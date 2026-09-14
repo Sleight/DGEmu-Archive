@@ -1,0 +1,84 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Following on from the Global DP increase</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f108.html">Staff Forums</a> &rsaquo; <a href="../forums/f42.html">Staff Lounge</a> &rsaquo; Following on from the Global DP increase</div><div class="thread-title-box"><h1>Following on from the Global DP increase</h1><div class="thread-meta">27 posts &middot; page 1 of 1 &middot; 238 views</div></div><div class="post" id="p4587323">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Shai</span><span class="op-tag">ORIGINAL POST</span></span><span>Apr 30 2009, 10:04 PM</span></div>
+  <div class="body">Okies, I just took the liberty of bumping it from 12.5 to 15. Since doing silly things on the spur of the moment is something I enjoy.That's just for existing members though, no idea how to fix it for new registrations. =/So could someone sort that part for me?Oh, also, having the green text be automatically added when the award gp's button is clicked would be handy. Not top priority, but the convenience would be ... convenient.</div>
+</div><div class="post" id="p4587426">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u40799.html">kiza19</a></span><span>Apr 30 2009, 11:02 PM</span></div>
+  <div class="body">If I had access to everything I could probably figure it out and implement it. What is the coding for the warn one?</div>
+</div><div class="post" id="p4587979">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>May 01 2009, 05:21 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Shai&#x27; post=&#x27;4587323 wrote <span class="qdate">on Apr 30 2009, 06:04 PM</span>:</div>That's just for existing members though, no idea how to fix it for new registrations. =/</blockquote>Shouldn't be any need to change it for new registrations. They start at 10 the first day and are automatically bumped up to whatever level they're supposed to be at after the next reset.By the way, how did you manage to up everyone to 15 anyway? I haven't looked at the code for a while, but I don't remember it being possible to change the reset without modifying both the source code and database (unless I actually got around to adding some sort of ACP setting for it).</div>
+</div><div class="post" id="p4588051">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Shai</span></span><span>May 01 2009, 07:17 AM</span></div>
+  <div class="body">Query: UPDATE ibf_members SET dpglobal = 15 WHERE mgroup = 3 AND dpglobal = 12.5 Executed SuccessfullyKilled the site for about five minutes. :oBut by my reckoning that will in no way affect anyone else who registers. Would probably help if I knew where the source code was, I tried looking but  I can't find it. And probably wouldn't want to tamper with it much anyway, heh.Also, whoever added the search to the admin and mod actions in the ACP, THANK YOU! =D Awesome.</div>
+</div><div class="post" id="p4588068">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">B</span><a class="author" href="../users/u4.html">Bish</a></span><span>May 01 2009, 07:56 AM</span></div>
+  <div class="body">Hasn't that been there for quite a while?</div>
+</div><div class="post" id="p4588074">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Shai</span></span><span>May 01 2009, 08:06 AM</span></div>
+  <div class="body">Well, the thing is. I check the page on occasion, but I guess it's just one of those minor details I never paid attention to.</div>
+</div><div class="post" id="p4588191">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u1.html">Dragons Master</a></span><span>May 01 2009, 03:00 PM</span></div>
+  <div class="body">Hola buddies, the table ibf_members had a default of 12.5 to dpglobal_reset. I just changed it to 15. accidently killing the site again for ~30 minutes  :)  whoopsy! I think a way safer way would be to simply update the registration query (where that is) manually for now :DAbout killing the site with the members query - u can write a quick script that does that in chunks (of say, 5000 members each), that way there will be time between queries for site queries to run and the site won't go dead (though it won't be speedy  ;)  ) - the script will obviously take way longer but what do u care just let it run for as many time as it takes at least it won't lock the members table. omg I really killed the members table with that default reset alter  :gs:  kaboom [!]</div>
+</div><div class="post" id="p4588248">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u40799.html">kiza19</a></span><span>May 01 2009, 05:05 PM</span></div>
+  <div class="body">Hey DM how is everything on the other side of the world?</div>
+</div><div class="post" id="p4588259">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Shai</span></span><span>May 01 2009, 05:32 PM</span></div>
+  <div class="body">Oh, I never saw that in the table. I'm going to use the tired excuse. Now I think about it, yeah. That would be a temporary thing until the reset kicks in.I need to get more used to the DB. If the toolbox actually worked for me, that would be a nice start, haha. No idea what's wrong.But yeah, queries involving that table slaughter the site. ._.</div>
+</div><div class="post" id="p4589047">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u178553.html">Don&#x27;t Dream It&#x27;s Over</a></span><span>May 02 2009, 12:21 PM</span></div>
+  <div class="body">I do not like the green text. That is all I have to say.I say make it blue. Something less painful on the eyes.Either way, I'm glad we're shifting towards giving positive actions, instead of just negative.</div>
+</div><div class="post" id="p4589291">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u590675.html">stock</a></span><span>May 02 2009, 07:00 PM</span></div>
+  <div class="body"><span style="color:#1faa15">This really seems okay, and blue would be a little less "explicit."</span></div>
+</div><div class="post" id="p4591201">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u1.html">Dragons Master</a></span><span>May 04 2009, 09:07 PM</span></div>
+  <div class="body"> :weep:  what green text are we talking about? :DOh and everything is great on this site of the world, the army kills me entirely, I've got a new girlfriend for a few months now and it's getting serious  :D  so I might turn myself to a husband in a few months.. i'm actually thinking of proposing in a few of months.. then again i sure wouldn't mind delaying it until she'll propose me  :(  oh and my car died on me yesterday when i was a billion years away from my flat, so i called a friend a slept on a 2 seats couch in his place and I have absolutly no part that doesn't hurt to death today muhahaha..i'm gonna hit bed.. dead tired here..</div>
+</div><div class="post" id="p4591219">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u40799.html">kiza19</a></span><span>May 04 2009, 09:23 PM</span></div>
+  <div class="body">Congrats on the new girlfriend.</div>
+</div><div class="post" id="p4591238">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">R</span><a class="author" href="../users/u1054667.html">Revolving Door</a></span><span>May 04 2009, 09:43 PM</span></div>
+  <div class="body">@DM: Green text for our current GP award button. *sighs* Yea, I'm still not used to seeing your posts. It's kinda creepy.</div>
+</div><div class="post" id="p4591269">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u590675.html">stock</a></span><span>May 04 2009, 10:22 PM</span></div>
+  <div class="body">They're refreshing though, haha.</div>
+</div><div class="post" id="p4591275">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">R</span><a class="author" href="../users/u1054667.html">Revolving Door</a></span><span>May 04 2009, 10:26 PM</span></div>
+  <div class="body">True dat.  :weep: @DM: Didn't you tell me you might propose soon? You just had to tell everybody? Now we have no secrets. >_></div>
+</div><div class="post" id="p4591506">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u10409.html">hackerx</a></span><span>May 05 2009, 03:21 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Dragons Master&#x27; post=&#x27;4591201 wrote <span class="qdate">on May 4 2009, 05:07 PM</span>:</div> :facepalm:  what green text are we talking about? :DOh and everything is great on this site of the world, the army kills me entirely, I've got a new girlfriend for a few months now and it's getting serious  :D  so I might turn myself to a husband in a few months.. i'm actually thinking of proposing in a few of months.. then again i sure wouldn't mind delaying it until she'll propose me  ;)  oh and my car died on me yesterday when i was a billion years away from my flat, so i called a friend a slept on a 2 seats couch in his place and I have absolutly no part that doesn't hurt to death today muhahaha..i'm gonna hit bed.. dead tired here..</blockquote>Ouch on the dead car and the couch surfing, congrats on the lady.</div>
+</div><div class="post" id="p4591817">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sir VG</span></span><span>May 05 2009, 10:15 AM</span></div>
+  <div class="body">Just remember that with every wife comes a mother-in-law.  :facepalm: </div>
+</div><div class="post" id="p4600259">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u178553.html">Don&#x27;t Dream It&#x27;s Over</a></span><span>May 14 2009, 09:35 PM</span></div>
+  <div class="body">Whoa....did we move this from the staff discussion to the main staff folder and remove a bunch of posts??</div>
+</div><div class="post" id="p4600260">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">R</span><a class="author" href="../users/u1054667.html">Revolving Door</a></span><span>May 14 2009, 09:38 PM</span></div>
+  <div class="body">No. This was made in MSD.</div>
+</div><div class="post" id="p4603397">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u178553.html">Don&#x27;t Dream It&#x27;s Over</a></span><span>May 18 2009, 05:40 AM</span></div>
+  <div class="body">Weird....I could have sworn there were more posts.</div>
+</div><div class="post" id="p4603451">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">B</span><a class="author" href="../users/u4.html">Bish</a></span><span>May 18 2009, 08:01 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Dragons Master&#x27; post=&#x27;4591201 wrote <span class="qdate">on May 5 2009, 07:07 AM</span>:</div>oh and my car died on me yesterday when i was a billion years away from my flat</blockquote>haha,wut</div>
+</div><div class="post" id="p4603535">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u178553.html">Don&#x27;t Dream It&#x27;s Over</a></span><span>May 18 2009, 01:40 PM</span></div>
+  <div class="body">I think he meant light years...I'm pretty sure he drives a Millennium Falcon.</div>
+</div><div class="post" id="p4604085">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u590675.html">stock</a></span><span>May 19 2009, 04:27 AM</span></div>
+  <div class="body">What the hell's a millenium falcon?Who's <em>they</em>?!</div>
+</div><div class="post" id="p4604089">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sir VG</span></span><span>May 19 2009, 04:46 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">stock&#x27; post=&#x27;4604085 wrote <span class="qdate">on May 18 2009, 11:27 PM</span>:</div>What the hell's a millenium falcon?Who's <em>they</em>?!</blockquote>I sense a disturbance in the force here.</div>
+</div><div class="post" id="p4604240">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u178553.html">Don&#x27;t Dream It&#x27;s Over</a></span><span>May 19 2009, 12:46 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">stock&#x27; post=&#x27;4604085 wrote <span class="qdate">on May 18 2009, 09:27 PM</span>:</div>What the hell's a millenium falcon?Who's <em>they</em>?!</blockquote>Ummm it's a ship that can make the kessel run in less than 12 parsecs, duh.</div>
+</div><div class="post" id="p4604424">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u590675.html">stock</a></span><span>May 19 2009, 07:14 PM</span></div>
+  <div class="body">Bah, never mind.</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

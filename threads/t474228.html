@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Solved] 1 download at a time?</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f108.html">Staff Forums</a> &rsaquo; <a href="../forums/f42.html">Staff Lounge</a> &rsaquo; [Solved] 1 download at a time?</div><div class="thread-title-box"><h1>[Solved] 1 download at a time?</h1><div class="thread-meta">16 posts &middot; page 1 of 1 &middot; 154 views</div></div><div class="post" id="p4977573">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">M</span><a class="author" href="../users/u104116.html">milo-</a><span class="op-tag">ORIGINAL POST</span></span><span>Nov 12 2011, 08:18 AM</span></div>
+  <div class="body">Maybe it's just me, but lately it seems like DG handles downloads VERY poorly, you can only download one rom at a time AND the site is inaccessible while the download is in progress, which isn't very nice when downloading big roms. I remember DM was playing around with how downloads are handled a while ago, but I don't think the site being inaccessible while downloading was an intended effect. or maybe the problem is in my end</div>
+</div><div class="post" id="p4977575">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u26698.html">Django</a></span><span>Nov 12 2011, 10:16 AM</span></div>
+  <div class="body">Not your end. I had the same problem.</div>
+</div><div class="post" id="p4977593">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Nov 12 2011, 07:35 PM</span></div>
+  <div class="body">same. if I try to download more than 1 rom at a time they all time out and I cant go on the forums</div>
+</div><div class="post" id="p4977624">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">T</span><a class="author" href="../users/u2398491.html">tedsb16</a></span><span>Nov 13 2011, 12:05 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">KHRS&#x27; timestamp=&#x27;1321126553&#x27; post=&#x27;4977593 wrote:</div>I cant go on the forums</blockquote>This is probably better for your long term health anyway.</div>
+</div><div class="post" id="p4977718">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u1.html">Dragons Master</a></span><span>Nov 13 2011, 07:16 PM</span></div>
+  <div class="body">Whoa - you guys are correct [!] the download totally hogs the site  XD  that is very very strange and I'll look into it.As for logging out of the forums - I don't see that happen over here .. once the download is complete I'm still logged in and everything..</div>
+</div><div class="post" id="p4977733">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Nov 13 2011, 08:49 PM</span></div>
+  <div class="body">It took me 15 minutes to download a 28MB DS rom and I couldn't even go on the forums to rage about it</div>
+</div><div class="post" id="p4977766">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">V</span><span class="author">Victorique De Blois</span></span><span>Nov 14 2011, 04:04 AM</span></div>
+  <div class="body">Something definitely buggy going on.</div>
+</div><div class="post" id="p4977820">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u1.html">Dragons Master</a></span><span>Nov 14 2011, 09:19 PM</span></div>
+  <div class="body">Yup it's more buggy than you think - it only blocks php pages for the session.. If you'll trying reading an image it will work, it u try going to a non-php page (e.g. the new skin demo page - nds.htm) it will work.More than that - if u try using a different browser - it will work! It only blocks php for that session which is c-r-a-z-y.. I've written about it in devshed's forums hoping for a prompt and simple solution for some crazy php behavior I'm not yet familiar withSolved!! thanks to some awesome dude on devshed who let me know about php's session_write_close !</div>
+</div><div class="post" id="p4977925">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">M</span><a class="author" href="../users/u104116.html">milo-</a></span><span>Nov 15 2011, 11:30 AM</span></div>
+  <div class="body">THANK YOU NOW, MAY I ASK FOR A PRIZE SINCE I BROUGHT THIS UP? IF YOU EVER DIE... CAN I USE YOUR AVATAR?</div>
+</div><div class="post" id="p4977975">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u1.html">Dragons Master</a></span><span>Nov 16 2011, 09:04 AM</span></div>
+  <div class="body">Sure thing  :)  though you'll have to be quick since I pay quarterly for the server and obviously no one will pay for it when I'm gone and boom good bye avatar - so you'll have to quickly grab it when u can - perhaps even make a small copy of it now..</div>
+</div><div class="post" id="p4977981">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">M</span><a class="author" href="../users/u104116.html">milo-</a></span><span>Nov 16 2011, 09:44 AM</span></div>
+  <div class="body">Done. If s­hit ever hits the fan, I'll use it proudly.  :) </div>
+</div><div class="post" id="p4978150">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">V</span><span class="author">Victorique De Blois</span></span><span>Nov 18 2011, 12:21 AM</span></div>
+  <div class="body">LOL. By curiosity, how much does it cost you to maintain the server?</div>
+</div><div class="post" id="p4978180">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Nov 18 2011, 08:38 AM</span></div>
+  <div class="body">Ben just mentioned it the other week I think .... was over $200 or $400 dollars and not it WAY cheaper, like 50% difference or something ....</div>
+</div><div class="post" id="p4978572">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">V</span><span class="author">Victorique De Blois</span></span><span>Nov 21 2011, 07:28 AM</span></div>
+  <div class="body">Hmm, I hope we're at least wheeling enough donations to cover half of the expensive in the least...</div>
+</div><div class="post" id="p4978604">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Nov 21 2011, 01:24 PM</span></div>
+  <div class="body">wow, I have to say, great work, DM, the downloads are working perfectly, I'm downloading 2 DS ROMs as I'm posting this</div>
+</div><div class="post" id="p4979046">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u1207886.html">Dannyslr81</a></span><span>Nov 24 2011, 08:20 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">KHRS&#x27; timestamp=&#x27;1321881882&#x27; post=&#x27;4978604 wrote:</div>wow, I have to say, great work, DM, the downloads are working perfectly, I'm downloading 2 DS ROMs as I'm posting this</blockquote>here I thought this was me for the longest.Mostly happened when I logged on on a friend's computer(I usually use UG/BG instead of direct-download unless I need it sooner than I can get it through there)I'll be sure to check this out when I go there next time Usually I start a download goes to like 5% and then never goes any higher for a while so I cancel and start again Nice to see it fixed Tried to see if I can download 2 at a time but the download finished before that Great Job DM(and I guess milo for saying something) Edit: Actually I just decided to do it anyway and both roms are almost completed as I'm typing this</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

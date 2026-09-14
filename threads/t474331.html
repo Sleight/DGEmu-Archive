@@ -1,0 +1,65 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Guide] Downloading Files with JDownloader</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f173.html">DGEmu Assistant</a> &rsaquo; <a href="../forums/f174.html">Forum Rules &amp; Guidelines / Emulation &amp; Rom Guides</a> &rsaquo; [Guide] Downloading Files with JDownloader</div><div class="thread-title-box"><h1>[Guide] Downloading Files with JDownloader</h1><div class="thread-meta">1 posts &middot; page 1 of 1 &middot; closed &middot; 626 views</div></div><div class="post" id="p4978298">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">V</span><span class="author">Victorique De Blois</span><span class="op-tag">ORIGINAL POST</span></span><span>Nov 19 2011, 08:20 AM</span></div>
+  <div class="body"><img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/jd1.png" loading="lazy" class="post-img"><br />
+<br />
+<strong>Overview:</strong><br />
+JDownloader is a Java based download manager that will take care of any file sharing service sites. You can queue, setup automatic file extraction, enter passwords for locked files, automate certain sites' Captchas, rip Youtube videos, and much much more with the software. This guide will explain how the software works for file sharing services so that you may queue up files for downloading from one of the many mirrors provided for the roms hosted on DGEmu and for downloads in the "Download Center".<br />
+<br />
+<strong>What you will need:</strong><br />
+- JDownloader: <a href="http://jdownloader.org/download/index" target="_blank" rel="noopener">http://jdownloader.org/download/index</a><br />
+- Java Runtime Environment (JRE): <a href="http://java.com/" target="_blank" rel="noopener">http://java.com/</a> <strong>Before starting:</strong>Make sure JRE has been installed prior to using JDownloader. You can find the download in the links provided above. <strong>Installing the application:</strong>During the installation interview of JDownloader, you can leave most settings at default. You will then reach a point where it will propose the installation of "Facemoods", which is not necessary.You can do the changes on that screen to match the screenshot below:<br />
+<img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/jd2.jpg" loading="lazy" class="post-img"><br />
+<br />
+<strong>Configuring the application:</strong><br />
+When launching the application, you will be presented with a windows that looks like the image below.Here, we have 3 settings to change if needed:Max. Con. determines the maximum allowed simultaneous downloads per file.Max. Dls. determines the maximum allowed downloads overall.Speed sets a maximum speed allocated for JDownloader to use. If left at 0, there is no limit.<br />
+<img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/jd3.jpg" loading="lazy" class="post-img"><br />
+To start our configuration, let's first move to the "Settings" tab and on the "Basics > Download & Connections" category.You should first set a default download directory. This will let JDownloader download all your files into a specific location of your choice. You may change the path as you download. A later section of this guide will explain it.Another setting that should be added is the "Start Downloads on Startup". This will let JDownloader automatically start your download queue once you launch the application.<br />
+<img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/jd4.jpg" loading="lazy" class="post-img"><br />
+A very nifty feature that you shouldn't need for our site, but maybe others is under the "Modules > Passwords & Logins > Unrar/Extract".Here, you can setup a list of passwords to be saved by the application. What this will do is let JDownloader automatically try all the passwords in that list to auto-extract your files once downloaded. This is very useful when you have recurrent passwords for files you download.<br />
+<img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/jd5.jpg" loading="lazy" class="post-img"><br />
+Next, we'll navigate to "Plugins & Add-ons > Host > Premium". This section will allow you to register all your premium accounts so that JDownloader can use them to bypass download wait times, speed limits, and bandwidth limits.For example, registering a free Megaupload account will reduce the download wait time from 45 seconds to 25 seconds between downloads.<br />
+<img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/jd6.jpg" loading="lazy" class="post-img"><br />
+Next, we move to "Plugins & Add-ons > Extensions".Make sure to check or uncheck the following depending on what you want:- HJSplit: When checked, this allows JDownloader to automatically join files that were split by HJSplit together. These files are mostly often found in the Anime and J-Pop communities.- JD Unrar: When checked, this allows JDownloader to automatically extract RAR and ZIP files once they are downloaded. Combined with the password list above, this should enable it to take care of most files automatically once the download is complete.<br />
+<img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/jd7.jpg" loading="lazy" class="post-img"><br />
+<strong>Using the application:</strong><br />
+Before we get started, always click on the globe button at the top right. This will ensure that JDownloader has all the latest plugins to be able to decrypt file sharing site links correctly.<br />
+<img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/jd8.jpg" loading="lazy" class="post-img"><br />
+To start a download, let's first jump to the "Linkgrabber" tab. JDownloader has many ways to recognizing links to download:<br />
+1. The old fashion way is to click on the "Add URL(s)" button and paste your links in there.<br />
+2. The easiest way is to simply copy the URL into Windows' clipboard (pressing Ctrl-C when URLs are selected). JDownloader will recognize the links and automatically add them to the list.<br />
+3. You can also drag and drop selected text into JDownloader and the application will parse it for you. This works in Firefox, but not in Internet Explorer.<br />
+<br />
+Tips:<br />
+- If you are lazy, you can select all the text from a webpage, and hit Ctrl-C. JDownloader is smart enough to filter out all the useless information and only take the links it needs.<br />
+- You can also do the same by opening the source code of an HTML page and hitting Ctrl-C<br />
+- JDownloader will grab any downloadable information... That means jpg on websites, videos links on Youtube, and much more. Because of that, it is not recommended to leave JDownloader constantly running the the background when no downloads are active as your Linkgrabber page can get filled very quickly...<br />
+<img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/jd9.jpg" loading="lazy" class="post-img"><br />
+Once your URLs are added, you will notice that JDownloader will try to categorize them together under a section just like the image below. When you double-click on the category, a new section will appear like the image below.You can then set specific settings to the category, such as renaming it, setting up a custom download directory, setting up a extraction password, and tell it whether or not to self-extract once the download is complete (Notice: the JD Unrar plug-in must be checked in the "Plugins & Add-ons > Extensions" section. Please refer to the section above for more details.)<br />
+<img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/jd10.jpg" loading="lazy" class="post-img"><br />
+You will also notice that JDownloader will test if the download links are still valid or not. You can easily manage the list of files to download by right-clicking on any item in the list:- Remove > Remove all Offline: As it says, this removes all dead links from the list to be treated.- Remove > Remove all duplicates: This will remove the links which have already been downloaded or are already queued under the "Download" tab.- Remove > Remove (x): This will remove the items you have selected in the list. Take note that you can hold "Ctrl" while selecting items in the list to do multiple selections at once.- Remove > Clear list: This will completely empty the list in "Linkgrabber".<br />
+<img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/jd11.jpg" loading="lazy" class="post-img"><br />
+Once your list is cleaned up and ready to be treated for downloading, click on the "Continue with all" button as shown below. JDownloader should now bring you back to the "Download" tab.<br />
+<img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/jd12.jpg" loading="lazy" class="post-img"><br />
+On this screen, you can monitor your download queue and their status. You will notice that the application will countdown numbers like you would get when you access the site.Once the countdown is done, the download will either automatically start (Rapishare, Hotfile, Megaupload, etc.) or prompt you for a Captcha (File Factory, File Server, WUpload, etc.). If you're presented with a Captcha, simply enter at best the information. If you made a mistake, it will re-prompt for a Captcha, or else, it will start a new countdown and automatically start your file after.<br />
+<img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/jd13.jpg" loading="lazy" class="post-img"><br />
+Managing files in the "Download" tab is quite easy. Simply select the files you want to modify, right-click, and a menu full of options appears.The options you will often use are:<br />
+- Delete > From list: This clears the item from the list itself. The file physically stays on your computer.<br />
+- Delete > From list and disk: This clears the items from the list and physically deletes the file on your computer.<br />
+- Open Directory: Will open a new explorer window to the location where the file was downloaded to.<br />
+- Open in browser: If for some reason, JDownloader fails to download a file, you can try to download it from your default web browser.<br />
+- Disable (x): This will stop your download and prevent it from downloading again until you enable it.<br />
+- Force download: This will force JDownloader to start a download even if you have reached your Max. Dls.<br />
+- Reset (x): When I file fails to download or is under a 20 minute countdown or so, you can use this option to reset it to 0 as if it was newly added. Notice that by doing so, you download will be reset and cannot resume from where it left off.<br />
+<br />
+<img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/jd14.jpg" loading="lazy" class="post-img"><br />
+<strong>Conclusion:</strong>That pretty much covers all the basics you need to queue downloads. This is extremely useful for downloading and queuing roms offered on our main page without being at the computer. This should also ease up the work of digging through the Download Center and simply add files together. The special collections I release will make use of this (especially the Touhou Project Collections). If you've read this far, then I invite you to read the extra section below, a few tips to make your experience even more enjoyable!<br />
+<br />
+<strong>Tips</strong><br />
+<strong>:</strong>- Free accounts limit you to 1 download at a time. When a download offers multiple mirrors to the same file, but from different hosts, you can queue a part from each host to have them all downloading consecutively.<br />
+- Remember to register for a free account with Megaupload. That will cut the wait time from 45 seconds to 25 seconds in between files.<br />
+- If you want to download Youtube videos, JDownloader will automatically add to the Linkgrabber all available formats in MP3, FLV, and MP4. You can choose the highest quality when available (720p, 1080p)<br />
+- If a website disables the right-click and you want to save an image on it, simply view its source code, copy all of it, and JDownloader should be able to identify the images to download.<br />
+- Please do watch the system resources used by JDownloader. If let open over a long period of time (over 3 days), it might inflate and cause issues with downloads. Simply exit the application and re-open it to fix it.</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

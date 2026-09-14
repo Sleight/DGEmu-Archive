@@ -1,0 +1,221 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GBA Emulation Guide (Updated November 24, 2009)</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f288.html">Console Emulation &amp; Modding Assistance</a> &rsaquo; <a href="../forums/f300.html">Nintendo</a> &rsaquo; <a href="../forums/f303.html">Other Nintendo Resources</a> &rsaquo; GBA Emulation Guide (Updated November 24, 2009)</div><div class="thread-title-box"><h1>GBA Emulation Guide (Updated November 24, 2009)</h1><div class="thread-meta" style="font-style:italic;margin-bottom:4px">Read this for useful information</div><div class="thread-meta">1 posts &middot; page 1 of 1 &middot; closed &middot; 28062 views</div></div><div class="post" id="p1282897">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a><span class="op-tag">ORIGINAL POST</span></span><span>May 11 2006, 05:40 PM</span></div>
+  <div class="body">This guide was created for the purpose of addressing all common emulation issues. Use <strong>Ctrl+F</strong> to search for specific games or sections or click the appropriate link in the table of contents.<br />
+<br />
+--<br />
+<br />
+[heading]<strong>TABLE OF CONTENTS</strong>[/heading]<br />
+<br />
+1. Emulators [EMUS]<br />
+2. Save Settings <br />
+3. Specific Rom Issues [ROMI]<br />
+4. Patches <br />
+5. BIOS Errors <br />
+6. Speeding up emulation <br />
+<br />
+--<br />
+<br />
+<strong>1. Emulators [EMUS]</strong><br />
+There are many GBA emulators available for use. The following are the ones recommended by DGEmu:<br />
+VisualBoyAdvance (aka VBA)<br />
+Official site: <a href="http://vba.ngemu.com/" target="_blank" rel="noopener">http://vba.ngemu.com/</a><br />
+Latest versions: 1.7.2 & 1.8.0b3 (Windows), 1.7.2 (Mac OS X)<br />
+<span style="color:red">Direct Download Link (1.7.2; Windows): <a href="http://prdownloads.sourceforge.net/vba/VisualBoyAdvance-1.7.2.zip" target="_blank" rel="noopener">http://prdownloads.s...vance-1.7.2.zip</a></span><br />
+<span style="color:red">Direct Download Link (1.8.0b3; Windows): <a href="http://vba.ngemu.com/downloads/VisualBoyAdvance-1.8.0-beta3.zip" target="_blank" rel="noopener">http://vba.ngemu.com...1.8.0-beta3.zip</a></span><br />
+<span style="color:red">Direct Download Link (1.7.2; OSX): <a href="http://prdownloads.sourceforge.net/vba/VisualBoyAdvance-1.7.2-MacOSX.dmg.gz" target="_blank" rel="noopener">http://prdownloads.s...2-MacOSX.dmg.gz</a></span><br />
+Undoubtedly the best GBA emulator developed to date, VisualBoyAdvance boasts the best game compatibility and best feature list of any emulator available. However, the original VBA project has since been abandoned and has been succeeded by the VBA-M project (immediately below).<br />
+<br />
+VisualBoyAdvance-M (aka VBA-M)<br />
+Official site: <a href="http://vba-m.ngemu.com/" target="_blank" rel="noopener">http://vba-m.ngemu.com/</a><br />
+Latest version: SVN 926 (Windows)<br />
+Read this topic for more info:VBA-M<br />
+<span style="color:red">Direct Download Link (Windows): <a href="https://sourceforge.net/projects/vbam/files/Win32%20-%20MFC/VisualBoyAdvanceM926.7z/download" target="_blank" rel="noopener">VisualBoyAdvance-M SVN926</a></span><br />
+<span style="color:red"><strong>Additional libraries and runtimes may be required in order to run VBA-M. <u>Please be sure to read the README first!</u></strong></span><br />
+VBA-M is the official successor to VBA with the goals of improving performance, fixing bugs, and expanding the capabilities of VBA to include features of the various available forks. Many respected emulator developers have contributed to the project, including Spacy (VisualBoyAdvance-S), Mudlord (Rice Video, Glide64), Nach (ZSNES), Blargg (ZSNES), and Jonas (ZSNES).<br />
+<br />
+VisualBoyAdvanceLink (aka VBALink)<br />
+Official site: <a href="http://vbalink.wz.cz/" target="_blank" rel="noopener">http://vbalink.wz.cz/</a><br />
+Latest version: 1.7.3 & 1.8.0b0 (Windows)<br />
+<span style="color:red">Direct Download Link (1.7.3; Windows): <a href="http://vbalink.wz.cz/vbalink173.7z" target="_blank" rel="noopener">http://vbalink.wz.cz/vbalink173.7z</a></span><br />
+<span style="color:red">Direct Download Link (1.8.0b0; Windows): <a href="http://vbalink.wz.cz/vbalink180b0.7z" target="_blank" rel="noopener">http://vbalink.wz.cz/vbalink180b0.7z</a></span><br />
+This is another unofficial build of VBA developed by denopqrihg. Unlike other VBA builds, this version allows 2-4 instances of the emulator to link, allowing for multiplayer play on the same computer or across a LAN. Version 1.7.3 introduced 2-player wireless for same-computer use, and version 1.8.0b0 introduced wireless networking across a LAN (and possibly the Internet) in addition to fixing the MegaMan Battle Network 5 and Boktai 2 crossover battle. Note that not all games are capable of linking at the moment - see the VBALink website (above) and also DGEmu's unofficial list at http://www.dgemu.com...showtopic=66686 for more information.<br />
+<br />
+VisualBoyAdvance for OSX<br />
+Site: <a href="http://www.macupdate.com/info.php/id/10123" target="_blank" rel="noopener">http://www.macupdate...fo.php/id/10123</a><br />
+Latest version: 1.7.4<br />
+<span style="color:red">Direct Download Link: <a href="http://www.macupdate.com/download.php/10123/VisualBoyAdvance-1.7.4-MacOSX.dmg.gz" target="_blank" rel="noopener">http://www.macupdate...4-MacOSX.dmg.gz</a></span><br />
+An unofficial build of VBA for OSX.Other emulators can be found at EmuHQ: <a href="http://www.emuhq.com/category/emulators/console/gameboy/" target="_blank" rel="noopener">http://www.emuhq.com...onsole/gameboy/</a><br />
+<br />
+Back to table of contents<br />
+<br />
+--<br />
+<br />
+<strong>2. Save Settings </strong><br />
+Certain games require specific save settings that need to be set manually. Otherwise, errors in in-game (battery) saves may occur or "white screens" may be encountered during emulation.<br />
+<br />
+The best solution is to place a <strong>vba-over.ini</strong> configuration file in the same directory as your emulator. This file automatically configures the save type settings for most common games. For the file to work, the default save settings must be set (go to <strong>Options -> Emulator -> Save Type -> Automatic</strong> and <strong>Options -> Emulator -> Save Type -> Flash 64K</strong>). If you have existing save files, you may need to delete, move, or rename them to allow the save configuration to work.<br />
+<br />
+<strong>"vba-over.ini" DOWNLOADS</strong><br />
+For VBA, VBALink: <a href="http://www.sendspace.com/file/uay5uq" target="_blank" rel="noopener">http://www.sendspace.com/file/uay5uq</a><br />
+For VBA-M: <a href="http://vba-m.ngemu.com/vbam/vbafiles/vba-over.zip" target="_blank" rel="noopener">http://vba-m.ngemu.c...es/vba-over.zip</a> (Unverified as of 2009-01-06; may not support all games listed below)<br />
+<br />
+<strong><u>GAMES CURRENTLY SUPPORTED BY VBA-OVER.INI FOR VBA/VBALINK</u></strong> (<span style="color:green">The problems that are addressed are listed in green</span>)<br />
+0418: Koro Koro Puzzle Happy Panechu!<br />
+0434: Dragon Ball Z - The Legacy Of Goku (U)<br />
+0639: Dragon Ball Z - The Legacy Of Goku (E)<br />
+0757: Pokemon Sapphire (J)<br />
+0760: Pokemon Ruby (J)<br />
+0898: Pokemon Sapphire (U) <span style="color:green">In-game save, white screen, in-game clock</span><br />
+0907: Pokemon Ruby (U) <span style="color:green">In-game save, white screen, in-game clock</span><br />
+1056: Dragon Ball Z - The Legacy of Goku II (E)<br />
+1085: Dragon Ball Z - The Legacy of Goku II (U)<br />
+1093: Super Mario Advance 4 (J)<br />
+1102: Bokura no Taiyou (J)<br />
+1109: Pokemon Zafiro (S)<br />
+1110: Pokemon Rubi (S)<br />
+1111: Pokemon Saphir (F)<br />
+1114: Pokemon Rubis (F)<br />
+1161: Boktai - The Sun is in Your Hand (U)<br />
+1190: Super Mario Advance 4 - Super Mario Bros 3 (E)<br />
+1212: Super Mario Advance 4 - Super Mario Bros 3 (U)<br />
+1237: Pokemon Sapphire (E) <span style="color:green">In-game save, white screen, in-game clock</span><br />
+1242: Pokemon Ruby (E) <span style="color:green">In-game save, white screen, in-game clock</span><br />
+1297: Dragon Ball Z Taiketsu (U)<br />
+1360: Pokemon Fire Red (J)<br />
+1362: Pokemon Leaf Green (J)<br />
+1420: Dragon Ball Z Taiketsu (E)<br />
+1483: Boktai - The Sun is in Your Hand (E)<br />
+1573: Digi Communication 2 in 1 Datou! Black Gemagema Dan (J)<br />
+1585: Zoku Bokura no Taiyou - Taiyou Shounen Django (J)<br />
+1591: Dragon Ball Z - The Legacy of Goku II International (J)<br />
+1604: Rockman EXE 4.5 Real Operation (J) <span style="color:green">Clock issue</span><br />
+1636: Pokemon Fire Red (U) <span style="color:green">In-game save, white screen, "The 1M sub-circuit board is not installed" message, "Save error. Please exchange the backup memory" message</span><br />
+1637: Pokemon Leaf Green (U) <span style="color:green">In-game save, white screen, "The 1M sub-circuit board is not installed" message, "Save error. Please exchange the backup memory" message</span><br />
+1646: Dragon Ball Z - Buu's Fury (U) <span style="color:green">"Game will not run on this hardware" message</span><br />
+1649: Pokemon Emerald (J)<br />
+1675: Pokemon Rojo Fuego (S)<br />
+1676: Pokemon Verde Hoja (S)<br />
+1677: Pokemon Blattgrune (G)<br />
+1678: Pokemon Feuerrote (G)<br />
+1679: Pokemon Rouge Feu (F)<br />
+1680: Pokemon Vert Feuille (F)<br />
+1685: Pokemon Rosso Fuoco (I)<br />
+1686: Pokemon Verde Foglia (I)<br />
+1691: Pokemon Leaf Green (E) <span style="color:green">In-game save, white screen, "The 1M sub-circuit board is not installed" message, "Save error. Please exchange the backup memory" message</span><br />
+1695: Pokemon Fire Red (E) <span style="color:green">In-game save, white screen, "The 1M sub-circuit board is not installed" message, "Save error. Please exchange the backup memory" message</span><br />
+1718: F-Zero Climax (J)<br />
+1719: Boktai 2 - Solar Boy Django (U)<br />
+1802: Gameboy Wars Advance 1+2 (J)<br />
+1821: Yoshi no Banyu Inryoku (J)<br />
+1883: Rocky (E)<br />
+1917: Pokemon Zaffiro (I)<br />
+1918: Pokemon Rubino (I)<br />
+1928: Top Gun - Combat Zones (U)<br />
+1932: Sennen Kazoku (J)<br />
+1967: Yoshi's Universal Gravitation (E)<br />
+1984: Pokemon Saphir (G)<br />
+1985: Pokemon Rubin (G)<br />
+1986: Pokemon Emerald (U) <span style="color:green">In-game save, white screen, in-game clock</span><br />
+2013: Boktai 2 - Solar Boy Django (E)<br />
+2022: Yoshi Topsy-Turvy (U)<br />
+2069: Shin Bokura no Taiyou - Gyakushuu no Sabata (J)<br />
+2079: Dragon Ball GT - Transformation (U)<br />
+2161: Super Mario Advance 4 v1.1 (U)<br />
+2185: Pokemon Smaragd (G)<br />
+2187: Pokemon Emeraude (F)<br />
+2190: Pokemon Esmeralda (S)<br />
+2207: Pokemon Smeraldo (I)<br />
+2288: Dragon Ball Z - The Legacy of Goku I & II (U)<br />
+2302: Yu-Gi-Oh! GX Duel Academy (U) <span style="color:green">In-game save</span><br />
+2342: Yu-Gi-Oh! Ultimate Masters 2006 (U) <span style="color:green">In-game save, white screen</span><br />
+2394: Zoku Bokura no Taiyou - Taiyou Shounen Django (J) (V1.1)<br />
+2471: Dragon Ball Z Buu's Fury & Dragon Ball GT Transformation 2-in-1 (U) <span style="color:green">"Game will not run on this hardware" message</span><br />
+2484: Pokemon Mystery Dungeon - Red Rescue Team (U)<br />
+<br />
+Some games use save settings that cannot be fixed by this method. In this case, a SRAM save patch is called for. SRAM save patches can be applied using GBATA: <a href="http://www.no-intro.org/tools.htm" target="_blank" rel="noopener">http://www.no-intro.org/tools.htm</a><br />
+<br />
+Back to table of contents<br />
+<br />
+--<br />
+<br />
+<strong>3. Specific Rom Issues [ROMI]</strong><br />
+The Classic NES and Famicon Mini roms do not work properly on VBA/VBALink; however, they do work properly on VBA-M when a proper vba-over.ini file is used (see above). To play them on VBA/VBALink, please download <a href="http://rapidshare.com/files/5453374/Nes_Classic___Famicom_Mini_Series.rar.html" target="_blank" rel="noopener">WRG's "Famicom Mini & Classic NES crackedpack"</a> (<a href="http://www.megaupload.com/?d=APIU6ROP" target="_blank" rel="noopener">mirror</a>)<br />
+<br />
+There are certain roms that are known to not work on emulators. At the moment, these include the following:<br />
+Madden 2006 and Madden 2007 (plays don't show up on screen)<br />
+Action Replay roms (requires hardware support - use the emulator's built-in cheat engine instead)<br />
+GameShark roms (requires hardware support - use the emulator's built-in cheat engine instead)<br />
+CodeBreaker roms (requires hardware support - use the emulator's built-in cheat engine instead)<br />
+MP3 Player roms (requires hardware support)<br />
+<br />
+Back to table of contents<br />
+<br />
+--<br />
+<br />
+<strong>4. Patches </strong><br />
+In some cases, patches may be required to fix certain roms. The following sites host IPS patches for use:<br />
+<a href="http://bubbz.pocketheaven.com/?system=gba§ion=patch" target="_blank" rel="noopener">http://bubbz.pocketh...m=gba§ion=patch</a><br />
+<a href="http://arcvoreppin.free.fr/ips/" target="_blank" rel="noopener">http://arcvoreppin.free.fr/ips/</a><br />
+<a href="http://www.gbarl.it/index.php?showtopic=6464" target="_blank" rel="noopener">http://www.gbarl.it/...?showtopic=6464</a> (Boktai 3 only) <span style="color:red">MIRROR:</span> <a href="http://w10.easy-share.com/655809.html" target="_blank" rel="noopener">http://w10.easy-share.com/655809.html</a><br />
+<a href="http://www.gbarl.it/index.php?showtopic=6448" target="_blank" rel="noopener">http://www.gbarl.it/...?showtopic=6448</a> (Boktai 3 only) <span style="color:red">MIRROR:</span> <a href="http://w10.easy-share.com/655810.html" target="_blank" rel="noopener">http://w10.easy-share.com/655810.html</a><br />
+<a href="http://www.romhacking.net/" target="_blank" rel="noopener">http://www.romhacking.net/</a> (translation patches)<br />
+<br />
+IPS patches can be applied by using a variety of tools. DGEmu recommends one of the following:<br />
+IPSWin: <a href="http://zerosoft.zophar.net/ipswin.htm" target="_blank" rel="noopener">http://zerosoft.zophar.net/ipswin.htm</a><br />
+GBATA: <a href="http://www.gbadat.altervista.org/tools.htm" target="_blank" rel="noopener">http://www.gbadat.al...a.org/tools.htm</a><br />
+Lunar IPS: <a href="http://fusoya.eludevisibility.org/lips/index.html" target="_blank" rel="noopener">http://fusoya.eludev...lips/index.html</a><br />
+<br />
+Back to table of contents<br />
+<br />
+--<br />
+<br />
+<strong>5. BIOS Errors </strong><br />
+<strong>If you are using VBA-M, there should be no BIOS errors if you are using a proper vba-over.ini file (see above).</strong><br />
+<br />
+Certain games use GBA BIOS functions that are not emulated by VBA/VBALink. When this occurs, you get an error message that says something like: "Unsupported BIOS function 0d called from 080f220a. A BIOS file is needed in order to get correct behavior."<br />
+<br />
+To solve this problem, download a copy of the BIOS and use it. You can download a copy of the BIOS here:<br />
+http://www.megaupload.com/?d=OTQ5XSHZ<br />
+<br />
+To use the BIOS, go to <strong>Options -> Emulator -> Select BIOS file...</strong> and choose the BIOS file that you downloaded (you may need to type in the filename manually if the file extension isn't recognized). Then go to <strong>Options -> Emulator -> Use BIOS file</strong> to enable it.<br />
+<br />
+<strong><u>GAMES KNOWN TO HAVE BIOS ERRORS</u></strong><br />
+198: Rampage Puzzle Attack (U)<br />
+771: Gauntlet Dark Legacy (U)<br />
+2053: 2 in 1 Crash Spyro Pack Volume 1 (E)<br />
+2054: 2 in 1 Crash Spyro Pack Volume 2 (E)<br />
+2186: Crash And Spyro Superpack Vol. 3 (E)<br />
+2302: Yu-Gi-Oh! GX Duel Academy (U)<br />
+2362: Polarium (E)<br />
+2443: bit Generations - Dotstream (J)<br />
+<br />
+Back to table of contents<br />
+<br />
+--<br />
+<br />
+<strong>6. Speeding up emulation </strong><br />
+<br />
+First of all, consult the official VBA FAQ for tips on making the emulator run faster: <a href="http://vba.ngemu.com/faq.shtml#cat6_2" target="_blank" rel="noopener">http://vba.ngemu.com/faq.shtml#cat6_2</a><br />
+<br />
+If those fail to solve your problem, you may also want to decrease your screen resolution or color quality. In Windows, right-click your desktop and choose <strong>Properties</strong>. From there, lower your screen resolution (you may need to click on the "Settings" tab) and/or your color quality.If you are using VBA-M, emulation may be choppy when using OpenAL or Xaudio. This is caused by an overly short buffer; adjust the size appropriately for your system. <strong>NOTE: If you are using a Creative sound card, choose OpenAL and select the name of your sound card in the device list.</strong><br />
+<br />
+Back to table of contents<br />
+<br />
+--<br />
+<br />
+Thanks to molh394, M@tty, qcarachato, GBATEST, and squall_leonhart69r for additions.<br />
+<br />
+Please PM me with any corrections/changes that should be made or additions that should be included.<br />
+<br />
+---<br />
+<br />
+Edit:2008-08-26: Added 198: Rampage Puzzle Attack to BIOS list. GBATEST<br />
+2008-12-30: Fixed link for the BIOS file (old link not working <s><a href="http://www.mediafire.com/?d0jbn25wjy7)" target="_blank" rel="noopener">http://www.mediafire.com/?d0jbn25wjy7)</a></s>. GBATEST<br />
+2009-01-06: Added VBA-M information. General editing. atomicknight<br />
+2009-08-08: Added new version of VBA-M. GBATEST<br />
+2009-08-14: Added new version of VBA-M. GBATEST<br />
+2009-10-12: Added new version of VBA-M. GBATEST<br />
+2009-11-24: Added new version of VBA-M. GBATEST</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

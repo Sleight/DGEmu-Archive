@@ -1,0 +1,707 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[EMULATOR] DeSmuME User&#x27;s Guide and FAQ</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f288.html">Console Emulation &amp; Modding Assistance</a> &rsaquo; <a href="../forums/f300.html">Nintendo</a> &rsaquo; <a href="../forums/f302.html">DS / 3DS Resources</a> &rsaquo; [EMULATOR] DeSmuME User&#x27;s Guide and FAQ</div><div class="thread-title-box"><h1>[EMULATOR] DeSmuME User&#x27;s Guide and FAQ</h1><div class="thread-meta" style="font-style:italic;margin-bottom:4px">UPDATED: 0.9.7</div><div class="thread-meta">567 posts &middot; page 1 of 3 &middot; 54060 views</div></div><div class="post" id="p1285840">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a><span class="op-tag">ORIGINAL POST</span></span><span>May 13 2006, 08:16 PM</span></div>
+  <div class="body"><span style="color:#000000">DeSmuME is currently the best NDS emulator around.</span><br />
+<span style="color:#000000">Here are the instructions to run the emulator, together with an FAQ.</span><br />
+<br />
+<span style="color:#000000"><a href="http://desmume.org/" target="_blank" rel="noopener"><span style="color:#dc921d">Official Site</span><br />
+</a> | <span style="color:#0000FF">The latest version is 0.9.8</span><br />
+<span style="color:red"><strong>Anyone asking questions that have already been answered here will receive point deductions.</strong></span><br />
+<br />
+<strong>1. How to Use DeSmuME?</strong></span><br />
+<u>STEP 1</u>: Download the emulator! The latest version of DeSmuME can be found here. There are different versions for Windows (both 32-bit and 64-bit), Linux and Mac OSX.<br />
+<br />
+<u>STEP 2</u>: Select and extract the correct .exe file for Windows users. <br />
+For 32-bit users, select desmume.exe. desmume_dev.exe is for developers of course. If you are using an old processor which cannot handle SSE2 please download the NOSSE2 version instead.<br />
+For 64-bit users just use desmume.exe.<br />
+<br />
+<u>STEP 3</u>: Set your controls (and other settings).<br />
+The default controls are OK, but you might prefer other settings. Choose <strong>Config</strong> -> <strong>Control Config</strong> to change the keys. Our recommended settings are <strong>Config -> Sound Settings -> Synchronous and Synch Method Z</strong>; and <strong>Config -> 3D Settings -> SoftRasterizer</strong> for sound and graphics emulation. If you have problems with sound/graphics, however, do try the other settings. In particular, if you have any graphics problems you should test all the possible combinations of the settings under "3D Settings" until you determine which one works best.<br />
+<br />
+<u>STEP 4</u>: BIOS and Firmware files (for troubleshooting).<br />
+Download the BIOS and Firmware files <a href="http://www.mediafire.com/file/l5k50s845r5ch0w" target="_blank" rel="noopener">here</a>. Unzip and extract the files to the same folder as DeSmuME. You should play without using BIOS/Firmware files, unless you face any emulation problems (e.g. freezing), or if the ROM you are playing is known to have many such problems (e.g. Pokemon HG/SS or B/W, Etrian Odyssey III). <br />
+<br />
+How to use them:<br />
+Go to <strong>Config -> Emulation Settings</strong> and select them under "Use external BIOS images" and "Use external firmware image". If that still doesn't work check the box for <strong>Enable Advanced Bus-Level Timing</strong>, also under Emulation Settings. Otherwise leave it unchecked.<strong>Do take note that the firmware <em>might</em> interfere with your touchscreen.</strong> It's a bug that DeSmuME hasn't really bothered to fix.<br />
+<br />
+<u>STEP 5</u>: Download the roms<br />
+All NDS roms can be found on DGEmu. <strong>Unzip the rom after downloading it.</strong><br />
+<br />
+<u>STEP 6</u>: Running the roms<br />
+Go to <strong>File -> Open</strong>. Choose your unzipped rom (the .nds files) and run it.<br />
+<br />
+*<strong>FOR NO$GBA USERS</strong>*:<br />
+Select File -> Import Backup Memory, then select your savefile (it should be a .sav file inside the BATTERY folder). This should allow you to load your in-game save from No$gba. If that doesn't work try following this guide: NDS Savegame Converter Guide.<br />
+<br />
+------------------------------<br />
+<br />
+<strong>2. Additional Features</strong><br />
+<u>Firmware Settings</u>: DeSmuME offers you the possibility of changing the settings of the DS firmware (such as Nickname, Message, etc). Simply go to <strong>Config</strong> -> <strong>Firmware Settings</strong>.<br />
+<u>Graphics Settings</u>: From the <strong>View</strong> menu, you can select <strong>Rotation</strong> (for games which require you to hold the DS like a book), <strong>Window Size</strong> (up to 4x; this may cause the game to lag), and an option to <strong>Force Maintain Ratio</strong> when you manually resize the screen.<br />
+<u>Taking Screenshots</u>: It's very easy, just go to <strong>File</strong> -> <strong>Save Screenshot As</strong> or <strong>File</strong> -> <strong>Quick Screenshot</strong>.<br />
+<u>Path Settings</u>: Unlike some emulators, DeSmuME allows you to control not only where it loads its ROMs from, but also where it saves in-game ("SaveRam"), where its savestates are located ("States") and where it saves its screenshots, among other things.<br />
+<u>Exporting RAW Saves</u>: Go to <strong>File</strong> -> <strong>Export Backup Memory</strong> to "export" a RAW savefile from the in-game save.This can easily be converted into the appropriate savefile for your flashcarts (see NDS Savegame Converter Guide).<br />
+<u>Developer tools</u>: All in the <strong>Tools</strong> menu bar. Won't go into detail.<br />
+<br />
+More: <a href="http://wiki.desmume.org/index.php?title=Manual" target="_blank" rel="noopener">DeSmuME Manual</a><br />
+<br />
+------------------------------<br />
+<strong>3. Frequently Asked Questions</strong><br />
+<span style="color:#009900">Q: Does DeSmuME have a Mac or Linux version?</span><br />
+A: Yes, it supports both Linux and Mac. There are Linux and Mac binaries for download from the download page. However, the Mac version only supports Intel CPUs at the moment. To use the Mac version for a Mac without an Intel CPU, you have to compile the source code yourself.<br />
+<br />
+<span style="color:#009900">Q: I get an error (0xC0150002). What do I do?</span><br />
+A: Try this: <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=200B2FD9-AE1A-4A14-984D-389C36F85647&amp;displaylang=en" target="_blank" rel="noopener">http://www.microsoft.com/downloads/details...;displaylang=en</a><br />
+<br />
+<span style="color:#009900">Q: Is DeSmuME a good emulator?</span><br />
+A: It's currently the best NDS emulator around.<br />
+<br />
+<span style="color:#009900">Q: Where can I download it?</span><br />
+A: Read the step 1 above.<br />
+<br />
+<span style="color:#009900">Q: Can it play all roms?</span><br />
+A: It can play almost all ROMs (more than No$gba can!).<br />
+<br />
+<span style="color:#009900">Q: Does it support save? How about save states?</span><br />
+A: In-game save works. <strong>Save state also works.</strong><br />
+<br />
+<span style="color:#009900">Q: The game is too slow, how can I increase the speed?</span><br />
+A: Go <strong>Config</strong> -> <strong>Frame Skip</strong> and select the number of frames to skip. The more frames skipped, the jumpier the graphics, but the faster the game speed. Aside from this, the only other thing you can do is to close all unnecessary programs to free up CPU and RAM.Also see the full solution from the official DeSmuME FAQ: <a href="http://wiki.desmume.org/index.php?title=Faq#DeSmuME_runs_too_slow.21" target="_blank" rel="noopener">DeSmuME runs too slow!</a><br />
+<br />
+<span style="color:#009900">Q: How do I fix inverted colors?</span><br />
+A: I've never had this problem before, but some users say resizing the window will change it back to normal. <em><span style="color:#FF0000"></span></em><br />
+<br />
+<span style="color:#009900">Q: How can I use cheats?</span><br />
+A: Go to <strong>Emulation -> Cheats -> List</strong>. Select "Action Replay" for AR codes, and then just key them in and Add them. Once you are done remember to Save them.For "internal" cheats, where you manually search for and alter the memory positions of the game, refer to <a href="http://wiki.desmume.org/index.php?title=Using_Cheats_in_DeSmuMe" target="_blank" rel="noopener">Using Cheats in DeSmuME</a>.If you get an error about not being able to save your cheats, check <strong>Config -> Path Settings -> Cheats</strong>, and change it to a folder in your Documents that exists and is not read-only.<br />
+<br />
+<span style="color:#009900">Q: How can I resize the screen?</span><br />
+A: From the <strong>View</strong> menu, or simply manually resize the screen from its edges.<br />
+<br />
+<span style="color:#009900">Q: Some games require microphone support, does DeSmuME have it?</span><br />
+A: Yes, though you'll need an actual microphone plugged into your computer for it to work.<br />
+<br />
+<span style="color:#009900">Q: Golden Sun: Dark Dawn's sound is terrible! Can you help?</span><br />
+A: Go to <strong>Config</strong> -> <strong>Sound Settings</strong> -> enable <strong>Advanced SPU Logic</strong> and select one of the <strong>Synchronous</strong> modes.<br />
+More: <a href="http://gbatemp.net/t268336-best-settings-for-desmume-to-get-golden-sun-dark-dawn-working" target="_blank" rel="noopener">Full list of Recommended Settings for this ROM</a><br />
+And here is the ­<a href="http://forums.ngemu.com/desmume-discussion/139938-golden-sun-dark-dawn.html#post1926123" target="_blank" rel="noopener">explanation of this sound problem from the Devs</a>.<br />
+<br />
+<br />
+For more info, read <a href="http://wiki.desmume.org/index.php?title=Faq" target="_blank" rel="noopener">The Official DeSmuME FAQ</a>.<br />
+<strong>Seriously, read the official FAQ. It will help you with most of your problems</strong><strong>.</strong><br />
+<br />
+------------------------------<br />
+<em>Credits:</em><br />
+<em>- Izham for the save states-</em><br />
+<em>phoenix121 for rewriting the entire guide</em><br />
+<em>-</em><em>Ody for the old guide (rewritten by phoenix121)</em><br />
+<em>- qcarachato and xenos219 for updating the [deleted] compatibility list with Ody</em><br />
+EDIT:5/16/08 - Added the newest version is 0.8<br />
+GBATEST1/04/09 - Added the newest version is 0.9 GBATEST<br />
+2/15/09 - Added the newest version is 0.9.1<br />
+GBATEST4/12/09 - Added the newest version is 0.9.2 as reported by <a href="../users/u1073138.html">Huang Fei Hong</a> in this post.<br />
+GBATEST7/8/09 - Added the newest version is 0.9.4<br />
+Sir VG11/30/09 - Added the newest version is 0.9.5 as reported by <a href="../users/u1073138.html">Huang Fei Hong</a> in this post.<br />
+GBATEST4/12/09 - Info on 0.9.5, plus clearing away outdated information. (many thanks to DJNForce9)<br />
+-mohl.6/06/10 - Re-added the update on DeSmuME 0.9.6, thanks to <a href="../users/u1073138.html">Huang Fei Hong</a> as usual.<br />
+-mohl.06/11/10 - Minor updates. Earlier on, added advice on BIOS and Firmware files, and the Enable Advanced Bus-Level Timing setting.<br />
+05/2/11 - Info for 0.9.7 added. Uploads will be done very soon (on the emu download thread of course). Guide not updated, haven't been testing the actual emulator. Thanks to Huang Fei Hong as usual for the info. -Mo­lh.<br />
+1st May 12: 0.9.8 is here! Thanks to Huang Fei Hong for the tip as usual. -Molh.</div>
+</div><div class="post" id="p1845295">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><span class="author">Anime_Manga lover</span></span><span>Nov 17 2006, 11:51 PM</span></div>
+  <div class="body"> ;)  it work you cool B)  B)   ;)    :P  <span style="color:red">POINTS were deducted for this post by atomicknight</span></div>
+</div><div class="post" id="p1847836">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">C</span><span class="author">CABAL- Master Of Cyborgs</span></span><span>Nov 18 2006, 11:13 AM</span></div>
+  <div class="body">Does Zack And Cody: Tipton Trouble Work? <span style="color:red">POINTS were deducted for this post by atomicknight</span></div>
+</div><div class="post" id="p1848078">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Nov 18 2006, 01:17 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">CABAL- Master Of Cyborgs&#x27; post=&#x27;1847836 wrote <span class="qdate">on Nov 18 2006, 07:13 PM</span>:</div>Does Zack And Cody: Tipton Trouble Work?</blockquote>Nope. Read the first post next time.</div>
+</div><div class="post" id="p1848767">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">N</span><span class="author">nhahtdh</span></span><span>Nov 18 2006, 04:12 PM</span></div>
+  <div class="body">Please add into Pokemon Ranger:Fully playable with gfx error (already)Slowliness after the new game screenCant see the people and PokemonAnd add to Pokemon Mystery DungeonCant save</div>
+</div><div class="post" id="p1848968">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Nov 18 2006, 05:18 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">nhahtdh&#x27; post=&#x27;1848767 wrote <span class="qdate">on Nov 19 2006, 12:12 AM</span>:</div>Please add into Pokemon Ranger:Fully playable with gfx error (already)Slowliness after the new game screenCant see the people and PokemonAnd add to Pokemon Mystery DungeonCant save</blockquote>For Pokemon Ranger: no need to be that precise.For Pokemon Mystery Dungeon: it's a redundance since no game can save on DeSmuME.Thanks for your suggestions though.</div>
+</div><div class="post" id="p1849416">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">C</span><span class="author">CABAL- Master Of Cyborgs</span></span><span>Nov 18 2006, 07:37 PM</span></div>
+  <div class="body">I Didn't See Tipton Trouble In  The List, And I Read The List BEFORE I Posted.</div>
+</div><div class="post" id="p1849461">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">F</span><span class="author">firey_chronicles</span></span><span>Nov 18 2006, 07:50 PM</span></div>
+  <div class="body"> :gay2:  is there any emulators that can play Final Fantasy III? There're tones of downloads here but most of them can't even be played  :gay2: ????????   ^_^ </div>
+</div><div class="post" id="p1849840">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Shizuma</span></span><span>Nov 18 2006, 09:21 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">firey_chronicles&#x27; post=&#x27;1849461 wrote <span class="qdate">on Nov 18 2006, 11:50 AM</span>:</div> :(  is there any emulators that can play Final Fantasy III? There're tones of downloads here but most of them can't even be played  :( ????????   ^_^ </blockquote>If you have questions about compatability I believe you are supposed to PM Ody and ask.</div>
+</div><div class="post" id="p1850764">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Nov 19 2006, 01:14 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">CABAL- Master Of Cyborgs&#x27; post=&#x27;1849416 wrote <span class="qdate">on Nov 19 2006, 03:37 AM</span>:</div>I Didn't See Tipton Trouble In  The List, And I Read The List BEFORE I Posted.</blockquote>My list covers only the roms after #600, for your game, click on the links I indicated. Read carefully!<blockquote class="quote"><div class="qhdr">Shizuma&#x27; post=&#x27;1849416 wrote <span class="qdate">on Nov 19 2006, 05:21 AM</span>:</div>If you have questions about compatability I believe you are supposed to PM Ody and ask.</blockquote>NO.Check the compatibility list above!</div>
+</div><div class="post" id="p1854287">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">T</span><span class="author">TATY_DUDE</span></span><span>Nov 19 2006, 09:17 PM</span></div>
+  <div class="body">So basically... i wasted 56 DPs on a game i cant even play ( Tomb Raider: Legend (U) )... Wow im in such a great mood now. Taking time to upload PSX ISO's in order to get some DPs for a game that dosnt even work... any other Emulators that might run the game?</div>
+</div><div class="post" id="p1854684">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Nov 19 2006, 11:18 PM</span></div>
+  <div class="body">Please read this topic:http://www.dgemu.com/forums/index.php?showtopic=68847</div>
+</div><div class="post" id="p1864240">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">D</span><span class="author">Deividson</span></span><span>Nov 22 2006, 05:45 PM</span></div>
+  <div class="body">you should check the list BEFORE downloading a game really. The nintendo DS is a pretty new system, so all the emulators out there are still projects, and nowhere near perfection. If you keep the download and wait a few (months?), prolly a new release/new emulator will run it.</div>
+</div><div class="post" id="p1872900">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">I</span><span class="author">Ice recca</span></span><span>Nov 24 2006, 04:14 PM</span></div>
+  <div class="body">my pokemon ranger doesnt worki go to open and execute then i cant seem to find it(this is the right file)then i change the setting and click on -all files- and i se it then i open it then it shows up with the msg "error this is file nds" what do i have do to?</div>
+</div><div class="post" id="p1872905">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Nov 24 2006, 04:15 PM</span></div>
+  <div class="body">What is the extension of your file?</div>
+</div><div class="post" id="p1900584">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">S</span><span class="author">SerbianEagle</span></span><span>Nov 29 2006, 09:49 PM</span></div>
+  <div class="body"> :blink:  thx for the list  :)    :) </div>
+</div><div class="post" id="p1902721">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">W</span><span class="author">Wezker619</span></span><span>Nov 30 2006, 05:45 AM</span></div>
+  <div class="body">I use Super Card and SUper key so lol I dunno! <span style="color:red">POINTS were deducted for this post by .BM</span></div>
+</div><div class="post" id="p1906764">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">D</span><span class="author">dzk87</span></span><span>Dec 01 2006, 01:43 AM</span></div>
+  <div class="body">pokemon ranger does not work on desmu</div>
+</div><div class="post" id="p1906839">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 01 2006, 01:55 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">dzk87&#x27; post=&#x27;1906764 wrote <span class="qdate">on Dec 1 2006, 09:43 AM</span>:</div>pokemon ranger does not work on desmu</blockquote>Read the first post, it's already mentioned.</div>
+</div><div class="post" id="p1907061">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">W</span><span class="author">wildblitz04</span></span><span>Dec 01 2006, 02:29 AM</span></div>
+  <div class="body">why is it every ds game i play on desume even the one thats green in the list crash instantly</div>
+</div><div class="post" id="p1907099">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">canders5</span></span><span>Dec 01 2006, 02:34 AM</span></div>
+  <div class="body">could u specify more, i can't really understand the problem to help u.</div>
+</div><div class="post" id="p1907243">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">Y</span><span class="author">you dian qiang</span></span><span>Dec 01 2006, 03:09 AM</span></div>
+  <div class="body">could it beyour desume version???</div>
+</div><div class="post" id="p1907533">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 01 2006, 04:16 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">wildblitz04&#x27; post=&#x27;1907061 wrote <span class="qdate">on Dec 1 2006, 10:29 AM</span>:</div>why is it every ds game i play on desume even the one thats green in the list crash instantly</blockquote>It shouldn't. Most probably your emulator is corrupted. Try to redownload the emulator from the link I indicated in the first post.</div>
+</div><div class="post" id="p1909650">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">M</span><span class="author">Megadoomer</span></span><span>Dec 01 2006, 06:55 PM</span></div>
+  <div class="body">It says that Jump Super Stars is 'very slow but playable.' However, despite the fact that I've downloaded the latest version of DeSmuME, and I've downloaded the JSS ROM from this site, I can't move when I start the first mission.</div>
+</div><div class="post" id="p1909925">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">B</span><span class="author">baddi</span></span><span>Dec 01 2006, 08:15 PM</span></div>
+  <div class="body">How can i change the language?I mean, i can play Ace Attorney only in English, but i would like to play it in German.By the way, how is the right configuration?I dont understand "D-Right; D-Down;..."...what does it mean?</div>
+</div><div class="post" id="p1910476">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">D</span><span class="author">dzk87</span></span><span>Dec 01 2006, 10:57 PM</span></div>
+  <div class="body">i did, and the screen says that it works. when i try it, there is just a black screen.</div>
+</div><div class="post" id="p1910880">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 02 2006, 12:59 AM</span></div>
+  <div class="body">@Megadoomer: the game actually doesn't really work. Despite its low speed, there are too many glitchs like the one you had that prevents from a real play.@baddi: which version (give me the number also) you have? D-right just mean 'right'.@dzk87: which rom are you talking about?</div>
+</div><div class="post" id="p1912839">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">B</span><span class="author">baddi</span></span><span>Dec 02 2006, 12:15 PM</span></div>
+  <div class="body">Now, i have got this version here: German NDeSmuME 0.4.0.If it isnt possible to change the language with this version, with which one i can do that?</div>
+</div><div class="post" id="p1913932">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 02 2006, 06:03 PM</span></div>
+  <div class="body">If you have the German version, then the only other available languages are Spanish and Italian. If you want to play the English version, then download it here:http://www.dgemu.com/nds-details-127.html</div>
+</div><div class="post" id="p1914220">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">B</span><span class="author">baddi</span></span><span>Dec 02 2006, 07:06 PM</span></div>
+  <div class="body">No sorry, i meant another thing  :D  :I want to play the German-Version of Ace Attorney, but i cant change the language in the game.I had two versions, one is the US version and the other one is Spanish.But can i also change the language within the game?<span style="color:#3333FF">Sorry I don't know the answer then, wait for someone else to answer maybe.</span></div>
+</div><div class="post" id="p1925435">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">J</span><span class="author">jase93</span></span><span>Dec 05 2006, 02:01 AM</span></div>
+  <div class="body">i tried playing ace attorney, but when i tried to open it, it said "error this is file nds." What is wrong? I thought that i would probably need a .nds file, but there are no .nds files at dgemu... are there?</div>
+</div><div class="post" id="p1925445">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 05 2006, 02:03 AM</span></div>
+  <div class="body">You have to extract the .nds file from the .zip file you download.</div>
+</div><div class="post" id="p1930397">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">S</span><span class="author">soy-chema</span></span><span>Dec 06 2006, 07:06 AM</span></div>
+  <div class="body">Hmm, so does it mean that Pokemon ranger cannot be played? (I mean with people and pokemon) Or can I play it on any other emulators? Thanks for helping.<blockquote class="quote"><div class="qhdr">nhahtdh&#x27; post=&#x27;1848767 wrote <span class="qdate">on Nov 18 2006, 11:12 AM</span>:</div>Please add into Pokemon Ranger:Fully playable with gfx error (already)Slowliness after the new game screenCant see the people and PokemonAnd add to Pokemon Mystery DungeonCant save</blockquote></div>
+</div><div class="post" id="p1930469">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 06 2006, 08:10 AM</span></div>
+  <div class="body">It cannot be really played on any emulator.</div>
+</div><div class="post" id="p1940175">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u984502.html">pral</a></span><span>Dec 09 2006, 05:25 AM</span></div>
+  <div class="body">On the games I've tried to play have a weird inverted color. It corrects itself when opening the menu on the emulator but returns to the funny colors as soon as letting go. Does anyone know if this is a problem with the roms or the emulator?</div>
+</div><div class="post" id="p1940237">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 09 2006, 05:45 AM</span></div>
+  <div class="body">It is the emulator. DeSmuME has some reports about inverted colors. There is nothing you can do.</div>
+</div><div class="post" id="p1940281">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">D</span><span class="author">Dekar_Serverbot</span></span><span>Dec 09 2006, 06:06 AM</span></div>
+  <div class="body">DeSmuME is still a baby... it isn't a good emulator now, i wish that he was more complete</div>
+</div><div class="post" id="p1942163">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">B</span><span class="author">BarbangPie</span></span><span>Dec 09 2006, 06:50 PM</span></div>
+  <div class="body">My computer won't let me extract the .nds file from any of the .zip files i download from your site, WHY???   :yawn: </div>
+</div><div class="post" id="p1942245">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Dec 09 2006, 07:22 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">BarbangPie&#x27; post=&#x27;1942163 wrote <span class="qdate">on Dec 10 2006, 07:50 AM</span>:</div>My computer won't let me extract the .nds file from any of the .zip files i download from your site, WHY???   :yawn: </blockquote>Are you using Windows XP? if you are, you can open the zip file and click "extract all files" on the pane at the left, which starts a wizard to extract the files. Alternatively, you can drag the files to your desktop which also extracts them.If you are not using Windows XP, you can download <a href="http://www.winzip.com/" target="_blank" rel="noopener">WinZip</a> to extract the files. Personally, i'd recommend <a href="http://www.rarlab.com/" target="_blank" rel="noopener">WinRAR</a>.</div>
+</div><div class="post" id="p1942448">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">M</span><span class="author">machiaveli42</span></span><span>Dec 09 2006, 08:17 PM</span></div>
+  <div class="body">umm... what about the fulletal game?</div>
+</div><div class="post" id="p1943159">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 09 2006, 11:59 PM</span></div>
+  <div class="body">@machiaveli42: don't post the same message everywhere, read the first post.@BarbangPie: don't use Winzip or the default zip software in XP, they have issue to open our zip files. Instead as pheonix said, use Winrar or 7-zip to extract them.</div>
+</div><div class="post" id="p1947820">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u620840.html">SearchBomber</a></span><span>Dec 10 2006, 10:41 PM</span></div>
+  <div class="body">SNK vs. Capcom: Card Fighters DS works until an attack is executed.</div>
+</div><div class="post" id="p1947909">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">Z</span><a class="author" href="../users/u877994.html">ZezimaXX</a></span><span>Dec 10 2006, 11:03 PM</span></div>
+  <div class="body">on pokemon in ranger and blue rescue the spites dont show up is there a way to fix this?</div>
+</div><div class="post" id="p1948203">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 10 2006, 11:58 PM</span></div>
+  <div class="body">There is nothing that can be done to fix it.</div>
+</div><div class="post" id="p1987856">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">D</span><span class="author">Darklugiaxcross</span></span><span>Dec 22 2006, 01:26 AM</span></div>
+  <div class="body">Now i know what to get from DGEmu.com</div>
+</div><div class="post" id="p1988292">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">K</span><span class="author">kirlia</span></span><span>Dec 22 2006, 04:09 AM</span></div>
+  <div class="body">Is it just our computer or the emulator that has the problem?When I play a rom in DeSmuMe the game seems <strong>SLOW</strong>!And no sound/music is playing. (doesn't the emulatorplay sounds?)   ^_^ </div>
+</div><div class="post" id="p1988405">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Dec 22 2006, 04:41 AM</span></div>
+  <div class="body">Sound: <em>"At this time DeSmuME DOES NOT emulate sound for the Nintendo DS games. That is one of the things that you will see added in the future releases of the emulator."</em> - on the official website.SLOW: it's the emulator. it has to read the DS instruction, change it so your PC can understand then execute it. get a faster computer and it'll run faster. OR you can wait until better releases come out (ie. in a coupla years)</div>
+</div><div class="post" id="p1988802">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Soundoreo!</span></span><span>Dec 22 2006, 07:29 AM</span></div>
+  <div class="body">When it says for Full metal alchemist (Seems to be working) does that include gameplay? because i have 56k and i don't wanna download it and see it doesn't work</div>
+</div><div class="post" id="p1989118">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Dec 22 2006, 09:42 AM</span></div>
+  <div class="body">I couldn't get gameplay to work. The menu and cutscenes play pretty well though, just some slight lag.</div>
+</div><div class="post" id="p1995851">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">D</span><span class="author">Davin</span></span><span>Dec 24 2006, 04:39 PM</span></div>
+  <div class="body">Hey guys D here. Just wanted to let u guys know that the new version of DeSmuME has just been released! Now this new version has SOUND AND SAVE STATE. So u can now hear the game along with saving it. This indeed is very big news for the DS emulators do to the fact that this is the first DS emulator that now has sound and can actually save. Im sure some new games can be played on it too, but im guessing still that not all can be played. though even without certain games.. the sound and save state alone is a very big accomplishment. If u want source and the download go here:Homepage for source: <a href="http://desmume.sourceforge.net/" target="_blank" rel="noopener">Homepage</a>Download: <a href="http://files.ngemu.com/nds/desmume/download/desmume-0.5.0-win.zip" target="_blank" rel="noopener">DeSmuME 0.5.0</a></div>
+</div><div class="post" id="p1995903">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">G</span><span class="author">gop23</span></span><span>Dec 24 2006, 05:06 PM</span></div>
+  <div class="body">ok i'd just try 2 game already : harvest moon ds works perfectly. digimon ds works but a little bit slow.. more lateredits: yoshi island ds works perfectly</div>
+</div><div class="post" id="p1997003">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">-</span><a class="author" href="../users/u491638.html">-=$fAnG$=-</a></span><span>Dec 24 2006, 11:38 PM</span></div>
+  <div class="body">lol thx mod, this was really helpful</div>
+</div><div class="post" id="p1998114">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">N</span><span class="author">Nephilim123</span></span><span>Dec 25 2006, 01:27 PM</span></div>
+  <div class="body">Um, just a thought, I think you should updated the first post, put - the current version is 5.0 instead of leaving it on 4.0, might throw off new comers  :lazy:  (I dont know if compatabilities have changed or not...).It say this on the Change Log:0.3.3 -> 0.5.0 arm:  - Fixed MSR with immediate value opcode.  - Fixed LSR_0 thumb opcode (C flag is correctly set now).  - Fixed LDR*/STR* opcodes.  - Fixed unaligned memory access on THUMB Core.  - Added relocating SWI routines. bios:  - Added decompression functions.  - Added GetPitchTable function.  - Added GetVolumeTable function.  - Added GetCRC16 function.  - Added experimental SoundBias function.  - Added GetSineTable function. cart:  - Added CompactFlash/FAT emulation.  - Added Get ROM chip ID Cartridge command. gpu:  - Added framebuffer emulation.  - Fixed a bug in GPU (xfin could be greater than LG causing a segfault).  - Added support for Display Mode 0(Display Off).  - Added the basic framework for Display Mode 3(Display from Main RAM). spu:  - Added sound emulation.  - Added sound core system.  - Added WAV write core.  - Added dummy core.  - Added Direct Sound core. linux port:  - Added GTK+ GUI.  - Added command line interface.  - Added stylus and arm9 keypad support in CLI version.  - Added FPS display.  - Added basic frameskip. windows port:  - Fixed a bug when displaying a ROM's information.  - Added key configuration.  - Removed the debug key.  - Added new experimental auto frameskip/frame limit code.  - Added sound settings dialog.  - Added a few menu options for accessing the website, forums, and for    submitting bugs. general:  - Rewrote code in C.  - Fixed warnings.  - Used defines and typedef's to make things more portable and easier to    read.  - Added autotools stuff.  - Changes to logging system.  - Added screenshot function.  - Translated most french to english.  - Added savestate support.  - Added firmware reading support(needs work).  - Added Backup Memory support with autodetection.  - Fixed some endianess issues.  - Fixed things so Visual C++ can compile code.  - Added bsd support.  - Reworked ROM loading so you can load a different rom without any problems.  - Finished NDS_Reset. Now the emulation can be reset even while running.EDIT: Nevermind, it is 5.0... lol just read the 2nd post above this one  XD  Qute a coincidence that I download v5.0 a day after its release... ah wells.Well, if anybody has it... can you test Jump Ultimate Stars (j)? I just wanna know if that game works alright  XD  I'll be waiting a post...</div>
+</div><div class="post" id="p1998117">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 25 2006, 01:30 PM</span></div>
+  <div class="body">Well I don't see the point of adding this on the first post. No one understands these technical specifications. What interests everyone is the compatibility. I'll carry out the tests with this new version from now on.</div>
+</div><div class="post" id="p1998126">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">N</span><span class="author">Nephilim123</span></span><span>Dec 25 2006, 01:36 PM</span></div>
+  <div class="body">Alright, I will await your uh... "Discoveries"  :lazy:  *Hopes Ody test's Jump Ultimate Stars*</div>
+</div><div class="post" id="p1998134">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 25 2006, 01:39 PM</span></div>
+  <div class="body">I'll probably not retest previous games because there are too many, sorry.</div>
+</div><div class="post" id="p1998141">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">N</span><span class="author">Nephilim123</span></span><span>Dec 25 2006, 01:43 PM</span></div>
+  <div class="body">Bah... alright, I understand... Hopefully I get 40 something NDS/DP's before anyone else tests it... which is unlikely at this rate :Pum if you dont mind me asking however... what games ARE you going to test? You dont have to name them all, just a few.</div>
+</div><div class="post" id="p1998166">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 25 2006, 02:20 PM</span></div>
+  <div class="body">I will test all the future roms.</div>
+</div><div class="post" id="p1999604">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">U</span><span class="author">unknown dragoon</span></span><span>Dec 26 2006, 02:56 AM</span></div>
+  <div class="body">i'm using the new 5.0 version and some of the games that half work work kinda better plus it has sound.</div>
+</div><div class="post" id="p1999659">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 26 2006, 03:21 AM</span></div>
+  <div class="body">Well I guess the purpose of newer version is to work better :rolleyes:So nothing to worry about it  :rolleyes: </div>
+</div><div class="post" id="p2001352">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">R</span><a class="author" href="../users/u112280.html">RockmanRotties</a></span><span>Dec 26 2006, 04:32 PM</span></div>
+  <div class="body"><a href="http://desmume.sourceforge.net/downloads/" target="_blank" rel="noopener">http://desmume.sourceforge.net/downloads/</a>Click Windows Binary if you are Windows usersClick Linux Binary if you are Linux users.Remember, do not complaint if the games are slower than the previous version or the game is no longer working. :wtf:Do not forgot to drop your nice messages over there to cheers them on. The next version will be better, hopefully. Now, enjoy this release! and make a screenshots if you want. HAVE FUN! GO!</div>
+</div><div class="post" id="p2001360">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">P</span><span class="author">popani</span></span><span>Dec 26 2006, 04:33 PM</span></div>
+  <div class="body">o goodie    XD </div>
+</div><div class="post" id="p2001458">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">R</span><a class="author" href="../users/u112280.html">RockmanRotties</a></span><span>Dec 26 2006, 05:08 PM</span></div>
+  <div class="body">Please help this emulator and drop a line in their site to say thank you and happy holidays, huh ?  XD  XD </div>
+</div><div class="post" id="p2008561">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u658712.html">HardGay</a></span><span>Dec 28 2006, 11:36 PM</span></div>
+  <div class="body">Great work, thanks.</div>
+</div><div class="post" id="p2009077">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><span class="author">Kawaiidreamer</span></span><span>Dec 29 2006, 03:04 AM</span></div>
+  <div class="body">can u update more information on which rom works which one not?please.  thank you</div>
+</div><div class="post" id="p2009110">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 29 2006, 03:20 AM</span></div>
+  <div class="body">What do you mean by more?</div>
+</div><div class="post" id="p2011811">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">D</span><span class="author">darkziel</span></span><span>Dec 29 2006, 09:18 PM</span></div>
+  <div class="body">some games haven't sound?or the emulator hasn't sound???i have download the Pokemon Mystery Dungeon - Blue Rescue Team and the game works but there are no sound?and the game info in dgemu.com says Languages: Multi 5and i can't change the languagesomeone can help me?(the language isn't very important, but the sound Y_Y!!!!!!!!!!!!!!!!!)</div>
+</div><div class="post" id="p2012733">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 30 2006, 02:52 AM</span></div>
+  <div class="body">v4.0 has no sound but v5.0 has. Download it here:<a href="http://desmume.sourceforge.net/downloads/" target="_blank" rel="noopener">http://desmume.sourceforge.net/downloads/</a></div>
+</div><div class="post" id="p2013099">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">N</span><span class="author">new_dude2</span></span><span>Dec 30 2006, 05:45 AM</span></div>
+  <div class="body">sorry but i'm really bad at finding something in a long list, but is bleach ds playable on the emulator</div>
+</div><div class="post" id="p2013142">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 30 2006, 05:54 AM</span></div>
+  <div class="body">Use the search function of your browser. If you use IE, just click CTRL+F and input "bleach".</div>
+</div><div class="post" id="p2015048">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">rogeragev</span></span><span>Dec 30 2006, 10:58 PM</span></div>
+  <div class="body">I try playing GS2 on english but the bottom screen is blank, all it shows is the backgroung even when trying to do stuff on the bottom screen. Is there a way to fix it? i really wanna try this game.</div>
+</div><div class="post" id="p2015266">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 31 2006, 12:10 AM</span></div>
+  <div class="body">You tried to play a GBA game on a DS emulator?</div>
+</div><div class="post" id="p2015302">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">rogeragev</span></span><span>Dec 31 2006, 12:23 AM</span></div>
+  <div class="body">no the DS version of GS2 but this game isn't the only one with that problem. the new castlevania works but the bottom screen doesn't show anything but background.</div>
+</div><div class="post" id="p2015342">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u956671.html">hookshot-</a></span><span>Dec 31 2006, 12:36 AM</span></div>
+  <div class="body">Yoshi's Island DS is like the only good game on the working games list.</div>
+</div><div class="post" id="p2016552">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Dec 31 2006, 11:27 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">rogeragev&#x27; post=&#x27;2015302 wrote <span class="qdate">on Dec 31 2006, 08:23 AM</span>:</div>no the DS version of GS2 but this game isn't the only one with that problem. the new castlevania works but the bottom screen doesn't show anything but background.</blockquote>Since when there is a GS2 game on DS?For Castlevania: Dawn of Sorrow, it's normal, no emulator runs it correctly.</div>
+</div><div class="post" id="p2017435">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">X</span><span class="author">XdanyX</span></span><span>Dec 31 2006, 06:54 PM</span></div>
+  <div class="body">Hey, does Castlevania - DoS or PoR works any better in v5.0, I'm asking because I don't want to download it and see it does not wor properly...</div>
+</div><div class="post" id="p2018483">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><span class="author">Pedrotorres</span></span><span>Jan 01 2007, 01:01 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">hookshotlink&#x27; post=&#x27;2015342 wrote <span class="qdate">on Dec 31 2006, 12:36 AM</span>:</div>Yoshi's Island DS is like the only good game on the working games list.</blockquote>  XD    noooope, Digimon World DS and Harvest Moon DS are good games  B)</div>
+</div><div class="post" id="p2018785">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">K</span><span class="author">kirlia</span></span><span>Jan 01 2007, 02:53 AM</span></div>
+  <div class="body">Um. What does the SOURCE CODE do??   XD </div>
+</div><div class="post" id="p2020347">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u307755.html">sottal</a></span><span>Jan 01 2007, 01:26 PM</span></div>
+  <div class="body">Does Pokemon Ranger work on Desmume 5.0?</div>
+</div><div class="post" id="p2021336">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">T</span><span class="author">tomas 24</span></span><span>Jan 01 2007, 07:43 PM</span></div>
+  <div class="body">Does the rom super mario 64 ds works in emulators? Tell me fast!  >.&lt; </div>
+</div><div class="post" id="p2022236">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">W</span><span class="author">welsy</span></span><span>Jan 02 2007, 12:34 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">sottal&#x27; post=&#x27;2020347 wrote <span class="qdate">on Jan 2 2007, 12:26 AM</span>:</div>Does Pokemon Ranger work on Desmume 5.0?</blockquote>Yes it works but there are gfx problems eg u cant see sprites</div>
+</div><div class="post" id="p2022355">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">M</span><span class="author">Mystery_Dungeon</span></span><span>Jan 02 2007, 01:08 AM</span></div>
+  <div class="body">Well, I was looking on the internet and someone got a screenshot of Ranger:<img src="http://dsmedia.ign.com/ds/image/article/732/732944/pokemon-ranger-20060915062112582.jpg" loading="lazy" class="post-img">Now, My Desmume 5.0 plays Pokemon Ranger, but the sprites are showing up.  I saw the above post that said there were gfx problems (I have no idea what gfx means).  Now, is there a certain emulator that will play the Pokemon Ranger sprites?  There should be seeing this picture here.</div>
+</div><div class="post" id="p2022455">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Jan 02 2007, 01:55 AM</span></div>
+  <div class="body">The picture can be taken from the real game. Some were realesed way before the game was released anyway.I didn't test the game for DeSmuME 5.0 and I can't do it within a near future since the earthquake in Taiwan cause a serious lag in all international connection so that I can't download the rom. Either wait for a few weeks before my connection recover or download it at your own risk.For information, on DeSmuME 4.0, the game works but the sprites are invisible. (gfx mean graphic)</div>
+</div><div class="post" id="p2023982">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">E</span><span class="author">exe.data</span></span><span>Jan 02 2007, 01:51 PM</span></div>
+  <div class="body"><img src="http://i130.photobucket.com/albums/p268/exedata/PokemonRangerDeSmuME5.jpg" loading="lazy" class="post-img">well that is Pokemon Ranger with DeSmuME 5.0</div>
+</div><div class="post" id="p2024199">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">M</span><span class="author">megaxvx</span></span><span>Jan 02 2007, 03:02 PM</span></div>
+  <div class="body">I think you better wait the next version cause the shash's 3D code is not include on this version.</div>
+</div><div class="post" id="p2028054">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">M</span><span class="author">mvbdx</span></span><span>Jan 03 2007, 12:19 PM</span></div>
+  <div class="body">i can run big brain academy.very nice!i offer to u 2 play this game  :(  (with v0.5)without problem & err.</div>
+</div><div class="post" id="p2028162">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">T</span><a class="author" href="../users/u18013.html">timever</a></span><span>Jan 03 2007, 01:35 PM</span></div>
+  <div class="body">With version 0.5.0 you can play Kirby Squeak Squad.</div>
+</div><div class="post" id="p2031839">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">B</span><span class="author">blackbox12</span></span><span>Jan 04 2007, 11:47 AM</span></div>
+  <div class="body">uh, what's Desmume 0.5? The website only is up to 0.4.0, isn't it?</div>
+</div><div class="post" id="p2031843">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Jan 04 2007, 11:50 AM</span></div>
+  <div class="body">The main website is not updated. Download it from the first post on the page 5 of this thread.</div>
+</div><div class="post" id="p2033083">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">D</span><span class="author">darkziel</span></span><span>Jan 04 2007, 09:55 PM</span></div>
+  <div class="body">what's the meaning of 0735 - Castlevania - Portrait of Ruin (U) [Could not write the data]what's the meaning of couldn't write data???with this is unplayable??cause the game costs much DP's and if the game doesn't work... Y_Y!!!!!!so please tell me what's couldn't write data</div>
+</div><div class="post" id="p2033144">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Jan 04 2007, 10:26 PM</span></div>
+  <div class="body">With version 0.4.0, because it doesn't support saves, it can't write the save file ("data" = save data), so the game couldn't start. However, with version 0.5.0, it now supports saves so you can start the game.I just tested it, you can't see the bottom screen in the menu and during the game, so you can't play the game. However, I'm amazed it can play the video that plays when you press B.</div>
+</div><div class="post" id="p2033200">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">D</span><span class="author">darkziel</span></span><span>Jan 04 2007, 10:47 PM</span></div>
+  <div class="body">DAMN!!!another castlevania is playable in this emulator??or an rpg game??a recommended game for me?please!i'm very bored Y_Y</div>
+</div><div class="post" id="p2033378">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Jan 04 2007, 11:51 PM</span></div>
+  <div class="body">It means it doesn't work. Look at the emulation FAQ next time.</div>
+</div><div class="post" id="p2034180">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Jan 05 2007, 04:18 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">darkziel&#x27; post=&#x27;2033200 wrote <span class="qdate">on Jan 5 2007, 11:47 AM</span>:</div>DAMN!!!another castlevania is playable in this emulator??or an rpg game??a recommended game for me?please!i'm very bored Y_Y</blockquote>Look at the official RPG games discussion thread for games to try:http://www.dgemu.com/forums/index.php?showtopic=139604</div>
+</div><div class="post" id="p2035529">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">caela</span></span><span>Jan 05 2007, 12:42 PM</span></div>
+  <div class="body">I'm really confused now. If really desmume.com is the official page of DeSemuME, why doesn't it show the DeSemuME 0.5 download featured at <a href="http://desmume.sourceforge.net/downloads/" target="_blank" rel="noopener">http://desmume.sourceforge.net/downloads/</a>Is it maybe only the NDeSmuME a mod by Normmatt (one of the developers) where he writes at<a href="http://www.desmume.com/ndesmume.htm" target="_blank" rel="noopener">http://www.desmume.com/ndesmume.htm</a><blockquote class="quote"><div class="qhdr">someone wrote:</div>... Arrived to the version the 0.5.0 firm plan. After that many have advised me to modify the name to the emulator in order not to create confusion I have decided to call it NDeSmuMe.</blockquote></div>
+</div><div class="post" id="p2037842">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">M</span><span class="author">mvbdx</span></span><span>Jan 06 2007, 07:06 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">darkziel&#x27; post=&#x27;2033200 wrote <span class="qdate">on Jan 5 2007, 02:17 AM</span>:</div>DAMN!!!another castlevania is playable in this emulator??or an rpg game??a recommended game for me?please!i'm very bored Y_Y</blockquote>my friend, u can run harvest moon ds or pokmen (all ver!)guys, i played yoshi's island ds with this emu!!nice, very nice!good luck</div>
+</div><div class="post" id="p2038213">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">Y</span><a class="author" href="../users/u783769.html">Yunagi</a></span><span>Jan 06 2007, 10:44 AM</span></div>
+  <div class="body">do i have to download ALL of them?</div>
+</div><div class="post" id="p2038535">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Jan 06 2007, 02:39 PM</span></div>
+  <div class="body">Please stop going off topic. This thread is about DeSmuME, not for recommending RPGs. Next person going off topic is warned.</div>
+</div><div class="post" id="p2038864">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">B</span><span class="author">baddi</span></span><span>Jan 06 2007, 05:43 PM</span></div>
+  <div class="body">Ody,when will you update the compatibility list of DeSmuME?</div>
+</div><div class="post" id="p2038916">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Jan 06 2007, 06:07 PM</span></div>
+  <div class="body">Ody can't test them, because of the earthquake in Taiwan that stuffed up internet cables in China.<blockquote class="quote"><div class="qhdr">Ody&#x27; post=&#x27;2022455 wrote <span class="qdate">on Jan 2 2007, 02:55 PM</span>:</div>I didn't test the game for DeSmuME 5.0 and I can't do it within a near future since the earthquake in Taiwan cause a serious lag in all international connection so that I can't download the rom. Either wait for a few weeks before my connection recover or download it at your own risk.</blockquote></div>
+</div><div class="post" id="p2040781">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">Y</span><a class="author" href="../users/u783769.html">Yunagi</a></span><span>Jan 07 2007, 06:11 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Ody&#x27; post=&#x27;2038535 wrote <span class="qdate">on Jan 7 2007, 01:39 AM</span>:</div>Please stop going off topic. This thread is about DeSmuME, not for recommending RPGs. Next person going off topic is warned.</blockquote>.. im not really sure if your talking to me but if you are then sorry.</div>
+</div><div class="post" id="p2042889">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">D</span><span class="author">deathxbat</span></span><span>Jan 08 2007, 12:00 AM</span></div>
+  <div class="body">i clicked the link for the desume emulator thing, and when i click ndesume version 5.0  it shows a new window, and says "Server Not Found"  i use FireFox.  i have also tried useing IE and it still didnt work.  why is this? any other link? maybe link to the exact download file?</div>
+</div><div class="post" id="p2042894">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Jan 08 2007, 12:03 AM</span></div>
+  <div class="body">The link on the official website is broken. Wait for a few days to see whether it is operational again.Or use the link on the first post of the page 4 in this thread.</div>
+</div><div class="post" id="p2043410">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">S</span><span class="author">ShadyTK</span></span><span>Jan 08 2007, 03:10 AM</span></div>
+  <div class="body">cant download none of em man dang <span style="color:red">POINTS were deducted for this post by qcarachato</span><span style="color:#654321">Please, stay on topic. In this thread we discuss DeSmuME's Compatibility List.Download problems does not belong here.</span></div>
+</div><div class="post" id="p2049035">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Red.</span></span><span>Jan 10 2007, 02:52 AM</span></div>
+  <div class="body">Kirby Squeak Squad don't show backgrounds with 0.5.0.</div>
+</div><div class="post" id="p2055644">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">Q</span><span class="author">qcarachato</span></span><span>Jan 12 2007, 07:04 AM</span></div>
+  <div class="body"><span style="color:#654321">Since Ody is having some problems getting the ROMs (connection issues), I'm gonna take care of this list for a while.If some of the info is incorrect, please feel free to PM me and I'll recheck it and update the list if needed.Tested games from 0783 to 0810.Used DeSmuME v0.5.0Got it from here:<a href="http://desmume.sourceforge.net/downloads/" target="_blank" rel="noopener">http://desmume.sourceforge.net/downloads/</a></span></div>
+</div><div class="post" id="p2059228">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">T</span><span class="author">t3h_n00berer</span></span><span>Jan 13 2007, 08:26 AM</span></div>
+  <div class="body">Has anyone tested out Tetris DS? I don't see it in the list...  :D </div>
+</div><div class="post" id="p2059271">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">M</span><span class="author">mvbdx</span></span><span>Jan 13 2007, 08:40 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">t3h_n00berer&#x27; post=&#x27;2059228 wrote <span class="qdate">on Jan 13 2007, 11:56 AM</span>:</div>Has anyone tested out Tetris DS? I don't see it in the list...  :D </blockquote>yes, i tested that! but... i cant run that! black page and nothing!</div>
+</div><div class="post" id="p2073209">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">M</span><span class="author">Meehyn</span></span><span>Jan 17 2007, 05:36 AM</span></div>
+  <div class="body"><span style="color:#008000">So no Rockman ZX??That's nice...</span></div>
+</div><div class="post" id="p2075528">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><span class="author">Protoavis</span></span><span>Jan 17 2007, 11:24 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Meehyn&#x27; post=&#x27;2073209 wrote <span class="qdate">on Jan 17 2007, 05:36 AM</span>:</div><span style="color:#008000">So no Rockman ZX??That's nice...</span></blockquote>It's being worked on, it's almost working now if you use the latest CVS....but it's slowYou can get information about the CVS at <a href="http://desmume.sourceforge.net/forums/" target="_blank" rel="noopener">http://desmume.sourceforge.net/forums/</a></div>
+</div><div class="post" id="p2085748">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">S</span><span class="author">sakyh</span></span><span>Jan 20 2007, 08:52 PM</span></div>
+  <div class="body">I downlaoded elctroplankton & tried to run it, but all it does is flash & say intermission. Does this mean I can't play it? WHen a new version becomes avalabile (sp>>) will it be metioned here? (ill just keep the rom till there is one that'll run it)It might help to make a list of DS ROMs that are fully playable, so they know what's OK to DL. I don't know how much time that would take though....Anyways, enough of my blabbing, Thanks for all the info!</div>
+</div><div class="post" id="p2086683">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Jan 21 2007, 02:17 AM</span></div>
+  <div class="body">The first post DOES tell you which games work.Anyway, read the first post to see whether Electroplankton is supposed to work.We will not retest all roms when a new version is out. This will require too much work.</div>
+</div><div class="post" id="p2095477">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">I</span><span class="author">I3lackI3lue</span></span><span>Jan 23 2007, 05:44 AM</span></div>
+  <div class="body">Nintendo ds emulator is so hard to make it work.... So many roms don't work. That suks</div>
+</div><div class="post" id="p2097934">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">X</span><span class="author">xathil</span></span><span>Jan 24 2007, 12:17 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Ody&#x27; post=&#x27;2086683 wrote <span class="qdate">on Jan 20 2007, 06:17 PM</span>:</div>The first post DOES tell you which games work.Anyway, read the first post to see whether Electroplankton is supposed to work.We will not retest all roms when a new version is out. This will require too much work.</blockquote>maybe spread out the work load?  XD  i would totally be up for testing if you send me the romsoh and whoever got that pokemon ranger pic.. its from IGN.com. says on the bottom right. which means it was a shot taken from an actual DS.</div>
+</div><div class="post" id="p2098175">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">T</span><span class="author">thegunzm4ster</span></span><span>Jan 24 2007, 01:18 AM</span></div>
+  <div class="body">i got 1 of those gay things wherethe colors for most images that aren't 3d are a bluish inverty thing.  and in naruto:shinobi ratsudan, the top screen is pure white.  i think Jump super stars would work, but i get so irritated with the invert i quit before the opening ends.  does anyone know if i can fix this, or is it just impossible and i am screwed.</div>
+</div><div class="post" id="p2098310">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Jan 24 2007, 01:50 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">xathil&#x27; post=&#x27;2097934 wrote <span class="qdate">on Jan 24 2007, 08:17 AM</span>:</div>maybe spread out the work load?  XD  i would totally be up for testing if you send me the roms</blockquote>Errr... that would take years to send all these roms, rather test this myself directly... if I had the roms  XD </div>
+</div><div class="post" id="p2099457">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">M</span><span class="author">mvbdx</span></span><span>Jan 24 2007, 07:31 AM</span></div>
+  <div class="body">anyone tested Hotel Dusk: Room 215 on emu? if anyone tested that, please aware me.this game should be an great adventure on ds.</div>
+</div><div class="post" id="p2099461">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">P</span><span class="author">pkmdungeonred</span></span><span>Jan 24 2007, 07:33 AM</span></div>
+  <div class="body">desmume 0.5.0 isnt very good the  fastest it can do is 9 frame skips -.-</div>
+</div><div class="post" id="p2101028">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">T</span><span class="author">thegunzm4ster</span></span><span>Jan 24 2007, 10:30 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">someone wrote:</div>i got 1 of those gay things wherethe colors for most images that aren't 3d are a bluish inverty thing. and in naruto:shinobi ratsudan, the top screen is pure white. i think Jump super stars would work, but i get so irritated with the invert i quit before the opening ends. does anyone know if i can fix this, or is it just impossible and i am screwed.</blockquote>no one answered me, so i'll say it again.  i just wanna play Jump Super Stars, and i don't have a DS.<span style="color:#3333FF">Don't post twice the same message. If no one answered, it's because no one knows. Next time you are warned.</span></div>
+</div><div class="post" id="p2101348">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><span class="author">Protoavis</span></span><span>Jan 25 2007, 12:10 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">pkmdungeonred&#x27; post=&#x27;2099461 wrote <span class="qdate">on Jan 24 2007, 07:33 AM</span>:</div>desmume 0.5.0 isnt very good the  fastest it can do is 9 frame skips -.-</blockquote>Set it to 0 frameskips (or whatever...dont leave it on auto) some people have gotten up to 60, although they might be using the latest CVS *shrug* You can find a guide to compiling the CVS to get the most current build of the emu at <a href="http://desmume.sourceforge.net/forums/" target="_blank" rel="noopener">http://desmume.sourceforge.net/forums/</a></div>
+</div><div class="post" id="p2101389">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Jan 25 2007, 12:20 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">pkmdungeonred&#x27; post=&#x27;2099461 wrote <span class="qdate">on Jan 24 2007, 08:33 PM</span>:</div>desmume 0.5.0 isnt very good the  fastest it can do is 9 frame skips -.-</blockquote>why is 9 frame skips "not very good"?<blockquote class="quote"><div class="qhdr">thegunzm4ster&#x27; post=&#x27;2101028 wrote <span class="qdate">on Jan 25 2007, 11:30 AM</span>:</div>no one answered me, so i'll say it again.  i just wanna play Jump Super Stars, and i don't have a DS.</blockquote>Then wait until emulators get better. Or get a DS.<blockquote class="quote"><div class="qhdr">Protoavis&#x27; post=&#x27;2101348 wrote <span class="qdate">on Jan 25 2007, 01:10 PM</span>:</div>Set it to 0 frameskips (or whatever...dont leave it on auto) some people have gotten up to 60, although they might be using the latest CVS *shrug* You can find a guide to compiling the CVS to get the most current build of the emu at <a href="http://desmume.sourceforge.net/forums/" target="_blank" rel="noopener">http://desmume.sourceforge.net/forums/</a></blockquote>Frame skips and Frame rate are 2 different things... frame rate is supposed to be 60, and I can get that on my 1.5GHz computer, for some games.CVS has nothing to do with the program itself. Look it up on <a href="http://en.wikipedia.org/wiki/Concurrent_Versions_System" target="_blank" rel="noopener">Wikipedia</a>.And you don't need to compile any code yourself. All the binaries are up for download from <a href="http://desmume.sourceforge.net/" target="_blank" rel="noopener">http://desmume.sourceforge.net/</a></div>
+</div><div class="post" id="p2110508">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">L</span><span class="author">Lavanda</span></span><span>Jan 27 2007, 11:49 AM</span></div>
+  <div class="body">Does Harvest Moon DS work well on this? Anyone know?Update: I've tested HM DS on this emulator and it works fine so far, it did get stuck when I was creating my character but I've read this game has many glitches in anyway and one of them is freezing up. I'll keep you posted as i've heard the friendship points meter sometimes resets every day.</div>
+</div><div class="post" id="p2117304">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">O</span><span class="author">Omegalord</span></span><span>Jan 29 2007, 04:45 AM</span></div>
+  <div class="body">Does Ryuusei no Rockman work on this emulator?</div>
+</div><div class="post" id="p2125624">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">M</span><span class="author">megaxvx</span></span><span>Jan 31 2007, 01:32 PM</span></div>
+  <div class="body">Well!! I got a news for all Rockman zx fan's, a new released version of DesmuMe 0.5 fix can emulate rockman zx to 97%.Here is the official page<a href="http://amponzi.googlepages.com/" target="_blank" rel="noopener">amponzi DesmuMe</a>Have Fun!!!</div>
+</div><div class="post" id="p2128640">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u40799.html">kiza19</a></span><span>Feb 01 2007, 09:10 AM</span></div>
+  <div class="body">I tried to play trauma center  on desmume and it keeps freezing is there anything I can do. I checked your links to look at the compatability lists and it said that it should be compatablegot it working</div>
+</div><div class="post" id="p2128859">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">G</span><span class="author">genogenogeno</span></span><span>Feb 01 2007, 12:25 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">someone wrote:</div>Well!!I got a news for all Rockman zx fan's, a new released version of DesmuMe 0.5 fix can emulate rockman zx to 97%.</blockquote>That may be so, but it can't emulate Megaman ZX very well. It's slow, and a gfx layer doesn't show in the upper screen. This is both with DesmuMe 0.5 and the WIP build in your link.</div>
+</div><div class="post" id="p2129255">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Feb 01 2007, 03:24 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">kiza19&#x27; post=&#x27;2128640 wrote <span class="qdate">on Feb 1 2007, 05:10 PM</span>:</div>I tried to play trauma center  on desmume and it keeps freezing is there anything I can do. I checked your links to look at the compatability lists and it said that it should be compatablegot it working</blockquote>I can't test it for now but the version 5 and version 4 have different compatibility lists. All the early roms were tested with v4 and may not work on v5. Download v4 on www.desmume.com.</div>
+</div><div class="post" id="p2146909">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">B</span><span class="author">basf11214</span></span><span>Feb 06 2007, 09:56 PM</span></div>
+  <div class="body">Version 0.6.0 is out!<blockquote class="quote"><div class="qhdr">someone wrote:</div>DeSmuME v0.6.0 released!This new version includes graphic enhancements and fixes:    * added support for window, transparency and brightness    * fixed sprites and background rendering bugs    * added possibility to resize and rotate emulation windowsA new interface based on glade is now available and support for gzipped and zipped roms has been added.</blockquote>Just what exactly are those background rendering bugs?</div>
+</div><div class="post" id="p2147211">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Feb 07 2007, 12:33 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">basf11214&#x27; post=&#x27;2146909 wrote <span class="qdate">on Feb 7 2007, 10:56 AM</span>:</div>Just what exactly are those background rendering bugs?</blockquote>The "background rendering bugs" are when the background doesn't show up. Same with sprites.</div>
+</div><div class="post" id="p2159492">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">X</span><span class="author">xDebbiexLyx</span></span><span>Feb 10 2007, 07:44 PM</span></div>
+  <div class="body">does animal crossing work</div>
+</div><div class="post" id="p2160046">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Slovinian</span></span><span>Feb 10 2007, 11:22 PM</span></div>
+  <div class="body">Usually what gives me a great idea of how far along the emulator has come, is monkeying with it using low-budget pc.  ePSX I could run 3D games flawlessly (with extra speed, sound, and mp3 player running) on :  600mhz 96mb ram (OS= XP ) and 8mb video, and on a pc with 200mhz, 32mb ram, and 8mb video still smooth (without sound and added enhancements).  Sure, if you have a powerful pc it can run almost anything, but to really test the emulator do so with half the recommended specs...that will show you how structured it is.  You don't need a powerful system (all the time) to run decent games.</div>
+</div><div class="post" id="p2165318">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">A</span><span class="author">almaxwig</span></span><span>Feb 12 2007, 11:51 AM</span></div>
+  <div class="body">ill try this out!</div>
+</div><div class="post" id="p2170102">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">M</span><span class="author">mvbdx</span></span><span>Feb 14 2007, 04:07 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">someone wrote:</div>DISCLAIMER (!):These builds are to be considered work-in-progress builds and do not represent official releases. These builds are compiled using Microsoft Visual C++ 2005 with all optimizations enabled and buffer overrun checks disabled. Use of these builds is at your own risk and are intended for use by testers only. If you do not feel comfortable with test software, please do not download these builds. Report all bugs to the official DeSmuME forums linked from the official page. Do not ask when new builds will be available or when XX game will be supported.February 12, 2007 Build- Fixed potential memory leak- Fixed issues with hardware sound buffering on some cards- Slight graphical fixes- Other bugfixes</blockquote><a href="http://amponzi.googlepages.com/DeSmuME-070212.zip" target="_blank" rel="noopener">Download</a>Source: <a href="http://www.1emulation.com/" target="_blank" rel="noopener">http://www.1emulation.com/</a></div>
+</div><div class="post" id="p2170109">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">D</span><span class="author">da_dawg</span></span><span>Feb 14 2007, 04:10 AM</span></div>
+  <div class="body">Does Lunar Knights Work?I really want to try it out x_x... Eventually (means when I'll have money), I'll buy it T_T... or do the Flashcart thingy</div>
+</div><div class="post" id="p2170329">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Feb 14 2007, 06:44 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">da_dawg&#x27; post=&#x27;2170109 wrote <span class="qdate">on Feb 14 2007, 05:10 PM</span>:</div>Does Lunar Knights Work?I really want to try it out x_x... Eventually (means when I'll have money), I'll buy it T_T... or do the Flashcart thingy</blockquote>Nope. Just tried it in DeSmuME 0.5.0 and 0.6.0 and both say:"Data could not be written. Please turn off DS and reinsert game card."Which we all know you can't do on an emulator.So no. Unplayable on DeSmuME. You could try other emulators though.</div>
+</div><div class="post" id="p2178950">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">V</span><a class="author" href="../users/u951931.html">Vizard.</a></span><span>Feb 17 2007, 05:17 AM</span></div>
+  <div class="body">Pokemon Ranger(E) characters, upper screen, and pokemon can't be seen.</div>
+</div><div class="post" id="p2179349">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">M</span><span class="author">mvbdx</span></span><span>Feb 17 2007, 08:48 AM</span></div>
+  <div class="body">from DeSmuME Site:<blockquote class="quote"><div class="qhdr">someone wrote:</div><strong>Linux packages</strong>Thanks to Asher256, DeSmuME is now available as a package for ArchLinux and Ubuntu Linux distributions:    * <a href="http://aur.archlinux.org/packages.php?do_Details=1&amp;ID=8059&amp;O=0&amp;L=0&amp;C=0&amp;K=desmume&amp;SB=&amp;SO=&amp;PP=25&amp;do_MyPackages=0&amp;do_Orphans=0&amp;SeB=nd" target="_blank" rel="noopener">ArchLinux package</a>    * <a href="http://asher256-repository.tuxfamily.org/index.php?page=home&amp;lang=en" target="_blank" rel="noopener">Asher256’s repository</a></blockquote>____________________from DeSmuME Unofficial WIP Builds Site:<blockquote class="quote"><div class="qhdr">someone wrote:</div><strong>February 16, 2007 Build</strong>- Preliminary foundation established for 3D support- Some FAT issues fixed- Minor bugfixes<a href="http://amponzi.googlepages.com/DeSmuME-070216.zip" target="_blank" rel="noopener">Download</a></blockquote></div>
+</div><div class="post" id="p2185299">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u450398.html">secret</a></span><span>Feb 19 2007, 09:29 AM</span></div>
+  <div class="body">im sorry 4 asking. i've downloaded the file emulateur.zip, desmume-0.6.0win.zip n desmume-0.6.0.tar.gz. do i have 2 put in a same folder after i have extract it? how?</div>
+</div><div class="post" id="p2185426">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">C</span><span class="author">chrk</span></span><span>Feb 19 2007, 10:54 AM</span></div>
+  <div class="body">Hix  >.&lt;  no game can saveeeeeeeeeee</div>
+</div><div class="post" id="p2185979">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Feb 19 2007, 07:13 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">secret&#x27; post=&#x27;2185299 wrote <span class="qdate">on Feb 19 2007, 10:29 PM</span>:</div>im sorry 4 asking. i've downloaded the file emulateur.zip, desmume-0.6.0win.zip n desmume-0.6.0.tar.gz. do i have 2 put in a same folder after i have extract it? how?</blockquote>you only need desmume-0.6.0win.zip - extract it and put it into any directory you want. just note that even if you associate .nds files with it, it won't run the rom automatically. you <em>have</em> to choose File -> Open then choose your rom.<blockquote class="quote"><div class="qhdr">chrk&#x27; post=&#x27;2185426 wrote <span class="qdate">on Feb 19 2007, 11:54 PM</span>:</div>Hix  ^_^  no game can saveeeeeeeeeee</blockquote>  >.&lt;  For your information, all my games can save since desmume 0.5.0</div>
+</div><div class="post" id="p2186479">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">X</span><span class="author">XdanyX</span></span><span>Feb 19 2007, 10:36 PM</span></div>
+  <div class="body">Hi, I know DeSmume might not seem much for all the one who use NO$GBA, but, if you look back then you'll see that the one who won the 'final battle' for GBA emulation was VBA, and i think tha about the DS the outcome will be the same, VBA and DeSmume share many similarities like a user friendly interface, so i decided to Create a FULL and DETAILED compatibility list, just for comparison look at the description of game 0735:Here:<blockquote class="quote"><div class="qhdr">someone wrote:</div>0735 - Castlevania - Portrait of Ruin (U) [Could not write the data]</blockquote>There:<blockquote class="quote"><div class="qhdr">someone wrote:</div>The game begins, a black screen is shown on the bottom and a graveyard on the top , if you wait too long the the movie starts playing(slowly), press 'a' 3 times and start pressing random keys till the message changes, then draw anything on the center and click right below the drawing area(that you cant see)(for help on this look on youtube for 'portrait of ruin'), then you'll see the story, and the the dialogs, once everything ends you're shown the map on the top and a black screen on the bottom with the hp/mp bars.</blockquote>I'll be trying to add titles daily(or asap) so that we can have the list fulfilled as soon as possible, so if anyone wants to help me on this seemingly impossible to-do-alone task please replay, and if you want to send a game description use the form on the bottom of the list.The link is the following:<a href="http://desmumecom.topcities.com/index.html" target="_blank" rel="noopener">http://desmumecom.topcities.com/index.html</a></div>
+</div><div class="post" id="p2187344">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">I</span><span class="author">icecanal</span></span><span>Feb 20 2007, 02:24 AM</span></div>
+  <div class="body">hey theres a new bleach game and i wana know does it work?</div>
+</div><div class="post" id="p2187415">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">N</span><span class="author">Nephilim123</span></span><span>Feb 20 2007, 02:46 AM</span></div>
+  <div class="body">6.0 is out now. Great, just what I was waiting for... however, Im still unable to obtain the Jump Ultimate Stars rom... can anyone test it on 5.0 or 6.0 and tell me if it runs?</div>
+</div><div class="post" id="p2187681">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">N</span><span class="author">nhahtdh</span></span><span>Feb 20 2007, 03:46 AM</span></div>
+  <div class="body">I've test with Desmume v0.6.0 and Pokemon Trozei (Torouze, Link) can <em><strong>save</strong></em>Desmume is a somewhat good emulator, despite lots of gfx errors, all function can be used easily (I means touch panel, keys)No$gba is better at graphic but the programmer have a lot of thing to do with the touch panel. Almost games play on that doesn't work mainly because there is no response when you touch the screen or the game react wierdly.</div>
+</div><div class="post" id="p2187892">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">V</span><a class="author" href="../users/u766487.html">vannygal</a></span><span>Feb 20 2007, 05:20 AM</span></div>
+  <div class="body">OMG I never thought anybody would post the games which work and which doesn't. I like people like you. People like you are meant to rule the world. You must've had a lot of time on ur hands. I really envy you. Anyways, thank you for this wonderful guide ^^</div>
+</div><div class="post" id="p2187995">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Feb 20 2007, 05:59 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">vannygal&#x27; post=&#x27;2187892 wrote <span class="qdate">on Feb 20 2007, 06:20 PM</span>:</div>OMG I never thought anybody would post the games which work and which doesn't. I like people like you. People like you are meant to rule the world. You must've had a lot of time on ur hands. I really envy you. Anyways, thank you for this wonderful guide ^^</blockquote>There's a list of "perfectly" working games here:http://www.dgemu.com/forums/index.php?showtopic=204330And I tested a whole bunch of games (6GB to be exact) on DeSmuME 0.6.0 and posted them all there. You'll see that Pokemon Trozei is one of the games on that list.</div>
+</div><div class="post" id="p2188076">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">B</span><span class="author">barrywu998</span></span><span>Feb 20 2007, 06:50 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Ody&#x27; post=&#x27;1872905 wrote <span class="qdate">on Nov 25 2006, 03:15 AM</span>:</div>What is the extension of your file?</blockquote>I've always wanted to know how to use a DS emulator thanks!!  :lol: </div>
+</div><div class="post" id="p2189132">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">X</span><span class="author">XdanyX</span></span><span>Feb 20 2007, 05:24 PM</span></div>
+  <div class="body">Added:6 - Polarium (u)28 - Zoo Keeper (u)0856 - Bleach DS 2nd - Kokui Hirameku Requiem (J)Also fell free to REQUEST games with the form on the bottom, please, so that I can add 'em to my priority list, these will be added asap, games requested here will be added to the list, but may take a little longer to be added...</div>
+</div><div class="post" id="p2189209">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u923104.html">killerofthe666</a></span><span>Feb 20 2007, 05:58 PM</span></div>
+  <div class="body">can u retest the games on the new emulators so we can c if the old games work better on the new 1s</div>
+</div><div class="post" id="p2189289">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">X</span><span class="author">XdanyX</span></span><span>Feb 20 2007, 06:42 PM</span></div>
+  <div class="body">All game are being tested on version 0.6, and I'll not delete the games, instead I'll burn em to a DVD, so once 0.7 is released I'll retest 'em, process which will go quicker this time since I'll have em with me, instead of having to download 'em.</div>
+</div><div class="post" id="p2189295">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Feb 20 2007, 06:44 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">killerofthe666&#x27; post=&#x27;2189209 wrote <span class="qdate">on Feb 21 2007, 06:58 AM</span>:</div>can u retest the games on the new emulators so we can c if the old games work better on the new 1s</blockquote>Here's Ody's reply a couple of pages back:<blockquote class="quote"><div class="qhdr">Ody&#x27; post=&#x27;2086683 wrote <span class="qdate">on Jan 21 2007, 03:17 PM</span>:</div>The first post DOES tell you which games work.Anyway, read the first post to see whether Electroplankton is supposed to work.We will not retest all roms when a new version is out. This will require too much work.</blockquote>Just read the [topic="204330"]List of Perfectly Working Roms[/topic] for roms that members here are testing on the newer versions. And can anyone who has tested and verified that roms are working "perfectly" (well, maybe a little lag is OK) please post in that topic so Ody can add it to that list. That's what that list is for. And do note that <a href="http://homepages.ihug.co.nz/~kplchow/list.htm" target="_blank" rel="noopener"><strong>all games on this list</strong></a> have already been tested in DeSmuME 0.5.0 and 0.6.0, and if they're not in the [topic="204330"]List of Perfectly Working Roms thread[/topic] then the games won't work. There's no need for multiple people to test and retest games (unless you really want to, of course).</div>
+</div><div class="post" id="p2192492">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">X</span><span class="author">XdanyX</span></span><span>Feb 21 2007, 07:52 PM</span></div>
+  <div class="body">Ok, back on this topic again, I added the results of game 3 and 354, also added game 5 submited by samuraikill</div>
+</div><div class="post" id="p2196337">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">N</span><span class="author">Nephilim123</span></span><span>Feb 22 2007, 10:18 PM</span></div>
+  <div class="body">Thanks for that list phoenix... guess Jump Ultimate Stars still has problems.</div>
+</div><div class="post" id="p2200219">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">M</span><span class="author">mvbdx</span></span><span>Feb 24 2007, 03:09 AM</span></div>
+  <div class="body"><strong>No$GBA 2.3d released!</strong>    * nds/video/help: added note on unknown tvoutcnt register (nds9 port 4000070h)    * nds/sio/help: added chapter on (absent) link port (with new bits like ckup)    * nds/aux/help: added full gba and gba-sp cpu/lcd/chipset pinouts (from no$gmb)    * nds/aux/help: added SG and SW pins (gba-sp/nds headphone socket) (from no$gmb)    * nds/3d/help: added projection/rotation/scaling/translation matrix examples    * nds/3d/help: added edge marking notes, alpha_test_ref notes, and fog notes    * nds/3d/help: added new shadow polygon chapter, and added toon table notes)    * nds/3d: skips vtx's of (still unsupported) shadow polygons (avoid eragon dirt)    * nds/3d: speedup: re-creates textures only if teximage_param/pltt_base changed    * nds/3d: speedup: mtx_mul_4x3/3x3/trans/scale skips fixed values (ie. 0 and 1    * nds/sound: init =0 (avoids fatal 'e-2' on reset)    * nds/3d: supports packed-texture-mode3 (mul3+mul5=div8) (eragon/mariokart demo)    * nds/microphone: emulates mircophone gain level (powerman reg3 = x1 x2 x4 x8)    * nds/microphone: wave_in-dma activated only if/as long as enabled in powerman    * nds/microphone: forwards PC mic-in/line-in to nds-microphone (player 1 only)    * nds/microphone: emulates muted mic-level (for mic-powerman off=000h, on=800h)    * dos/nds: supports nds-video (256x192) (dual-screen) (forced 640x480 onepix))    * dos: prevents hlt-opcode under dpmi (hlt crashed cwsdpmi, ignored by win98)    * initialize: corrected @@zero_fill_vals length (caused crash in dos version)<a href="http://files.ngemu.com/gba/nogba/download/no$gba-2.3d.zip" target="_blank" rel="noopener">Download</a><strong>iDeaS 1.0.1.0 released!</strong>    * Fixed a bug in DISPSTAT irq    * Fixed a bug in RTC functions    * Added EEPROM management    * Added Power Managment functions.<a href="http://files.ngemu.com/nds/ideas/download/ideas1010.zip" target="_blank" rel="noopener">Download</a>Source: ngemu.com <span style="color:red">POINTS were deducted for this post by atomicknight</span></div>
+</div><div class="post" id="p2204689">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">F</span><span class="author">fireman15</span></span><span>Feb 25 2007, 04:38 PM</span></div>
+  <div class="body">Plz tell me if this was already said and if not can u help me.Whenever i load a rom like Pokemon Ranger and Pokemon Mystery Dungeon Blue the game always crashes.Why?</div>
+</div><div class="post" id="p2205086">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">X</span><span class="author">XdanyX</span></span><span>Feb 25 2007, 07:01 PM</span></div>
+  <div class="body">Hi, unfortunately I'm without a keyboard, so I'll not be updating the site for the next few days, all to I'll keep adding the submitted games...Added: 624.</div>
+</div><div class="post" id="p2205127">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">M</span><span class="author">mvbdx</span></span><span>Feb 25 2007, 07:15 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">fireman15&#x27; post=&#x27;2204689 wrote <span class="qdate">on Feb 25 2007, 08:08 PM</span>:</div>Plz tell me if this was already said and if not can u help me.Whenever i load a rom like Pokemon Ranger and Pokemon Mystery Dungeon Blue the game always crashes.Why?</blockquote>Pokemon Mystery Dungeon: Blue Rescue Team should run perfectly, i think u dont re-encrypt the roms.u can download this software from this link (or zelda!  B) ): <a href="http://www.gbadat.altervista.org/gbadat/tools/eNDryptS_Advanced_v1.2_NDS-iND.zip" target="_blank" rel="noopener">http://www.gbadat.altervista.org/gbadat/to...1.2_NDS-iND.zip</a>extract the file & put your rom(s) in the same directory, then run software. (software re-encrypt roms automatically)finally u can run game. good luck.</div>
+</div><div class="post" id="p2206140">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">A</span><span class="author">AdamantiumSheWolf</span></span><span>Feb 26 2007, 12:56 AM</span></div>
+  <div class="body">I have DeSmuME 0.6.0 (newest release)  and it attests to *PERFECT* playability of Super Princess Peach.  Well, great.  However, I opened the emulator, dragged to "file-->open" and opened the SPP rom file.  However, all I get is a gray-out with sound (i.e. her saying "Nintendo" and then the start screen music).  WTF?  Am I not doing something right?  (Sorry about not looking through 11 pages of posts before I submitted this--Will check.)</div>
+</div><div class="post" id="p2206547">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Feb 26 2007, 02:55 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">AdamantiumSheWolf&#x27; post=&#x27;2206140 wrote <span class="qdate">on Feb 26 2007, 01:56 PM</span>:</div>I have DeSmuME 0.6.0 (newest release)  and it attests to *PERFECT* playability of Super Princess Peach.  Well, great.  However, I opened the emulator, dragged to "file-->open" and opened the SPP rom file.  However, all I get is a gray-out with sound (i.e. her saying "Nintendo" and then the start screen music).  WTF?  Am I not doing something right?  (Sorry about not looking through 11 pages of posts before I submitted this--Will check.)</blockquote>It definitely runs fine on my emulator. You should either redownload the emulator or the rom. The rom from this site definitely works too.</div>
+</div><div class="post" id="p2211499">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">F</span><span class="author">fireman15</span></span><span>Feb 27 2007, 08:46 PM</span></div>
+  <div class="body">on pokemon ranger y is it that when it asks which gender you are it freezes. (note* if some1 asked this already tell me what pages casue i didn't see it)</div>
+</div><div class="post" id="p2226445">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">S</span><span class="author">sanjeevp</span></span><span>Mar 03 2007, 03:32 PM</span></div>
+  <div class="body">you know on the new english v.6.0 i have digimon world ds and i try starting but it says "image has crashed" and then it says do you want to send error report " dont send" or "send"??so u have any solutions?or debugs?</div>
+</div><div class="post" id="p2227634">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">F</span><span class="author">fireman15</span></span><span>Mar 03 2007, 11:20 PM</span></div>
+  <div class="body">lol that happened to me at first try unzippin the file if not that then i don't know.</div>
+</div><div class="post" id="p2229920">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">S</span><span class="author">sanjeevp</span></span><span>Mar 04 2007, 10:26 AM</span></div>
+  <div class="body">unzip wth? and if u need download it tell me plz?</div>
+</div><div class="post" id="p2230146">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Mar 04 2007, 01:00 PM</span></div>
+  <div class="body">Unzip=extract the .zip file you downloaded from DGEmu. Use WinRar (you can fnd it at www.rarlab.com).</div>
+</div><div class="post" id="p2232881">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">R</span><a class="author" href="../users/u790429.html">reYez.</a></span><span>Mar 05 2007, 05:05 AM</span></div>
+  <div class="body">i have extracted these files in a folder but i can't find the file named desmume.exebut i can find a file called desmume.exe.Manifestplease help....</div>
+</div><div class="post" id="p2232901">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Mar 05 2007, 05:12 AM</span></div>
+  <div class="body">I don't know where you downloaded you emulator but in the link on the first post, there is a desmume.exe file inside the zip.<a href="http://prdownloads.sourceforge.net/desmume/desmume-0.6.0-win.zip?download" target="_blank" rel="noopener">http://prdownloads.sourceforge.net/desmume...in.zip?download</a></div>
+</div><div class="post" id="p2232914">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">R</span><a class="author" href="../users/u790429.html">reYez.</a></span><span>Mar 05 2007, 05:15 AM</span></div>
+  <div class="body">I surely downloaded it 4rm ur thread in the beginning....</div>
+</div><div class="post" id="p2233138">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Mar 05 2007, 06:18 AM</span></div>
+  <div class="body">Are you sure? Because I just check it and there IS a file named desmume.exe. Unless you system is messing up and rename all .exe file in .exe.Manifest.</div>
+</div><div class="post" id="p2234241">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">supereddman98</span></span><span>Mar 05 2007, 06:59 PM</span></div>
+  <div class="body">anyone attempted to play yu-gi-oh spirit caller? if so whats the result from it? thanks.</div>
+</div><div class="post" id="p2234263">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Mar 05 2007, 07:08 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">supereddman98&#x27; post=&#x27;2234241 wrote <span class="qdate">on Mar 6 2007, 07:59 AM</span>:</div>anyone attempted to play yu-gi-oh spirit caller? if so whats the result from it? thanks.</blockquote>Spirit Summoner (the Japanese version) didn't work, so I guess Spirit Caller won't work either, since they're basically the same thing.According to the List of Perfectly Working Roms, it works for No$gba. You can try that instead.</div>
+</div><div class="post" id="p2235367">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">N</span><span class="author">naoko</span></span><span>Mar 06 2007, 01:58 AM</span></div>
+  <div class="body">Has anyone ever actually load Jump Ultimate Stars to the main menu? I loaded it and a caution box shows up with japanese text.</div>
+</div><div class="post" id="p2235872">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Mar 06 2007, 04:08 AM</span></div>
+  <div class="body">It doesn't run in the latest version; after you read go through the video, main menu and short comic strip about the 'J Galaxy' and all that, DeSmuME gives you an error and quits automatically. Wait for a new version of DeSmuME to come out, or you can try No$gba.</div>
+</div><div class="post" id="p2236508">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">R</span><a class="author" href="../users/u790429.html">reYez.</a></span><span>Mar 06 2007, 09:21 AM</span></div>
+  <div class="body">ii have downloaded the DeSmuMe again with a different mirror and now it works...N E ways,, Thanks Ody opss Sarah-  :( </div>
+</div><div class="post" id="p2237656">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">F</span><span class="author">fireman159</span></span><span>Mar 06 2007, 10:23 PM</span></div>
+  <div class="body">Srry bout this dumb question , but wat is gfx glitch can u tell me or tell me were i can find out bout it.</div>
+</div><div class="post" id="p2238228">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Mar 07 2007, 01:21 AM</span></div>
+  <div class="body">gfx=graphic. It means the graphic has issue such as deformed/inversed images.</div>
+</div><div class="post" id="p2244849">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">R</span><span class="author">rpgs_player</span></span><span>Mar 09 2007, 05:48 AM</span></div>
+  <div class="body">How to make final fantasy 3 works?</div>
+</div><div class="post" id="p2244887">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Mar 09 2007, 06:02 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">rpgs_player&#x27; post=&#x27;2244849 wrote <span class="qdate">on Mar 9 2007, 06:48 PM</span>:</div>How to make final fantasy 3 works?</blockquote>It doesn't.At least, it doesn't in 0.6.0. You can try older versions, as they have different compatibilities, but I don't think it will work.</div>
+</div><div class="post" id="p2245131">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Mar 09 2007, 08:32 AM</span></div>
+  <div class="body">FF3 works partially on No$gba but you can't get very far. However, it is already a good sign, you should try it on the next version of No$gba and also DeSmuME.</div>
+</div><div class="post" id="p2247103">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">B</span><span class="author">bubstheman</span></span><span>Mar 10 2007, 01:26 AM</span></div>
+  <div class="body">does pokemon dimond and pearl work its not on eather of the lists?</div>
+</div><div class="post" id="p2247162">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Mar 10 2007, 01:42 AM</span></div>
+  <div class="body">No it doesn't work on DeSmuME. You can try No$gba but it is very slow.</div>
+</div><div class="post" id="p2247280">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Mar 10 2007, 02:37 AM</span></div>
+  <div class="body">Yes, there was an announcement until No$gba 2.3c was released and runs the roms, even if it was very slow.</div>
+</div><div class="post" id="p2268314">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">I</span><span class="author">ibby100</span></span><span>Mar 15 2007, 05:54 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Anime_Manga lover&#x27; post=&#x27;1845295 wrote <span class="qdate">on Nov 18 2006, 02:51 AM</span>:</div> :)  it work you cool B)  B)   XD    :)  <span style="color:red">POINTS were deducted for this post by atomicknight</span></blockquote>Thanks for all that I thought the DS emulator dont work but now I know it does!!!</div>
+</div><div class="post" id="p2273212">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">B</span><span class="author">Blue Comet</span></span><span>Mar 17 2007, 12:55 AM</span></div>
+  <div class="body">Just wondering but is there an emulator that works well with the Super Robot Wars W Rom? I would like to know before I use up a good 40 or so DP's downloading it. Thanks  XD </div>
+</div><div class="post" id="p2273259">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Mar 17 2007, 01:14 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Blue Comet&#x27; post=&#x27;2273212 wrote <span class="qdate">on Mar 17 2007, 08:55 AM</span>:</div>Just wondering but is there an emulator that works well with the Super Robot Wars W Rom? I would like to know before I use up a good 40 or so DP's downloading it. Thanks  XD </blockquote>http://www.dgemu.com/forums/index.php?showtopic=204330Do not ask for compatibility! Will anyone ever read the pinned topics?</div>
+</div><div class="post" id="p2273269">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u798078.html">pole287</a></span><span>Mar 17 2007, 01:19 AM</span></div>
+  <div class="body">Pokemon ranger doesnt worknig theres no people or characters where there sohuld be.</div>
+</div><div class="post" id="p2273328">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Mar 17 2007, 01:49 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">pole287&#x27; post=&#x27;2273269 wrote <span class="qdate">on Mar 17 2007, 09:19 AM</span>:</div>Pokemon ranger doesnt worknig theres no people or characters where there sohuld be.</blockquote>It works on No$gba.</div>
+</div><div class="post" id="p2273347">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u798078.html">pole287</a></span><span>Mar 17 2007, 01:56 AM</span></div>
+  <div class="body">Tried it there to it doesnt seem to wanna work.</div>
+</div><div class="post" id="p2273365">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Mar 17 2007, 02:01 AM</span></div>
+  <div class="body">Follow extactly the instructions in the first post (especially, get the latest version) and set the save type to Flash 256KB and it WILL work.</div>
+</div><div class="post" id="p2273375">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u798078.html">pole287</a></span><span>Mar 17 2007, 02:04 AM</span></div>
+  <div class="body">With no$gba?</div>
+</div><div class="post" id="p2273397">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Mar 17 2007, 02:12 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">pole287&#x27; post=&#x27;2273375 wrote <span class="qdate">on Mar 17 2007, 10:04 AM</span>:</div>With no$gba?</blockquote>Yes since it does work on No$gba 2.3d.</div>
+</div><div class="post" id="p2274224">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">B</span><span class="author">Blue Comet</span></span><span>Mar 17 2007, 07:09 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Sarah-&#x27; post=&#x27;2273259 wrote <span class="qdate">on Mar 16 2007, 07:14 PM</span>:</div>http://www.dgemu.com/forums/index.php?showtopic=204330Do not ask for compatibility! Will anyone ever read the pinned topics?</blockquote>My bad, I'm still kinda new here...</div>
+</div><div class="post" id="p2274265">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">S</span><span class="author">solidsnake332</span></span><span>Mar 17 2007, 07:23 AM</span></div>
+  <div class="body">i tried to compile CVS for desmume, i just get desmume.exe.manifest, i rename it to desmume.exe and try to run it, but it's a no go</div>
+</div><div class="post" id="p2274366">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Mar 17 2007, 08:13 AM</span></div>
+  <div class="body">You want to download the Win32 binary, not the source code.<a href="http://prdownloads.sourceforge.net/desmume/desmume-0.6.0-win.zip?download" target="_blank" rel="noopener">Try this.</a></div>
+</div><div class="post" id="p2274592">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">sanane2</span></span><span>Mar 17 2007, 10:00 AM</span></div>
+  <div class="body">Pokemond Diamond doesnt work.</div>
+</div><div class="post" id="p2274677">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">N</span><span class="author">nhahtdh</span></span><span>Mar 17 2007, 10:54 AM</span></div>
+  <div class="body">Dont know how you get pokemon diamond/pearl to work, I had tried for 10 mins then I gave up.Anyway, anybody know that some game got the color inverse, right? Then you only have to resize (move the mouse near the edge of the screen and drag a little), the color will back to normal, or you can choose 2x instead of 1x.</div>
+</div><div class="post" id="p2278780">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">M</span><span class="author">MeiTnerium109</span></span><span>Mar 18 2007, 01:18 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Sarah-&#x27; post=&#x27;1751482 wrote <span class="qdate">on Oct 23 2006, 10:10 PM</span>:</div><span style="color:#009900">0716 - Yoshi's Island DS (E) </span></blockquote>That one didn't seem to work for me. Maybe it's because I'm using NDeSmuMe (which is based off of DeSmuMe, I think by one of the same programmers too...), but it doesn't get past the intro...</div>
+</div><div class="post" id="p2278821">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Mar 18 2007, 01:50 PM</span></div>
+  <div class="body">Try either DeSmuME 0.5.0 and up or No$gba 2.3b and up. They run this rom perfectly.</div>
+</div><div class="post" id="p2286563">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">B</span><a class="author" href="../users/u895147.html">binky5</a></span><span>Mar 20 2007, 05:14 PM</span></div>
+  <div class="body">my controls are diffrent</div>
+</div><div class="post" id="p2286954">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a></span><span>Mar 20 2007, 07:41 PM</span></div>
+  <div class="body">If you're using version 0.5.0 and up, click the menu Config -> Control Config.</div>
+</div><div class="post" id="p2292211">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u1132254.html">snizman</a></span><span>Mar 21 2007, 11:05 PM</span></div>
+  <div class="body">You forgot to add Megaman ZX to the playable list.It may start slow but it speeds up after a little bit through the game.the list provided says so.</div>
+</div><div class="pagenav"><span class="current">1</span><a href="t329714_p2.html">2</a><a href="t329714_p3.html">3</a><a href="t329714_p2.html">Next &rarr;</a></div></div></body></html>

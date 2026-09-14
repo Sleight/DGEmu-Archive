@@ -1,0 +1,72 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Hack Your PSP: An FAQ and a Guide</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f288.html">Console Emulation &amp; Modding Assistance</a> &rsaquo; <a href="../forums/f293.html">Sony</a> &rsaquo; <a href="../forums/f295.html">PSP / Vita Resources</a> &rsaquo; How to Hack Your PSP: An FAQ and a Guide</div><div class="thread-title-box"><h1>How to Hack Your PSP: An FAQ and a Guide</h1><div class="thread-meta" style="font-style:italic;margin-bottom:4px">Basic guide to CFW</div><div class="thread-meta">1 posts &middot; page 1 of 1 &middot; closed &middot; 446 views</div></div><div class="post" id="p4954724">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">M</span><a class="author" href="../users/u36218.html">Mo­lh.</a><span class="op-tag">ORIGINAL POST</span></span><span>May 26 2011, 01:06 PM</span></div>
+  <div class="body"><strong>Here's a basic guide to PSP hacking and homebrew. If you want more I suggest you read around in websites like <a href="http://www.wololo.net" target="_blank" rel="noopener">Wololo</a> and <a href="http://www.psp-hacks.com" target="_blank" rel="noopener">PSP-Hacks</a> and <a href="http://www.pspslimhacks.com" target="_blank" rel="noopener">PSP Slim Hacks</a>. If you just want to learn how to install a CFW, though, dive right in!</strong><br />
+<br />
+<span style="color:#009900">Why hack the PSP?</span><br />
+In this context "hacking" refers to using custom firmware (CFW) instead of official firmware (OFW), "firmware" being the software which runs the PSP. You can check what firmware you are running under <strong>Settings -> System Information</strong> on your PSP.<br />
+<br />
+CFW allows you to do more with your PSP than usual. It lets you play homebrew (programs made by non-official developers), as well as ISOs (games), make backups of your PSP and your UMDs, and so on.<br />
+<br />
+<span style="color:#009900">Sounds good to me! How do I do it?</span><br />
+First determine what model of PSP you have, using this image from a PSP Slim Hacks Tutorial:<br />
+<br />
+<img src="http://i224.photobucket.com/albums/dd136/OverLord_Draik/PSPModel.gif" loading="lazy" class="post-img"><br />
+<br />
+If it's a PSP 100X, PSP 200X or PSP Go, the recommended CFW is <strong>6.20 Pro permanent</strong>.<br />
+<br />
+If it's a PSP-300X, use the <a href="http://filetrip.net/f25206-PSP-Module-Checker-1-0.html" target="_blank" rel="noopener">PSP Module Checker</a> to find out what module you have.<br />
+Just download it, extract it to obtain the "MCHECKER" folder, and place that inside the "/PSP/GAME" folder in your memory stick. Then put your mem stick back into your PSP, turn it on, and select the module checker under "Games".<br />
+<br />
+If it is a 05g or below use <strong>6.20 PRO permanent</strong>. If it is a 07g or 09g, use <strong>6.60 PRO</strong>, because you <em>cannot</em> run 6.20 PRO on those models.<br />
+6.60 PRO is not a "permanent" CFW. This means that when you completely shut it down you will have to load it again (sleep mode is ok).<br />
+<br />
+**<span style="color:#FF0000">If you are already running OFW from 6.30 - 6.39, and have a PSP which can run 6.20 PRO, either <a href="http://forums.dashhacks.com/f133/downgrading-from-firmware-6-3x-to-firmware-6-t296612/" target="_blank" rel="noopener">downgrade your firmware</a> first, or just use 6.60 PRO, the non-"permanent" CFW.</span>**<br />
+<br />
+<span style="color:#009900"><strong>Installing 6.20 PRO permanent</strong> (from the <a href="http://gbatemp.net/t293978-how-to-softmod-hack-your-psp" target="_blank" rel="noopener">GBATemp Softmod guide</a>)</span><br />
+If you are not already on OFW 6.20...<br />
+1. Download 6.20 official firmware for <a href="http://filetrip.net/file.php?id=9075" target="_blank" rel="noopener">PSP 100X/200X/300X</a> or for <a href="http://filetrip.net/file.php?id=24457" target="_blank" rel="noopener">PSP Go</a>.<br />
+2. Copy the UPDATE folder to the /PSP/GAME/ folder on your memory stick (or the Go's internal storage).<br />
+3. Launch the 6.20 update on your PSP, and tell it to update. **<strong>If you are on CFW already DISABLE OR DELETE ALL YOUR PLUGINS FIRST</strong>**<br />
+If you have older CFW already installed, e.g. 5.50 Prome-4, you might see the "<em>Firmware is already 9.90. There's no need to upgrade.</em>" error message. If so, just change its version txt.<br />
+<br />
+**Now to install the 6.20 hack!<br />
+1. Download <a href="http://filetrip.net/g35131741-SIGNED-6-20-PRO.html" target="_blank" rel="noopener">6.20 PRO</a>.<br />
+2. Copy the "620PRO_Permanent" and "PROUPDATE" folders to /PSP/GAME/.<br />
+3. Run the 6.20 PRO-B Updater (the icon has "UPDATE" faintly in the middle) on your PSP and when it runs press X to install and launch the temporary 6.20 hack.<br />
+4. After the PSP restarts, run the 6.20 PRO-B Permanent Patch (the icon says "PERMANENT BOOTLOADER").<br />
+5. Press X once to choose to install, then press X again to choose to test it.<br />
+6. If your PSP successfully rebooted after the test, then run the permanent patch again, but this time press X and then Circle to install.<br />
+<em>(If your PSP did not successfully test, try removing your "/seplugins/" folder from your memory stick and try again, because not all 5.x plugins work on 6.xx)</em><br />
+<br />
+To uninstall it just run the Permanent Patch again.<br />
+<br />
+<br />
+<span style="color:#009900"><strong>Installing 6.60 PRO</strong> (also from the same GBATemp guide)</span><br />
+If you are not already on OFW 6.60...<br />
+1. Download 6.60 official firmware (for PSP <a href="http://filetrip.net/file.php?id=26020" target="_blank" rel="noopener">100X/200X/300X</a>) or (for <a href="http://filetrip.net/file.php?id=26021" target="_blank" rel="noopener">PSP Go</a>).<br />
+2. Place the "UPDATE" folder into the /PSP/GAME/ folder on your memory stick (or the Go's internal storage).<br />
+3. Run the 6.60 update on your PSP and allow it to install. **<strong>If you are on CFW already DISABLE OR DELETE ALL YOUR PLUGINS FIRST</strong><br />
+<br />
+Now to install the hack!<br />
+1. Download <a href="http://filetrip.net/g35132300-SIGNED-6-60-PRO.html" target="_blank" rel="noopener">6.60 PRO</a><br />
+2. Copy the "660PROUpdate" and "660FastRecovery" folders to /PSP/GAME/ on your memory stick (or Go's internal storage).<br />
+3. Run 6.60 PRO Updater on your PSP, and press X to install.<br />
+4. Your PSP should restart into hacked mode. This will last until your PSP is shut fully off (sleep mode is okay). To hack it again quickly, run the Fast Recovery to get back into 6.60 PRO.<br />
+<br />
+To uninstall it just shut it down fully.<br />
+<br />
+<br />
+<span style="color:#009900">So...now I can run PSP homebrew and games?</span><br />
+Yes. Homebrew comes in a folder, with an "EBOOT.PBP" inside. Place this folder inside the /PSP/GAMES/ folder of your memory stick or PSP Go internal memory. Then run it from your PSP, under "Games".<br />
+Place your ISOs (games) inside the /ISO folder, and run it from your PSP under "Games".<br />
+<br />
+<span style="color:#009900">How about CSOs? What's the difference between them and ISOs anyway?</span><br />
+CSOs are compressed ISOs (hence the 'C'). They should still work like ISOs, just that they might take longer to load or lag at cutscenes or so.<br />
+<br />
+<span style="color:#009900">How about online play or the PSN?</span><br />
+You should be able to play online and access the PSN, if you follow this guide.<br />
+<br />
+<em>If anyone has anything to add or any feedback to give please PM me or a mod, thank you!</em></div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

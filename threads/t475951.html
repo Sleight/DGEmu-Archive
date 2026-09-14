@@ -1,0 +1,297 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IPBoard Upgrade to 3.3.0 Issues</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f108.html">Staff Forums</a> &rsaquo; <a href="../forums/f42.html">Staff Lounge</a> &rsaquo; IPBoard Upgrade to 3.3.0 Issues</div><div class="thread-title-box"><h1>IPBoard Upgrade to 3.3.0 Issues</h1><div class="thread-meta">56 posts &middot; page 1 of 1 &middot; 215 views</div></div><div class="post" id="p5006951">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span><span class="op-tag">ORIGINAL POST</span></span><span>Apr 05 2012, 10:56 PM</span></div>
+  <div class="body">I just completed the upgrade, and boy, asides the fact that the board loads faster, it also broke a lot of the display...So for now, it's plenty normal that the board is missing half of the cool features it used to have as I disabled them and will troubleshoot as I get the time.If you spot any problems with the normal functions, please post here and I'll try to look into it.P.S. Yes, I know all of the main page's rom release posts are screwed up... Need to figure out why it did that also.</div>
+</div><div class="post" id="p5006958">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">T</span><a class="author" href="../users/u2454177.html">The Pan Is Mightier</a></span><span>Apr 05 2012, 11:08 PM</span></div>
+  <div class="body">I couldn't log in from my laptop or my phone, though it seems to be working now. I assume that was due to the upgrade. Well if it keeps acting up, I'll let you know.</div>
+</div><div class="post" id="p5006961">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 05 2012, 11:54 PM</span></div>
+  <div class="body">I turned the community offline at 4:50Yup, towards 5:00, the site broke down as I was copying the upgrade files without modifying a path we customized for security, and the site sure didn't like it and broke down. Even the community offline didn't help. That was fixed towards 5:15 when the file copy was done.Towards 5:20, I started the site upgrade before leaving my work.When I got home around 6:40, the upgrade was complete, so I turned the community back online.And then BAM, all the errors that chizzy was mentioning, so I disabled all board hooks, and now it's working well.I'll do further analysis during the weekend to try to see what caused it to go haywire, so in the meanwhile, no moods, selective quote, etc.It's that or no DGEmu for anyone for Easter. XDAwww yeah~Upgrade screwed up IPBWI, thus breaking our staff utilities and DGEmu Arcade.Good stuff!I was expecting Staff Utilities to semi break as the new IPBoard does not use a "Banned" member group anymore, it just simply sets a ban status per user. Because of that, But I wasn't expecting it to completely break IPBWI. XDOk, that was quick to fix...IPBWI upgraded, DGEmu Arcade back online, Staff Utilities taken down for revision.</div>
+</div><div class="post" id="p5006980">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Apr 06 2012, 11:10 AM</span></div>
+  <div class="body">Oh Meru is sooo cool he has made changes that will NOT break the site when we upgrades *laughs* .... YEA RIGHT!Also I notice most posts have the first character changed to an 'A' for some reason ......TAB now does a Tab instead of selecting post .....</div>
+</div><div class="post" id="p5006981">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u1.html">Dragons Master</a></span><span>Apr 06 2012, 11:10 AM</span></div>
+  <div class="body"> :smile:  yeah stuff looks pretty wierd right now.. I'm gonna be off cause of passover and just go online occassionally from now until next Sunday (April 15th) - I'll try to go on an hour here and there to update the site but I can't help much - things aren't extremely bad though - plus it's a little motivation boost to make the news and rom releases seperation  :br: </div>
+</div><div class="post" id="p5007008">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 06 2012, 07:03 PM</span></div>
+  <div class="body">Hey, the links we fixed still work.The reason why I wanted this board upgrade is because they improved the site loading speed, which seems to have helped, but one of the big issues is:New IPS is using HTML StrictAlot of these older add-ons were using HTML TransitionalWhat does that make? Tons of errors because people weren't programming the way they should be according to new standards.As for IPBWI, They did state that you needed the new SDK to fix compatibility so all the pages using that are up except the Staff Utilities since those actually make changes to the DB, and the DB slightly changed with the upgrade ;)Oh, btw DM, IPBoard recommends using MySQL 5.3 and PHP 5.0 or higher.Is there any possibility of doing those critical upgrades to the server?Thanking system back online, had to remove the old version and install a new one, so all the thanks recorded are lost, but that's not really an issue.</div>
+</div><div class="post" id="p5007009">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Apr 06 2012, 07:04 PM</span></div>
+  <div class="body">i have sad</div>
+</div><div class="post" id="p5007010">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 06 2012, 08:56 PM</span></div>
+  <div class="body">Yupz.I can't seem to upgrade the awards system though, gives me a DB error...God damn, that scared the shit outta me for a few moments.Something went wrong with an app, it it bamessedup everything, and the whole board went haywire.I was able to revert the settings and all, but holy crap, all the Awards are lost... pissed me off right now...And the board is still screwy.Geez, and this is not even a major upgrade, I can just imagine how many things will break upgrading to version 4 if that comes out.</div>
+</div><div class="post" id="p5007043">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">T</span><span class="author">The Archbishop</span></span><span>Apr 06 2012, 10:03 PM</span></div>
+  <div class="body">vbulletin</div>
+</div><div class="post" id="p5007047">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 06 2012, 10:18 PM</span></div>
+  <div class="body">I know right?vBulletin boards have been more stable than this pos, but hey, we already paid, so we have to stick with this.</div>
+</div><div class="post" id="p5007069">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">T</span><span class="author">The Archbishop</span></span><span>Apr 07 2012, 02:16 AM</span></div>
+  <div class="body">figured as much, oh well*sniffle*</div>
+</div><div class="post" id="p5007076">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">T</span><a class="author" href="../users/u2454177.html">The Pan Is Mightier</a></span><span>Apr 07 2012, 04:13 AM</span></div>
+  <div class="body">Aww, I liked my thanks.  Well at least I can post now.</div>
+</div><div class="post" id="p5007109">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 07 2012, 08:20 AM</span></div>
+  <div class="body">Yup, that and awards...Stupid lousy 8-bit pos.And the upgrade seem to have replaced all old post's first character with an A?Wtf?</div>
+</div><div class="post" id="p5007111">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 07 2012, 08:30 AM</span></div>
+  <div class="body">A don't know what happened  :smile: </div>
+</div><div class="post" id="p5007114">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 07 2012, 08:32 AM</span></div>
+  <div class="body">Ya, let me shove that A up your Arse. XDTechnology... after years of bugginess and patching, it finally bit us after an upgrade...</div>
+</div><div class="post" id="p5007118">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 07 2012, 08:40 AM</span></div>
+  <div class="body">Meru... Warn system dead now?Or is there a way to revert to the old system?</div>
+</div><div class="post" id="p5007119">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Apr 07 2012, 08:41 AM</span></div>
+  <div class="body">.... didn't you read my post Meru lol, already told you that Sherlock :Plol Piggie</div>
+</div><div class="post" id="p5007122">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 07 2012, 08:47 AM</span></div>
+  <div class="body">The convert & DP loan systems still work and the members still have warn levels so it still works.But i can't give out negs  :smile: <s>Also, I might be able to rewrite the staff utils to be independent of ipbwi ( using the admin/sources files directly ) . Worth the effort ?</s>nono</div>
+</div><div class="post" id="p5007128">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Apr 07 2012, 09:08 AM</span></div>
+  <div class="body">When you use an IPStore item that you no longer have (you used them all but you press the back button for example) you get the following error:<strong>Strict Standards</strong>: Declaration of group_forum_breadcrumb::sendOutput() should be compatible with that of output::sendOutput() in <strong>/home/dgemu/domains/dgemu.com/public_html/forums/hooks/group_forum_breadcrumb_9248b3ceda07533f216be474f23d7977.php</strong> on line <strong>107</strong></div>
+</div><div class="post" id="p5007133">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 07 2012, 07:13 PM</span></div>
+  <div class="body">I'll look over it tmr...Dead in the morning, and am tired now  ~_~  XDYa, right now Social Groups seems to be sick: I enable it, it creates all sorts of strict errors on the board, but Social Group works. I disable it, all errors are gone, Social Groups all get locked out with a password.Warn engine seems to have disappeared, yes... I don't really get why though, it's supposed to be a board basic feature.I had to recache the whole ibEconomy, and that seems to have helped, but there are still parts that are not available?If this seriously keeps up, I think coding out own store would save us the pain as we would actually know wtf we did... But that will be a much bigger challenge.Wow, the A being replaced at every post is a freaking nasty bug, and it isn't caused by any of the add-ons or anything I put...As 2bp pointed out, the db is perfectly fine, all the posts are clean in there.That basically means that this bug, is YET AGAIN, something wrong with the new editor for posts and the way it interprets the posts...</div>
+</div><div class="post" id="p5007158">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">T</span><a class="author" href="../users/u2454177.html">The Pan Is Mightier</a></span><span>Apr 07 2012, 07:39 PM</span></div>
+  <div class="body">Yay for Meru making more work for himself by upgrading!Better to deal with this **** .1 by .1 instead of taking a massive hit by waiting til the next 1.0 leap.</div>
+</div><div class="post" id="p5007172">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 07 2012, 08:58 PM</span></div>
+  <div class="body">I finally figured out what was wrong with the errors at the top: The add-on to render the group subforums was causing the error.Disabling that fixes it up, but now everyone sees the group subforums which isn't supposed to happen. Got to wait until the guy updates the add-on to fix it.For the "A" issue, I'm still not sure what is wrong with it...It's not an issue with any of the add-on, it's more an issue with how IPB interprets a post from the database, and this issue we have been seeing since our last version, except not as explicitly as now...I'm trying something to see if it helps...</div>
+</div><div class="post" id="p5007223">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Apr 08 2012, 05:13 AM</span></div>
+  <div class="body">I don't know about you guyss but this A thing is pretty hilarious</div>
+</div><div class="post" id="p5007243">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Apr 08 2012, 09:53 AM</span></div>
+  <div class="body">Nothing wrong with that cause once it is posted it is fine, it is several hours after (at a certain time perhaps) that it all gets "A" .....Also warning points is @#$^ and cause of that Mods can NOT WARN OR BAN ..... (See the BBC17 thread in Bannings forum) .....</div>
+</div><div class="post" id="p5007271">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">T</span><a class="author" href="../users/u2454177.html">The Pan Is Mightier</a></span><span>Apr 08 2012, 06:01 PM</span></div>
+  <div class="body">For some reason I can't access my topic here:http://www.dgemu.com/forums/index.php?/topic/475838-pans-android-games-and-emulators/It says:"Search is not available as the Sphinx API is not available, please contact an administrator about this issue "But I'm not using the search at all.EDIT: Same thing happened here:http://www.dgemu.com/forums/index.php?/topic/474186-pay-what-you-want-games-humble-indie-bundles/So I figured out the problem after testing my theory. I can't enter any topics that I started myself! Weird.UPDATE: Idk if anyone did anything to fix it, but I can enter my own topics now, so that's odd.</div>
+</div><div class="post" id="p5007319">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 09 2012, 04:06 AM</span></div>
+  <div class="body">The post starting with A issue is fixed.Posted for help in another board, and the people there were knowledgeable.Thanks system completely taken down as it was the cause of it. ajax Thanks 1.0.6 isn't compatible with IP.Board 3.3.0, so I had to upgrade to devCU Thanks 2.0, and as it seems, that version causes a bug with the display on some boards where the first character of the post would all get changed to A, even if that mod is meant for IP.Board 3.3.0... During my tests, I completely disabled the hook and the problem persisted: It seems that disabling it doesn't help, I had to completely uninstall it to fix the issue...So that's 1 problem down.Sphinx API was my fault: I was doing a massive cleanup of the files on the server for our forums: We still had all the old files for the old dg_store, dgemu rpg, etc lying around in the main forum folder, clogging things up a bit. So I started a first phase of cleanup by moving files, and soon after, I noticed the Sphinx config error (a file I moved by accident), so I put it back.IP.Board 3.3.0 moved to warning points instead of displaying the level of warning like it used to. The alter warn setting seems to have changed, I'll have to look and see what I can do about it. As for banning, moderators never had the ability to do so. It was only possible with the Staff Utilities, but as I said, that is taken down temporarily for revision to make sure it doesn't screw anything more up.One thing I noticed: The board seems to be a lot faster to load stuff. I know the dev team improved speed, but to this noticeable extent? It's wonderful. We'll have to wait until some mods and hooks get released before everything is 100% stable and back to how it was at 3.2.3 minus the slowness.GOD DAMN LOUSY IPBOARD POS...NOW WHAT DO WE GET? THE A PROBLEM FIXED, BUT ALL POSTS FOR SQUISHED WITH NO MORE FORMATTING...God damn, when they migrated to that "html" format in the posts, it's really annoying.</div>
+</div><div class="post" id="p5007322">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Apr 09 2012, 04:29 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Rin Itoshiki&#x27; timestamp=&#x27;1333944418&#x27; post=&#x27;5007319 wrote:</div>The post starting with A issue is fixed.</blockquote>awww.oh well, good work, meru.also yay, it doesn't take forever to load someone's profile anymore!</div>
+</div><div class="post" id="p5007323">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 09 2012, 04:42 AM</span></div>
+  <div class="body">Good work meru &lt;3Also, Can we tune up the performance options again?I had noticed that < Members reading this topic > was disabled in 3.2.3 and lots of other little things too.</div>
+</div><div class="post" id="p5007326">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">T</span><a class="author" href="../users/u2454177.html">The Pan Is Mightier</a></span><span>Apr 09 2012, 04:48 AM</span></div>
+  <div class="body">I miss the rep system most of all, but fixing the Sphinx thing and the A thing was pretty damned great thanks</div>
+</div><div class="post" id="p5007333">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Apr 09 2012, 05:39 AM</span></div>
+  <div class="body">Posts with new paragraphs got whacked out a bit but new posts are fine so that isn't that much of a big deal ....</div>
+</div><div class="post" id="p5007358">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">T</span><span class="author">The Archbishop</span></span><span>Apr 09 2012, 10:50 AM</span></div>
+  <div class="body">the upgrade caused it so channel28 is on ignore for some reasoni like it.</div>
+</div><div class="post" id="p5007360">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 09 2012, 06:21 PM</span></div>
+  <div class="body">@Channel: It is an issue... Especially in the soundtrack download center, that place looks horrible now...Update: Bug confirmed in IP.Board 3.3.0: Super moderators unable to warn members.Applied a fix, you can now warn members. Unfortunately, you can only give out positive warns, not negative.The new warn center is much more intuitive compared to the old version.</div>
+</div><div class="post" id="p5007411">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Apr 09 2012, 06:33 PM</span></div>
+  <div class="body">people actually give out neg warns???</div>
+</div><div class="post" id="p5007418">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 10 2012, 01:56 AM</span></div>
+  <div class="body">Update IPBWI ?</div>
+</div><div class="post" id="p5007427">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">T</span><a class="author" href="../users/u2454177.html">The Pan Is Mightier</a></span><span>Apr 10 2012, 03:05 AM</span></div>
+  <div class="body">I've noticed the new pop up that appears when you select a topic for moderation. I like it. It's a lot easier than scrolling all the way down if you plan on modding a few separate topics in separate ways.</div>
+</div><div class="post" id="p5007455">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 10 2012, 07:02 AM</span></div>
+  <div class="body">IPBWI is up to date, that only affects custom pages we make.<br />
+Yup, the new moderation system is nifty.<br />
+<br />
+I just turned the board back online after those many hours of post rebuild: It didn't help, in fact, doing that seems to have made things worse...<br />
+And there doesn't seem to be any plausible way to making a post format properly anymore...<br />
+<br />
+So now we HAVE to scramble and make edits and reformat all our posts manually... Stupid bug of IP.Board...<br />
+<br />
+That being said, we should put 4 main focuses:<br />
+1. Reformat rules and guidelines...<br />
+2. Reformat our guides and pinned topics.<br />
+3. Reformat our stuff in the Download Center<br />
+4. Reformat the posts on the main page.<br /><br />Just look at how fucking wonderful my Win7 guide turned out to be:<br />
+http://www.dgemu.com/forums/index.php?/topic/475257-guide-microsoft-windows-7-installation-resource/<br /><br />On a side and positive note: Social Groups is fixed and running like normal.</div>
+</div><div class="post" id="p5007468">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Apr 10 2012, 09:11 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Rin Itoshiki&#x27; timestamp=&#x27;1333995712&#x27; post=&#x27;5007360 wrote:</div><br />
+Update: Bug confirmed in IP.Board 3.3.0: Super moderators unable to warn members.Applied a fix, you can now warn members. Unfortunately, you can only give out positive warns, not negative.The new warn center is much more intuitive compared to the old version.<br />
+</blockquote><br />
+It is still !@$%^!@#$^ .... all Current "Reasons" give other options as "Verbal Warning only" so you can't suspend or ban, etc .......<br /><br /><blockquote class="quote"><div class="qhdr">Rin Itoshiki&#x27; timestamp=&#x27;1334041327&#x27; post=&#x27;5007455 wrote:</div><br />
+That being said, we should put 4 main focuses:<br />
+1. Reformat rules and guidelines...<br />
+2. Reformat our guides and pinned topics.<br />
+3. Reformat our stuff in the Download Center<br />
+4. Reformat the posts on the main page.<br />
+<br />
+Just look at how ******* wonderful my Win7 guide turned out to be:<br />
+http://www.dgemu.com...ation-resource/<br />
+</blockquote><br />
+ :facepalm: <br /><br />----   <br />
+<br />
+I am not doing any more quizzes until this thing with paragraphs being deleted is sorted out lol</div>
+</div><div class="post" id="p5007487">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 10 2012, 01:03 PM</span></div>
+  <div class="body">Wow.<br />
+May as well delete the board now  :P </div>
+</div><div class="post" id="p5007503">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 10 2012, 02:49 PM</span></div>
+  <div class="body">It's fucking ridiculous that a bug like that lingered in their new version.<br />
+I was roaming the Invision official support, and I just happen to coincidentally land on a reported bug that is our issue.<br />
+<br />
+We're actually not the only board that was affected with this mess as it seems, and many people are pissed off at them for this.<br />
+<br />
+They've fixed it on IP.Board 3.3.1 Beta, but their reply for everyone that got hit with this bad luck:<br />
+Tough luck, either restore manually or rollback posts table.<br />
+<br />
+Just effing great. I've already sent a PM to DM to see if he could merge back the old posts from our backup back in January (or was it then, I don't remember when I requested that) just so that we can fix anything before that time. That should fix the rules (but reset it to version prior Pat's changes, fawk) and many pages back to normal, but everything else in between then and now is screwed...<br />
+<br />
+I REALLY don't want to go through all my PS2 and collection releases again...</div>
+</div><div class="post" id="p5007551">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">T</span><a class="author" href="../users/u2454177.html">The Pan Is Mightier</a></span><span>Apr 10 2012, 06:35 PM</span></div>
+  <div class="body">So it won't happen to new posts, but will still be a block of text for the posts from the last few months? Damn, well it's a good thing I keep text files backups of almost every DC topic I make.</div>
+</div><div class="post" id="p5007574">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 10 2012, 08:05 PM</span></div>
+  <div class="body">It's still an annoying prick to actually open each file and copy paste...<br />
+<br />
+When I found out about it, you can't imagine how pissed I was when I read the issue.<br />
+You had people complaining about 70k posts screwed, another that had 300k posts...<br />
+<br />
+But they're nowhere near us with 1.3M posts.</div>
+</div><div class="post" id="p5007729">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Apr 11 2012, 12:05 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Rin Itoshiki&#x27; timestamp=&#x27;1334069374&#x27; post=&#x27;5007503 wrote:</div><br />
+It's ******* ridiculous that a bug like that lingered in their new version.<br />
+I was roaming the Invision official support, and I just happen to coincidentally land on a reported bug that is our issue.<br />
+<br />
+We're actually not the only board that was affected with this mess as it seems, and many people are pissed off at them for this.<br />
+<br />
+They've fixed it on IP.Board 3.3.1 Beta, but their reply for everyone that got hit with this bad luck:<br />
+Tough luck, either restore manually or rollback posts table.<br />
+<br />
+Just effing great. I've already sent a PM to DM to see if he could merge back the old posts from our backup back in January (or was it then, I don't remember when I requested that) just so that we can fix anything before that time. That should fix the rules (but reset it to version prior Pat's changes, fawk) and many pages back to normal, but everything else in between then and now is screwed...<br />
+<br />
+I REALLY don't want to go through all my PS2 and collection releases again...<br />
+</blockquote><br />
+I have already started editing the Rules and Guidelines, etc fixing this problem ....<br />
+<br />
+Speaking of which refer to<br />
+http://www.dgemu.com/forums/index.php?/topic/475578-rule-and-guideline-rewrites/#entry5007731</div>
+</div><div class="post" id="p5007735">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 11 2012, 01:02 PM</span></div>
+  <div class="body">Meru, ACP says you need to delete a file because security issues.<br />
+Better do that  :) <br />
+What did you do with the post rebuild though?</div>
+</div><div class="post" id="p5007743">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 11 2012, 03:13 PM</span></div>
+  <div class="body">Yeah, I know, I'm just leaving the install file there for now in case I need to re-run a global install again.<br />
+<br />
+Anyways, that page is pretty much useless unless you have an admin account.<br />
+<br />
+The rebuild tool cannot be removed from the boards, just don't go around and click it. It's really resource intensive.</div>
+</div><div class="post" id="p5007745">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 11 2012, 03:26 PM</span></div>
+  <div class="body">Nah, I don't click anything because i'm too scared the site will break.</div>
+</div><div class="post" id="p5007790">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 11 2012, 08:00 PM</span></div>
+  <div class="body">Why not?<br />
+<br />
+Then I can finally pass the blame on someone else asides me.  XD </div>
+</div><div class="post" id="p5007844">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 12 2012, 01:28 AM</span></div>
+  <div class="body">We can blame Invision!</div>
+</div><div class="post" id="p5007953">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Apr 12 2012, 09:06 AM</span></div>
+  <div class="body">...... you know Meru is more to blame here because REALLY with a upgrade like that is should of been tested on the Staff Test Boards (the duplicate forum we originally tested IPB3 out on) and then we would of seen this and avoided it .....<br />
+<br />
+so no lets keep blaming Meru  :P  lol</div>
+</div><div class="post" id="p5008050">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 13 2012, 03:47 AM</span></div>
+  <div class="body">There's a difference between a major upgrade and minor upgrade, and a revision.<br />
+<br />
+Logically from a good standard, passing from 3.2 to 3.3 is considered a minor upgrade, making slight changes to the code and small interface changes without re-hauling the whole code.<br />
+Who knew that IP.Board would touch a tool to rebuild post content when that aspect was not affected from their description of changes.<br />
+<br />
+That's basically a lack of dedication in QA on their end.<br />
+<br />
+That's like asking Microsoft to deliver a new Windows knowing that performing an upgrade will cause your system to crash, and you would need to reformat your computer to reinstall. It just doesn't make sense.<br />
+<br />
+~ ~ ~ ~ ~<br />
+<br />
+Alright guys, Staff Utilities back online, with the changes 2bp made (visibility toggle, action log), slightly modified the output.<br />
+<br />
+Had to fix the warn center link as the new version completely changed it.<br />
+I might remove the warn member button as the new warn center that shows the logs also has the warn member function, which is much more complete now.<br />
+<br />
+I also managed to fix the double scroll bar issue.<br /><br />I haven't thoroughly tested the point deduction stuff, so if there's any bugs, let me know.</div>
+</div><div class="post" id="p5008137">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Apr 13 2012, 07:27 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Rin Itoshiki&#x27; timestamp=&#x27;1334288827&#x27; post=&#x27;5008050 wrote:</div><br />
+I haven't thoroughly tested the point deduction stuff, so if there's any bugs, let me know.<br />
+</blockquote><br />
+Clicking #49 on your post gives the URL in the browser, copying that and inserting into Staff Util. ...... Post NOT FOUND ....<br />
+<br />
+Am I doing it the right way?<br /><br />----<br />
+<br />
+In other news did you read this:<br />
+<blockquote class="quote"><div class="qhdr">Channel28&#x27; timestamp=&#x27;1334046924&#x27; post=&#x27;5007467 wrote:</div><br />
+Found new Warn button .... You MUST select a reason and they ALL say Verbal Warning only .... that is sooo @#^!@#%^!@#%^<br />
+</blockquote><br />
+Granted it was last post on the BCC713 page 1 so you probably (yet again) missed it .....<br />
+<br />
+But yea ..... I can't warn BCC713 probably for a Dupe Account when "Reasons" says VERBAL WARNING ONLY on every current selectable option ......</div>
+</div><div class="post" id="p5008153">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 13 2012, 12:26 PM</span></div>
+  <div class="body">Eh?<br />
+I see many options to add warning points.<br />
+<br />
+Spamming	1<br />
+Inappropriate Language	1<br />
+Signature Violation	1<br />
+Abusive Behaviour	1<br />
+Topic Bumping<br />
+Other<br />
+<br />
+And then under the 'Punishment' header, There are also options to suspend. Do you have it or is that an admin only thing?</div>
+</div><div class="post" id="p5008176">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 13 2012, 02:18 PM</span></div>
+  <div class="body">It could be an admin thing.<br />
+<br />
+I`ll try to go predefine a few settings by next week.</div>
+</div><div class="post" id="p5008448">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Apr 14 2012, 07:00 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">2bigpigs&#x27; timestamp=&#x27;1334320010&#x27; post=&#x27;5008153 wrote:</div><br />
+Spamming 1<br />
+Inappropriate Language 1<br />
+Signature Violation 1<br />
+Abusive Behaviour 1<br />
+Topic Bumping<br />
+Other<br />
+</blockquote><br />
+Other wasn't there yesterday .... I swear lol<br />
+<br />
+Other allows Points and Remove Points after X time .... but Punishment is still Verbal ...</div>
+</div><div class="post" id="p5008479">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 14 2012, 08:22 AM</span></div>
+  <div class="body">Do you have a change punishment button?<br />
+That opens up a ban/suspend dialog for me</div>
+</div><div class="post" id="p5008646">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Rin Itoshiki</span></span><span>Apr 15 2012, 02:07 AM</span></div>
+  <div class="body">I added other the other day, so ur not smoking anything Channel.<br />
+Ill setup a list of stuff that can be given.</div>
+</div><div class="post" id="p5008666">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Apr 15 2012, 04:39 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Rin Itoshiki&#x27; timestamp=&#x27;1334455666&#x27; post=&#x27;5008646 wrote:</div><br />
+I added other the other day, so ur not smoking anything Channel.<br />
+</blockquote><br />
+<img src="http://www.dgemu.com/forums/public/style_emoticons/default/Smoke%20bong.gif" loading="lazy" class="post-img">  :Khrs: <br /><br />Oh .... stuff like Signature violation (Verbal Warning) DOES actually give a warning .... not a neutral one which is what one would expect from the term, "Verbal Warning" .....</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

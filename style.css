@@ -1,0 +1,78 @@
+*{box-sizing:border-box}
+body{margin:0;background:#e9eef3;color:#293845;font-family:Arial,Helvetica,sans-serif;font-size:14px;}
+a{color:#1b5faa;text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{background:linear-gradient(rgb(64,108,153),rgb(44,87,136));padding:0 20px;color:#fff;overflow:hidden;height:64px;display:flex;align-items:center;justify-content:space-between}
+.brand-logo{height:64px;display:block}
+.navbar{background:#2c5a86;display:flex;flex-wrap:wrap;padding:0 12px}
+.navbar a{color:#e7f0fa;padding:11px 16px;font-size:.92rem;display:inline-block}
+.navbar a.active{background:#eef2f6;color:#1c3b5e;font-weight:bold}
+.navbar a:hover{background:#3a6c99;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:16px 14px 60px;}
+.layout{display:flex;gap:16px;align-items:flex-start}
+.main-col{flex:1;min-width:0}
+.side-col{width:260px;flex-shrink:0}
+.section-bar{background:linear-gradient(#3b6ea5,#2f5f8f);color:#fff;font-weight:bold;font-size:1rem;padding:9px 14px;border-radius:5px 5px 0 0;margin-top:18px}
+.forum-box{background:#fff;border:1px solid #cdd9e5;border-top:none;border-radius:0 0 6px 6px;overflow:hidden}
+.forum-row{display:flex;gap:14px;padding:14px 16px;border-bottom:1px solid #e3e9ef;align-items:flex-start}
+.forum-row:last-child{border-bottom:none}
+.forum-row:nth-child(even){background:#f7fafc}
+.f-icon{width:34px;height:34px;border-radius:6px;background:#dce8f5;color:#3b6ea5;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+.f-main{flex:1;min-width:0}
+.f-title{font-size:1.02rem;font-weight:bold;color:#1c3b5e}
+.f-sub{font-size:.82rem;color:#4a7bab;margin-top:2px}
+.f-sub a{color:#4a7bab}
+.f-desc{color:#66768a;font-size:.85rem;margin-top:5px;line-height:1.4}
+.f-stats{width:90px;text-align:center;color:#4a5a6a;font-size:.85rem;flex-shrink:0;padding-top:2px}
+.f-stats b{display:block;font-size:1.05rem;color:#1c3b5e}
+.f-last{width:210px;flex-shrink:0;font-size:.82rem;color:#5a6c7d;line-height:1.5}
+.f-last .t{color:#1b5faa;font-weight:bold;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.avatar{width:32px;height:32px;border-radius:5px;background:#7ba0c4;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:bold;font-size:.9rem;vertical-align:middle;margin-right:6px}
+.side-box{background:#fff;border:1px solid #cdd9e5;border-radius:6px;overflow:hidden;margin-bottom:16px}
+.side-hdr{background:linear-gradient(#3b6ea5,#2f5f8f);color:#fff;font-weight:bold;padding:9px 14px;font-size:.95rem}
+.side-item{display:flex;gap:8px;padding:10px 12px;border-bottom:1px solid #e3e9ef;align-items:flex-start}
+.side-item:last-child{border-bottom:none}
+.side-item .t{display:block;color:#1b5faa;font-weight:bold;font-size:.85rem;line-height:1.3}
+.side-item .m{color:#8a97a5;font-size:.78rem;margin-top:2px}
+.crumbs{padding:10px 2px;color:#5a6c7d;font-size:.85rem}
+.crumbs a{color:#1b5faa}
+.topic-table{width:100%;border-collapse:collapse;background:#fff}
+.topic-table th{background:#e4ecf4;color:#3b5878;text-align:left;font-size:.78rem;padding:8px 10px;border-bottom:2px solid #cdd9e5}
+.topic-table td{padding:9px 10px;border-bottom:1px solid #e3e9ef;font-size:.86rem;vertical-align:top}
+.topic-table tr:nth-child(even){background:#f7fafc}
+.topic-title{color:#1c3b5e;font-weight:bold}
+.pin-badge{color:#c98a1c;font-weight:bold;margin-right:4px}
+.num-col{text-align:center;color:#4a5a6a;width:70px}
+.last-col{width:190px;font-size:.82rem;color:#5a6c7d}
+.pagenav{display:flex;justify-content:center;gap:6px;margin:18px 0;flex-wrap:wrap}
+.pagenav a,.pagenav span{padding:6px 12px;border:1px solid #cdd9e5;border-radius:4px;background:#fff;font-size:.85rem}
+.pagenav span.current{background:#2f5f8f;color:#fff;border-color:#2f5f8f}
+input#search{width:100%;padding:9px 12px;border-radius:5px;border:1px solid #b9c8d8;font-size:.95rem;margin:14px 0;background:#fff}
+.thread-title-box{background:#fff;border:1px solid #cdd9e5;border-radius:6px 6px 0 0;padding:14px 16px}
+.thread-title-box h1{margin:0 0 4px;font-size:1.2rem;color:#1c3b5e}
+.thread-meta{color:#8a97a5;font-size:.82rem}
+.post{background:#fff;border:1px solid #cdd9e5;border-top:none;padding:14px 16px}
+.post:last-of-type{border-radius:0 0 6px 6px}
+.post .phead{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.83rem;color:#8a97a5;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid #eef2f6}
+.post .author{color:#1c3b5e;font-weight:bold}
+.post .body{word-wrap:break-word;overflow-wrap:break-word;line-height:1.55}
+.post .body img.post-img{max-width:100%;border-radius:5px;margin:6px 0}
+blockquote.quote{border-left:3px solid #7ba0c4;background:#eef4fa;margin:8px 0;padding:8px 12px;border-radius:0 5px 5px 0}
+blockquote.quote .qhdr{color:#7488a0;font-size:.78rem;margin-bottom:4px;font-style:italic}
+.op-tag{background:#e4ecf4;color:#3b6ea5;font-size:.72rem;padding:1px 7px;border-radius:3px;margin-left:6px}
+.stat-line{color:#8a97a5;font-size:.85rem;margin:8px 2px 4px}
+.footnote{color:#8a97a5;font-size:.78rem;text-align:center;margin-top:24px}
+.profile-header{background:#fff;border:1px solid #cdd9e5;border-radius:6px;padding:18px 20px;display:flex;gap:16px;align-items:center;margin-bottom:16px}
+.profile-header .avatar{width:56px;height:56px;font-size:24px;border-radius:8px}
+.profile-title{font-size:1.3rem;font-weight:bold;color:#1c3b5e}
+.profile-sub{color:#8a97a5;font-size:.85rem;margin-top:2px}
+.profile-banned{background:#e05a5a;color:#fff;font-size:.72rem;padding:2px 8px;border-radius:3px;margin-left:8px}
+.stat-grid{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.stat-box{background:#fff;border:1px solid #cdd9e5;border-radius:6px;padding:10px 16px;text-align:center;min-width:110px}
+.stat-box b{display:block;font-size:1.1rem;color:#1c3b5e}
+.stat-box span{color:#8a97a5;font-size:.78rem}
+.field-table{width:100%;border-collapse:collapse;background:#fff}
+.field-table td{padding:8px 12px;border-bottom:1px solid #e3e9ef;font-size:.85rem}
+.field-table td:first-child{color:#5a6c7d;width:140px}
+.author{color:#1c3b5e;font-weight:bold}
+a.author:hover{text-decoration:underline}

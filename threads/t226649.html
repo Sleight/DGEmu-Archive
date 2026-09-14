@@ -1,0 +1,128 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAME User&#x27;s Guide</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f288.html">Console Emulation &amp; Modding Assistance</a> &rsaquo; <a href="../forums/f323.html">Other Console Resources</a> &rsaquo; MAME User&#x27;s Guide</div><div class="thread-title-box"><h1>MAME User&#x27;s Guide</h1><div class="thread-meta" style="font-style:italic;margin-bottom:4px">For beginning MAME users (all 3 big OSes covered)</div><div class="thread-meta">3 posts &middot; page 1 of 1 &middot; closed &middot; 2120 views</div></div><div class="post" id="p2377120">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u211155.html">Hadel</a><span class="op-tag">ORIGINAL POST</span></span><span>Apr 12 2007, 01:37 AM</span></div>
+  <div class="body"><span style="color:black">I have noticed that there are occasionally some topics that pop up that ask about using certain aspects of the Multiple Arcade Machine Emulator (MAME), and most of these seem to wind up closed or in the Dump for no particular reason. So, this guide here has been made to cover the basic essentials of being able to properly play ROM files on MAME, since these are what most of the threads in the past have asked about anyway. If you are brand new to using MAME or do not even have it yet and would like to emulate arcade games, then it is recommended that you read this so you don't get lost in starting up. I hope this helps members and also cuts down on MAME help topics.</span><br />
+<br />
+<span style="color:black"><strong>Note that throughout this guide, the important parts of the instructions are bolded so that you can quickly scan through the document if you wish and still have the essential information.</strong></span><br />
+<br />
+<span style="color:black"><strong>TABLES OF CONTENTS</strong></span><br />
+<span style="color:black"><strong>I. MAME Plus!/MAME32</strong> (for Windows)</span><br />
+<span style="color:black">1. <strong>Downloads</strong></span><br />
+<span style="color:black">2. <strong>Getting Started</strong></span><br />
+<span style="color:black">3. <strong>Network Play</strong></span><br />
+<br />
+<span style="color:black"><strong>II. MacMAME/MAME OSX</strong> (for Mac)</span><br />
+<span style="color:black">1. <strong>MacMAME Links</strong></span><br />
+<span style="color:black">2. <strong>MAME OSX Links</strong></span><br />
+<br />
+<span style="color:black"><strong>III. MAME on Linux</strong> (for Linux)</span><br />
+<br />
+<span style="color:black"><span style="color:green"><strong>(Credits to</strong> Manatee x360a.org <strong>for writing this portion of the guide)</strong></span></span><br />
+<span style="color:black"><span style="color:red"><strong><u>Additional Emulation Guides for MAME</u></strong></span></span><br />
+<span style="color:black"><strong>Capcom Play System 3 (CPS3) Guide <span style="color:green">by</span></strong> <a href="../users/u658123.html">DownShift</a></span><br />
+<strong>Neo-Geo Guide <span style="color:green">by</span></strong> <a href="../users/u211155.html">Hadel</a><br />
+<br />
+<span style="color:black"><strong>MAME Plus!/MAME32</strong></span><br />
+<span style="color:black">MAME Plus! is the recommended version of the emulator to use, although it is an unofficial build/update of the original MAME/MAME32 versions, so if there are any problems/major bugs in coming releases, then it is recommended that you try one of the MAME32 builds or an older version of MAME Plus! <strong>Another thing to note about MAME versions is that some ROMs get updated now and then, and some of the older versions of ROMs do not work on newer versions of MAME. So, if one of your ROMs does not work on your latest version of MAME, try to download an earlier version to play it or get a newer version of the ROM.</strong> Ok, so this guide is here to teach you the basics about getting started on MAME, in case you don't know already. So first, let's make sure you at least have the emulator.</span><br />
+<br />
+<span style="color:black"><strong><u>Downloads</u></strong></span><br />
+<span style="color:black">If you do not know where to download MAME Plus! or MAME32 for some reason, do not worry. Tons of places have it. Here are a few:</span><br />
+<span style="color:black"><strong>MAME Plus!:</strong></span><br />
+<span style="color:black"><a href="http://www5.emu-zone.org/host/mameplus/" target="_blank" rel="noopener">http://www5.emu-zone.../host/mameplus/</a></span><br />
+<span style="color:black">(this is constantly being updated, and the updates will usually wind up on this page... click the Download button there)</span><br />
+<span style="color:black">If some of your ROMs have not been updated and do not work on that, then try one of the older versions of MAME32:</span><br />
+<span style="color:black"><strong>MAME32 0.95:</strong></span><br />
+<span style="color:black"><a href="http://mame32.classicgaming.gamespy.com/download.htm" target="_blank" rel="noopener">Download Here</a></span><br />
+<span style="color:black">There are older versions still available for download at plenty of places, so if your system cannot handle these for some reason, it would be better for you to find an older version. The interface for the versions is essentially the same, so this guide can help you no matter what version you are using.</span><br />
+<br />
+<span style="color:black"><strong><u>Getting Started</u></strong></span><br />
+<span style="color:black">Now that you have downloaded the emulator, you should set everything up so you can play the ROMs properly. Firstly, you should create a folder to store all of the files that come with the download. If you have 0.64, then all of the files necessary for the program will be bundled and you need to extract them all into one folder. If you have 0.95, then when you run the installation exe file, you will need to show what directory to install everything into. It's ok if you didn't create a directory beforehand; you can just direct it into a new folder that doesn't exist yet and the program will create that folder for you. <strong>So basically, just make sure all the files that come with the downloads are put into a single folder designated just for the program. This is essential for making everything easier.</strong></span><br />
+<br />
+<span style="color:black">The next step in setting everything up is to put your ROM files in the correct place. In the folder with all of your MAME stuff, there should be a folder titled "roms". The only file that will be in this folder when you first install everything is "dir.txt". Quite simply, this folder is where you are going to put all of your ROMs, unless you want to make things harder for yourself. <strong>So, when you download a MAME ROM from DG (or anywhere else, I suppose), put it into the "roms" folder that is already there. There is no need to unzip or rename anything. Doing so is likely to make things not work.</strong></span><br />
+<br />
+<span style="color:black">ROMs downloaded from DGEmu come bundled with all versions of the ROM necessary for playing the game, so it is best to download them from here. Something to note if you download from other places though is that if it is an expansion ROM, such as Super Street Fighter 2 Turbo, then it is necessary to also have the original ROM, which in this example is Super Street Fighter 2, in order to play the game. So make sure you have all parent ROMs and subroms necessary before trying to play.Now, to get to playing the games. When you open MAME, on the left hand side of the screen you will find a list of directories set up in a menu. On the top of the list is a folder called "All Games". <strong>"All Games" is just a list of all the games that can be played on the emulator. It is not the games that you already have available to play. In order to get to these, go to the folder called "Available" directly under it.</strong> Whenever you add new ROMs to the "rom" folder, go to the main screen of MAME and press F5 (the Refresh command for MAME). This should put any added games into the "Available" folder on the left side and allow you to play them. Once you have the game you want to play in the menu, double click on the title to start.</span><br />
+<br />
+<span style="color:black"><strong>When the game starts up, you can easily set the controls you wish to use for that game by pushing Tab.</strong> If you want to only set the controls for the game you are currently playing, select "Input (this game)". If you want to set general controls for all the games in your list, then select "Input (general)".</span><br />
+<br />
+<span style="color:black">This is basically all of the essential information you will need to start playing ROMs on MAME. You should be on your way to a good time now if you read all of this carefully, or at least looked at the bolded parts. Have fun!</span><br />
+<br />
+<span style="color:black"><strong><u>Network Play</u></strong></span><br />
+<span style="color:black">The easiest way to start a network game is to right-click the game that you want to play and select the "Play Network Game" option. Alternatively, you can highlight a game on the list and then go to File->Play network game. When you do this, the server screen will appear. When this shows up, the program will start generating the list of servers you can play on. The servers with the lowest ping will usually be at the top of this list. At the bottom of the screen, you can input a username and change the connection type that it says for you. It is recommended that you select the server with the lowest ping when you want to play. There are other tabs on this screen that you can go to, as well. The "Waiting Games" tab shows you people who are waiting for someone to connect to their server and play with them. The "Recent" tab is a list of every server you have ever been in, with the most frequently visited ones on top. The other tabs are very self-explanatory. This should be enough information for you to start enjoying network play if you wish to use that feature of MAME.</span><br />
+<br />
+<span style="color:black"><strong>MacMAME/MAME OSX</strong></span><br />
+<span style="color:black">If you are a Macintosh user, then it is recommended you use MAME OSX or MacMAME as your emulator. Because not many people on the forums use these, I will not waste time putting much about them. However, in case there are a few out there who do need help with them, I am going to provide some links to places where you can get help if you need it, as well as a place to download the emulators if you don't have them.</span><br />
+<br />
+<span style="color:black"><strong><u>MacMAME Links</u></strong></span><br />
+<span style="color:black">If you do not have MacMAME on your Mac OSX yet, then you can download it from here:</span><br />
+<span style="color:black"><a href="http://www.macmame.org/downloads.html" target="_blank" rel="noopener">http://www.macmame.org/downloads.html</a></span><br />
+<br />
+<span style="color:black">Note that you must have Mac OSX 10.2 or higher in order to use the emulator.If you are having any trouble using MacMAME or need some kind of help figuring out how to use it, visiting this page usually solves the problem:</span><br />
+<span style="color:black"><a href="http://www.bannister.org/forums/ubbthreads.php?ubb=showflat&amp;Number=20270&amp;page=1#Post20270" target="_blank" rel="noopener">http://www.bannister...age=1#Post20270</a> (click)</span><br />
+<br />
+<span style="color:black">There are several links to FAQs, guides, and also advice about using the official message board of the program to get help with additional issues. This page pretty much has everything that a MacMAME user can ask for. So go there if you need anything. Asking questions on the forums here will probably be much less useful.</span><br />
+<br />
+<span style="color:black"><strong><u>MAME OSX Links</u></strong></span><br />
+<span style="color:black">If you do not have MAME OSX and would like to use it, then you can download it from here:</span><br />
+<span style="color:black"><a href="http://mameosx.sourceforge.net" target="_blank" rel="noopener">http://mameosx.sourceforge.net</a></span><br />
+<br />
+<span style="color:black">This page also has a manual for using the program once you have it downloaded:</span><br />
+<span style="color:black"><a href="http://mameosx.sourceforge.net/documentation/manual.php" target="_blank" rel="noopener">http://mameosx.sourc...tion/manual.php</a></span><br />
+<br />
+<span style="color:black">For any additional help with using the program that isn't covered in that manual, you can follow the advice that is given in that document:</span><br />
+<span style="color:black"><blockquote class="quote"><div class="qhdr">someone wrote:</div><strong>Where To Get Help</strong></span><br />
+<span style="color:black">A <a href="http://www.bannister.org/forums/ubbthreads.php" target="_blank" rel="noopener">web forum</a> for MAME OS X is available for any questions not covered by this document.</blockquote></span><br />
+<span style="color:black">All of that should be sufficient information for any Mac users who wish to play MAME ROMs on their computer.</span><br />
+<br />
+<span style="color:black"><strong>MAME on Linux</strong></span><br />
+<span style="color:black"><span style="color:green"><strong>This guide was written by Manatee x360a.org</strong></span></span><br />
+<br />
+<span style="color:black">This guide was written for all of those linux guys out there like me. I used Xubuntu 7.04 Feisty Fawn, but Kubuntu, Ubuntu, Red Hat, and anything Debian will work this way.You might to get some Graphical and Sound libraries and GTK runtimes, but a quick run in Synaptic should do the job.The best emulator for Linux is AdvancedMAME. It has not received an update in close to a year, but it is the smoothest running without having to get WINE involved. The <a href="http://advancemame.sourceforge.net/" target="_blank" rel="noopener">link to the advancedMAME site is here</a> It utilizes Mame 1.06, which is a pretty stable build with good compatibility. You´re going to run the games you´re going to want to play, so that fixes that.</span><br />
+<br />
+<span style="color:black">Once you tar or unzip AMAME, Running advmame in konsole, shell, Gterm, or terminal will tell you to set up a configuration file, which you can do with advmame --default. Once done that, you can to edit your ~/.advance/advmame.rc file. Under the dir_rom entry, you can change the directory if different than default, which is ~/.advance/roms/.</span><br />
+<br />
+<span style="color:black">As always, all of the ROMS are available here at DGEMU. Starting up a game is as simple as advmame romname. As long as the ROM you want is in the right directory, it should start up quickly. At first, the navigation might seem a little complicated, but you will get a grasp on it quickly. Once inside, you can push your TAB key to open up a menu which allows configuration of all kinds, video, input, audio and so on. Luckily, gamepads are supported, so fun is only a few minutes away.</span><br />
+<br />
+<span style="color:black">I highy recommend an Xbox 360 controller for the job, Xpad360 modified drivers are available <a href="http://ubuntuforums.org/showpost.php?p=2512158&amp;postcount=6" target="_blank" rel="noopener">Here</a> Configuring that is in the attached thread @ ubuntuforums.org. Your methods may slightly differ between distributions, but those instructions worked in xubuntu.</span><br />
+<br />
+<span style="color:black">[hr]</span><br />
+<br />
+<span style="color:black">One last thing that should be mentioned is that many other questions about MAME can be solved by looking at the official MAME FAQ at the main site for the emulator:</span><br />
+<span style="color:black"><a href="http://www.mame.net/mamefaq.html" target="_blank" rel="noopener">http://www.mame.net/mamefaq.html</a></span><br />
+<br />
+<span style="color:black">If there are any issues that you have with this guide, feel free to PM me and I will be happy to fix something or make something clearer. I was considering having pictures to help people along better, but I decided that it was not necessary. If you have trouble understanding what is written without a visual, do not hesitate to tell me so. If you have any additional questions about using MAME that are not covered in this topic, then it would be fine to post a topic in the Other Consoles emulation subforum. I am always happy to help, as are numerous other members. I hope this document helped everyone. Thanks for taking the time to read it!  :P </span></div>
+</div><div class="post" id="p3412983">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u658123.html">DownShift</a></span><span>Sep 20 2007, 06:29 AM</span></div>
+  <div class="body"><strong>Capcom Play System 3 (CPS3) Emulation on MAME</strong><br />
+The Capcom Play System 3 (better known as CPS3) is a semi successful arcade board that hosted only a few, but good games. The hardware featured 2-D fighters that are rich in audio and visuals. Some people actually consider the CPS3 as the best 2-D arcade hardware since it's raw power and storage space allows for fluent animations and high quality sound.To start on our CPS3 journey, we will need a few files to start with; the ROM itself (found here), the <strong>CHD</strong> and the <strong>NO CD</strong> files which I hosted here:<br />
+http://www.megaupload.com/?d=1VB6OZSK<br />
+And the latest version of MAME++: <a href="http://ddememame.hp.infoseek.co.jp/mameppk_bin_vc-0.119-20070917.7z" target="_blank" rel="noopener">http://ddememame.hp....119-20070917.7z</a><br />
+1) First thing's first; create a roms folder, since the 7zip doesn't come with one packed in, this will be where all your roms are going to be held.<br />
+<img src="http://i120.photobucket.com/albums/o187/XxDownShiftxX/step1.png" loading="lazy" class="post-img"><br />
+2) Next, take your sfiii.zip, sfiii3_chd, and sfiiin.zip in the roms folder. This is what it should look like:<br />
+<img src="http://i120.photobucket.com/albums/o187/XxDownShiftxX/step2.png" loading="lazy" class="post-img"><br />
+3) Now that we have our roms in place, its time to configure MAME, open mameppkgui-vc.exe. Wait until the emulator searches for available ROMs. Click the 'Available' tab on the side to see the games that are playable. Please continue with this guide, regardless of what games appear on screen.4) Go into Options > Directories and find the folder where your MAME++ roms folder is held and browse to it, OK out of both screens and wait for the emulator to search again:<br />
+<img src="http://i120.photobucket.com/albums/o187/XxDownShiftxX/step3.png" loading="lazy" class="post-img"><br />
+<img src="http://i120.photobucket.com/albums/o187/XxDownShiftxX/step4.png" loading="lazy" class="post-img"><br />
+5) Now, go back into Options and choose <strong>Default Game Options</strong>. By default, the setting <strong>Run In Window</strong> is unchecked, make sure to check that box if your system isnt quite up to snuff. Adjust Display settings to fit your needs<br />
+<img src="http://i120.photobucket.com/albums/o187/XxDownShiftxX/step5.png" loading="lazy" class="post-img"><br />
+6) Once the game loads, follow on screen instructions to begin emulation, hit the Tab button to configure your game and start playing!<br />
+<img src="http://i120.photobucket.com/albums/o187/XxDownShiftxX/play.png" loading="lazy" class="post-img"><br />
+<br />
+<strong>Credits</strong><br />
+DownShift (1st Draft)</div>
+</div><div class="post" id="p3414968">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u211155.html">Hadel</a></span><span>Sep 20 2007, 08:41 PM</span></div>
+  <div class="body"><strong>Neo-Geo Emulation on MAME</strong><br />
+<br />
+MAME is also capable of playing Neo-Geo ROMs. You only need one additional file to do it, too! It's a pretty simple process. First, make sure you have read these instructions if you have no set up your emulator already:<br />
+<strong>Downloads</strong><br />
+<strong>Getting Started</strong><br />
+Next, download the BIOS file for the Neo-Geo system, which I have hosted here:<br />
+http://www.megaupload.com/?d=02GZLOCR<br />
+<strong>*WILL NEED TO REUPLOAD SOMEWHERE!*</strong><br />
+<br />
+Once you have set up your emulator, extract the BIOS file called NEO-GEO.rom (it is compressed in RAR format, so download <strong><a href="http://www.rarlab.com/download.htm" target="_blank" rel="noopener">WinRAR</a></strong> if you haven't yet) and insert it into your "roms" folder. You can also put all of your Neo-Geo ROMs inside of the folder with it when you get some. Now just open up the emulator, push F5 to refresh everything. and BOOM! You are all set to start playing Neo-Geo games! Simple.  :) <br />
+<br />
+Everything else is set up as the same way as most MAME ROMs are, including the settings. So refer to the first section of the guide to solve any problems that may arise. Of course, if the link for the download dies or you face additional problems, do not hesitate to ask me or another qualified staff member for assistance.</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

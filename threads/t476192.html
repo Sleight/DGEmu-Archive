@@ -1,0 +1,1025 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recovery practice drill</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f108.html">Staff Forums</a> &rsaquo; <a href="../forums/f318.html">Staff Operations</a> &rsaquo; <a href="../forums/f133.html">Site Operations</a> &rsaquo; Recovery practice drill</div><div class="thread-title-box"><h1>Recovery practice drill</h1><div class="thread-meta">62 posts &middot; page 1 of 1 &middot; 273 views</div></div><div class="post" id="p5011414">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a><span class="op-tag">ORIGINAL POST</span></span><span>Apr 26 2012, 01:16 PM</span></div>
+  <div class="body">Since some of you ( just chizzy ) are impatient about starting and none of you've never really done a DG guide before Channel's letting me assign ( or i'm assigning you because of reasons ) you a few threads so you get the feel of it.<br />
+Refer to the third post for an imperfect example of what we expect.<br />
+<br />
+<strong><u>Instructions</u></strong><br />
+-Keep an untouched backup of all your work if possible. Preferably a local copy on your hard-disk.<br />
+-When you're done with a thread, Strike it out from your list as channel said in the other topic. DO NOT TOUCH CHANNEL'S LIST. I'll do that.<br />
+-I'll go through your work and mark the topic as complete if it looks good.<br />
+<br />
+<strong><u>Technical Challenges</u></strong><br />
+<br />
+IPB3 breaks a couple of things.<br />
+1. The autocom redirect. <span style="color:#282828">[font=helvetica, arial, sans-serif]---[/font]</span><br />
+<span style="color:#282828">[font=helvetica, arial, sans-serif]The old system used:[/font]</span><br />
+<span style="color:#000000">http</span><span style="color:#666600">:</span><span style="color:#880000">//www.dgemu.com/forums/imdex.php?autocom=out&go=&lt;urlencodedurl></span><br />
+<span style="color:#282828">[font=helvetica, arial, sans-serif]T so : became %3A for example, so we have ended up with the following:[/font]</span><br />
+<span style="color:#666600">[</span><span style="color:#000000">url</span><span style="color:#666600">=</span><span style="color:#008800">"http://www.dgemu.com/forums/imdex.php?autocom=out&go=http%3A%2F%2Furlencodedurl"</span><span style="color:#666600">]</span><span style="color:#000000">http</span><span style="color:#666600">:</span><span style="color:#880000">//www.longurl....com</span><br />
+<span style="color:#282828">[font=helvetica, arial, sans-serif]For example this link will not work because it has the above errors:[/font]</span><br />
+http://pcsx.tripod.com/<br />
+<strong>How to fix this!</strong><br />
+<span style="color:#282828">[font=helvetica, arial, sans-serif]What you've got to do is take out the part after the 'go=' and urldecode it. You can either use a function like the one here: [/font]</span><a href="http://meyerweb.com/eric/tools/dencoder/" target="_blank" rel="noopener">http://meyerweb.com/...tools/dencoder/</a><br />
+<br />
+2. Spoilers in certain pages<br />
+<br />
+You'll see something like:&lt;div>&lt;div id="spoiler">&lt;div <strong>...</strong> width:98%"> Some text that belongs in the spoiler... &lt;/div>&lt;div id="hide">&lt;/div>&lt;/div>&lt;/div> &lt;/div><br />
+<br />
+I recommend you use my page if you have lots of spoilers to fix.<br />
+Otherwise you just cut out all the html and wrap it in good old spoiler tags.<br />
+<br />
+<br />
+<br />
+<strong>My tool</strong><br />
+<a href="http://bigpig.byethost9.com/dgstuff/recovery.php" target="_blank" rel="noopener">http://bigpig.byetho...ff/recovery.php</a><br />
+<br />
+What it does: Fixes broken autocom redirect, HTML spoilers and does a few linebreaks where obvious.<br />
+How to use:<br />
+<br />
+Quote/edit a post in RAW mode ( Where all the BBcode is visible and no formatting is done - Hit the toggle )<br />
+Paste it into the input box and hit submit. ( Keep linebreaks and separators unchecked unless they're known to cause trouble<br />
+Hit submit, It'll return you a processed post WITH a backup. Don't remove the backup till much later.<br />
+Paste this back into the editor and get a post preview.<br />
+Edit till satisfactory.<br />
+<br />
+<br />
+<br />
+<br />
+<strong><u>Assignments</u></strong><br />
+<strong>Chizzy</strong><br />
+<s> http://www.dgemu.com...c/469425-hello/ </s><br />
+<s> http://www.dgemu.com...a-psp-phatslim/ </s><br />
+<br />
+<br />
+<strong>Anubis</strong><br />
+http://www.dgemu.com...n-system-works/<br />
+http://www.dgemu.com...-posting-ranks/<br />
+<br />
+<br />
+No hurry to get them finished. Make sure you do them properly. Good luck.<br />
+<br />
+Ok?<br />
+Others want to try? Post here.</div>
+</div><div class="post" id="p5011421">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Apr 26 2012, 01:40 PM</span></div>
+  <div class="body">I added the part about backup copy in the Assignment thread .... but that reminds me ... the light (switch on and off) in the top left corner (Toggle Editing Mode) should be clicked THEN copy the post .... *adds that now*</div>
+</div><div class="post" id="p5011424">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 26 2012, 01:47 PM</span></div>
+  <div class="body">Speculation.&lt;!----<br />
+<br />
+Mission Statement Nub<br />
+[OFFICIAL] PSP Emulators Guide -Me<br />
+Master Homebrew List -Me<br />
+Video game soundtrack albums<span style="color:#282828">[font=helvetica, arial, sans-serif] (WHOLE TOPIC) -Not yet[/font]</span><br />
+"Favorite ..." topics & polls -Noobie<br />
+Request Guidelines (Danny) -Old, Chizzy<br />
+Request Guidelines (KHRS) -Old, Noobie<br />
+>>>>>Ultimate PSP Emulators' Guide/Tutorial&lt;<<<< - SUPER LONG!<br />
+Forum Rules -No<br />
+[TROUBLESHOOTING] Pokemon Diamond & Pearl on Emulators -Chizzy<br />
+[Official] NDS Rom Flashing Thread -Nub<br />
+[EMULATOR] How to Aggrandize No$gba Screen with NDS2xGL -Chizzy<br />
+CLICK HERE FOR FREE DPs!<br />
+Official Reporting Guide -Don't touch.<br />
+How to use the forums' search functions - Anubis ( Old but moderately relevant. )<br />
+How the DP Loan system works - Done<br />
+How to join the staff and other member groups -Chizzy<br />
+Official Reporting Guide -Don't touch.<br />
+Warn FAQ - Anubis---><br />
+<br />
+<br />
+<span style="color:black">Reviews FAQ<br />
+Q: How do I write a Review?<br />
+A: From the details page of every game click <img src="http://www.dgemu.com/Images/RomInfo/menu_Reviews_on.gif" loading="lazy" class="post-img">. Look to the left and you will see a "Post Review" section. Click where is says "Click here" and begin your review. <br />
+<strong>Please be sure to delete the "Write your review here.." text first or it'll appear in your review</strong><br />
+. When you're done, rate the game below and then simply click submit to send it for inspection.<br />
+<br />
+Q: Oops! I made an error. Is there any way to fix/edit my review?<br />
+A: Not at the moment. Maybe a future version will allow review inspectors to edit reviews and correct errors for you. Do not worry, nobody demands perfection so if it is a decent review, it will still be accepted.<br />
+<br />
+Q: What is in it for me?<br />
+A: If you write a highly exceptional review, you will receive 10 DPs for your efforts. If you don't get DPs, then your only reward is the satisfaction of contributing something to dgemu.<br />
+<br />
+Q: How will I know if my review is approved?<br />
+A: Simple. It'll then appear in the reviews section of that particular game. Notice that you will not be informed on whether your review has been approved so check back periodically (typically if your review is not present after 48 hours, then it was probably declined).<br />
+<br />
+Q: How can I check my review after submission?<br />
+A: If your review is accepted it'll appear amongst the others for that particular game. The only way to see if it's there is to navigate to the review page. Currently there is no system to track your reviews.<br />
+<br />
+Q: My review was approved, but I did not get any DPs, why?<br />
+A: Not all approved reviews will earn you 10 DPs. As briefly mentioned above, only those which are of a highly professional standards are worthy of reward.<br />
+<br />
+Q: I lost Dps!!!<br />
+A: Both plagiarism and spamming will not be tolerated. If our review inspectors find out that you've copied from an official review site like GameFaqs or see you just sent garbage, your review will not only get declined, but you will be penalized 10 DPs as well. <strong>Please only submit original and meaningful material</strong>.<br />
+NOTE: If you created a review for another site that you then wish to submit here as well, it may be best to mention this at the top of review so you are not mistakenly accused of plagiarism.<br />
+<br />
+Q: If writing reviews copied from places like Gamefaqs is not allowed, then why do I see some there?<br />
+A: Either they were missed or they were submitted before that rule was made.<br />
+<br />
+Q: Is there a limit to the total number of DPs I can earn from submitting reviews?<br />
+A: No. As long as your reviews are legitimate, written by you, and of high quality, you may earn 10 DPs for every review you submit, regardless of how many you have submitted in total. Note that any spamming or plagiarizing (as interpreted by the review inspectors) will earn you a deduction for <strong>each review falling under those categories</strong>.<br />
+<br />
+Q: Who are the review inspectors?<br />
+A: Anyone who is support staff or higher as well as a few selected members can inspect your reviews. Do not badger them if you think that you deserved a reward, but did not receive it because there is no way for anybody to know who saw your review. If however, you have other types of questions, then feel free to ask (but most of them should have already been answered in this guide)<br />
+<br />
+Q: So how do I write a review that is guaranteed to earn me DPs?<br />
+A: Please read the following guide: (written by ling99rp):Tutorial for making a review that is of quality.**First of all, I'd like to re-emphasize that your review must be written by <strong>you</strong>. It is easy to see if the review has been plagiarized or "ripped” from a different site. If you are caught plagiarizing or ripping you <u><strong>lose 10 DPs</strong></u><br />
+**To start off, make sure you have played the game and understand something about it before making the review. This will ensure that your review is accurate and your chances of getting DPs are increased. Below is a fictitious review that will help you understand how and what a quality review is.<br />
+<br />
+Wrong review-<blockquote class="quote"><div class="qhdr">USER1 wrote:</div>Pokemon: Sapphire version<br />
+This was the best game in my opinion. The gamming experience was the greatest. You should download it!!     XD </blockquote>The above review is "wrong" because it contains the following mistakes:<br />
+1. It is too short. Your review should be at least 50 words in length. Although this is just a suggested amount, the reason behind it is that it takes a considerable number of words to product a quality review.<br />
+2. Try to stay a way from using vague/generalized phrases or sentences like “this game is the best”.<br />
+3. Be sure to use proper spelling, grammar, and punctuation and try to stay away from odd symbols such as the above  &lt;3 . It deters the reader from your review.<br />
+<br />
+Proper review-<br />
+<blockquote class="quote"><div class="qhdr">USER2 wrote:</div>Pokemon: Sapphire version<br />
+The quality of this game was relatively high. I enjoyed the overall feel of the game and would suggest it as a download. Like the other games in the series it offers a wide range of pokemon and characters to encounter and battle. Since there is a co-game involved with this one, you are able to link up with a friend and trade pokemon which you can collect to fill in your pokedex. This game is strategic and will challenge you with puzzles to complete.</blockquote><br />
+The above review is half way decent and guarantees acceptance, but the reviewer would still unlikely be awarded the 10 DP’s since it does not cover all aspects of the game.<br />
+<br />
+Now the following review is the type that I and other review inspectors would award. It divides all the game elements (e.g. graphics, sound, gameplay, etc or different game modes where applicable) and analyzes them independently. Here's an example which was taken from one of dgemu's very own members (full credit goes to marcosw78)<br />
+<blockquote class="quote"><div class="qhdr">marcosw78 wrote:</div>Review For Super Robot Taisen Original Generation 2. (SRT OG 2)<br />
+<br />
+Positive respond:<br />
+Technical glitch/ miracle: <br />
+this US version is a perfect adaptation from Japanese version. The only different is the translation. <br />
+(Glicth or miracle) I'm not sure how to put this. But if you see carefully especially SRW fans who still have "savegame " from the jpn version, you can use your save game and put them in us version without any problem. and this also works for cheats code also.<br />
+<br />
+About the game stories it self.<br />
+Basicly this game is a turn based strategy war game using Banpresto original characters that mostly appears in super robot war (SRW) game series. The story is directly related to 1st series of SRT OG 1 (6 months after). see review from SRT OG for more review.<br />
+<br />
+Way to play<br />
++basicly like most of srw series you can get PP (pilot points) + EXP (experience) + $$ (money) from defeating enemies/completing mission. The way to distribute them is up to you. Usually people tend to put their effort more on their particular/favorite unit.<br />
++There are 3 type of fields in the game. <br />
+1. Intermission fields (In this fields you will modified, review, status of your mech and pilot)<br />
+2. Map fields is where you put your unit in used againts your enemy and its based on episode.<br />
+3. Animation fields is where the action of your unit become to lives (either attack,support,or defend)<br />
+<br />
+Overall review.<br />
+Like I said before in technical glitch/ miracle section. This game is perfect for SRW fans who can't speak/read japanese which already / starting to play this 2nd series of SRT OG. <br />
+<br />
+Negative respond:<br />
+there is no neg response regarding this game I play until episode 32 in this game and I didn't find anything to complain about this game.<br />
+nice music, very good graphic animation, heavy plot, a lot of cool mechs. I even say that this game is a little bit better than SRW J which is also good but the music is kind of annoying.<br />
+<br />
+Last words<br />
+<br />
+Please Support ATLUS US by buying the original of this game so that they might consider to adapt more SRW games to US. </blockquote><br />
+<br />
+Hopefully this shows how a review that gets rewarded DPs should look. If there are any questions please ask a staff member if you are in need of some help.<br />
+**Do not steal the review used in this tutorial and use it as you own. You will lose DPs if you are caught using it**<br />
+<strong>CREDITS:</strong><br />
+Quality Review guide and example written by ling999rp<br />
+Guide written by Molh394 and djnforce9 with revisions by atomicknight</span>    </div>
+</div><div class="post" id="p5011427">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>Apr 26 2012, 01:55 PM</span></div>
+  <div class="body">You should probably PM both users to tell them to edit those.</div>
+</div><div class="post" id="p5011473">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 26 2012, 06:06 PM</span></div>
+  <div class="body">New tool up. <a href="http://bigpig.byethost9.com/dgstuff/recovery.php" target="_blank" rel="noopener">http://bigpig.byetho...ff/recovery.php</a><br />
+Suggestive linebreaks, Just what meru said.<br />
+<br />
+<br />
+$find = array( '.' , ':' );<br />
+<br />
+foreach($find as $f ){<br />
+$pos = 0;<br />
+<br />
+while( ($pos = strpos($msg, $f , $pos ))!== FALSE){<br />
+if( $msg[$pos+1]!= ' ' )<br />
+$msg = substr_replace($msg, "\n" , $pos+1 ,0 );<br />
+$pos++;<br />
+}<br />
+<br />
+<br />
+If the character after a . or a : is not a space, A newline character is inserted. Can you guys think of more?<br />
+Also, If you want a character like - or = to be added, It's just 2 lines for me. Feel free to ask.<br />
+<br />
+<br />
+Interview/Questions for Staff Members - RULES<br />
+How to install custom firmware on a PSP Phat/Slim<br />
+Mission Statement<br />
+[OFFICIAL] PSP Emulators Guide<br />
+Master Homebrew List<br />
+Video game soundtrack albums<span style="color:#282828">[font=helvetica, arial, sans-serif] (WHOLE TOPIC)[/font]</span><br />
+"Favorite ..." topics & polls<br />
+Request Guidelines (KHRS)<br />
+Request Guidelines (Danny)<br />
+>>>>>Ultimate PSP Emulators' Guide/Tutorial&lt;<<<<<br />
+Forum Rules<br />
+[TROUBLESHOOTING] Pokemon Diamond & Pearl on Emulators<br />
+[Official] NDS Rom Flashing Thread<br />
+[EMULATOR] How to Aggrandize No$gba Screen with NDS2xGL<br />
+CLICK HERE FOR FREE DPs!<br />
+Official Reporting Guide<br />
+How to use the forums' search functions<br />
+How the DP Loan system works<br />
+How to join the staff and other member groups<br />
+Official Reporting Guide<br />
+Warn FAQ<br />
+PC Section Rules<br />
+HOW TO: Install emulators on the PSP - v.3<br />
+Stop asking for the following<br />
+New Support & Suggestions FAQ (Testing phase)<br />
+Posting Ranks</div>
+</div><div class="post" id="p5011478">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">T</span><a class="author" href="../users/u2454177.html">The Pan Is Mightier</a></span><span>Apr 26 2012, 06:14 PM</span></div>
+  <div class="body">I think Meru suggested after ']' and that might be a good idea</div>
+</div><div class="post" id="p5011493">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 26 2012, 06:57 PM</span></div>
+  <div class="body">Err.. If you say so.<br />
+I added  as a whole but ] makes sense too. Except excessive space after things like quotes and code  :( <br />
+<br />
+Also, Working on checkboxes so i have a single page for everything.<br />
+<br />
+Okay ok.<br />
+I added that and a pattern match and the option to do linebreaks. So The old page should probably be taken down now.<br />
+<br />
+How to use the new one.<br />
+Quote/edit a post in RAW mode ( Where all the BBcode is visible and no formatting is done - Hit the toggle )<br />
+Paste it into the input box and hit submit. ( Keep linebreaks and separators unchecked unless they're known to cause trouble<br />
+Hit submit, It'll return you a processed post WITH a backup. Don't remove the backup till much later.<br />
+Paste this back into the editor and get a post preview.<br />
+Edit till satisfactory.<br />
+<br />
+Good luck.</div>
+</div><div class="post" id="p5011500">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u2633161.html">Chizzy</a></span><span>Apr 26 2012, 07:37 PM</span></div>
+  <div class="body"><br />
+http://www.dgemu.com/forums/index.php?/topic/369965-how-to-install-custom-firmware-on-a-psp-phatslim/ this thread, it will not allow me to edit any of the posts...<br />
+<br />
+I finished the other one though.</div>
+</div><div class="post" id="p5011501">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u2631936.html">Hyperblade Zero</a></span><span>Apr 26 2012, 07:44 PM</span></div>
+  <div class="body">@Somebody: At the two jobs given, i can't edit in any of my two  :o  Is the topic invisible, or edit proof?<br />
+<br />
+Unless you want me to copy all the text into a notepad, and unscramble the text. Then i'd copy and paste in the encoder/decoder with it's link(?)</div>
+</div><div class="post" id="p5011504">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>Apr 26 2012, 08:30 PM</span></div>
+  <div class="body">@Anubis: Thanks for pointing it out. I fixed your privileges, you can not edit in that section.</div>
+</div><div class="post" id="p5011515">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u2631936.html">Hyperblade Zero</a></span><span>Apr 26 2012, 09:21 PM</span></div>
+  <div class="body">****. I posted my links in the wrong section  :facepalm:  Just a sec...<br />
+<br />
+Here's one.<br />
+<s>Posting Ranks</s><br />
+<br />
+<s>posting-ranks</s><br />
+<br />
+Here's two.<br />
+<s>DP Loan System</s><br />
+<br />
+<s>loan-system-works</s><br />
+<br />
+I hope that one was fine. I spaced some things out, but there wasn't a huge problem there.</div>
+</div><div class="post" id="p5011522">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u2633161.html">Chizzy</a></span><span>Apr 26 2012, 09:31 PM</span></div>
+  <div class="body"><s>http://www.dgemu.com...c/469425-hello/ </s><br />
+<s>http://www.dgemu.com...a-psp-phatslim/ </s><br />
+<br />
+Finished Both.</div>
+</div><div class="post" id="p5011546">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>Apr 26 2012, 10:34 PM</span></div>
+  <div class="body">Anubis:<br />
+First link: Missing a break line after Posting Ranks, between on.So, ranks.All, rank.All, staff.You<br />
+Second link: Great, it seems clean.<br />
+<br />
+Chiz:<br />
+First link: Seems fine. I would've personally put a break line after each bolded point that differentiate between the "title" and the "content", but I guess it works like that also.<br />
+Second link: You forgot to edit all the content under the spoiler tags...</div>
+</div><div class="post" id="p5011548">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u2633161.html">Chizzy</a></span><span>Apr 26 2012, 10:36 PM</span></div>
+  <div class="body">what do you mean?<br />
+I edited all 3 posts on that one.<br />
+Including the ONE spoiler tag,<br />
+I accidently deleted the software and hardware headings and paragraphs when I decoded the links.</div>
+</div><div class="post" id="p5011558">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u2631936.html">Hyperblade Zero</a></span><span>Apr 26 2012, 10:48 PM</span></div>
+  <div class="body">So you mean i just forgot to space a word or two?  :huh: </div>
+</div><div class="post" id="p5011591">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>Apr 27 2012, 02:24 AM</span></div>
+  <div class="body">Remember:<br />
+The issue we had was that all posts lost break lines.<br />
+<br />
+A break line is simply an "enter" keystroke on keyboard<br /><br />Hey 2bp, good job on the tool.<br />
+Do you mind passing me the source code?<br />
+<br />
+Continue working on adding more features into it, I'll probably upload a copy of it onto our own servers with staff validation in it to keep a second copy here as you continue your dev on it.  :) </div>
+</div><div class="post" id="p5011653">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u2631936.html">Hyperblade Zero</a></span><span>Apr 27 2012, 02:29 AM</span></div>
+  <div class="body">I am such a dumbass  :facepalm: <br />
+<br />
+Did you mean just put everything under the word "posting rank?" since it's underlined, if so now i know what you mean. I can do a roundabout job. It's just the terms used in conversation i don't get.<br />
+<br />
+Lets evaluate this one more time, shall we.<br />
+http://www.dgemu.com/forums/index.php?/topic/6345-posting-ranks/ I actually thought at first this would be perfect, and the other was gonna give me trouble  :o </div>
+</div><div class="post" id="p5011655">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>Apr 27 2012, 02:42 AM</span></div>
+  <div class="body">Hahaha, the real world turns around.<br />
+But yes, that is what I meant.<br />
+<br />
+Take a look at how I formatted mine compared to yours:<br />
+<blockquote class="quote"><div class="qhdr">someone wrote:</div><br />
+This topic answers how to obtain certain posting statuses, which are displayed to the left of your posts.<br />
+<br />
+<u><strong>Posting Ranks</strong></u><br />
+If you haven't noticed, under your avatar or username, there's a word, and underneath that, there is a little symbol (henceforth called 'pips') that look like <img src="http://www.dgemu.com/forums/style_images/1/pip.gif" loading="lazy" class="post-img">. That is the rank you're on.<br />
+So, I proudly present you, the posting ranks.<br />
+All new members start off at 1 pip, as they have 0-49 posts. Another pip is added for each rank you achieve.<br />
+<br />
+<u>Egg</u>: 0<br />
+<u>Hatchling</u>: 50<br />
+<u>Serpent</u>: 150<br />
+<u>Winged Serpent</u>: 300<br />
+<u>Dragon</u>: 500<br />
+<u>Elite Dragon</u>: 750<br />
+<u>Holy Dragon</u>: 1000<br />
+<u>Reaper Dragon</u>: 1500<br />
+<u>Ancient Dragon</u>: 2000<br />
+<u>Master Dragon</u>: 3000<br />
+<u>Tiamat</u>: 5000<br />
+<u>Bahamut</u>: 10000<br />
+<br />
+You need to POST in sections that increase post count in order to increase your posting rank.<br />
+All Staff members (Support Staff, mods, admins) do not have any pips, rather a badge as a sign of their position on the staff.<br />
+You can also customise this title to whatever you want. Just buy the "Custom Member Title" (and fill in the text box according to what you want) in the DG Store.<br />
+</blockquote><br />
+<br />
+Do notice Bish's style of posting compared to AK's style of posting. He likes his "Enter" key a lot, just like me.<br />
+To tell if there is one or not, you notice that they usually have the basic English text writing format: there's always a space after each period when they go on the same line.<br />
+That's how you identify where you need those specific break lines.</div>
+</div><div class="post" id="p5011656">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u2631936.html">Hyperblade Zero</a></span><span>Apr 27 2012, 02:47 AM</span></div>
+  <div class="body">Well the only reason i might confuse that. Is, because sometimes even after a period, you can keep the next sentence brief and short without spacing it below the last one. I know the difference as well. What you posted looks a lot like the spacing you have to do in the quiz section. lol<br />
+<br />
+Though i'll keep all this in mind, thanks.<br />
+http://www.dgemu.com/forums/index.php?/topic/6345-posting-ranks/</div>
+</div><div class="post" id="p5011657">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>Apr 27 2012, 02:57 AM</span></div>
+  <div class="body">As for Chizzy, the first spoiler tag shows up like this:<br />
+<br />
+Isn't it much nicer like this:<br />
+<br />
+<blockquote class="quote"><div class="qhdr">someone wrote:</div><img src="http://img128.imageshack.us/img128/6620/cfwjt3.png" loading="lazy" class="post-img"><br />
+<br />
+<strong>HARDMODDING A BATTERY</strong><strong>Slim Battery:</strong><br />
+First you need to open the battery up, which I did by prying it open with a Flat Headed Screw Driver.<br />
+Remember, it is better to be cautious than stab the thing to death and break it.<br />
+<img src="http://img61.imageshack.us/img61/5237/openvl5.jpg" loading="lazy" class="post-img"><br />
+<br />
+Once The case is open, lift up the circuit board.<br />
+<img src="http://img61.imageshack.us/img61/208/liftfp5.jpg" loading="lazy" class="post-img"><br />
+<br />
+Locate the Chip Pictured:<br />
+<img src="http://img156.imageshack.us/img156/8069/findtw8.jpg" loading="lazy" class="post-img"><br />
+<br />
+Below it, the letters "IC04" will be written upside down. (If your battery is not like this, i would probably advise against modifying it)<br />
+Cut the the shown leg, I just used the scissors my Swisse Pocket knife, which did the trick nicely.<br />
+<img src="http://img61.imageshack.us/img61/1743/cutzr2.jpg" loading="lazy" class="post-img"><br />
+<br />
+Close Her Back Up!!!!!!!<br />
+To test Whether it works pop it into your PSP, if its was made correctly the PSP will the automatically turn itself on but the screen will stay blank and the power Light will stay on and be green.<br />
+<br />
+<strong>ANOTHER METHOD</strong><br />
+Another way to convert a slim battery into a Pandora is to solder wire to the two points shown below.<br />
+<img src="http://www.psp-hacks.com/images/battery_slim_pandoraize.jpg" loading="lazy" class="post-img"><br />
+<br />
+I have tested this method and can confirm it works as well.<br />
+This image was taken from PSP Hacks(which they got from eurasia), which also shows how to wire a Phat battery.<br />
+<a href="http://www.psp-hacks.com/2007/10/22/one-wire-pandora-battery-no-software-required/" target="_blank" rel="noopener">http://www.psp-hacks...uired/#comments</a><br />
+<br />
+<strong>PSP PHAT Battery:</strong><br />
+Pry it Open same as the slim battery.<br />
+Once The case is open, lift up the circuit board.<br />
+Locate the Chip.Cut the the leg.<br />
+Close Her Back Up!!!!!!!<br />
+<br />
+For Pics and more details about converting a phat battery go to:<br />
+<a href="http://www.pspmod.com/forums/psp-hardware-guides/23870-how-create-pandoras-battery-slim-ms-without-fat-psp.html" target="_blank" rel="noopener">http://www.pspmod.co...ut-fat-psp.html</a><br />
+<br />
+To test Whether it works pop it into your PSP, if its was made correctly the PSP will the automatically turn itself on but the screen will stay blank and the power Light will stay on and be green.<br />
+<br />
+<span style="color:red"><strong>Charge your Battery Now, so that when you are installing the firmware it doesnt die. </strong></span><br />
+To charge Plug in your power cable then the battery.<br />
+<br />
+<strong>CREATING THE MAGIC MEMORY STICK </strong><br />
+Extract TOTALNewbieasyInstallerPandorasmenu into a folder.(TOTALNewbieasyInstaller will not work on Windows Vista, only XP)<br />
+Format Your Memory Stick on your PSP via Settings>System Settings>Format Memory Stick<br />
+You can Use TOTALNewbieasyInstallerPandorasmenu with your memory stick in your psp and attached to your PC from your PSP, or you can use it with the memory stick in the card adapter directly into your PC.<br />
+In the folder containing TOTALNewbieasyInstallerPandorasmenu, run START.exe and follow exactly what it tells except don't worry About the first Format as we already did that in a previous step.<br />
+Type the Memory Sticks drive letter in and press Enter twice.<br />
+<img src="http://img261.imageshack.us/img261/6922/drivedl3.jpg" loading="lazy" class="post-img"><br />
+<br />
+Then give the volume a label and press enter. I called It "Magic Mem"<br />
+It then asks about formatting, press "y" and press enter.Then it says to take out the Memory stick and Stop USB connection. Do This.<br />
+If You are using an adapter, stop the device then disconnect it from the adapter.<br />
+Press Enter.<br />
+Then Plug it Back in the Adapter or PSP (whichever you where using)<br />
+Press Enter.<br />
+Then Choose 4 and press Enter, it will then proceed to copy files to the memory stick.<br />
+<img src="http://img261.imageshack.us/img261/8781/choicesau9.jpg" loading="lazy" class="post-img"><br />
+<br />
+If it asks you to write ABS then press y and enter (sometimes it won't).<br />
+<img src="http://img211.imageshack.us/img211/9435/abssectorbf3.jpg" loading="lazy" class="post-img"><br />
+<br />
+There we have it the magic memory stick is completed. Press enter to exit the program.<br />
+<br />
+The Moment of truth has arrived!!!!!!!!!!<br />
+Put the Memory Stick In the PSP and then plug in the Battery. If all is good the Memory stick light will flicker (If you are using this on a Phat PSP, you will see a menu). <strong><span style="color:red">YOU WILL NOT BE ABLE TO COPY THE NAND IF YOUR MEMORY STICK IS 64MB IN SIZE, AS THE NAND BACKUP IS 66MB AND THE FILES ON THE MEMORY STICK ARE 22MB. IF YOU DO TRY TO DUMP YOUR NAND ON A 64MB MEMORY STICK YOU WILL CORRUPT IT </span></strong><br />
+Now press Square to make a dump of your nand. <strong><span style="color:red">DO THIS BEFORE YOU INSTALL THE CUSTOM FIRMWARE!!!!!!!!!! </span></strong><br />
+After the PSP has finished copying the nand, it will shut itself off.<br />
+Take out the Memory Stick and Plug it into your PC and copy nand-dump.bin so you have it as a backup.<br />
+Reinsert the memory stick and the battery, and once it is back on, press X. While the Firmware is installing, the lights will be flickering. When all the lights turn off you can take out the battery, plug in the power cable, and when you turn it back on 3.71 M33!!!<br />
+<br />
+If you hard modded your battery, go buy yourself another battery. <br />
+If you used the Datel TOOL Battery, plug your old battery in and start gaming.<br />
+<br />
+NOTES:<br />
+For some people, it doesn't work straight away, so it may not work straight away for you. I had a period when only the green light of the battery would turn on, even though i had the Memory Stick inserted. To overcome this, just remake the Magic Memory Stick. (I had to about 5-6 times)(Statement from Sir VG: For me, this worked on the very first try.)<br />
+<br />
+TOTALNewbieasyInstallerPandorasmenu is not the only way to make a magic memory stick.<br />
+Other programs:<br />
+Pandoras GUI v1.5<br />
+Disinter<br />
+<br />
+Guide courtesy of ediblebird from GBATemp ForumsTested using a Datel TOOL Battery Slim by Sir VG, on a PSP Slim that had 3.72 OFW.<br />
+Place to buy Datel TOOL Battery (Phat and Slim): <a href="http://www.codejunkies.com/" target="_blank" rel="noopener">http://www.codejunkies.com/</a><a href="http://www.megaupload.com/?d=GVZI5NE4" target="_blank" rel="noopener">TOTALNewbieasyInstallerPandorasmenu</a> (136.85MB) <a href="http://www.megaupload.com/?d=044SQDZ3" target="_blank" rel="noopener">(Some alternate setup.)</a><br />
+<br />
+------<br />
+<br />
+<strong>Upgrading to a newer CFW. </strong><br />
+Why update?<br />
+3.80 update added Internet Radio, using Shoutcast and Icecast.<br />
+3.90 added Skype (for PSP Slim models only).<br />
+4.01 added internet search.<br />
+<br />
+First, you'll download an update package.<br />
+This will include the 3.90 M33 CFW, as well as the official Sony 3.90 install package.<br />
+The combination of the two will allow you to install 3.90 M33 on your PSP.<br />
+Both can be found at<a href="http://www.dark-alex.org/" target="_blank" rel="noopener">Dark-AleX's website</a><br />
+Once you have the download package on your computer, extract the UPDATE folder and put it on the memory stick under PSP->GAME.<br />
+For the official firmware, Google for the following:<br />
+<br />
+Do you have to do each one individually?  No. If you are at CFW 3.52 M33-3, or higher, you can go to any base level of firmware.  Incremental upgrades (M33-2, M33-3, etc) have to be added separately.<br />
+Alternate Update Method (starting with 3.80 M33)From 3.80M33, you can download new M33 firmwares updates via the Network Update feature released at 3.80M33. Otherwise, download it via <a href="http://dark-alex.org/" target="_blank" rel="noopener">this webpage</a> as usual.<br />
+How to play PS1 games on your 3.90 M33 CFW PSP!Yes, I know you really want to know how to do this.  I found some very simple tool to do this, called PSX2PSP.First, you need a PS1 ISO.  If you need to download one, check out the PS1 Emulation forum here for links to such, or on how to convert your PS1 CD into an ISO...this guide won't cover it.<br />
+Load up PSX2PSP (I use Theme Mode) and go to the convert menu.  The first box lists ISO/PBP file.  Load up your ISO there (it can be in ISO, BIN/CUE, or IMG/CCD/SUB format).  Most of the other stuff should list automatically, though you'll need to set the output folder.  The fastest way to load it on your PSP is to set it to the PSP->GAME folder.Customize PBP will, after selecting your ISO, allow you to customize the background stuff, just like you see on a PSP game when on the UMD menu.  This section is completely optional.<br />
+Icon Image - Box on the left to display the title (and disc) - Image size: 144 x 80 Pixels, 32 bit color, PNG formatBackground Images - Background of the entire display - 480 x 272 Pixels, 32 bit color, PNG format<br />
+Information image - Lower right corner, displays text about the game - 310x180, 8 or 32 bit color, PNG format, transparencies recommended.<br />
+Background image - Audio clip that plays when looking at the pretties.  AT3 format (A WAV file encoded into ATTRAC3 format)<br />
+Icon Animation - Similar to image, but instead is an animation.<br />
+PMF format.Boot/Warning Image - The image that appears when your PSX ISO is loading (before the PS1 Boot Logo).  Image size: 480 x 272 Pixels, 32 bit color, PNG format<br />
+<br />
+When you're done, on the convert menu, click convert. Wait a while, and you'll have a PS1 game on your PSP!<br />
+This method isn't foolproof, but a number of games play just fine. <br />
+Sorry FFVII fanboys, you'll have to find a different method, cause it crashed at the first battle.<br />
+PSX2PSP v1.2 - <a href="http://www.filefactory.com/file/d17657/" target="_blank" rel="noopener">DOWNLOAD</a> (1.13MB)<br />
+<a href="http://popsdb.twystneko.com/index.php" target="_blank" rel="noopener">PopStation Image Packs</a><br />
+<a href="http://www.psxpspmanuals.com/" target="_blank" rel="noopener">PSX Manuals for PSP</a><a href="http://www.psxpspmanuals.com/read.php?3,59" target="_blank" rel="noopener">Creating your own PSXPSP manuals.</a></blockquote><br /><br />@Anubis: Yes, it does get confusing, but most of the time, especially in guides, the standard is held for professionalism.<br />
+Use your good judgement: if something seems to be formatted weird, you can adjust it to your taste also, as long as it doesn't look like an eyesore to read.</div>
+</div><div class="post" id="p5011687">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 27 2012, 04:01 AM</span></div>
+  <div class="body">Meru your post is so sexy, I'll just replace that.<br />
+<br />
+Chizman, What were you talking about some hardware and software part 'disappearing' ?<br />
+Did you lose any text?<br />
+<br />
+Anubis, The posting ranks topic is well done.<br />
+But if you look at the last paragraph, It needs linebreaks.<br />
+<br />
+<blockquote class="quote"><div class="qhdr">someone wrote:</div>You need to POST in sections that increase post count in order to increase your posting rank.All Staff members (Support Staff, mods, admins) do not have any pips, rather a badge as a sign of their position on the staff.You can also customise this title to whatever you want. Just buy the "Custom Member Title" (and fill in the text box according to what you want) in the DG Store. </blockquote><br />
+Needs to become:<blockquote class="quote"><div class="qhdr">someone wrote:</div>You need to POST in sections that increase post count in order to increase your posting rank.<br />
+All Staff members (Support Staff, mods, admins) do not have any pips, rather a badge as a sign of their position on the staff.<br />
+You can also customise this title to whatever you want. Just buy the "Custom Member Title" (and fill in the text box according to what you want) in the DG Store. </blockquote><br />
+K?<br />
+I did the DP loan topic because i like the DP loan so much. Sorry  :P </div>
+</div><div class="post" id="p5011690">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>Apr 27 2012, 04:03 AM</span></div>
+  <div class="body">You and your DP Loan.  XD <br />
+<br />
+I still can't believe we actually somehow managed by giving you the code, you editing it, giving it back, I apply and upload, and you test.<br />
+TEAMWORK FTW!!!</div>
+</div><div class="post" id="p5011693">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 27 2012, 04:05 AM</span></div>
+  <div class="body">Working here. Excuse me.<br />
+<br />
+Ok. Done working.<br />
+<br />
+Chizman!<br />
+I told you to keep a backup of what you're working on. You lost the whole intro and didn't fix it. WUT? I could have bricked my girlfriend's PSP because of that > :( <br />
+</div>
+</div><div class="post" id="p5011694">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u2631936.html">Hyperblade Zero</a></span><span>Apr 27 2012, 04:08 AM</span></div>
+  <div class="body"> :o  God, i didn't even notice that. Thanks.<br />
+<br />
+http://www.dgemu.com...-posting-ranks/ The wasn't any room after "their" for the "position on staff" part, it was already at the end of the page.</div>
+</div><div class="post" id="p5011695">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>Apr 27 2012, 04:10 AM</span></div>
+  <div class="body">2big, you pig!<br />
+<br />
+You can use the dump or something as your work table   XD </div>
+</div><div class="post" id="p5011697">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 27 2012, 04:29 AM</span></div>
+  <div class="body">Meru, Source coming after one more test. I'm adding user submitted characters to linebreak after rather than hardcoded ones.<br />
+<br />
+Anubis. Good job.<br />
+<br />
+<br />
+<br />
+As you can see, the system's flaws are obvious.:<br />
+<strong>Here's a basic guide to PSP hacking and homebrew. If you want more I suggest you read around in websites like <a href="http://www.wololo.net" target="_blank" rel="noopener">Wololo</a> and <a href="http://www.psp-hacks.com" target="_blank" rel="noopener">PSP-Hacks</a> and <a href="http://www.pspslimhacks.com" target="_blank" rel="noopener">PSP Slim Hacks</a>. If you just want to learn how to install a CFW, though, dive right in!<br />
+</strong><span style="color:#009900">Why hack the PSP?</span>In this context "hacking" refers to using custom firmware (CFW) instead of official firmware (OFW), "firmware" being the software which runs the PSP. You can check what firmware you are running under <strong>Settings -> System Information</strong> on your PSP.<br />
+CFW allows you to do more with your PSP than usual. It lets you play homebrew (programs made by non-official developers), as well as ISOs (games), make backups of your PSP and your UMDs, and so on.<br />
+<span style="color:#009900">Sounds good to me! How do I do it?</span>First determine what model of PSP you have, using this image from a PSP Slim Hacks Tutorial:<br />
+<img src="http:&lt;br /&gt;
+//i224.&lt;br /&gt;
+photobucket.&lt;br /&gt;
+com/albums/dd136/OverLord_Draik/PSPModel.&lt;br /&gt;
+gif" loading="lazy" class="post-img">If it's a PSP 100X, PSP 200X or PSP Go, the recommended CFW is <strong>6.<br />
+20 Pro-B7 permanent</strong>.<br />
+If it's a PSP-300X, use the <a href="http://filetrip.net/f25206-PSP-Module-Checker-1-0.html" target="_blank" rel="noopener">PSP Module Checker</a> to find out what module you have.<br />
+Just download it, extract it to obtain the "MCHECKER" folder, and place that inside the "/PSP/GAME" folder in your memory stick. Then put your mem stick back into your PSP, turn it on, and select the module checker under "Games".<br />
+If it is a 05g or below use <strong>6.<br />
+20 PRO-B7 permanent</strong>. If it is a 07g or 09g, use <strong>6.<br />
+39 PRO-B7</strong>, because you <em>cannot</em> run 6.<br />
+20 on those models.<br />
+6.<br />
+39 PRO is not a "permanent" CFW. This means that when you completely shut it down you will have to load it again (sleep mode is ok).<br />
+**<span style="color:#FF0000">If you are already running OFW from 6.<br />
+30 - 6.<br />
+39, and have a PSP which can run 6.<br />
+20 PRO-B7, you will have to either <a href="http://forums.dashhacks.com/f133/downgrading-from-firmware-6-3x-to-firmware-6-t296612/" target="_blank" rel="noopener">downgrade your firmware</a> first, or just use 6.<br />
+39 PRO-B7, the non-"permanent" CFW.<br />
+</span>**<span style="color:#009900"><strong>Installing 6.<br />
+20 PRO-B7 permanent</strong> (from the <a href="http://gbatemp.net/t293978-how-to-softmod-hack-your-psp" target="_blank" rel="noopener">GBATemp Softmod guide</a>)</span>If you are not already on Official Firmware 6.<br />
+20...   1. Download 6.<br />
+20 official firmware for <a href="http://filetrip.net/file.php?id=9075" target="_blank" rel="noopener">PSP 100X/200X/300X</a> or for <a href="http://filetrip.net/file.php?id=24457" target="_blank" rel="noopener">PSP Go</a>.    2. Copy the UPDATE folder to the /PSP/GAME/ folder on your memory stick (or the Go's internal storage).   3. Launch the 6.<br />
+20 update on your PSP, and tell it to update. **<strong>If you are on CFW already DISABLE OR DELETE ALL YOUR PLUGINS FIRST</strong>**If you have older CFW already installed, e.<br />
+g. 5.<br />
+50 Prome-4, you might see the "<em>Firmware is already 9.<br />
+90. There's no need to upgrade.<br />
+</em>" error message. If so, just change its version.<br />
+txt.<br />
+**Now to install the 6.<br />
+20 hack!   1. Download <a href="http://filetrip.net/f25477-SIGNED-6-20-PRO-B7.html" target="_blank" rel="noopener">6.<br />
+20 PRO-B7</a>.   2. Copy the "620PRO_Permanent" and "PROUPDATE" folders to /PSP/GAME/.   3. Run the 6.<br />
+20 PRO-B Updater (the icon has "UPDATE" faintly in the middle) on your PSP and when it runs press X to install and launch the temporary 6.<br />
+20 hack.     4. After the PSP restarts, run the 6.<br />
+20 PRO-B Permanent Patch (the icon says "PERMANENT BOOTLOADER").   5. Press X once to choose to install, then press X again to choose to test it.   6. If your PSP successfully rebooted after the test, then run the permanent patch again, but this time press X and then Circle to install.<br />
+<em>(If your PSP did not successfully test, try removing your "/seplugins/" folder from your memory stick and try again, because not all 5.<br />
+x plugins work on 6.<br />
+xx)</em>To uninstall it just run the Permanent Patch again.<br />
+<span style="color:#009900"><strong>Installing 6.<br />
+39 PRO-B7</strong> (also from the same GBATemp guide which is pretty good)</span>If you are not yet on 6.<br />
+39...   1. Download 6.<br />
+39 official firmware (for PSP <a href="http://filetrip.net/f25265-Sony-Official-US-Firmware-6-39.html" target="_blank" rel="noopener">100X/200X/300X</a>) or (for <a href="http://filetrip.net/f25266-Sony-Official-US-Firmware-%28Go%29-6-39.html" target="_blank" rel="noopener">PSP Go</a>).   2. Place the "UPDATE" folder into the /PSP/GAME/ folder on your memory stick (or the Go's internal storage).   3. Run the 6.<br />
+39 update on your PSP and allow it to install. **<strong>If you are on CFW already DISABLE OR DELETE ALL YOUR PLUGINS FIRST</strong>Now to install the hack!   1. Download <a href="http://filetrip.net/f25478-SIGNED-6-39-PRO-B7.html" target="_blank" rel="noopener">6.<br />
+39 PRO-B7</a>   2. Copy the "639PROUpdate" and "639FastRecovery" folders to /PSP/GAME/ on your memory stick (or Go's internal storage).   3. Run 6.<br />
+39 PRO-B Updater on your PSP, and press X to install.   4. Your PSP should restart into hacked mode. This will last until your PSP is shut fully off (sleep mode is okay). To hack it again quickly, run the Fast Recovery to get back into 6.<br />
+35 PROTo uninstall it just shut it down fully, and don't run Fast Recovery again.<br />
+<span style="color:#009900">So...now I can run PSP homebrew and games?</span>Yes. Homebrew comes in a folder, with an "EBOOT.<br />
+PBP" inside. Place this folder inside the /PSP/GAMES/ folder of your mem stick or PSP Go internal memory. Then run it from your PSP, under "Games".<br />
+Place your ISOs (games) inside the /ISO folder, and run it from your PSP under "Games".<br />
+<span style="color:#009900">How about CSOs? What's the difference between them and ISOs anyway?</span>CSOs are compressed ISOs (hence the 'C'). They should still work like ISOs, just that they might take longer to load or lag at cutscenes or so.<br />
+<span style="color:#009900">How about online play or the PSN?</span>You should be able to play online and access the PSN, if you follow this guide.<br />
+<em>If anyone has anything to add or any feedback to give please PM me or a mod, thank you!<br />
+</em> <br />
+		_BACKUP_<br />
+		<strong>Here's a basic guide to PSP hacking and homebrew. If you want more I suggest you read around in websites like Wololo and PSP-Hacks and PSP Slim Hacks. If you just want to learn how to install a CFW, though, dive right in!</strong><span style="color:#009900">Why hack the PSP?</span>In this context "hacking" refers to using custom firmware (CFW) instead of official firmware (OFW), "firmware" being the software which runs the PSP. You can check what firmware you are running under <strong>Settings -> System Information</strong> on your PSP.CFW allows you to do more with your PSP than usual. It lets you play homebrew (programs made by non-official developers), as well as ISOs (games), make backups of your PSP and your UMDs, and so on.<span style="color:#009900">Sounds good to me! How do I do it?</span>First determine what model of PSP you have, using this image from a PSP Slim Hacks Tutorial:&lt;div>&lt;div id="spoiler">&lt;div>&lt;input type="button" value="Show Spoiler!" style="width:100px;font-size:12px;margin:10px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')['show'].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')['show'].style.display = ''; this.parentNode.parentNode.getElementsByTagName('div')['hide'].style.display = 'none'; this.innerText = ''; this.value = 'Hide Spoiler!'; } else { this.parentNode.parentNode.getElementsByTagName('div')['show'].style.display = 'none'; this.parentNode.parentNode.getElementsByTagName('div')['hide'].style.display = ''; this.innerText = ''; this.value = 'Show Spoiler!'; }" />&lt;div id="show" style="background#c1f8ff; display: none; background-color:transparent; background-repeat:repeat; margin: 0px;border-style:solid;border-width:1px; padding: 4px; width:98%"><img src="http://i224.photobucket.com/albums/dd136/OverLord_Draik/PSPModel.gif" loading="lazy" class="post-img">&lt;/div>&lt;div id="hide">&lt;/div>&lt;/div>&lt;/div> &lt;/div>If it's a PSP 100X, PSP 200X or PSP Go, the recommended CFW is <strong>6.20 Pro-B7 permanent</strong>.If it's a PSP-300X, use the PSP Module Checker to find out what module you have.Just download it, extract it to obtain the "MCHECKER" folder, and place that inside the "/PSP/GAME" folder in your memory stick. Then put your mem stick back into your PSP, turn it on, and select the module checker under "Games".If it is a 05g or below use <strong>6.20 PRO-B7 permanent</strong>. If it is a 07g or 09g, use <strong>6.39 PRO-B7</strong>, because you <em>cannot</em> run 6.20 on those models.6.39 PRO is not a "permanent" CFW. This means that when you completely shut it down you will have to load it again (sleep mode is ok).**<span style="color:#FF0000">If you are already running OFW from 6.30 - 6.39, and have a PSP which can run 6.20 PRO-B7, you will have to either downgrade your firmware first, or just use 6.39 PRO-B7, the non-"permanent" CFW.</span>**<span style="color:#009900"><strong>Installing 6.20 PRO-B7 permanent</strong> (from the GBATemp Softmod guide)</span>&lt;div>&lt;div id="spoiler">&lt;div>&lt;input type="button" value="Show Spoiler!" style="width:100px;font-size:12px;margin:10px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')['show'].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')['show'].style.display = ''; this.parentNode.parentNode.getElementsByTagName('div')['hide'].style.display = 'none'; this.innerText = ''; this.value = 'Hide Spoiler!'; } else { this.parentNode.parentNode.getElementsByTagName('div')['show'].style.display = 'none'; this.parentNode.parentNode.getElementsByTagName('div')['hide'].style.display = ''; this.innerText = ''; this.value = 'Show Spoiler!'; }" />&lt;div id="show" style="background#c1f8ff; display: none; background-color:transparent; background-repeat:repeat; margin: 0px;border-style:solid;border-width:1px; padding: 4px; width:98%">If you are not already on Official Firmware 6.20...   1. Download 6.20 official firmware for PSP 100X/200X/300X or for PSP Go.    2. Copy the UPDATE folder to the /PSP/GAME/ folder on your memory stick (or the Go's internal storage).   3. Launch the 6.20 update on your PSP, and tell it to update. **<strong>If you are on CFW already DISABLE OR DELETE ALL YOUR PLUGINS FIRST</strong>**If you have older CFW already installed, e.g. 5.50 Prome-4, you might see the "<em>Firmware is already 9.90. There's no need to upgrade.</em>" error message. If so, just change its version.txt.**Now to install the 6.20 hack!   1. Download 6.20 PRO-B7.   2. Copy the "620PRO_Permanent" and "PROUPDATE" folders to /PSP/GAME/.   3. Run the 6.20 PRO-B Updater (the icon has "UPDATE" faintly in the middle) on your PSP and when it runs press X to install and launch the temporary 6.20 hack.     4. After the PSP restarts, run the 6.20 PRO-B Permanent Patch (the icon says "PERMANENT BOOTLOADER").   5. Press X once to choose to install, then press X again to choose to test it.   6. If your PSP successfully rebooted after the test, then run the permanent patch again, but this time press X and then Circle to install.<em>(If your PSP did not successfully test, try removing your "/seplugins/" folder from your memory stick and try again, because not all 5.x plugins work on 6.xx)</em>To uninstall it just run the Permanent Patch again.&lt;/div>&lt;div id="hide">&lt;/div>&lt;/div>&lt;/div> &lt;/div><span style="color:#009900"><strong>Installing 6.39 PRO-B7</strong> (also from the same GBATemp guide which is pretty good)</span>&lt;div>&lt;div id="spoiler">&lt;div>&lt;input type="button" value="Show Spoiler!" style="width:100px;font-size:12px;margin:10px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')['show'].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')['show'].style.display = ''; this.parentNode.parentNode.getElementsByTagName('div')['hide'].style.display = 'none'; this.innerText = ''; this.value = 'Hide Spoiler!'; } else { this.parentNode.parentNode.getElementsByTagName('div')['show'].style.display = 'none'; this.parentNode.parentNode.getElementsByTagName('div')['hide'].style.display = ''; this.innerText = ''; this.value = 'Show Spoiler!'; }" />&lt;div id="show" style="background#c1f8ff; display: none; background-color:transparent; background-repeat:repeat; margin: 0px;border-style:solid;border-width:1px; padding: 4px; width:98%">If you are not yet on 6.39...   1. Download 6.39 official firmware (for PSP 100X/200X/300X) or (for PSP Go).   2. Place the "UPDATE" folder into the /PSP/GAME/ folder on your memory stick (or the Go's internal storage).   3. Run the 6.39 update on your PSP and allow it to install. **<strong>If you are on CFW already DISABLE OR DELETE ALL YOUR PLUGINS FIRST</strong>Now to install the hack!   1. Download 6.39 PRO-B7   2. Copy the "639PROUpdate" and "639FastRecovery" folders to /PSP/GAME/ on your memory stick (or Go's internal storage).   3. Run 6.39 PRO-B Updater on your PSP, and press X to install.   4. Your PSP should restart into hacked mode. This will last until your PSP is shut fully off (sleep mode is okay). To hack it again quickly, run the Fast Recovery to get back into 6.35 PROTo uninstall it just shut it down fully, and don't run Fast Recovery again.&lt;/div>&lt;div id="hide">&lt;/div>&lt;/div>&lt;/div> &lt;/div><span style="color:#009900">So...now I can run PSP homebrew and games?</span>Yes. Homebrew comes in a folder, with an "EBOOT.PBP" inside. Place this folder inside the /PSP/GAMES/ folder of your mem stick or PSP Go internal memory. Then run it from your PSP, under "Games".Place your ISOs (games) inside the /ISO folder, and run it from your PSP under "Games".<span style="color:#009900">How about CSOs? What's the difference between them and ISOs anyway?</span>CSOs are compressed ISOs (hence the 'C'). They should still work like ISOs, just that they might take longer to load or lag at cutscenes or so.<span style="color:#009900">How about online play or the PSN?</span>You should be able to play online and access the PSN, if you follow this guide.<em>If anyone has anything to add or any feedback to give please PM me or a mod, thank you!</em><br />
+		<br />
+<br />
+<br />
+Err... Meru, The linebreak breaks all the URLs.<br />
+ :( </div>
+</div><div class="post" id="p5011704">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">T</span><a class="author" href="../users/u2454177.html">The Pan Is Mightier</a></span><span>Apr 27 2012, 05:36 AM</span></div>
+  <div class="body">Meru that was beautiful. You should just do all the work  :awesome: </div>
+</div><div class="post" id="p5011768">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u2633161.html">Chizzy</a></span><span>Apr 27 2012, 01:17 PM</span></div>
+  <div class="body">Um meru, you forgot that that post also had Links that needed to be decoded and had to remove the <a href="http://Dgemu/Blahblah.com3%Go=" target="_blank" rel="noopener">http://Dgemu/Blahblah.com3%Go=</a> stuff.<br />
+After you told me about the pics I edited it, and it looks similar to what you posted afterwards.<br />
+<br />
+also when im given an assignment can you guys be more specific?<br />
+I edited the 3 posts in that second thread, and it Pissed molh off because one of them was his.<br />
+even though all I fixed were the coded links with the go= on his</div>
+</div><div class="post" id="p5011778">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 27 2012, 01:32 PM</span></div>
+  <div class="body">Molh was pissed because of that post?<br />
+I don't think it was because of that post since he said 'OTHER THAN RECOVERY OPERATIONS'. If it was, I'll PM him since i'm the one who asked you to edit it.<br />
+<br />
+Meru, You did not fix that?  :( <br />
+I don't see any broken links in meru's post. Maybe you're seeing things?<br />
+Also, Chizman, You blind? Look at the bottom paragraphs in meru's post, They're paragraphs! Your bottom half is a wall.</div>
+</div><div class="post" id="p5011781">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u2633161.html">Chizzy</a></span><span>Apr 27 2012, 01:35 PM</span></div>
+  <div class="body">I didnt do alot, I was tired yesterday and went to bed at 8pm.<br />
+yeah Molh got mad because I edited his post and because he warned me not to, I even got warn from him because of it.</div>
+</div><div class="post" id="p5011784">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 27 2012, 01:42 PM</span></div>
+  <div class="body">I've PMed him.<br />
+If it was about that post, I'll handle it since i'm the one who asked you to.<br />
+<br />
+Meanwhile, Tell me what you understand about the 'post recovery' job at hand. I have a feeling you don't get it.</div>
+</div><div class="post" id="p5011786">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u2633161.html">Chizzy</a></span><span>Apr 27 2012, 01:44 PM</span></div>
+  <div class="body">we are to fix Line Breaks<br />
+decode links,<br />
+fix OLD spoilers<br />
+edit the format of the posts so that they are paragraphs and not blocks of text.<br />
+<br />
+Thats most of what ive done so far</div>
+</div><div class="post" id="p5011792">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 27 2012, 01:53 PM</span></div>
+  <div class="body">Good good.<br />
+I was just making sure.<br />
+<br />
+I'll look into your invisible warning bar and profile problems. I may as well do the whole NTD since doing half of it will be a real headache for Shadow and channel.</div>
+</div><div class="post" id="p5011827">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>Apr 27 2012, 07:03 PM</span></div>
+  <div class="body">@Chiz: Molh warned you based off the wrong post. He PMed me right away when he made the mistake and asked me if I could rectify it as he wanted to warn you about modifying other people's post for the lulz. I told him that it's harder to fix the warn, so just leave it and I would explain if inquired about it.<br />
+<br />
+Also: I edited your post quickly to show you how the post formats would look soothing to the eye. For fixing links and such, I didn't make any changes. Notice my "Isn't it much nicer like this" above the quote.<br />
+<br />
+@2bp: Probably not. I edited that post manually. No script involved.  :) <br />
+<br />
+Also, the reason why your script breaks characters is because your check isn't thorough enough. It can break lines after :, but it shouldn't break a line after http:<br />
+<br />
+Same for dashes: it should break a line if directly preceded with a character, but it shouldn't break a line if another character directly follows:<br />
+Break the line: - Item 1- Item 2<br />
+Don't break the line: On Sainte-Catherine street<br />
+The only headache that could occur is when you use the dash to break a word because it can't fit on the same line, but that doesn't happen in forums.<br />
+<br />
+Also, I hope you didn't code too much, I transformed your page a bit and regrouped your code.<br />
+Applied transitional html and evrything, but still a lot of work to be done on html side   XD </div>
+</div><div class="post" id="p5011889">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">M</span><a class="author" href="../users/u36218.html">Mo­lh.</a></span><span>Apr 28 2012, 03:01 AM</span></div>
+  <div class="body">Yupp, just to clarify, I warned you for editing this post of mine <strong>without permission</strong>. It is okay to edit my guides; it's part of your job after all!  :) <br />
+<br />
+Sorry for the confusion.</div>
+</div><div class="post" id="p5011890">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 28 2012, 03:03 AM</span></div>
+  <div class="body">Well why didn't i think of that  :( <br />
+<br />
+Although:<br />
+Please do the following-Blahblah<br />
+<br />
+AND<br />
+<br />
+First paragraph.Second paragraph<br />
+<br />
+<br />
+Would require a linebreak<br />
+<br />
+I think it's easier to fix misplaced linebreaks than it is to fix places with no linebreaks  :P <br />
+If you feel the need to add anything, You're the pro  :) <br />
+<br />
+And after tomorrow i will descend back to planet earth after finishing majority of the important exams. YAAAAAAAY!</div>
+</div><div class="post" id="p5011892">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u2633161.html">Chizzy</a></span><span>Apr 28 2012, 03:09 AM</span></div>
+  <div class="body">wait, tell me the difference between a section break and a Line break &lt;b>?</div>
+</div><div class="post" id="p5011895">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 28 2012, 03:19 AM</span></div>
+  <div class="body">A section break is something i've never heard of.<br />
+A linebreak in HTML is <br/> or &lt;/br> or <br>. It does <br/><br />
+this.<br />
+In other languages which aren't HTML ( non-markups, i guess ). It's the traditional "\n" character. <br />
+If you use it in an HTML page it does \n this. But if you view the source, You'll have a new line there.<br />
+<br />
+I still don't know what a section break is.</div>
+</div><div class="post" id="p5011896">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">M</span><a class="author" href="../users/u36218.html">Mo­lh.</a></span><span>Apr 28 2012, 03:19 AM</span></div>
+  <div class="body"><s>chiz/anubis/any other available RS: can i give you guys a task? like, a Real, This-Is-Not-A-Drill, We-Require-This-Now task?<br />
+help clean up this guide asap. reason: a guy needs to use it immediately.<br />
+<br />
+requirements:<br />
+1. make it as readable and user-friendly as possible<br />
+2. make sure all the content, including links and instructions, remains highly accurate. remember that someone will probably be using it <em>immediately after you edit the guide</em> - do not brick his PSP!<br />
+(hint: much of the guide came from <a href="http://gbatemp.net/t293978-how-to-softmod-hack-your-psp" target="_blank" rel="noopener">here</a>  ;) )<br />
+<br />
+once you are done you may then link the guide to that guy in that topic, so that he can receive the help that he needs, without having to turn to another website like gbatemp.<br />
+<br />
+good luck!  :) </s><br />
+<br />
+<strong>Edit</strong>: Oops pigs did it. Oh welll! No worries, better opportunities will prob come sooner or later!  :D </div>
+</div><div class="post" id="p5011897">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 28 2012, 03:20 AM</span></div>
+  <div class="body">Wait, I did it.<br />
+<br />
+<strong>Here's a basic guide to PSP hacking and homebrew. If you want more I suggest you read around in websites like <a href="http://www.wololo.net" target="_blank" rel="noopener">Wololo</a> and <a href="http://www.psp-hacks.com" target="_blank" rel="noopener">PSP-Hacks</a> and <a href="http://www.pspslimhacks.com" target="_blank" rel="noopener">PSP Slim Hacks</a>. If you just want to learn how to install a CFW, though, dive right in!</strong><br />
+<br />
+<span style="color:#009900">Why hack the PSP?</span><br />
+In this context "hacking" refers to using custom firmware (CFW) instead of official firmware (OFW), "firmware" being the software which runs the PSP. You can check what firmware you are running under <strong>Settings -> System Information</strong> on your PSP.<br />
+CFW allows you to do more with your PSP than usual. It lets you play homebrew (programs made by non-official developers), as well as ISOs (games), make backups of your PSP and your UMDs, and so on.<br />
+<span style="color:#009900">Sounds good to me! How do I do it?</span><br />
+First determine what model of PSP you have, using this image from a PSP Slim Hacks Tutorial:<br />
+<br />
+<img src="http:&lt;br /&gt;
+//i224.&lt;br /&gt;
+photobucket.&lt;br /&gt;
+com/albums/dd136/OverLord_Draik/PSPModel.&lt;br /&gt;
+gif" loading="lazy" class="post-img"><br />
+<br />
+If it's a PSP 100X, PSP 200X or PSP Go, the recommended CFW is <strong>6.20 Pro permanent</strong>.<br />
+If it's a PSP-300X, use the <a href="http://filetrip.net/f25206-PSP-Module-Checker-1-0.html" target="_blank" rel="noopener">PSP Module Checker</a> to find out what module you have.<br />
+Just download it, extract it to obtain the "MCHECKER" folder, and place that inside the "/PSP/GAME" folder in your memory stick. Then put your mem stick back into your PSP, turn it on, and select the module checker under "Games".<br />
+If it is a 05g or below use <strong>6.20 PRO permanent</strong>. If it is a 07g or 09g, use <strong>6.60 PRO</strong>, because you <em>cannot</em> run 6.20 PRO on those models.<br />
+6.60 PRO is not a "permanent" CFW. This means that when you completely shut it down you will have to load it again (sleep mode is ok).<br />
+**<span style="color:#FF0000">If you are already running OFW from 6.<br />
+30 - 6.39, and have a PSP which can run 6.20 PRO, you will have to either <a href="http://forums.dashhacks.com/f133/downgrading-from-firmware-6-3x-to-firmware-6-t296612/" target="_blank" rel="noopener">downgrade your firmware</a> first, or just use 6.60 PRO, the non-"permanent" CFW.<br />
+</span><br />
+**<span style="color:#009900"><strong>Installing 6.20 PRO permanent</strong> (from the <a href="http://gbatemp.net/t293978-how-to-softmod-hack-your-psp" target="_blank" rel="noopener">GBATemp Softmod guide</a>)</span><br />
+<br />
+If you are not already on Official Firmware 6.20...   1. Download 6.20 official firmware for <a href="http://filetrip.net/file.php?id=9075" target="_blank" rel="noopener">PSP 100X/200X/300X</a> or for <a href="http://filetrip.net/file.php?id=24457" target="_blank" rel="noopener">PSP Go</a>.<br />
+2. Copy the UPDATE folder to the /PSP/GAME/ folder on your memory stick (or the Go's internal storage).<br />
+3. Launch the 6.20 update on your PSP, and tell it to update. **<strong>If you are on CFW already DISABLE OR DELETE ALL YOUR PLUGINS FIRST</strong>**If you have older CFW already installed, e.<br />
+g. 5.50 Prome-4, you might see the "<em>Firmware is already 9.90. There's no need to upgrade.</em>" error message. If so, just change its version.<br />
+txt.<br />
+**Now to install the 6.20 hack!   1. Download <a href="http://filetrip.net/g35131741-SIGNED-6-20-PRO.html" target="_blank" rel="noopener">6.20 PRO</a>.   2. Copy the "620PRO_Permanent" and "PROUPDATE" folders to /PSP/GAME/.   3. Run the 6.20 PRO-B Updater (the icon has "UPDATE" faintly in the middle) on your PSP and when it runs press X to install and launch the temporary 6.20 hack.<br />
+4. After the PSP restarts, run the 6.20 PRO-B Permanent Patch (the icon says "PERMANENT BOOTLOADER").<br />
+5. Press X once to choose to install, then press X again to choose to test it.<br />
+6. If your PSP successfully rebooted after the test, then run the permanent patch again, but this time press X and then Circle to install.<br />
+<em>(If your PSP did not successfully test, try removing your "/seplugins/" folder from your memory stick and try again, because not all 5.x plugins work on 6.xx)</em>To uninstall it just run the Permanent Patch again.<br />
+<br />
+<br />
+<span style="color:#009900"><strong>Installing 6.60 PRO</strong> (also from the same GBATemp guide)</span><br />
+If you are not yet on 6.60...<br />
+1. Download 6.60 official firmware (for PSP <a href="http://filetrip.net/file.php?id=26020" target="_blank" rel="noopener">100X/200X/300X</a>) or (for <a href="http://filetrip.net/file.php?id=26021" target="_blank" rel="noopener">PSP Go</a>).<br />
+2. Place the "UPDATE" folder into the /PSP/GAME/ folder on your memory stick (or the Go's internal storage).<br />
+3. Run the 6.60 update on your PSP and allow it to install. **<strong>If you are on CFW already DISABLE OR DELETE ALL YOUR PLUGINS FIRST</strong>Now to install the hack!<br />
+1. Download <a href="http://filetrip.net/g35132300-SIGNED-6-60-PRO.html" target="_blank" rel="noopener">6.60 PRO</a>   2. Copy the "660PROUpdate" and "660FastRecovery" folders to /PSP/GAME/ on your memory stick (or Go's internal storage).<br />
+3. Run 6.60 PRO Updater on your PSP, and press X to install.<br />
+4. Your PSP should restart into hacked mode. This will last until your PSP is shut fully off (sleep mode is okay). To hack it again quickly, run the Fast Recovery to get back into 6.60 PRO.<br />
+To uninstall it just shut it down fully.<br />
+<br />
+<br />
+<span style="color:#009900">So...now I can run PSP homebrew and games?</span><br />
+Yes. Homebrew comes in a folder, with an "EBOOT.<br />
+PBP" inside. Place this folder inside the /PSP/GAMES/ folder of your mem stick or PSP Go internal memory. Then run it from your PSP, under "Games".<br />
+Place your ISOs (games) inside the /ISO folder, and run it from your PSP under "Games".<br />
+<span style="color:#009900">How about CSOs? What's the difference between them and ISOs anyway?</span><br />
+CSOs are compressed ISOs (hence the 'C'). They should still work like ISOs, just that they might take longer to load or lag at cutscenes or so.<br />
+<span style="color:#009900">How about online play or the PSN?</span><br />
+You should be able to play online and access the PSN, if you follow this guide.<br />
+<em>If anyone has anything to add or any feedback to give please PM me or a mod, thank you!</em></div>
+</div><div class="post" id="p5011898">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">M</span><a class="author" href="../users/u36218.html">Mo­lh.</a></span><span>Apr 28 2012, 03:23 AM</span></div>
+  <div class="body">meru why does this recovery staff have admin powers<br />
+what is the meaning of this</div>
+</div><div class="post" id="p5011899">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">L</span><a class="author" href="../users/u2631936.html">Lightning Flash</a></span><span>Apr 28 2012, 03:29 AM</span></div>
+  <div class="body">I have what now?</div>
+</div><div class="post" id="p5011901">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">M</span><a class="author" href="../users/u36218.html">Mo­lh.</a></span><span>Apr 28 2012, 03:31 AM</span></div>
+  <div class="body">you are not 2bp  :foldarms: </div>
+</div><div class="post" id="p5011902">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">L</span><a class="author" href="../users/u2631936.html">Lightning Flash</a></span><span>Apr 28 2012, 03:33 AM</span></div>
+  <div class="body">Oh...thought you meant recovery staff team, not one member.<br />
+ignore me.</div>
+</div><div class="post" id="p5011904">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 28 2012, 03:37 AM</span></div>
+  <div class="body">Meru, Why can this old man use the internet?</div>
+</div><div class="post" id="p5011908">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">M</span><a class="author" href="../users/u36218.html">Mo­lh.</a></span><span>Apr 28 2012, 03:50 AM</span></div>
+  <div class="body">meru why are you older than me<br />
+which century did you come from<br />
+<br />
+meru why am i spamming up a work thread<br />
+<br />
+meru wait please dont respond to this</div>
+</div><div class="post" id="p5011915">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 28 2012, 04:10 AM</span></div>
+  <div class="body">@Meru, I get ya but i think it's a bit hard to hardcode all of that. I'm gonna let the user fill in the breaks and just leave . as default.<br />
+<br />
+<br />
+And maybe add a "break before" option since bbcode headings.</div>
+</div><div class="post" id="p5011973">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Apr 28 2012, 06:58 AM</span></div>
+  <div class="body">*admires the spam*</div>
+</div><div class="post" id="p5011987">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">M</span><a class="author" href="../users/u36218.html">Mo­lh.</a></span><span>Apr 28 2012, 07:35 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">2bigpigs&#x27; timestamp=&#x27;1335583219&#x27; post=&#x27;5011897 wrote:</div><br />
+Wait, I did it.<br />
+<br />
+<strong>Here's a basic guide to PSP hacking and homebrew. If you want more I suggest you read around in websites like <a href="http://www.wololo.net" target="_blank" rel="noopener">Wololo</a> and <a href="http://www.psp-hacks.com" target="_blank" rel="noopener">PSP-Hacks</a> and <a href="http://www.pspslimhacks.com" target="_blank" rel="noopener">PSP Slim Hacks</a>. If you just want to learn how to install a CFW, though, dive right in!</strong><br />
+<br />
+<span style="color:#009900">Why hack the PSP?</span><br />
+In this context "hacking" refers to using custom firmware (CFW) instead of official firmware (OFW), "firmware" being the software which runs the PSP. You can check what firmware you are running under <strong>Settings -> System Information</strong> on your PSP.<br />
+CFW allows you to do more with your PSP than usual. It lets you play homebrew (programs made by non-official developers), as well as ISOs (games), make backups of your PSP and your UMDs, and so on.<br />
+<span style="color:#009900">Sounds good to me! How do I do it?</span><br />
+First determine what model of PSP you have, using this image from a PSP Slim Hacks Tutorial:<br />
+<br />
+<img src="http:&lt;br /&gt;
+//i224.&lt;br /&gt;
+photobucket.&lt;br /&gt;
+com/albums/dd136/OverLord_Draik/PSPModel.&lt;br /&gt;
+gif" loading="lazy" class="post-img"><br />
+<br />
+If it's a PSP 100X, PSP 200X or PSP Go, the recommended CFW is <strong>6.20 Pro permanent</strong>.<br />
+If it's a PSP-300X, use the <a href="http://filetrip.net/f25206-PSP-Module-Checker-1-0.html" target="_blank" rel="noopener">PSP Module Checker</a> to find out what module you have.<br />
+Just download it, extract it to obtain the "MCHECKER" folder, and place that inside the "/PSP/GAME" folder in your memory stick. Then put your mem stick back into your PSP, turn it on, and select the module checker under "Games".<br />
+If it is a 05g or below use <strong>6.20 PRO permanent</strong>. If it is a 07g or 09g, use <strong>6.60 PRO</strong>, because you <em>cannot</em> run 6.20 PRO on those models.<br />
+6.60 PRO is not a "permanent" CFW. This means that when you completely shut it down you will have to load it again (sleep mode is ok).<br />
+**<span style="color:#FF0000">If you are already running OFW from 6.<br />
+30 - 6.39, and have a PSP which can run 6.20 PRO, you will have to either <a href="http://forums.dashhacks.com/f133/downgrading-from-firmware-6-3x-to-firmware-6-t296612/" target="_blank" rel="noopener">downgrade your firmware</a> first, or just use 6.60 PRO, the non-"permanent" CFW.<br />
+</span><br />
+**<span style="color:#009900"><strong>Installing 6.20 PRO permanent</strong> (from the <a href="http://gbatemp.net/t293978-how-to-softmod-hack-your-psp" target="_blank" rel="noopener">GBATemp Softmod guide</a>)</span><br />
+<br />
+If you are not already on Official Firmware 6.20...   1. Download 6.20 official firmware for <a href="http://filetrip.net/file.php?id=9075" target="_blank" rel="noopener">PSP 100X/200X/300X</a> or for <a href="http://filetrip.net/file.php?id=24457" target="_blank" rel="noopener">PSP Go</a>.<br />
+2. Copy the UPDATE folder to the /PSP/GAME/ folder on your memory stick (or the Go's internal storage).<br />
+3. Launch the 6.20 update on your PSP, and tell it to update. **<strong>If you are on CFW already DISABLE OR DELETE ALL YOUR PLUGINS FIRST</strong>**If you have older CFW already installed, e.<br />
+g. 5.50 Prome-4, you might see the "<em>Firmware is already 9.90. There's no need to upgrade.</em>" error message. If so, just change its version.<br />
+txt.<br />
+**Now to install the 6.20 hack!   1. Download <a href="http://filetrip.net/g35131741-SIGNED-6-20-PRO.html" target="_blank" rel="noopener">6.20 PRO</a>.   2. Copy the "620PRO_Permanent" and "PROUPDATE" folders to /PSP/GAME/.   3. Run the 6.20 PRO-B Updater (the icon has "UPDATE" faintly in the middle) on your PSP and when it runs press X to install and launch the temporary 6.20 hack.<br />
+4. After the PSP restarts, run the 6.20 PRO-B Permanent Patch (the icon says "PERMANENT BOOTLOADER").<br />
+5. Press X once to choose to install, then press X again to choose to test it.<br />
+6. If your PSP successfully rebooted after the test, then run the permanent patch again, but this time press X and then Circle to install.<br />
+<em>(If your PSP did not successfully test, try removing your "/seplugins/" folder from your memory stick and try again, because not all 5.x plugins work on 6.xx)</em>To uninstall it just run the Permanent Patch again.<br />
+<br />
+<br />
+<span style="color:#009900"><strong>Installing 6.60 PRO</strong> (also from the same GBATemp guide)</span><br />
+If you are not yet on 6.60...<br />
+1. Download 6.60 official firmware (for PSP <a href="http://filetrip.net/file.php?id=26020" target="_blank" rel="noopener">100X/200X/300X</a>) or (for <a href="http://filetrip.net/file.php?id=26021" target="_blank" rel="noopener">PSP Go</a>).<br />
+2. Place the "UPDATE" folder into the /PSP/GAME/ folder on your memory stick (or the Go's internal storage).<br />
+3. Run the 6.60 update on your PSP and allow it to install. **<strong>If you are on CFW already DISABLE OR DELETE ALL YOUR PLUGINS FIRST</strong>Now to install the hack!<br />
+1. Download <a href="http://filetrip.net/g35132300-SIGNED-6-60-PRO.html" target="_blank" rel="noopener">6.60 PRO</a>   2. Copy the "660PROUpdate" and "660FastRecovery" folders to /PSP/GAME/ on your memory stick (or Go's internal storage).<br />
+3. Run 6.60 PRO Updater on your PSP, and press X to install.<br />
+4. Your PSP should restart into hacked mode. This will last until your PSP is shut fully off (sleep mode is okay). To hack it again quickly, run the Fast Recovery to get back into 6.60 PRO.<br />
+To uninstall it just shut it down fully.<br />
+<br />
+<br />
+<span style="color:#009900">So...now I can run PSP homebrew and games?</span><br />
+Yes. Homebrew comes in a folder, with an "EBOOT.<br />
+PBP" inside. Place this folder inside the /PSP/GAMES/ folder of your mem stick or PSP Go internal memory. Then run it from your PSP, under "Games".<br />
+Place your ISOs (games) inside the /ISO folder, and run it from your PSP under "Games".<br />
+<span style="color:#009900">How about CSOs? What's the difference between them and ISOs anyway?</span><br />
+CSOs are compressed ISOs (hence the 'C'). They should still work like ISOs, just that they might take longer to load or lag at cutscenes or so.<br />
+<span style="color:#009900">How about online play or the PSN?</span><br />
+You should be able to play online and access the PSN, if you follow this guide.<br />
+<em>If anyone has anything to add or any feedback to give please PM me or a mod, thank you!</em><br />
+</blockquote><br />
+<br />
+By the way, here is the cleaned up version of that clean-up:<br />
+<strong>Here's a basic guide to PSP hacking and homebrew. If you want more I suggest you read around in websites like <a href="http://www.wololo.net" target="_blank" rel="noopener">Wololo</a> and <a href="http://www.psp-hacks.com" target="_blank" rel="noopener">PSP-Hacks</a> and <a href="http://www.pspslimhacks.com" target="_blank" rel="noopener">PSP Slim Hacks</a>. If you just want to learn how to install a CFW, though, dive right in!</strong><br />
+<br />
+<span style="color:#009900">Why hack the PSP?</span><br />
+In this context "hacking" refers to using custom firmware (CFW) instead of official firmware (OFW), "firmware" being the software which runs the PSP. You can check what firmware you are running under <strong>Settings -> System Information</strong> on your PSP.<br />
+<br />
+CFW allows you to do more with your PSP than usual. It lets you play homebrew (programs made by non-official developers), as well as ISOs (games), make backups of your PSP and your UMDs, and so on.<br />
+<br />
+<span style="color:#009900">Sounds good to me! How do I do it?</span><br />
+First determine what model of PSP you have, using this image from a PSP Slim Hacks Tutorial:<br />
+<br />
+<img src="http://i224.photobucket.com/albums/dd136/OverLord_Draik/PSPModel.gif" loading="lazy" class="post-img"><br />
+<br />
+If it's a PSP 100X, PSP 200X or PSP Go, the recommended CFW is <strong>6.20 Pro permanent</strong>.<br />
+<br />
+If it's a PSP-300X, use the <a href="http://filetrip.net/f25206-PSP-Module-Checker-1-0.html" target="_blank" rel="noopener">PSP Module Checker</a> to find out what module you have.<br />
+Just download it, extract it to obtain the "MCHECKER" folder, and place that inside the "/PSP/GAME" folder in your memory stick. Then put your mem stick back into your PSP, turn it on, and select the module checker under "Games".<br />
+<br />
+If it is a 05g or below use <strong>6.20 PRO permanent</strong>. If it is a 07g or 09g, use <strong>6.60 PRO</strong>, because you <em>cannot</em> run 6.20 PRO on those models.<br />
+6.60 PRO is not a "permanent" CFW. This means that when you completely shut it down you will have to load it again (sleep mode is ok).<br />
+<br />
+**<span style="color:#FF0000">If you are already running OFW from 6.30 - 6.39, and have a PSP which can run 6.20 PRO, either <a href="http://forums.dashhacks.com/f133/downgrading-from-firmware-6-3x-to-firmware-6-t296612/" target="_blank" rel="noopener">downgrade your firmware</a> first, or just use 6.60 PRO, the non-"permanent" CFW.</span>**<br />
+<br />
+<span style="color:#009900"><strong>Installing 6.20 PRO permanent</strong> (from the <a href="http://gbatemp.net/t293978-how-to-softmod-hack-your-psp" target="_blank" rel="noopener">GBATemp Softmod guide</a>)</span><br />
+If you are not already on OFW 6.20...<br />
+1. Download 6.20 official firmware for <a href="http://filetrip.net/file.php?id=9075" target="_blank" rel="noopener">PSP 100X/200X/300X</a> or for <a href="http://filetrip.net/file.php?id=24457" target="_blank" rel="noopener">PSP Go</a>.<br />
+2. Copy the UPDATE folder to the /PSP/GAME/ folder on your memory stick (or the Go's internal storage).<br />
+3. Launch the 6.20 update on your PSP, and tell it to update. **<strong>If you are on CFW already DISABLE OR DELETE ALL YOUR PLUGINS FIRST</strong>**<br />
+If you have older CFW already installed, e.g. 5.50 Prome-4, you might see the "<em>Firmware is already 9.90. There's no need to upgrade.</em>" error message. If so, just change its version txt.<br />
+<br />
+**Now to install the 6.20 hack!<br />
+1. Download <a href="http://filetrip.net/g35131741-SIGNED-6-20-PRO.html" target="_blank" rel="noopener">6.20 PRO</a>.<br />
+2. Copy the "620PRO_Permanent" and "PROUPDATE" folders to /PSP/GAME/.<br />
+3. Run the 6.20 PRO-B Updater (the icon has "UPDATE" faintly in the middle) on your PSP and when it runs press X to install and launch the temporary 6.20 hack.<br />
+4. After the PSP restarts, run the 6.20 PRO-B Permanent Patch (the icon says "PERMANENT BOOTLOADER").<br />
+5. Press X once to choose to install, then press X again to choose to test it.<br />
+6. If your PSP successfully rebooted after the test, then run the permanent patch again, but this time press X and then Circle to install.<br />
+<em>(If your PSP did not successfully test, try removing your "/seplugins/" folder from your memory stick and try again, because not all 5.x plugins work on 6.xx)</em><br />
+<br />
+To uninstall it just run the Permanent Patch again.<br />
+<br />
+<br />
+<span style="color:#009900"><strong>Installing 6.60 PRO</strong> (also from the same GBATemp guide)</span><br />
+If you are not already on OFW 6.60...<br />
+1. Download 6.60 official firmware (for PSP <a href="http://filetrip.net/file.php?id=26020" target="_blank" rel="noopener">100X/200X/300X</a>) or (for <a href="http://filetrip.net/file.php?id=26021" target="_blank" rel="noopener">PSP Go</a>).<br />
+2. Place the "UPDATE" folder into the /PSP/GAME/ folder on your memory stick (or the Go's internal storage).<br />
+3. Run the 6.60 update on your PSP and allow it to install. **<strong>If you are on CFW already DISABLE OR DELETE ALL YOUR PLUGINS FIRST</strong><br />
+<br />
+Now to install the hack!<br />
+1. Download <a href="http://filetrip.net/g35132300-SIGNED-6-60-PRO.html" target="_blank" rel="noopener">6.60 PRO</a><br />
+2. Copy the "660PROUpdate" and "660FastRecovery" folders to /PSP/GAME/ on your memory stick (or Go's internal storage).<br />
+3. Run 6.60 PRO Updater on your PSP, and press X to install.<br />
+4. Your PSP should restart into hacked mode. This will last until your PSP is shut fully off (sleep mode is okay). To hack it again quickly, run the Fast Recovery to get back into 6.60 PRO.<br />
+<br />
+To uninstall it just shut it down fully.<br />
+<br />
+<br />
+<span style="color:#009900">So...now I can run PSP homebrew and games?</span><br />
+Yes. Homebrew comes in a folder, with an "EBOOT.PBP" inside. Place this folder inside the /PSP/GAMES/ folder of your memory stick or PSP Go internal memory. Then run it from your PSP, under "Games".<br />
+Place your ISOs (games) inside the /ISO folder, and run it from your PSP under "Games".<br />
+<br />
+<span style="color:#009900">How about CSOs? What's the difference between them and ISOs anyway?</span><br />
+CSOs are compressed ISOs (hence the 'C'). They should still work like ISOs, just that they might take longer to load or lag at cutscenes or so.<br />
+<br />
+<span style="color:#009900">How about online play or the PSN?</span><br />
+You should be able to play online and access the PSN, if you follow this guide.<br />
+<br />
+<em>If anyone has anything to add or any feedback to give please PM me or a mod, thank you!</em><br />
+<br />
+There were a few odd spacings and line breaks, but otherwise everything was okay.  :P </div>
+</div><div class="post" id="p5012170">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>Apr 28 2012, 10:52 PM</span></div>
+  <div class="body">@Molh: They have admin powers? Or are you talking about being able to delete own posts and see them in the admin log?<br />
+ <br />
+@2bp: Suggestion: Check boxes with options and check all by default, let the person using the tool decide what he needs?<br />
+There are only so many instances where you need a break line, but more exceptions... And I think managing the exceptions is priority: It's less bad that it misses a few cases than it breaking more of the things we know is right. The person using the tool is assumingly the smart one, as long as it's not PEBKAC.</div>
+</div><div class="post" id="p5012242">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">M</span><a class="author" href="../users/u36218.html">Mo­lh.</a></span><span>Apr 29 2012, 06:29 AM</span></div>
+  <div class="body">yes, they have<br />
+in fact they even have the big sentinel badge on them!!<br />
+<br />
+welll, not "they", just that one guy</div>
+</div><div class="post" id="p5012261">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>Apr 29 2012, 07:47 AM</span></div>
+  <div class="body">you mean Channel? ;D</div>
+</div><div class="post" id="p5012268">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 29 2012, 08:14 AM</span></div>
+  <div class="body">No, He means me.<br />
+<br />
+About the page, I updated last night. I think i posted about it or something. I added a strict and raw linebreak replace so it makes it easier.<br />
+Strict does an alphanumeric check before and after the needle, Raw doesn't. Checkboxes of what?<br />
+If the array passed is empty, We don't do a replace.</div>
+</div><div class="post" id="p5012270">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>Apr 29 2012, 08:15 AM</span></div>
+  <div class="body">Ya, I saw.<br />
+Want to send the new code over also?<br />
+<br />
+I'll do a crosscheck and add the proper html and send it back to you hopefully sometime tomorrow or beginning of the week.<br />
+<br />
+Like that, you can work off proper html for once   XD </div>
+</div><div class="post" id="p5012275">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 29 2012, 08:27 AM</span></div>
+  <div class="body">:&lt;<br />
+<br />
+What's going wrong though?<br />
+I know i'm missing 2 columns in a table. I was planning on fixing that after some testing.<br />
+I don't use a doctype thingy.<br />
+My forms have tables and divs between them.<br />
+<br />
+Proper HTML is a bugger :&lt;<br />
+<br />
+Wait, So what was the suggestion with checkboxes?</div>
+</div><div class="post" id="p5012276">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>Apr 29 2012, 08:40 AM</span></div>
+  <div class="body">Proper html will guarantee output on all browsers.<br />
+Who knows if a browser out there is going to go dafuk and load everything weird.   XD <br />
+<br />
+I dunno, it was just a suggestion, as in:<br />
+(*) -<br />
+(*) .<br />
+(*) :<br />
+<br />
+And as users check them, each and every single one of them, you can hard code the exceptions to not perform it on. Like that, you have more control over what the user does.</div>
+</div><div class="post" id="p5012277">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Apr 29 2012, 08:46 AM</span></div>
+  <div class="body">I'll stick to the Text method. We'll let the users fill in. No hardcoding at all.</div>
+</div><div class="post" id="p5012292">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>Apr 29 2012, 10:56 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Sakamoto-san&#x27; timestamp=&#x27;1335685634&#x27; post=&#x27;5012261 wrote:</div><br />
+you mean Channel? ;D<br />
+</blockquote><br />
+LMFAO hahaha lol have you been reading the convo Meru, everyone including Chizzy got the meaning of it lol</div>
+</div><div class="post" id="p5012381">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>Apr 29 2012, 07:49 PM</span></div>
+  <div class="body">Gimme a break:<br />
+3:47AM, just returned home from an evening with my fiancée.<br />
+Instead of going to sleep, I just came on here and quickly skimmed the posts, and read all my PMs, though I only responded to DM I think? He's got some really JUICY stuff going on that was ecstasy worth~  XD <br />
+And then in my tired state, I made a few last edits to staff utilities to let you guys be able to warn people again!<br />
+<br />
+So I have excuses!! :&lt;<br />
+<br />
+ XD </div>
+</div><div class="post" id="p5012719">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Channel28</span></span><span>May 01 2012, 09:39 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Sakamoto-san&#x27; timestamp=&#x27;1335728956&#x27; post=&#x27;5012381 wrote:</div><br />
+though I only responded to DM I think? He's got some really JUICY stuff going on that was ecstasy worth~  XD <br />
+</blockquote><br />
+OK your off the hook .... now add me to the convo lol</div>
+</div><div class="post" id="p5012739">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>May 01 2012, 01:20 PM</span></div>
+  <div class="body">I guess practice is over.<br />
+I've added database backups of your posts incase someone accidentally loses a bit of the post because of the Editor modes or something.<br />
+<br />
+No page to recover it yet but that shouldn't be hard to do.<br />
+<s><br />
+Also, You mind if i go about fixing some of the posts?<br />
+Like the ones which have HTML in them.<br />
+</s>Wait a minute... I can't HTML either  :( </div>
+</div><div class="post" id="p5012807">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Sakamoto-san</span></span><span>May 01 2012, 08:11 PM</span></div>
+  <div class="body">@2bp: It depends on sections. Only a few certain sections have HTML enabled, all the rest are disabled for security reasons.<br />
+On those sections where it is enabled, you can edit in html.</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

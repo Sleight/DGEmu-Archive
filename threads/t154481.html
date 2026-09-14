@@ -1,0 +1,308 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[OFFICIAL] GUIDE: How to recover bad Pokemon saves</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f288.html">Console Emulation &amp; Modding Assistance</a> &rsaquo; <a href="../forums/f300.html">Nintendo</a> &rsaquo; <a href="../forums/f303.html">Other Nintendo Resources</a> &rsaquo; [OFFICIAL] GUIDE: How to recover bad Pokemon saves</div><div class="thread-title-box"><h1>[OFFICIAL] GUIDE: How to recover bad Pokemon saves</h1><div class="thread-meta" style="font-style:italic;margin-bottom:4px">Saves made using the wrong settings may be fix-able</div><div class="thread-meta">89 posts &middot; page 1 of 1 &middot; 5334 views</div></div><div class="post" id="p1513443">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a><span class="op-tag">ORIGINAL POST</span></span><span>Aug 21 2006, 07:07 PM</span></div>
+  <div class="body">This is a guide on how to recover Pokemon saves made using the wrong save settings (i.e. Flash 64K instead of Flash 128K). At this moment, I cannot fully guarantee that it will work under all circumstances, but chances are that the following procedure will produce viable results.<br />
+<br />
+<strong>Required files</strong><br />
+A save state that was made using the Flash 64K save type<br />
+An unpatched version of the rom of the game used to create the save state above (note that you may need to re-download a version from DGEmu if you patched your existing rom)<br />
+A copy of VisualBoyAdvance<br />
+<br />
+<br />
+<strong>Instructions</strong><br />
+1) Create a new folder somewhere on your hard drive<br />
+2) Copy the save state, the rom, and the emulator into the new folder you created in step 1. <span style="color:red"><strong>NO OTHER FILES SHOULD BE IN THAT FOLDER</strong></span><br />
+3) Open the emulator, but do not load the rom. <span style="color:red"><strong>DO NOT CHANGE ANY SAVE SETTINGS</strong></span><br />
+3a) If you are playing Ruby, Sapphire, or Emerald, you should turn on the Real Time Clock by going to <strong>Options -> Emulator -> Real Time Clock</strong><br />
+4) Load the rom. You may get a white screen - that is normal behavior, so proceed to the next step<br />
+5) Load the save state by going to <strong>File -> Load...</strong> and selecting the save state (it should show up on the screen without requiring you to change directories)<br />
+6) Your saved game should be loaded. Then change the save type by going to <strong>Options -> Emulator -> Save Type -> Flash 128K</strong><br />
+7) Use the in-game save (i.e. press Enter to open the in-game menu and choose Save)<br />
+8) After going through the entire saving process, close the emulator. If you look in the new folder you created in step 1, you should see a 128KB save file corresponding to your rom.<br />
+9) Create another new folder within the folder you made in step 1<br />
+10) Copy the emulator and the rom into the folder you created in step 9. <span style="color:red"><strong>DO NOT COPY ANY OF THE OTHER FILES</strong></span><br />
+11) Open the copy of the emulator you copied in the last step (i.e. in the newest folder). Do not load the rom<br />
+12) Change the save type to Flash 128K by going to <strong>Options -> Emulator -> Save Type -> Flash 128K</strong><br />
+12a) If you are playing Ruby, Sapphire, or Emerald, you should turn on the Real Time Clock by going to <strong>Options -> Emulator -> Real Time Clock</strong><br />
+13) Load the copy of the rom found in the newest folder you made - it should be the one that shows up automatically on the screen<br />
+14) There should be <strong>NO</strong> white screen. Now go to <strong>File -> Import -> Battery File...</strong> Click on the icon with the folder and an upward-pointing arrow (i.e. go to the folder you created in step 1). Load the 128KB save that was created in step 8. At the confirmation screen, click "Yes"<br />
+15) After the initial intro screen, you should get an error message like "The save file is corrupted. The previous save file will be load." That is correct behavior, so proceed to the next step<br />
+16) Choose to continue with the existing save file<br />
+17) Now use the in-game save again (i.e. press Enter to open the in-game menu and choose Save)<br />
+18) Reset the emulator (<strong>File -> Reset</strong>)<br />
+19) When the rom loads again, there should be no error message pertaining to the save. If you close the emulator, you will find a 128KB save file corresponding to the rom in the newest folder you made (in step 9). Delete all the files in the folder you made in step 1 so that you don't confuse them with the good saves (don't delete the folder you made in step 9 of course).<br />
+20) Continue playing using the in-game save that was generated in steps 17-19. You may want to make a save state immediately just in case.<br />
+<br />
+So there you go. Hopefully this will work for everyone, but I cannot be sure due to lack of sufficient test cases. Just as background, I used VisualBoyAdvance version 1.7.2, a Pokemon Emerald rom (unpatched of course), and a save state provided by Keiz (original topic is deleted). After running this procedure, I beat the Elite 4 and was able to continue playing without any problems.<br />
+<br />
+If you are in such a situation, please try this procedure out and let me know if it works by posting or by PM. If you cannot get it to work, please upload your save state to a site such as <a href="http://www.sendspace.com" target="_blank" rel="noopener">SendSpace</a> and deliver the link to me by posting or by PM. I will personally run through the procedure myself to see if I can get it to work.<br />
+<br />
+---<br />
+<br />
+<strong>EDIT:</strong> There seems to be some issues with Fire Red saves that makes them impossible to recover. Recovery with Leaf Green saves seems to be possible with the rom on this site</div>
+</div><div class="post" id="p1521192">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">K</span><span class="author">Kuchiki Byakura</span></span><span>Aug 23 2006, 10:08 PM</span></div>
+  <div class="body">You should have pinned this...XDAnyways...nice guid... :D <span style="color:red">Meh, there are too many pinned topics in this forum already. Hopefully having a link to it in my sig will keep it alive for a bit at least. And if not, at least people will know to direct others to this topic  :blink: </span></div>
+</div><div class="post" id="p1526786">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u483286.html">Kiririn-shi</a></span><span>Aug 25 2006, 11:27 AM</span></div>
+  <div class="body">Hehe, let's this topic be inactive for 30 days and I'll move it in the Dump forum :DAnyway, I just tested with a bad save file I made, and it works perfectly for me :)Good job  :)  And I was joking just above  :) </div>
+</div><div class="post" id="p1626635">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">S</span><span class="author">squirreljerky</span></span><span>Sep 23 2006, 06:17 PM</span></div>
+  <div class="body">I'm guessing this doesn't work with Pokemon Mysterious Dungeon: Red Rescue Team. I tried it and still getting "Save Failed." I never used an IPS patch or anything so I guess it was a far-flung hope that would actually work, even though RRT uses the same save size as the others.</div>
+</div><div class="post" id="p1626895">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Sep 23 2006, 07:19 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">squirreljerky&#x27; post=&#x27;1626635 wrote <span class="qdate">on Sep 23 2006, 02:17 PM</span>:</div>I'm guessing this doesn't work with Pokemon Mysterious Dungeon: Red Rescue Team. I tried it and still getting "Save Failed." I never used an IPS patch or anything so I guess it was a far-flung hope that would actually work, even though RRT uses the same save size as the others.</blockquote>That was already noted here: http://www.dgemu.com/forums/index.php?s=&a...t&p=1625839</div>
+</div><div class="post" id="p1628448">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">P</span><span class="author">Pokemon 1412</span></span><span>Sep 24 2006, 01:30 AM</span></div>
+  <div class="body">That was a good think I've read. But hall of fame record still corrupted.</div>
+</div><div class="post" id="p1628508">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Sep 24 2006, 01:44 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Pokemon 1412&#x27; post=&#x27;1628448 wrote <span class="qdate">on Sep 23 2006, 09:30 PM</span>:</div>That was a good think I've read. But hall of fame record still corrupted.</blockquote>The data that was already lost cannot be recovered. Your Hall of Fame data should now be saved after subsequent defeats of the Elite Four.</div>
+</div><div class="post" id="p1695064">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">F</span><span class="author">FinalKiller</span></span><span>Oct 09 2006, 01:13 AM</span></div>
+  <div class="body">Oh thank you thank you so much!!!Some how you helped me figure out how to make my saved game work on VBA Link  &lt;_&lt; !!!!!!!!!!!!THX SO MUCH!!!</div>
+</div><div class="post" id="p2058193">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">E</span><a class="author" href="../users/u487893.html">Eärendil</a></span><span>Jan 13 2007, 02:25 AM</span></div>
+  <div class="body">Can this method be used with FFTA?</div>
+</div><div class="post" id="p2058207">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Jan 13 2007, 02:28 AM</span></div>
+  <div class="body">Who the heck moved this topic into The Dump? *moves*<span style="color:#3333FF">I guess someone moved it when using the mass moving feature...I was moving this thread back also but you were quicker  :) </span>@Eärendil: Sorry, but it can't be done as far as I know. You can try setting the save type correctly and deleting the in-game save right before the game auto-saves, but I can't guarantee that will work.</div>
+</div><div class="post" id="p2059193">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">V</span><a class="author" href="../users/u951931.html">Vizard.</a></span><span>Jan 13 2007, 08:12 AM</span></div>
+  <div class="body">Nice, now I have no problems with my saves.Why don't you pin this topic.</div>
+</div><div class="post" id="p2222472">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">X</span><span class="author">xChicobo</span></span><span>Mar 02 2007, 04:28 PM</span></div>
+  <div class="body">it says my save "has been erased due to corruption or damage" what's that mean?</div>
+</div><div class="post" id="p2222560">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Mar 02 2007, 04:53 PM</span></div>
+  <div class="body">When are you getting that error?</div>
+</div><div class="post" id="p2257010">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">S</span><span class="author">shick1098</span></span><span>Mar 12 2007, 07:30 PM</span></div>
+  <div class="body">I've followed all of the steps up to reloading the save state. My save state files have endings of .sg1, .sg2, etc., and they won't show up on the dialog. It seems that only .sgml files work for it? I then tried just using the F# key that corresponded to the .sg1 file I was using and saved my game normally. It created a .sa1 file but it was a 64kb file. I've tried numerous times, all with the flash 128k setting checked. Any ideas?</div>
+</div><div class="post" id="p2257332">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Mar 12 2007, 09:55 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">shick1098&#x27; post=&#x27;2257010 wrote <span class="qdate">on Mar 12 2007, 03:30 PM</span>:</div>I've followed all of the steps up to reloading the save state. My save state files have endings of .sg1, .sg2, etc., and they won't show up on the dialog. It seems that only .sgml files work for it? I then tried just using the F# key that corresponded to the .sg1 file I was using and saved my game normally. It created a .sa1 file but it was a 64kb file. I've tried numerous times, all with the flash 128k setting checked. Any ideas?</blockquote>If you're using VBALink, substitute SG1 and SG2 for SGM and SA1 and SA2 for SAV. Otherwise, you can rename the files to SGM and SAV and use them in the normal VBA.If you can't get them to work, upload them to <a href="http://www.sendspace.com/" target="_blank" rel="noopener">SendSpace</a> and I'll take a look at them.</div>
+</div><div class="post" id="p2266144">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">T</span><span class="author">tomatoblood</span></span><span>Mar 15 2007, 03:19 AM</span></div>
+  <div class="body">nice you really need to pin thisi got the saves thing finally right!yay  :) </div>
+</div><div class="post" id="p2290580">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">C</span><span class="author">Cheng Cheng</span></span><span>Mar 21 2007, 01:54 PM</span></div>
+  <div class="body">This Guide Rocks,Its totally works thanks!!!</div>
+</div><div class="post" id="p2295241">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">W</span><a class="author" href="../users/u402372.html">wat the</a></span><span>Mar 22 2007, 07:11 PM</span></div>
+  <div class="body">Thanks im going to go try it out</div>
+</div><div class="post" id="p2296280">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">D</span><span class="author">danielhrch</span></span><span>Mar 22 2007, 11:37 PM</span></div>
+  <div class="body">i have this problem... i beated elite 4 for the second time and the first time everything was alright, but this time i saved with shift+1 when the pokemons that won in the elite 4 appear... and i got this "battery run dry"stuff so i have to start the game again, and i cant save with enter and save cus i saved with shift+1 in that pokemon thing.. so what can i do? i turned on the clock thing but didn't work.. T_Tplease helpim using pokemon emerald</div>
+</div><div class="post" id="p2300062">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">Y</span><span class="author">yonghyun123100</span></span><span>Mar 24 2007, 02:39 AM</span></div>
+  <div class="body">Great guide, and thanks for the information</div>
+</div><div class="post" id="p2304201">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">O</span><span class="author">opiate8307</span></span><span>Mar 25 2007, 12:00 AM</span></div>
+  <div class="body">I tried those steps over and over but it still just come up with new game and options.  Is my save game totaly screwed?</div>
+</div><div class="post" id="p2305932">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Mar 25 2007, 08:46 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">opiate8307&#x27; post=&#x27;2304201 wrote <span class="qdate">on Mar 24 2007, 08:00 PM</span>:</div>I tried those steps over and over but it still just come up with new game and options.  Is my save game totaly screwed?</blockquote>Quite possibly. Only certain saves can be recovered for whatever strange reason, so if it steps don't work, then you're probably out of luck.</div>
+</div><div class="post" id="p2306485">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">D</span><span class="author">Don_Corleone</span></span><span>Mar 25 2007, 01:39 PM</span></div>
+  <div class="body">Can you post another Mystery Dungeon link? The link on the first page is broken  :D </div>
+</div><div class="post" id="p2307467">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Mar 25 2007, 06:16 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Don_Corleone&#x27; post=&#x27;2306485 wrote <span class="qdate">on Mar 25 2007, 09:39 AM</span>:</div>Can you post another Mystery Dungeon link? The link on the first page is broken  :D </blockquote>Link restored. It's not all that useful though - all that topic says is that these instructions don't work for Mysterious Dungeon.</div>
+</div><div class="post" id="p2320092">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">1</span><span class="author">123457575698jsgadfkusgdfku</span></span><span>Mar 28 2007, 03:04 PM</span></div>
+  <div class="body">ok I know , thanks <span style="color:red">POINTS were deducted for this post by atomicknight</span></div>
+</div><div class="post" id="p2356100">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">G</span><span class="author">GabrielBenitez</span></span><span>Apr 07 2007, 07:08 AM</span></div>
+  <div class="body">If I wrote these save game files to my leaf green would I still get that message?</div>
+</div><div class="post" id="p2357921">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Apr 07 2007, 08:36 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">GabrielBenitez&#x27; post=&#x27;2356100 wrote <span class="qdate">on Apr 7 2007, 03:08 AM</span>:</div>If I wrote these save game files to my leaf green would I still get that message?</blockquote>What exactly are you asking? Your save settings must be correct in order to avoid that message.</div>
+</div><div class="post" id="p2359113">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">Z</span><span class="author">zeggers</span></span><span>Apr 08 2007, 01:11 AM</span></div>
+  <div class="body">You just saved my life.  :P </div>
+</div><div class="post" id="p2362079">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">G</span><span class="author">GabrielBenitez</span></span><span>Apr 09 2007, 12:47 AM</span></div>
+  <div class="body">Well I meant ym flash card. I keep trying to make this measage go away when I flash this to my F2a advance card but I cant get it to stop. Help?</div>
+</div><div class="post" id="p2522736">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">P</span><span class="author">ps2stony</span></span><span>May 13 2007, 02:07 AM</span></div>
+  <div class="body">Would this work for Super Mario Advance 4: Super Mario Bros. 3?</div>
+</div><div class="post" id="p2522916">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>May 13 2007, 02:26 AM</span></div>
+  <div class="body">Nope. This is for the Pokemon RPGs only.To solve the Super Mario Bros. problem, follow these instructions: http://www.dgemu.com/forums/index.php?showtopic=21909. Note that you will need to start over.</div>
+</div><div class="post" id="p2522939">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">P</span><span class="author">ps2stony</span></span><span>May 13 2007, 02:27 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">atomicknight&#x27; post=&#x27;2522916 wrote <span class="qdate">on May 13 2007, 04:26 AM</span>:</div>Nope. This is for the Pokemon RPGs only.To solve the Super Mario Bros. problem, follow these instructions: http://www.dgemu.com/forums/index.php?showtopic=21909. Note that you will need to start over.</blockquote>Start over? My problem is that it says my save file is corrupted...</div>
+</div><div class="post" id="p2522971">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>May 13 2007, 02:30 AM</span></div>
+  <div class="body">Right. If you had tried using save states before, all that data will have to be erased for it to work properly.</div>
+</div><div class="post" id="p2523046">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">P</span><span class="author">ps2stony</span></span><span>May 13 2007, 02:36 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">atomicknight&#x27; post=&#x27;2522971 wrote <span class="qdate">on May 13 2007, 04:30 AM</span>:</div>Right. If you had tried using save states before, all that data will have to be erased for it to work properly.</blockquote>No, no. I never got to play the game. I just downloaded it and opened it with VBA and it gave me the message saying the file is corrupted. This might be the rom, because I downloaded it from another site before I knew about this site. But I'm not sure.</div>
+</div><div class="post" id="p2523249">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>May 13 2007, 03:00 AM</span></div>
+  <div class="body">Still, follow the instructions and save once. Then it'll work.</div>
+</div><div class="post" id="p2524025">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">E</span><span class="author">EvaXephon</span></span><span>May 13 2007, 04:38 AM</span></div>
+  <div class="body">Wow - I've been scouring the Internet for a fix to this problem, and the detailed walkthrough in the first post made sense and seemed like it was exactly what I needed......But when I tried it, it would not work, for some reason. D=I follow steps 1) and 2). Only three things in the folder, no settings adjusted. I go to <strong>File -> Load</strong>, and load my rom (Fire Red). I don't get a white screen. I load my save state and change the save settings to 128k, but when I try to use the in-game save, I get the infamous "Save error. Please exchange the backup memory."Was this a part of the plan, or is the game supposed to save correctly at this point? This is a guide for continuing your game after fixing your save problem, right? Any idea why I'm getting the save error?</div>
+</div><div class="post" id="p2524087">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>May 13 2007, 04:45 AM</span></div>
+  <div class="body">Fire Red and Leaf Green seem to behave differently. I have no idea how I got them to work when I first wrote the guide, especially since every attempt afterward has failed.So in short, you're most likely out of luck.</div>
+</div><div class="post" id="p2524212">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">E</span><span class="author">EvaXephon</span></span><span>May 13 2007, 05:02 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">atomicknight&#x27; post=&#x27;2524087 wrote <span class="qdate">on May 13 2007, 06:45 AM</span>:</div>Fire Red and Leaf Green seem to behave differently. I have no idea how I got them to work when I first wrote the guide, especially since every attempt afterward has failed.So in short, you're most likely out of luck.</blockquote><em>Owch.</em> That'd be harsh. 13 hours gone just like that.If I sent you my files, do you think you could experiment with them and try to create the desired effect?I wouldn't blame you for interpreting that to be a request from someone who's too lazy to do something themself, but believe me, I've spent the better half of today trying to overcome this problem. I wouldn't want to throw in the towel if there was still one person who might be able to help. It's an opportunity to get better at troubleshooting this problem, at least.</div>
+</div><div class="post" id="p2524426">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>May 13 2007, 05:32 AM</span></div>
+  <div class="body">PM me the save files and I'll take a look at it. I can't guarantee anything though.</div>
+</div><div class="post" id="p2533121">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">C</span><span class="author">chronocros0</span></span><span>May 14 2007, 09:16 AM</span></div>
+  <div class="body">good guid if you can make outher guides you are prety at it.</div>
+</div><div class="post" id="p2534561">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">.</span><span class="author">.nxs</span></span><span>May 14 2007, 03:40 PM</span></div>
+  <div class="body">Wow good guid  :( </div>
+</div><div class="post" id="p2534576">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">B</span><span class="author">BaToBrAvE</span></span><span>May 14 2007, 03:43 PM</span></div>
+  <div class="body">omg ty  :(  that has been so useful bc i wanted to do that and i didn't no how to  :( </div>
+</div><div class="post" id="p2611746">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">1</span><span class="author">12305</span></span><span>May 24 2007, 11:58 AM</span></div>
+  <div class="body">your our savior always and always......, tnx atomicknight...,</div>
+</div><div class="post" id="p2641718">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">Q</span><span class="author">Q-Dizzle16</span></span><span>May 28 2007, 06:47 PM</span></div>
+  <div class="body">So should those of us with Fire Red and Leaf Green try another ROM or another emulator or what?</div>
+</div><div class="post" id="p2641737">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>May 28 2007, 06:50 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Q-Dizzle16&#x27; post=&#x27;2641718 wrote <span class="qdate">on May 28 2007, 11:47 AM</span>:</div>So should those of us with Fire Red and Leaf Green try another ROM or another emulator or what?</blockquote>Use VBA 1.7.2 and the roms on this site. Follow the instructions here to make sure that you don't run into save errors: http://www.dgemu.com/forums/index.php?showtopic=21909</div>
+</div><div class="post" id="p2649246">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">Q</span><span class="author">Q-Dizzle16</span></span><span>May 29 2007, 04:34 PM</span></div>
+  <div class="body">Another question, if I just downloaded the PKMN Emerald ROM and changed the save settings to 128k before I start playing, will everything work normally or do I still need to follow the recovery steps to make sure the game won't corrupt my game?</div>
+</div><div class="post" id="p2649965">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>May 29 2007, 06:50 PM</span></div>
+  <div class="body">If you change the save settings before you ever open the rom, everything will work properly. A better way of doing that is to use the instructions here: http://www.dgemu.com/forums/index.php?showtopic=21909Doing those steps will ensure that every game you play will have the save settings configured correctly.</div>
+</div><div class="post" id="p2661003">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">A</span><span class="author">ataji</span></span><span>May 31 2007, 02:28 AM</span></div>
+  <div class="body">I play Fire Red version. Why is it that when I finish fighting the Elite Four, the game restarts instead of continuing at Pallet Town? Is it a case of bad Pokemon saves too? Can I use the methods above to solve this problem?</div>
+</div><div class="post" id="p2663019">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>May 31 2007, 08:16 AM</span></div>
+  <div class="body">Your save settings were wrong. You most likely won't be able to recover the save data, but you can try if you want.</div>
+</div><div class="post" id="p2729727">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">A</span><span class="author">Arrow-lish-07</span></span><span>Jun 08 2007, 03:54 AM</span></div>
+  <div class="body">Heeey, that problem was same as mine and it really was a pain in the neck...I spent 70 hours on my Pokemon Fire Red, never using in-game save as it said: "WARNING! There is a different game file that is already saved. If you save now, theother file's adventure, including items and Pokemon, will be entirely lost. Are you sure you want to save now and overwrite the other save file?" And I thought, strange? As when I started the game just after downloading, it said that it has another save file... Now, before I come face-to-face with the Champion, I tried to overwrite the save file... But, it just wouldn't work, do they? The notorious and annoying speech "Save error. Please exchange the backup memory." always pops out when I tried to save. So I might as well just give up when I thought, after I beat the Champion, it will automatically save my progress anyway. It turned out that I'm wrong... After beating the Champion and credits scrolled out, the game restarts, right? And, after pressing start... It just take me to the controls guide... start my adventure all over again... The message "The 1-M sub-circuit board is not installed." was gone only when I tried out this topic's guide.I can't be out of luck, especially this time!!! My 70 hours...mind... and energy... will be wasted... >&lt;</div>
+</div><div class="post" id="p2730254">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Jun 08 2007, 05:29 AM</span></div>
+  <div class="body">Eh, Fire Red/Leaf Green saves can't be recovered for whatever reason. Whatever test I had tried out before must have been with some other parameters.</div>
+</div><div class="post" id="p2730578">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">A</span><span class="author">Arrow-lish-07</span></span><span>Jun 08 2007, 06:25 AM</span></div>
+  <div class="body">Gee... For all that hard work and Pokemon raising... It's very hard for me to give up just like that...All I want is to obtain the National Dex and experience catching Johto Pokemon...I guess I'll stick to Pokemon Emerald now~ -_-</div>
+</div><div class="post" id="p2753870">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">C</span><span class="author">CommieZhenya</span></span><span>Jun 10 2007, 03:04 PM</span></div>
+  <div class="body">Hi, there. I recently downloaded Pokemon Ruby Version. However, it lets me save, but I cannot load the saves, nor can I find them. Due to having a Mac and being unable to get a more recent VBA I wonder if I am simply stuck. The Options menu  is baren of all of the things the tutorial menu demands. Also, VBA "unexpectedly quits" when I attempt to use a pokeball. Help if possible?</div>
+</div><div class="post" id="p2753950">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">P</span><span class="author">PepsiCola</span></span><span>Jun 10 2007, 03:14 PM</span></div>
+  <div class="body">awsome! i just got my old game backi thought it was allllllllllllllllllllll gone... was about to start over</div>
+</div><div class="post" id="p2804228">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Jun 16 2007, 09:15 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">CommieZhenya&#x27; post=&#x27;2753870 wrote <span class="qdate">on Jun 10 2007, 08:04 AM</span>:</div>Hi, there. I recently downloaded Pokemon Ruby Version. However, it lets me save, but I cannot load the saves, nor can I find them. Due to having a Mac and being unable to get a more recent VBA I wonder if I am simply stuck. The Options menu  is baren of all of the things the tutorial menu demands. Also, VBA "unexpectedly quits" when I attempt to use a pokeball. Help if possible?</blockquote>Pokemon doesn't run well on Macs. The Mac build of VBA has that weird glitch that you encountered. Try downloading version 1.7.4 to see if that solves your problem (download link: <a href="http://www.macupdate.com/info.php/id/10123" target="_blank" rel="noopener">http://www.macupdate.com/info.php/id/10123</a>).The instructions in this topic don't apply to you because you're experiencing a whole different issue.</div>
+</div><div class="post" id="p2884726">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">Z</span><span class="author">zwoin</span></span><span>Jun 27 2007, 09:11 AM</span></div>
+  <div class="body">Thank's that helped me alot!</div>
+</div><div class="post" id="p2889931">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">C</span><span class="author">chrisix</span></span><span>Jun 28 2007, 01:13 AM</span></div>
+  <div class="body">THANK YOU, i was having so much stress over this crap!can finalyl get back and finish some oldies.</div>
+</div><div class="post" id="p2925344">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">A</span><span class="author">andrewisontop</span></span><span>Jul 02 2007, 04:05 PM</span></div>
+  <div class="body">i tryed this but it was confusing to me so it didint work very well at all</div>
+</div><div class="post" id="p3002881">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">V</span><span class="author">vicvicvic</span></span><span>Jul 12 2007, 04:08 PM</span></div>
+  <div class="body">Thank you, it worked. But I still have a little problem but it doesn't really matter.I NEVER got a white screen at 4 and no error message at 15So which means that I was able to use it at step 15 I think.Can please you tell me why?</div>
+</div><div class="post" id="p3003269">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Jul 12 2007, 05:18 PM</span></div>
+  <div class="body">Well, either it didn't actually work or you got lucky. Most games don't get white screens at step 4, but all of them usually get error messages at step 15. Check your new save file to see if it's 128 KB in size. If it is, then you're set. Otherwise, something went wrong.</div>
+</div><div class="post" id="p3005522">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">V</span><span class="author">vicvicvic</span></span><span>Jul 12 2007, 11:41 PM</span></div>
+  <div class="body">I think it's because I got lucky because it was 128 Kilobytes in size and the saving works. Thanks.</div>
+</div><div class="post" id="p3052138">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">T</span><span class="author">Thinktank213</span></span><span>Jul 20 2007, 01:31 AM</span></div>
+  <div class="body">great guide, thank you very much</div>
+</div><div class="post" id="p3140827">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">V</span><span class="author">vicvicvic</span></span><span>Aug 02 2007, 09:56 PM</span></div>
+  <div class="body">I have another question. I downloaded like five saves on gamefaqs for leaf green but some of them worked but some of them still didn't work. Can you please tell me why?</div>
+</div><div class="post" id="p3140990">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Aug 02 2007, 10:19 PM</span></div>
+  <div class="body">Because people upload empty or otherwise non-working saves. Nothing you can do about those.</div>
+</div><div class="post" id="p3150602">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">T</span><span class="author">Tivo3</span></span><span>Aug 04 2007, 05:31 AM</span></div>
+  <div class="body">great guide...it helped me out!</div>
+</div><div class="post" id="p3222117">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">M</span><span class="author">MaxKhoon</span></span><span>Aug 15 2007, 05:48 AM</span></div>
+  <div class="body">thank you very much dude!</div>
+</div><div class="post" id="p3681095">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">A</span><span class="author">Adeeray</span></span><span>Nov 22 2007, 09:15 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">EvaXephon&#x27; post=&#x27;2524212 wrote <span class="qdate">on May 13 2007, 07:02 AM</span>:</div><em>Owch.</em> That'd be harsh. 13 hours gone just like that.If I sent you my files, do you think you could experiment with them and try to create the desired effect?I wouldn't blame you for interpreting that to be a request from someone who's too lazy to do something themself, but believe me, I've spent the better half of today trying to overcome this problem. I wouldn't want to throw in the towel if there was still one person who might be able to help. It's an opportunity to get better at troubleshooting this problem, at least.</blockquote>Hi therei m having the same problem as 'EvaXephon'. I finally got Pokemon Fire Red to save in game but I already have a flash save file that I'm quite attached to... I just dont want to start over again and every time I load up the flash it goes back to saying "1m sub circuit is not installed" and "game save file already present... over write? *yes* ... error saving" then I have to delete all pkmnfr save files  :weep:  (I'm using VBA and the red version.... if only i hadda started with that)Please help us, cuz you are an expert, and i m just a rouqee. I a waiting for your solution desperately.Thanx in advance</div>
+</div><div class="post" id="p3867491">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">L</span><span class="author">leonida</span></span><span>Jan 17 2008, 12:03 AM</span></div>
+  <div class="body">This guide is useful, good i found this web-site!</div>
+</div><div class="post" id="p3867499">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">W</span><span class="author">Wood_Legend</span></span><span>Jan 17 2008, 12:06 AM</span></div>
+  <div class="body">ohh sweet it works   ^_^  - ThanxWood_Legend   XD </div>
+</div><div class="post" id="p3897746">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">W</span><span class="author">wonyenners</span></span><span>Jan 27 2008, 12:40 AM</span></div>
+  <div class="body">You know, I've lost a pokemon save every once in awhile (for abusing the red/blue glitch, or a corrupt Hall of Fame thingamajig) but I've found the most fun and satisfying way to recover the save is to start a new game and do it all over again...I'm happy when I beat the game and level up all my pokemon and caught all the pokemon, but im a little sad too, cause I cant go any further...In the other hand I'm just pleased as punch when I'm starting a new game, so I dont feel bad about losing my saves. It just reminds me how much I like pokemon!</div>
+</div><div class="post" id="p3910020">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">B</span><span class="author">Buffaloboy12</span></span><span>Jan 31 2008, 02:13 AM</span></div>
+  <div class="body">Thanks this helped me a bunch<span style="color:red">POINTS were deducted for this post by MonononPlease refer to the forum rules to find out why your points were deducted.</span></div>
+</div><div class="post" id="p3918139">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">R</span><span class="author">rikoui</span></span><span>Feb 03 2008, 01:18 AM</span></div>
+  <div class="body">I'm not realy sure if this is relivant but i downloaded a pokemon chaos black rom and i can't get it to save other than saving it through the vba? is this what this forum section is about?<span style="color:red">POINTS were deducted for this post by atomicknightPlease refer to the forum rules to find out why your points were deducted.</span></div>
+</div><div class="post" id="p3935510">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">N</span><span class="author">nitsujokin</span></span><span>Feb 10 2008, 10:00 AM</span></div>
+  <div class="body">thnx for the guide dude  :D  it helped me a lot heheh</div>
+</div><div class="post" id="p4175365">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">M</span><span class="author">mehh</span></span><span>Jun 04 2008, 01:17 PM</span></div>
+  <div class="body">[center]<strong>ATOMIC KNIGHT, YOU'RE A <span style="color:#FF0000">GENIUS!</span></strong>   &lt;3  [/center]Now my sapphire works on gpSP, the GBA Emulator on the PSP, and now I can use my Lvl 50 Pokemon (not much, but still, I would've been crestfallen not being able to use it on PSP) that i've trained on VBA (PC) on my PSP! It took me 5 hours trying to figure out how the heck I can put my save file on the PSP, with claims of NO HOPE on many forums, as they are already permanently fixed to 64-kbit save file. Finally, it works! Thanks a billion!  :(   B) P.S. Is that COD4 profile pic? If so, what server of COD4 do you go on? Maybe i can vs you! I usually go on toledo gamers, serverbeach.com la, or AAD Recruitin servers.All the best,<span style="color:#0000FF">Oabali/mehh</span>  :wub: </div>
+</div><div class="post" id="p4176761">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">H</span><span class="author">HDTV</span></span><span>Jun 05 2008, 06:58 AM</span></div>
+  <div class="body">You should have pinned this...Anyways...nice guid...<span style="color:red">POINTS were deducted for this post by atomicknightPlease refer to the forum rules to find out why your points were deducted.</span></div>
+</div><div class="post" id="p4198089">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><span class="author">K_IrBY</span></span><span>Jun 15 2008, 02:13 AM</span></div>
+  <div class="body">I am playing the pokemon red rescue team rom, do you know any way to get the saves to work for mystery dungeon games? Since the steps you gave don't work for mystery dungeon, I want to know if it is possible or if my case is impossible to fix. Thanks.</div>
+</div><div class="post" id="p4258466">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u1904487.html">Hikarineko</a></span><span>Jul 18 2008, 04:22 AM</span></div>
+  <div class="body">My FireRed Moemon partial_english didn't work even with your guide, but this thread is way the best and with more info that I found.It is odd that we can't fix the save. There should be a way even if we had to open the savestage on an hex editor and write a working data over our corrupted battery save. If that was possible, then we could develop an app to write a beginning save (or a save with full lvled pokemons on it  :o  ) to make it work and then just overwrite it.Anyway, I restarted the game and used gameshark to recover my pokemons. At least I cound use some rare ones and have a more balanced team now. At least I wasn't on this know elite 4 time when I found the bug.VBA developers did a great work on a very stable emu, but they should give priority on solving this save type bug, or at least putting a very visible warning that it is not set automatically and we must research about the right config BEFORE starting our games. I'm sure these games that go almost to end without needing a save and then demanding it to keep going are doing it to fight emulators.Anyway, tnx a LOT for your guide and your time developing your method. Most ppl I found said it was not possible without giving these few possibilities I found, yours being the best. There were ppl that even blames us players for playing without saving, as if we had to foretell that this bug exists. But you didn't do that, you tried to help and gave us a hope!</div>
+</div><div class="post" id="p4259239">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Jul 18 2008, 03:21 PM</span></div>
+  <div class="body">The problem with hex editing is that saving with the wrong type truncates data and moves the offsets around. I haven't spent too much time on it recently, but if anyone comes up with a good way of converting them, I'd be interested in seeing how they did it.But yeah, a nice addition to VBA would be better save detection (or even hard-coded presets for games with known issues).</div>
+</div><div class="post" id="p4263244">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">G</span><a class="author" href="../users/u1908162.html">grshen80</a></span><span>Jul 20 2008, 10:22 PM</span></div>
+  <div class="body">Thanks for the information! I was having trouble with my FireRed game lately, and this helped for me.</div>
+</div><div class="post" id="p4265594">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u1904487.html">Hikarineko</a></span><span>Jul 22 2008, 03:01 AM</span></div>
+  <div class="body">So, the save game data is not in a fixed place?That would really make things harder. But what, the emulator processes all that data right? So if somebody developed this code, he should know what is making it keep getting wrong, and find out how to tweak the emulation to fix it.I mean, when we create a savestage and close emulator, when we reopen it the game thinks it is continuing without interruption from beginning, but in reality it was restarted and old RAM data was rewritten, and so the game is being tweaked to think that. If when the savestage is reloaded, it is fixed, the game has no way to know the RAM was tweaked.I understand it is not trivial, there must be protections making it harder. Of course, if a game can be played for denz of hours without saving (lets say we keep the GBA powered with AC and not battery, and keep it turned on during nights), and all of a sudden almost on finishing it forces a save, that must be to make ppl using emulation use savestages until near the end and then hopefully finding some bug and getting struck.It can be hard to implement, but definetely it is not impossible, the battery saving cannot be gone forever.And like I said, this save type bug should get priority, I saw the exact same problem being reported on 2006! If at least the emulator came with a .txt talking only about this bug, with a link with updated info, and an official updated vba-over.ini, many frustration would have been avoided. There is no warning, no note saying to test battery saves, etc.Even if this bug was not fixed, if it received appropriated official attention, with support to all official games and all modders also made tests and warned about it...Well at least now I'm playing from beginning with my favorite pokemons, including mew2  :D </div>
+</div><div class="post" id="p4267113">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Jul 22 2008, 10:51 PM</span></div>
+  <div class="body">Save states are just compressed memory dumps (analogous to the "Hibernate" option for Windows). I kind of lost track of what you saying in the middle there, but the issue certainly should be addressed.</div>
+</div><div class="post" id="p4420689">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">N</span><span class="author">Noctis900</span></span><span>Nov 07 2008, 09:44 PM</span></div>
+  <div class="body">Nice guide Atomicknight, very useful</div>
+</div><div class="post" id="p4429810">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">S</span><span class="author">squall_leonhart69r</span></span><span>Nov 15 2008, 03:48 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">atomicknight&#x27; post=&#x27;4259239 wrote <span class="qdate">on Jul 19 2008, 02:21 AM</span>:</div>The problem with hex editing is that saving with the wrong type truncates data and moves the offsets around. I haven't spent too much time on it recently, but if anyone comes up with a good way of converting them, I'd be interested in seeing how they did it.But yeah, a nice addition to VBA would be better save detection (or even hard-coded presets for games with known issues).</blockquote>That would just lead to code bloat, which is something thats really not wanted.Improving the battery size detection is one of many things the vba-m project will look into in the future, however for now we intend on releasing versions of vba-m with the latest VBA-Over file, and i intend on adding the best settings for all games to it, and use it as an RDB type of thing.As to the battery being rewritten by the save state, we have fixed that in VBA-M using a Menu item to enable/disable the loading of battery data.</div>
+</div><div class="post" id="p4473938">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">B</span><span class="author">Blaziken011793</span></span><span>Dec 29 2008, 02:01 AM</span></div>
+  <div class="body">Wow, finally - I thought my Pokemon Save would be long lost at the Elite 4. THanks ^^</div>
+</div><div class="post" id="p4474810">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">D</span><span class="author">Darryl Ivan</span></span><span>Dec 29 2008, 04:32 PM</span></div>
+  <div class="body">some times my saves are gone and it says that it is corrupted!!! its like a shit!! FTW   ;) <span style="color:red">POINTS were deducted for this post by GBATESTPlease refer to the forum rules to find out why your points were deducted.</span></div>
+</div><div class="post" id="p4480447">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">S</span><span class="author">squall_leonhart69r</span></span><span>Jan 03 2009, 10:25 PM</span></div>
+  <div class="body">Hey Atomic knight, the issue with Fire red, was it the "Error, please replace battery" message that you couldn't get around?I couldn't get around that, Leaf green must do something different :\</div>
+</div><div class="post" id="p4483957">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">A</span><a class="author" href="../users/u180816.html">atomicknight</a></span><span>Jan 07 2009, 03:27 AM</span></div>
+  <div class="body">I think I just got a message about the save being deleted because it was corrupted. Been a while since I've done anything with it.</div>
+</div><div class="post" id="p4851061">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">M</span><span class="author">mythlord1</span></span><span>Aug 07 2010, 04:57 PM</span></div>
+  <div class="body">i need help!i am playing pokemon fire red and have defeated the elite four but after that my game restarts and starts from the beginning!!i save my progress using file-> save because my in game save wasnt working!!now i have used vba-over.ini and the in game save works but i have to start the game afresh!!is there no way to continue my game where i left it??????????\please help</div>
+</div><div class="post" id="p4851313">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">D</span><span class="author">dassda dasdasda</span></span><span>Aug 08 2010, 06:45 AM</span></div>
+  <div class="body">It is odd that we can't fix the save. There should be a way even if we had to open the savestage on an hex editor and write a working data over our corrupted battery save. If that was possible, then we could develop an app to write a beginning save (or a save with full lvled pokemons on it  ) to make it work and then just overwrite it.Anyway, I restarted the game and used gameshark to recover my pokemons. At least I cound use some rare ones and have a more balanced team now. At least I wasn't on this know elite 4 time when I found the bug.VBA developers did a great work on a very stable emu, but they should give priority on solving this save type bug, or at least putting a very visible warning that it is not set automatically and we must research about the right config BEFORE starting our games. I'm sure these games that go almost to end without needing a save and then demanding it to keep going are doing it to fight emulators.Anyway, tnx a LOT for your guide and your time developing your method. Most ppl I found said it was not possible without giving these few possibilities I found, yours being the best. There were ppl that even blames us players for playing without saving, as if we had to foretell that this bug exists. But you didn't do that, you tried to help and gave us a hope!</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>
