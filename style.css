@@ -76,3 +76,19 @@ blockquote.quote .qhdr{color:#7488a0;font-size:.78rem;margin-bottom:4px;font-sty
 .field-table td:first-child{color:#5a6c7d;width:140px}
 .author{color:#1c3b5e;font-weight:bold}
 a.author:hover{text-decoration:underline}
+
+@media (max-width: 700px) {
+  .layout{flex-direction:column}
+  .side-col{width:100%}
+  .forum-row{flex-wrap:wrap}
+  .f-stats{width:auto;flex:1;min-width:70px;text-align:left;padding-top:0}
+  .f-stats b{display:inline;margin-right:4px}
+  .f-last{width:100%;order:99;margin-top:6px;padding-top:6px;border-top:1px solid #eef2f6}
+  .topic-table thead{display:none}
+  .topic-table, .topic-table tbody, .topic-table tr, .topic-table td{display:block;width:auto}
+  .topic-table tr{border-bottom:1px solid #e3e9ef;padding:8px 0}
+  .topic-table td{padding:3px 10px;border-bottom:none}
+  .num-col, .last-col{width:auto;text-align:left}
+  .num-col::before{content:attr(data-label) ": "; color:#8a97a5}
+  .f-desc, .f-sub{white-space:normal}
+}
