@@ -78,10 +78,14 @@ blockquote.quote .qhdr{color:#7488a0;font-size:.78rem;margin-bottom:4px;font-sty
 a.author:hover{text-decoration:underline}
 
 @media (max-width: 700px) {
-  .layout{flex-direction:column}
+  .layout{flex-direction:column;align-items:stretch}
   .side-col{width:100%}
+  .topbar{flex-wrap:wrap;height:auto;padding:10px 14px}
+  .topbar span{font-size:.78rem;margin-top:4px}
   .forum-row{flex-wrap:wrap}
-  .f-stats{width:auto;flex:1;min-width:70px;text-align:left;padding-top:0}
+  .f-main{flex:1 1 100%;order:2;min-width:0}
+  .f-icon{order:1}
+  .f-stats{flex:0 0 auto;width:auto;min-width:0;order:3;text-align:left;padding:2px 14px 0 0}
   .f-stats b{display:inline;margin-right:4px}
   .f-last{width:100%;order:99;margin-top:6px;padding-top:6px;border-top:1px solid #eef2f6}
   .topic-table thead{display:none}
