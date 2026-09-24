@@ -1,0 +1,412 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Staff] DGEmu Radio v3.1: Setup and Deployment Guide [WIP]</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f108.html">Staff and Exclusive Access Forums</a> &rsaquo; <a href="../forums/f313.html">Staff Guides and Resources</a> &rsaquo; [Staff] DGEmu Radio v3.1: Setup and Deployment Guide [WIP]</div><div class="thread-title-box"><h1>[Staff] DGEmu Radio v3.1: Setup and Deployment Guide [WIP]</h1><div class="thread-meta">1 posts &middot; page 1 of 1 &middot; 40 views</div></div><div class="post" id="p5036888">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a><span class="op-tag">ORIGINAL POST</span></span><span>Sep 06 2012, 07:02 PM</span></div>
+  <div class="body"><p><strong><span style="font-size:18px;">DGEmu Radio v3.1: Setup and Deployment Guide</span></strong> [WIP]<br><br><span style="font-size:14px;"><strong>Introduction</strong></span><br>
+The purpose of this guide is to walk you through the steps to properly setup a new radio album for users on DGEmu based on version 2's source code. Unfortunately, since my site got taken down, many parts of version 1 were broken. On top of that, the setup with the older (and less clean) Flash MP3 player does not work properly with DGEmu's latest server.<br><br>
+This guide will consist of three parts:</p>
+<p>- <em>Changes:</em> A list of changes and features of each version.<br>
+- <em>User Guide: </em>This will instruct how a third party can fully prepare a soundtrack package for the administrator to use.<br>
+- <em>Admin Guide: </em>This will instruct the site administrator how to deploy said package onto the server.<br>
+- <em>VBScript Sources: </em>This section will contain all necessary source codes for the scripts.<br>
+ </p>
+<p><u><span><span style="font-size:18px;">Changes</span></span></u></p>
+<p> </p>
+<p><strong>Version 3.1</strong></p>
+<p>- Added Guest Preview Mode, now allowing users to use the radio for 1 minute.</p>
+<p>- Added new standardized error page that handles a multitude of errors.</p>
+<p>- Corrected a small bug where the title of the window is not centered.</p>
+<p>- Corrected a small URL parsing bug in the About window.</p>
+<p>- Upgrade from Google JQuery v1.9.1 to 2.0.3</p>
+<p>- Major code simplification and cleanup.</p>
+<p><strong>Version 3</strong><br>
+- Implemented JQuery components.</p>
+<p>- Added download feature based on GPs.</p>
+<p>- Added new XML based controls for GP costs.</p>
+<p>- Improved data structure to help a transparent testing and migration.</p>
+<p>- Updated album preparation and validation scripts.</p>
+<p>- Code cleanup.</p>
+<p><strong>Version 2</strong><br>
+- Loaded and streamed from DGEmu.</p>
+<p>- Implemented code to validate the user login.</p>
+<p>- Created new album preparation and validation scripts.</p>
+<p>- New data structure.</p>
+<p><strong>Version 1</strong><br>
+- Initial version of the radio</p>
+<p>- Added feature to be embed as an iFrame or opened as a new window.</p>
+<p>- Loaded and streamed from another server</p>
+<p> </p>
+<p><u><span><span style="font-size:18px;">User Guide</span></span></u><br><br><strong>Required tools</strong><br>
+- Playlist and Album Information Generator VBScript<br>
+- File Archiving Utility (Recommended: WinRAR)<br>
+- Image Editing Utility (Recommended: IrFanView)<br>
+- MP3 Tagging Utility (This guide will use <a  class="bbc_url" href="http://www.mp3tag.de/en/download.html">Mp3tag</a>)<br><br><strong>Preparing the music files</strong><br>
+There are several prerequirements that need to be fulfilled before an album is eligible for DGEmu Radio:<br>
+- All music files must be in MP3 format.<br>
+- All music files must respect the following naming convention: "XXX - Title.mp3" where XXX is the track number.<br>
+- All music file names must not contain any special characters.<br><br>
+For an easy solution to manage all your music files at once, you can use Mp3tag to mass rename your files according to their ID3 tag. The two important fields that need to be properly filled are the track number and the track title. The following steps will guide you on how to batch rename an album with <strong>Mp3tag</strong>:<br>
+1. Launch Mp3tag.<br>
+2. Select all your tracks from your directory and drag them into Mp3tag.<br>
+3. Select each track one by one and edit the track and title fields on the left. Make sure to not use any special characters in the fields. Don't forget to click save before moving on to the next track.<br>
+4. Once all the tracks have been edited, select all the tracks on the right hand side.<br>
+5. Optional: While having all the tracks selected, you can now batch edit the common fields such as the album name, artist, comment, audio ripper, and embed a new cover to your MP3 files. Once the changes are done, click save and it will apply it to all the tracks.<br>
+6. While having all tracks selected, click on Convert > Tag - Filename.<br>
+7. Make sure to set the format string to the following: <strong>$num(%track%,2) - %title%</strong><br>
+8. Click on "Ok" to convert all the tracks file names.<br>
+9. If everything was done correctly, your files should now be in the correct format for DGEmu Radio.<br><br><strong>Preparing the album art</strong><br>
+This is the easiest part to get ready. Simply prepare an image file in <strong>jpg format</strong> and resize it to exactly <strong>250x250 pixels</strong>. Once that is done, rename to file to <strong>front.jpg</strong>.<br><br><strong>Preparing the package for submission</strong><br>
+Once the album art and the MP3s are ready, put them together in a directory on the computer. Now, you will need to copy over the script to prepare the album. You can either use the encrypted VBScript located here or simply take the source code from the bottom of this guide to have your own script. The usage of the script is simple:<br>
+1. Copy the file over in the same directory where the MP3s and album art is located.<br>
+2. Run the script file by double-clicking it. If at any point an invalid entry is submitted, it will fail to create the necessary files.<br>
+3. <img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/dgemuradio01.jpg" alt="dgemuradio01.jpg"><br>
+4. <img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/dgemuradio02.jpg" alt="dgemuradio02.jpg"><br>
+5. <img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/dgemuradio03.jpg" alt="dgemuradio03.jpg"><br>
+6. <img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/dgemuradio04.jpg" alt="dgemuradio04.jpg"><br>
+7. You have now generated a playlist (list.txt) and an album information file (info.php)<br>
+8. Remove the VBScript file from the directory.<br>
+9. Now use a file archiving application such as WinRAR to compress all the content.<br>
+10. Upload the content to your favorite file sharing site or directly to the Administrator.<br><br>
+- Congratualtions, you have just submitted an album package for the DGEmu Radio system! -<br><br><u><span><span style="font-size:18px;">Admin Guide</span></span></u><br><br><strong>Required tools</strong><br>
+- Album Validator and Post Generation VBScript<br>
+- FTP Access Utility (Recommended: Filezilla)<br>
+- File Archiving Utility (Recommended: WinRAR)<br><br><strong>Connecting to the server through FTP</strong><br>
+For this part, you will need root access to DGEmu. Only Dragons Master is able to supply you with such an account. Once you have the proper connection address, user name, and password, you can configure any FTP client to connect to it, such as FileZilla.<br><br><strong>Preparing album files and forum post</strong><br>
+Before we can start, make sure you have the Album Validator VBScript ready. You can download the encrypted VBScript here or simply take the source code from the bottom of this guide to have your own script. Once you're ready, you can continue with the steps below:<br>
+1. Download and decompress the album package if required.<br>
+2. Copy the Album Validator and Post Generation VBScript file into the same directory as the content.<br>
+3. Run the script file by double-clicking it. If the check does not meet all requirements, the script will tell you exactly what is wrong with the package. If everything is well, just continue with the next steps.<br>
+4. <img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/dgemuradio05.jpg" alt="dgemuradio05.jpg"><br>
+5. For Windows Vista, 7, and 8 users, you will be prompted this window. Simply click "Allow Access".<br><img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/dgemuradioex.jpg" alt="dgemuradioex.jpg"><br>
+6. <img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/dgemuradio06.jpg" alt="dgemuradio06.jpg"><br>
+7. <img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/dgemuradio07.jpg" alt="dgemuradio07.jpg"><br>
+8. Now post the new topic on the site.<br><br>
+- Congratualtions, you have just posted a new entry for the DGEmu Radio system! -<br><br><span><span style="font-size:18px;">VBScript Sources</span></span><br><br><strong>Instructions</strong><br>
+To use these scripts, simply open an instance of Notepad or any raw text editor. Copy the whole source code, and save the file with an .vbs extension.<br><br>
+Prepare Album.vbs<br>
+</p>
+&lt;pre  class="_prettyXprint _lang-auto _linenums:0"&gt;
+'*******************************************************************************
+'*
+'*  Coded by         : [MH]Megaman_X
+'*
+'*  History          : 19-07-13, Auto-fill album short name with current
+'*                               directory name. This assumes that it is the
+'*                               short name used on the website
+'*                     11-09-12, Fixed a bug where the URL could not be blank
+'*                     07-09-12, Added ability to generate info.php
+'*                     05-09-12, Initial Release
+'*
+'*  Project Name     : Playlist and Album Information Generator for
+'*                     DGEmu Radio v3
+'*
+'*  Module Name      : Prepare Album.vbs
+'*
+'*  Description      : This file will generate a working playlist and album
+'*                     information file for DGEmu Radio v3
+'*
+'*  Notes            : Makes sure you copy this script into the folder where
+'*                     all the MP3s are located. Make sure that the music
+'*                     naming format respects the following:
+'*                     XXX - Title.mp3 where XXX is the track number up to 3
+'*                     digits maximum.
+'*
+'*******************************************************************************
+
+'*******************************************************************************
+'*
+'*  Global Calls and Options
+'*  Use this section for global variables and options.
+'*
+'*******************************************************************************
+
+Option Explicit
+
+
+'*******************************************************************************
+'*
+'*  Main Actions
+'*  This section should not be modified.
+'*
+'*******************************************************************************
+
+Call Main
+Wscript.Quit 0
+
+
+'*******************************************************************************
+'*
+'*  Subs & Functions
+'*  All your sub-routines and functions should be coded below.
+'*
+'*******************************************************************************
+
+Public Sub Main()
+    Dim intPosition, intStart, objFile, strAlbum, strInfo, strLine, strTemp, strTitle, strType, strWorkDir, strPlayName
+    Dim strPlaylist : strPlaylist = ""
+    Dim objShell : Set objShell = WScript.CreateObject("WScript.Shell")
+    Dim objFSO : Set objFSO = WScript.CreateObject("Scripting.FileSystemObject")
+
+    'Gets the working folder
+    strWorkDir = Replace(WScript.ScriptFullName, WScript.ScriptName, "")
+
+    'Prompt the user for the type of album. This will be based on a list of choices.
+    strType = InputBox("Please enter the type of album." & vbCrLf & vbCrLf & _
+                       "Valid choices:" & vbCrLf & _
+                       "ast - Anime Soundtrack" & vbCrLf & _
+                       "gst - Game Soundtrack (audio rips)" & vbCrLf & _
+                       "ost - Game Original Soundtrack (official releases)" & vbCrLf & _
+                       "dge - DGEmu Special Compilations" & vbCrLf & _
+                       "jap - Music of Japan" & vbCrLf & _
+                       "thp - Touhou Project Soundtracks", _
+                       "Playlist and Album Information Generator", "ost")
+    If Not (strType = "ast" Or strType = "gst" Or strType = "ost" Or strType = "dge" Or strType = "jap" Or strType = "thp") Then
+        MsgBox "Invalid entry. Playlist generation cancelled.", vbCritical, "Playlist and Album Information Generator Error"
+        WScript.Quit 1
+    End If
+
+    'Prompt the user for the album short name. This entry cannot be empty. It will also be completely converted to lower case.
+    strAlbum = InputBox("Please enter the short name of the album." & vbCrLf & _
+                        "Take note that all spaces will be truncated and all characters will be automatically converted to lowercase letters.", _
+                        "Playlist and Album Information Generator", objFSO.GetFolder(strWorkDir).Name)
+    If strAlbum = "" Then
+        MsgBox "Entry cannot be empty. Playlist generation cancelled.", vbCritical, "Playlist and Album Information Generator Error"
+        WScript.Quit 1
+    Else
+        strAlbum = LCase(Replace(strAlbum, " ", ""))
+    End If
+
+    'Prompt the user for the full album title.
+    strTitle = InputBox("Please enter the full title of the album.", "Playlist and Album Information Generator")
+    If strTitle = "" Then
+        MsgBox "Entry cannot be empty. Playlist generation cancelled.", vbCritical, "Playlist and Album Information Generator Error"
+        WScript.Quit 1
+    End If
+
+    'Prompt the user for the information URL. This entry can be empty
+    strInfo = InputBox("Please enter the URL to the album's information." & vbCrLf & _
+                        "Take note that this entry can be left blank if it does not apply. This is the case for DGEmu Special Compilations." & vbCrLf & _
+                        "It is also important that this entry starts with ""http"".", _
+                        "Playlist and Album Information Generator")
+    
+    If Not InStr(strInfo, "http") > 0 And Not strInfo = "" Then
+        MsgBox "Invalid entry. Playlist generation cancelled.", vbCritical, "Playlist and Album Information Generator Error"
+        WScript.Quit 1
+    End If
+
+    'Generates a list of all the mp3 in the current folder.
+    strPlayName = strWorkDir & "list.txt"
+    objShell.Run "cmd /C dir /b """ & strWorkDir & "*.mp3"" > """ & strPlayName & """", 2, True
+
+    'Reads the list of mp3s and parses the information according to the format suggested for a playlist.
+    Set objFile = objFSO.OpenTextFile(strPlayName, 1)
+    While ObjFile.AtEndOfStream = False
+        strTemp = objFile.ReadLine
+        strLine = strType & "/" & strAlbum & "/" & strTemp & "|"
+        strTemp = Replace(strTemp, ".mp3", "")
+        intStart = InStr(strTemp, " - ")
+        If IsNumeric(Mid(strTemp, 1, intStart)) Then
+            strPlaylist = strPlaylist & strLine & Mid(strTemp, intStart + 3) & vbCrLf
+        Else
+            strPlaylist = strPlaylist & strLine & strTemp & vbCrLf
+        End If
+    WEnd
+    objFile.Close
+
+    'Write the playlist back to the file.
+    Set objFile = objFSO.OpenTextFile(strPlayName, 2)
+    With objFile
+        .Write strPlaylist
+        .Close
+    End With
+
+    'Write the album information to a new php file.
+    Set objFile = objFSO.OpenTextFile(strWorkDir & "info.php", 2, True)
+    With objFile
+        .WriteLine "&lt;?php"
+        .WriteLine vbTab & "$title = """ & strTitle & """;"
+        .WriteLine vbTab & "$infourl = """ & strInfo & """;"
+        .WriteLine "?>"
+        .Close
+    End With
+    
+    'Let the user know that the process is complete. Window will auto-close after 5 seconds.
+    objShell.Popup "Playlist and album information generated successfully." ,5 ,"Playlist and Album Information Generator", vbInformation
+
+    'Clear resources
+    Set objFile = Nothing
+    Set objFSO = Nothing
+    Set objShell = Nothing
+End Sub
+&lt;/pre&gt;
+<p><br><br>
+Album Validator.vbs<br>
+</p>
+&lt;pre  class="_prettyXprint _lang-auto _linenums:0"&gt;
+'*******************************************************************************
+'*
+'*  Coded by         : [MH]Megaman_X
+'*
+'*  History          : 19-07-13, Added download folder and dummy files creation
+'*                               New post format for radio applied
+'*                     07-09-12, Initial Release
+'*
+'*  Project Name     : Album Validator and Post Generator for DGEmu Radio v3
+'*
+'*  Module Name      : Album Validator.vbs
+'*
+'*  Description      : This file will check the submission folder for any
+'*                     inconsistencies and will generate the post for the
+'*                     forums for DGEmu Radio v3.
+'*
+'*  Notes            : Makes sure you copy this script into the folder where
+'*                     the package has been extracted to.
+'*
+'*******************************************************************************
+
+'*******************************************************************************
+'*
+'*  Global Calls and Options
+'*  Use this section for global variables and options.
+'*
+'*******************************************************************************
+
+Option Explicit
+
+
+'*******************************************************************************
+'*
+'*  Main Actions
+'*  This section should not be modified.
+'*
+'*******************************************************************************
+
+Call Main
+Wscript.Quit 0
+
+
+'*******************************************************************************
+'*
+'*  Subs & Functions
+'*  All your sub-routines and functions should be coded below.
+'*
+'*******************************************************************************
+
+Public Sub Main()
+    Dim intFrameSize, intLength, objFile, strAlbum, strClipboard, strDlDir, strInfo, strMusicFile, strTitle, strType, strWorkDir
+    Dim objShell : Set objShell = WScript.CreateObject("WScript.Shell")
+    Dim objFSO : Set objFSO = WScript.CreateObject("Scripting.FileSystemObject")
+    Dim booFirst: booFirst = True
+
+    'Sets the script's current working directory.
+    strWorkDir = Replace(WScript.ScriptFullName, WScript.ScriptName, "")
+
+    'Creates the download directory if needed and adds the dummy files to prevent a download
+    strDlDir = strWorkDir & "dl\"
+    With objFSO
+        If Not .FolderExists(strDlDir) Then .CreateFolder(strDlDir)
+        .CreateTextFile(strDlDir & "Dummy1.rar")
+        .CreateTextFile(strDlDir & "Dummy2.rar")
+    End With
+
+    'Checks if the critical files are missing. This includes the playlist "list.txt" and the album information "info.php".
+    If Not objFSO.FileExists(strWorkDir & "info.php") Or Not objFSO.FileExists(strWorkDir & "list.txt") Then
+        MsgBox "Missing critical files." & vbCrLf & _
+        """list.txt"" and/or ""info.php"" is/are missing.", vbCritical, "Album Validator and Post Generator Error"
+        WScript.Quit 1
+    End If
+
+    'Check if the album art is missing.
+    If Not objFSO.FileExists(strWorkDir & "front.jpg") Then
+        MsgBox "Missing album art file." & vbCrLf & _
+        """front.jpg"" is missing.", vbCritical, "Album Validator and Post Generator Error"
+        WScript.Quit 1
+    End If
+    
+    'Reads the album information to get the album title.
+    Set objFile = objFSO.OpenTextFile(strWorkDir & "info.php", 1)
+    With objFile
+        .SkipLine
+        strTitle = .ReadLine
+        strTitle = Mid(strTitle, InStr(strTitle, "= """) + 3)
+        strTitle = Replace(strTitle, """;", "")
+        strInfo = .ReadLine
+        strInfo = Mid(strInfo, InStr(strInfo, "= """) + 3)
+        strInfo = Replace(strInfo, """;", "")
+        .Close
+    End With
+
+    'Reads the playlist to validate if all the MP3s are present.
+    'This will also populate the album type and short name values.
+    Set objFile = objFSO.OpenTextFile(strWorkDir & "list.txt", 1)
+    While ObjFile.AtEndOfStream = False
+        strMusicFile = objFile.ReadLine
+
+        'Populates the 2 basic information
+        If booFirst Then
+            strType = Mid(strMusicFile, 1, 3)
+            strAlbum = Mid(strMusicFile, 5, InStr(6, strMusicFile, "/") - 5)
+            booFirst = False
+        End If
+
+        'Parses the MP3 file name.
+        intLength = InStr(strMusicFile, "|") - InStr(6, strMusicFile, "/") - 1
+        strMusicFile = Mid(strMusicFile, InStr(6, strMusicFile, "/") + 1, intLength)
+        
+        'Checks for MP3 file presence in folder.
+        If Not objFSO.FileExists(strWorkDir & strMusicFile) Then
+            MsgBox "Missing MP3 file." & vbCrLf & _
+            """" & strMusicFile & """ is missing.", vbCritical, "Album Validator and Post Generator Error"
+            objFile.Close
+            WScript.Quit 1
+        End If
+    WEnd
+    objFile.Close
+
+    'If all the check are sucessful, prompt the user to upload the content.
+    'Once his upload is complete, pressing "Ok" in the message box will generate the clipboard information.
+    MsgBox "Content check successful." & vbCrLf & _
+           "Before clicking ""Ok"", make sure to do the following:"& vbCrLf & vbCrLf & _
+           "Please upload all the files through FTP in the directory ""wwwroot/dgradio/" & strType & "/" & strAlbum & """." & vbCrLf & _
+           "Once the content is uploaded, please start a post in the DGEmu Radio section and make sure to enable HTML.", _
+           vbInformation, "Album Validator and Post Generator"
+
+    'Puts the full title into the clipboard in order for the user to paste it.
+    Dim objIE : Set objIE = CreateObject("InternetExplorer.Application")
+    objIE.Navigate("about:blank")
+    objIE.Document.ParentWindow.ClipboardData.SetData "text", strTitle
+    MsgBox "Topic title has been saved to your clipboard." & vbCrLf & _
+           "Please paste it into the topic title field of the DGEmu forum post before pressing ""Ok"".", _
+           vbInformation, "Album Validator and Post Generator"
+
+    'Puts the post text into the clipboard in order for the user to paste it.
+    'This also resizes the iframe's height according to whether there is an album information link or not.
+    'Since VBScript does not support clipboard functions, we will work around the issue by using Internet Explorer.
+    If strInfo = "" Then
+        intFrameSize = 450
+    Else
+        intFrameSize = 480
+    End If
+    strClipboard = "&lt;center&gt;" & vbCrLf & _
+                   vbTab & "&lt;iframe src=""http://www.dgemu.com/dgradio/?album=" & strAlbum & "&type=" & strType & "&noclose=true"" scrolling=""no"" height=""" & intFrameSize & "px"" width=""600px""&gt;&lt;/iframe&gt;" & vbCrLf & _
+                   "&lt;/center&gt;"
+    objIE.Navigate("about:blank")
+    objIE.Document.ParentWindow.ClipboardData.SetData "text", strClipboard
+    objIE.Quit
+    MsgBox "Post content has been saved to your clipboard." & vbCrLf & _
+           "Please paste it into the DGEmu forum post.", _
+           vbInformation, "Album Validator and Post Generator"
+
+    'Clear resources
+    Set objFile = Nothing
+    Set objFSO = Nothing
+    Set objIE = Nothing
+    Set objShell = Nothing
+End Sub
+&lt;/pre&gt;
+<p><br><br><br><strong>Conclusion</strong><br>
+Hopefully, this guide will have covered all the main points about the system. If there are any issues or questions, don't hesitate to contact me.<br><br>
+~Meru<br><br><br><strong>Guide History</strong><br><em>29 Jul. 2013:</em> Changed title and preparation for DGEmu Radio v3.</p>
+<p><em>16 Oct. 2012:</em> Added screenshot on Vista and 7 machines with extra step. <strong>Due to a glitch of IP.Board, please replace "&#097;" by "A" on line 121 in the Album Validator script.</strong><br><em>11 Sept. 2012:</em> Fixed a bug in the Playlist Generator where the URL could not be empty.<br><em>10 Sept. 2012:</em> Fixed a bug in the Album Validator where the post generated contained extra information that wasn't needed.<br><em>7 Sept. 2012:</em> Initial full guide released.<br><em>6 Sept. 2012:</em> Initial template of guide drafted.</p>
+</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

@@ -1,0 +1,99 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Guide] Configuring PCSX2 1.2.1 (WIP)</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f108.html">Staff and Exclusive Access Forums</a> &rsaquo; <a href="../forums/f318.html">Staff Operations</a> &rsaquo; <a href="../forums/f322.html">Draft Guides and Pins</a> &rsaquo; [Guide] Configuring PCSX2 1.2.1 (WIP)</div><div class="thread-title-box"><h1>[Guide] Configuring PCSX2 1.2.1 (WIP)</h1><div class="thread-meta">1 posts &middot; page 1 of 1 &middot; 4 views</div></div><div class="post" id="p5116097">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a><span class="op-tag">ORIGINAL POST</span></span><span>May 13 2014, 08:59 PM</span></div>
+  <div class="body"><p><img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/PCSX2-Logo.png" alt="PCSX2-Logo.png"><br>
+ <br><strong>Overview:</strong><br>
+PCSX2 is a powerful Sony Playstation 2 emulator capable of running many games without issues at the current time of writing.<br>
+This guide will help you setup the basics in order to play games on Windows.<br>
+Notice that this guide will not cover any of the advanced options.</p>
+<p> </p>
+<p><strong>What you will need:</strong><br>
+- PCSX2 1.2.1 stable release: <a href="http://adf.ly/nKals" target="_blank" rel="noopener">Download</a></p>
+<p>- PCSX2 SVN*: <a href="http://adf.ly/nKct3" target="_blank" rel="noopener">Download</a><br>
+- PS2 Bios SCPH-39001: <a href="http://adf.ly/nLG6n" target="_blank" rel="noopener">Download</a><br>
+- Microsoft DirectX Runtime: <a href="http://adf.ly/cCsSd" target="_blank" rel="noopener">Download</a></p>
+<p>- Microsoft Visual C++ 2010 SP1 Redistributable 32-bit*: <a  class="bbc_url" href="http://adf.ly/fNA1C" title="External link">Download</a><br>
+- Microsoft Visual C++ 2013 Redistributable 32-bit: <a href="http://adf.ly/5930454/visual-c-2013" target="_blank" rel="noopener">Download</a><br>
+- 7-Zip: <a href="http://adf.ly/fN5cr" target="_blank" rel="noopener">Download</a><br>
+ <br><em>*Optional downloads. Read the guide for more information.</em></p>
+<p> </p>
+<p>[dlcguide]<br>
+ <br><strong>Game formats:</strong><br>
+On this latest version of Dolphin, you can only run disc images off your computer. You will also be able to run discs from an optical drive!<br>
+The currently supported image formats are the following:</p>
+<p>- BIN: CDRWIN image (must be accompanied by a CUE file)<br>
+- IMG: CloneCD image (must be accompanied by CCD and SUB files)<br>
+- ISO: ISO 9660 Stadard Disc Image</p>
+<p>- MDF: Alcohol 120% Media Descriptor image (must be accompanied by a MDS file)</p>
+<p>- NRG: Nero Burning ROM image</p>
+<p> </p>
+<p><strong>Before starting:</strong><br>
+Make sure all the hardware and software requirements are met.<br>
+ <br><span>The minimum hardware requirements:</span></p>
+<p><span>AMD Athlon 64 or Intel Pentium 4 or higher</span></p>
+<p>2GB of RAM or higher</p>
+<p>Dedicated video card (ATI Radeon 9500 or nVidia 5200 or higher)</p>
+<p> <br><span>The recommended hardware requirements:</span><br>
+AMD or Intel dual-core 3.0GHZ processor or higher<br>
+2GB of RAM or higher<br>
+Dedicated video card (ATI HD4750 or nVidia 8800GT or higher)<br>
+ <br><span>The software requirements:</span><br>
+Firstly, you will need to have Microsoft's DirectX Runtime redistributable installed to run to emulator. You can find the download link for it at the top of the guide.<br>
+Secondly, you will need Microsoft's Visual C++ 2013 runtime installed on your computer. You can also find the download link for it at the top of the guide.</p>
+<p> </p>
+<p><em>The SVN software requirements:</em></p>
+<p><em>These SVN releases are WIP builds as the emulators gets updated by the authors. These are often unstable and are used only for testing purposes. These releases do not require you to download the stable release to function.</em></p>
+<p><em>Firstly, you will need to have Microsoft's DirectX Runtime redistributable installed to run to emulator. You can find the download link for it at the top of the guide.<br>
+Secondly, you will need Microsoft's Visual C++ 2010 SP1 runtime installed on your computer. You can also find the download link for it at the top of the guide.</em></p>
+<p><strong>Preparing the emulator files:</strong><br>
+1. Once you downloaded the emulator from the author's website, use 7-zip to extract the content to any location on your computer.<br>
+2. Download the PS2 bios and extract the content into the "bios subfolder" where PCSX2 was extracted to. If this folder does not exist, create it and then extract the bios file in.</p>
+<p>3. Depending on the release you decided to use, please follow the instructions below correctly.</p>
+<p> </p>
+<p><strong>Configuring the emulator for the first time (stable release):</strong></p>
+<p>This section only applies to the stable release of the emulator. Unfortunately, this release has yet to introduce the first time configuration wizard, so a little more work needs to be done.</p>
+<p>1. To run the emulator, open "pcsx2-r5875.exe" from the location you just extracted the emulator to.</p>
+<p>2. You will be presented with a "PCSX2 Message" warning you that the GS plugin file was not found. Press "OK" on that window to access the "Plugin Configuration Panel".</p>
+<p>3. At the "Component Selectors" windows ///////////////////////////////////////////////BLABLABLA</p>
+<p> </p>
+<p><strong>Configuring the emulator for the first time (SVN release):</strong></p>
+<p>This section only applies to the SVN release of the emulator. The PCSX2 team has made this very easy for a first time user. They've made a first time configuration wizard which the user can go through step by step to setup the emulator.</p>
+<p>1. To run the emulator, open "pcsx2.exe" from the location you just extracted the emulator to.</p>
+<p>///////////////////////////////////////////////BLABLABLA</p>
+<p>1. Click on "Config", navigate to the "Audio" tab, and change the "DSP Emulator Engine" to "DSP LLE recompiler". This is to avoid a loud screeching sound at the bios screen.<br>
+2. Move to the "Gamecube" tab and uncheck "Skip BIOS" in the "IPL Settings" section. This will allow the emulator to load the bios when launching a GameCube game.<br>
+3. In the same "Gamecube" tab, click on "..." right next to "Slot A Memory Card" in the "Device Settings" section. Save your memory card somewhere on your computer. This will allow you to save game progress.<br>
+4. Return back to the main emulator window, and click on "Graphics", navigate to the "Hacks" tab and uncheck "Disable" in the "External Frame Buffer" section. Leave the radio button to "Virtual". This will allow the bios to display correctly without graphical errors.<br>
+5. Return back to the main emulator window, and click on "GCPad". Setup your controls here.<br>
+6. All the other settings can be left at their default parameters.<br>
+ <br><strong>Configuring the emulator for GameCube <span>without</span> the Bios:</strong><br>
+1. Click on"GCPad". Setup your controls here.<br>
+2. All the other settings can be left at their default parameters.<br>
+ <br><strong>Configuring the emulator for Wii:</strong><br>
+1. Click on"WiiMote", then on "Configure" next to "Wiimote 1 Emulated Wiimote" in the "Wiimotes" section. Setup your controls here. Remember to keep in mind the position of how you're holding a WiiMote to play certain games to configure it properly. For example, playing 2D virtual console games like Megaman 9 requires you to hold the WiiMote sideways, so you must reconfigure your controls on the keyboard to be the most "natural" as possible.<br>
+2. All the other settings can be left at their default parameters.<br>
+ <br><strong>Loading a single game:</strong><br>
+1. Click on "Open" from the main menu.<br>
+2. Browse for your game in one of the supported formats, select it and click "Open".<br>
+3. That's it, your game should now be loaded and you can now start playing!<br>
+ <br><strong>Loading a list of games:</strong><br>
+1. Click on "Browse" from the main menu.<br>
+2. Browse for the folder where your games are stored, select it and click "Select Folder".<br>
+3. If you have multiple folders where your games are stored, repeat steps 1 and 2 as many times needed.<br>
+4. That's it, the emulator should now scan the folder where all your games are stored and list them in the main window so that you can easily load them to start playing!<br>
+ <br><strong>Multi disc games:</strong><br>
+Some games will have more than one disc. The perfect examples are Goldeneye: Rogue Agent and Killer 7, both having 2 discs.<br>
+Once you complete the first disc, the game console will ask you to change discs to continue your game.<br>
+To do so, simply go to "File > Change Disc...".<br>
+A new window will appear, browse for your second disc, select it, and click "Open".<br><br><strong>Conclusion:</strong><br>
+That's pretty much the basics you need to know in order to start playing PlayStation 2 games.<br>
+If you have any other questions, please do ask away in our forums. We'll gladly try to help.</p>
+<p> </p>
+<p><strong>Update History:</strong></p>
+<p></p>
+<p>XX-05-14: Guide released to the public</p>
+<p>13-05-14: Guide redaction</p>
+<p></p>
+</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

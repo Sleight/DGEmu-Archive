@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is the site any faster?</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f108.html">Staff and Exclusive Access Forums</a> &rsaquo; <a href="../forums/f42.html">Staff Lounge</a> &rsaquo; Is the site any faster?</div><div class="thread-title-box"><h1>Is the site any faster?</h1><div class="thread-meta">8 posts &middot; page 1 of 1 &middot; 21 views</div></div><div class="post" id="p5018391">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u1.html">Dragons Master</a><span class="op-tag">ORIGINAL POST</span></span><span>Jun 03 2012, 07:26 PM</span></div>
+  <div class="body">I personally feel dgemu works a HELL LOT faster now with the new server even though it's much weaker.<br />
+Its amazing how much nginx is superior to apache in terms of performance.. sadly though there are many apache-specific features some applications (*cough* IPB *cough*) are using that needed to be a little hacked for things to work.<br />
+<br />
+Anyway I want u guys to let mek now what u think - the site loads overall quicker or slower?</div>
+</div><div class="post" id="p5018402">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u2454177.html">Pan Dimensional Being</a></span><span>Jun 03 2012, 08:50 PM</span></div>
+  <div class="body">Well it certainly seems to be loading right from my work computer. And it used to take a few seconds to load before. At least at my job anyway.</div>
+</div><div class="post" id="p5018435">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Jun 04 2012, 03:56 AM</span></div>
+  <div class="body">On my end, I find it loads at the same speed.<br />
+What I would like to see is if the site will be getting as many downtime and reboots as before.<br />
+<br />
+Something to find out as time passes by.</div>
+</div><div class="post" id="p5018436">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Jun 04 2012, 03:58 AM</span></div>
+  <div class="body">The forums show the same kind of exec time but the main site is definitely faster.<br />
+How come? Are the ROM details / comments pages cached or something?</div>
+</div><div class="post" id="p5018462">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Jun 04 2012, 06:09 AM</span></div>
+  <div class="body">If you have cache configured a certain way then if is probably seeing that there is no new data so it just loading the cached content from the previous day (etc), cause the main page only gets updated with a few details every few days, but the forums have updated just about every 5 mins with a new post somewhere (well probably more then 5 mins at certain times and less then 1 min at other times) .....<br />
+<br />
+I have to agree though it is loading faster, the way I have my comp set the server change required DGEmu to be re-cached, and I must say it did it fairly fast all things considered !</div>
+</div><div class="post" id="p5018508">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u1.html">Dragons Master</a></span><span>Jun 04 2012, 05:32 PM</span></div>
+  <div class="body">This has nothing to do with caching - we're just using nginx instead of apache - u see apache opened a new process for each visitor - having many concurrent users pretty much raped the server - this doesn't happen in nginx - there are just a few threads handling all requests using select ("select" is a function name) - this is gazillion times more efficient if u have many users - and we do.<br />
+<br />
+The exec time is even slower as this server does things (php, mysql) slower (it's way weaker) but the exec time is just how much time took to generate the page - sending it over and handling the requests (each image is a different request! it's crazy) is what <em>hopefully</em> became faster.<br /><br />Oh man just *hopefully* fixed the staff utils - was a small problem using $_SERVER['PHP_SELF'] which goes crazy - should always use $_SERVER['DOCUMENT_URI'] instead - it works great now.<br />
+Now to the nasty mail-fixing issue.. man I'm gonna eat lotsa crap.. will try not to cause too much destruction on the site!</div>
+</div><div class="post" id="p5018527">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">2</span><a class="author" href="../users/u2307272.html">2bigpigs</a></span><span>Jun 04 2012, 05:39 PM</span></div>
+  <div class="body"> XD <br />
+Thanks for the explanation DM</div>
+</div><div class="post" id="p5018544">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Jun 04 2012, 06:37 PM</span></div>
+  <div class="body">Yay, new change everywhere.<br />
+<br />
+We got a new server, my company gave me a new work laptop instead of myself using my personal machine, Arcade and Staff Utils back online... yay!!<br />
+<br />
+Hopefully you get the FTP account back up, I wanted to advance a bit on the DG Arcade coding and make some changes.</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

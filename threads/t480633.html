@@ -1,0 +1,117 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Guide] Configuring Dolphin 4.0.2</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f288.html">Console Emulation &amp; Modding Assistance</a> &rsaquo; <a href="../forums/f300.html">Nintendo</a> &rsaquo; <a href="../forums/f301.html">Wii / WiiU Resources</a> &rsaquo; [Guide] Configuring Dolphin 4.0.2</div><div class="thread-title-box"><h1>[Guide] Configuring Dolphin 4.0.2</h1><div class="thread-meta">5 posts &middot; page 1 of 1 &middot; 8446 views</div></div><div class="post" id="p5110914">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a><span class="op-tag">ORIGINAL POST</span></span><span>Mar 11 2014, 07:03 AM</span></div>
+  <div class="body"><p><img src="http://i359.photobucket.com/albums/oo38/mm21xx/Guide/Dolphin.jpg~original" alt="Dolphin.jpg~original"></p>
+<p> </p>
+<p><strong>Overview:</strong><br>
+Dolphin is the only emulator capable of handling Nintendo GameCube, Nintendo Wii, and Nintendo Triforce games at the current time of writing.<br>
+This guide will help you setup the basics in order to play games on Windows.<br>
+Notice that this guide will not cover any of the advanced options.<br><br><strong>What you will need:</strong><br>
+- Dolphin*: <a  class="bbc_url" href="http://adf.ly/fN6WZ" title="External link">Download</a></p>
+<p>- GameCube Bios**: <a data-ipb='nomediaparse' href='http://adf.ly/gABKX'>Download</a></p>
+<p>- Microsoft DirectX Runtime: <a  class="bbc_url" href="http://adf.ly/cCsSd" title="External link">Download</a><br>
+- Microsoft Visual C++ 2010 SP1 Redistributable 32-bit*: <a  class="bbc_url" href="http://adf.ly/fNA1C" title="External link">Download</a></p>
+<p>- Microsoft Visual C++ 2010 SP1 Redistributable 64-bit*: <a  class="bbc_url" href="http://adf.ly/fN9lj" title="External link">Download</a><br>
+- 7-Zip: <a  class="bbc_url" href="http://adf.ly/fN5cr" title="External link">Download</a></p>
+<p> </p>
+<p><em>*Read the guide in order to get the correct version for your system.</em></p>
+<p><em>**Optional download. Read the guide to find out more.</em></p>
+<p> </p>
+<p>[dlcguide]</p>
+<p> </p>
+<p><strong>Game formats:</strong></p>
+<p>On this latest version of Dolphin, you can only run disc images off your computer. You will not be able to run discs from an optical drive.<br>
+The currently supported image formats are the following:<br>
+- GCM: GameCube Master Data<br>
+- ISO: ISO 9660 Stadard Disc Image<br>
+- GCZ: Dolphin GameCube Zip<br>
+- CISO: Compact ISO<br>
+- WBFS: Wii Backup File System<br><br><strong>Before starting:</strong><br>
+Make sure all the hardware and software requirements are met.</p>
+<p> </p>
+<p><u>The minimum hardware requirements:</u></p>
+<p>AMD or Intel dual core 3.0GHz processor or higher</p>
+<p>2GB of RAM or higher</p>
+<p>Dedicated video card (ATI HD3650 or nVidia 8600GT or higher)</p>
+<p> </p>
+<p><u>The recommended hardware requirements:</u></p>
+<p>AMD or Intel quad core 3.2GHZ processor or higher</p>
+<p>2GB of RAM or higher</p>
+<p>Dedicated video card (ATI HD5670 or nVidia 8800GT or higher)</p>
+<p> </p>
+<p><u>The software requirements:</u></p>
+<p>Firstly, you will need to have Microsoft's DirectX Runtime redistributable installed to run to emulator. You can find the download link for it at the top of the guide.</p>
+<p>Secondly, you will need Microsoft's Visual C++ 2010 SP1 runtime installed on your computer. To choose the version of emulator and C++ runtime for your system, you must first verify if it's a 32-bit or 64-bit device.</p>
+<p>To check for this information, you can follow Microsoft's official guide on how to verify it by <a data-ipb='nomediaparse' href='http://adf.ly/g9jiE'>clicking here</a>.</p>
+<p>You can also obtain this information by downloading and running a script I coded by <a data-ipb='nomediaparse' href='http://adf.ly/g9ypa'>clicking here</a>.</p>
+<p>If you use my script, simply download it, and run it by double-clicking it. It will popup a message telling you which operating system you are running and what architecture you are on. Currently support detection up to Windows 8.1.</p>
+<p>If you have a 32-bit system, you can only run the 32-bit version of Dolphin with the 32-bit C++ runtime.</p>
+<p>If you have a 64-bit system, you can either run the 64-bit version of Dolphine with the 64-bit C++ runtime or run the 32-bit version of Dolphin with the 32-bit C++ runtime.</p>
+<p> </p>
+<p><strong>Preparing the emulator files:</strong><br>
+1. Once you downloaded the emulator from the author's website, use 7-zip to extract the content to any location on your computer.<br>
+2. That's it, we're now ready to configure the emulator. (That was really simple wasn't it?)</p>
+<p><em>3. This step is completely optional. If you want the GameCube portion of the emulator to load the bios screen (for nostalgia sake only), you can download the bios provided at the top of the guide, and extract the content into the "Sys\GC subfolder" where Dolphin was extracted to.</em></p>
+<p>4. To run the emulator, open "Dolphin.exe" from the location you just extracted the emulator to.<br><br><strong>Configuring the emulator for GameCube <u>with</u> the Bios:</strong></p>
+<p>1. Click on "Config", navigate to the "Audio" tab, and change the "DSP Emulator Engine" to "DSP LLE recompiler". This is to avoid a loud screeching sound at the bios screen.</p>
+<p>2. Move to the "Gamecube" tab and uncheck "Skip BIOS" in the "IPL Settings" section. This will allow the emulator to load the bios when launching a GameCube game.<br>
+3. In the same "Gamecube" tab, click on "..." right next to "Slot A Memory Card" in the "Device Settings" section. Save your memory card somewhere on your computer. This will allow you to save game progress.</p>
+<p>4. Return back to the main emulator window, and click on "Graphics", navigate to the "Hacks" tab and uncheck "Disable" in the "External Frame Buffer" section. Leave the radio button to "Virtual". This will allow the bios to display correctly without graphical errors.</p>
+<p>5. Return back to the main emulator window, and click on "GCPad". Setup your controls here.</p>
+<p>6. All the other settings can be left at their default parameters.</p>
+<p> </p>
+<p><strong>Configuring the emulator for GameCube <u>without</u> the Bios:</strong></p>
+<p>1. Click on"GCPad". Setup your controls here.</p>
+<p>2. All the other settings can be left at their default parameters.</p>
+<p> </p>
+<p><strong>Configuring the emulator for Wii:</strong></p>
+<p>1. Click on"WiiMote", then on "Configure" next to "Wiimote 1 Emulated Wiimote" in the "Wiimotes" section. Setup your controls here. Remember to keep in mind the position of how you're holding a WiiMote to play certain games to configure it properly. For example, playing 2D virtual console games like Megaman 9 requires you to hold the WiiMote sideways, so you must reconfigure your controls on the keyboard to be the most "natural" as possible.</p>
+<p>2. All the other settings can be left at their default parameters.</p>
+<p> </p>
+<p><strong>Loading a single game:</strong><br>
+1. Click on "Open" from the main menu.<br>
+2. Browse for your game in one of the supported formats, select it and click "Open".<br>
+3. That's it, your game should now be loaded and you can now start playing!</p>
+<p> </p>
+<p><strong>Loading a list of games:</strong><br>
+1. Click on "Browse" from the main menu.</p>
+<p>2. Browse for the folder where your games are stored, select it and click "Select Folder".</p>
+<p>3. If you have multiple folders where your games are stored, repeat steps 1 and 2 as many times needed.<br>
+4. That's it, the emulator should now scan the folder where all your games are stored and list them in the main window so that you can easily load them to start playing!</p>
+<p> </p>
+<p><strong>Multi disc games:</strong><br>
+Some games will have more than one disc. The perfect examples are Goldeneye: Rogue Agent and Killer 7, both having 2 discs.<br>
+Once you complete the first disc, the game console will ask you to change discs to continue your game.<br>
+To do so, simply go to "File > Change Disc...".<br>
+A new window will appear, browse for your second disc, select it, and click "Open".<br><br><strong>Conclusion:</strong><br>
+That's pretty much the basic you need to know in order to start playing GameCube and Wii games.<br>
+If you have any other questions, please do ask away in our forums. We'll gladly try to help.</p>
+<p> </p>
+<p><strong>Update History:</strong></p>
+<p></p>
+<p>18-05-14: Corrected a few typos and mistakes in the guide</p>
+<p>17-03-14: Guide released to the public</p>
+<p>11-03-14: Guide redaction</p>
+<p></p>
+</div>
+</div><div class="post" id="p5144085">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">1</span><a class="author" href="../users/u2713664.html">12321</a></span><span>Jan 23 2015, 06:51 AM</span></div>
+  <div class="body">I'd really like to use some of these emulators but I have no computer </div>
+</div><div class="post" id="p5144094">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u2670162.html">deeluna</a></span><span>Jan 23 2015, 10:10 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">12321 wrote <span class="qdate">on Jan 23 2015, 06:51 AM</span>:</div><p>I'd really like to use some of these emulators but I have no computer</p></blockquote><br>
+Well to be fair Dolphin is available for other platforms such as Android. So not having a computer in the classic sense of the word doesn't really limit you.  My question here is, Why are you posting on a guide? and for that matter what are you using to post if you don't have a computer?</div>
+</div><div class="post" id="p5144160">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Jan 24 2015, 09:59 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">deeluna wrote <span class="qdate">on Jan 23 2015, 10:10 AM</span>:</div>
+<div>
+<p>Well to be fair Dolphin is available for other platforms such as Android. So not having a computer in the classic sense of the word doesn't really limit you. My question here is, Why are you posting on a guide? and for that matter what are you using to post if you don't have a computer?</p>
+</div>
+</blockquote>
+<p>Mobile phones now have the ability to browse the web Luna :P lol</p></div>
+</div><div class="post" id="p5144387">
+  <div class="phead"><span><span class="avatar" style="background:#a3a35a;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u2670162.html">deeluna</a></span><span>Jan 26 2015, 09:28 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Channel28 wrote <span class="qdate">on Jan 24 2015, 09:59 AM</span>:</div><p>Mobile phones now have the ability to browse the web Luna :P lol</p></blockquote><br>
+What? When did this happen? What decade am I in?  Jokes aside I was mainly curious what the newbie was using if decent android phone or tablet then might be possible to run dolpin slowly.</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

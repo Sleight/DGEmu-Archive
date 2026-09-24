@@ -1,33 +1,28 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[EMULATOR] DeSmuME User&#x27;s Guide and FAQ</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f288.html">Console Emulation &amp; Modding Assistance</a> &rsaquo; <a href="../forums/f300.html">Nintendo</a> &rsaquo; <a href="../forums/f302.html">DS / 3DS Resources</a> &rsaquo; [EMULATOR] DeSmuME User&#x27;s Guide and FAQ</div><div class="thread-title-box"><h1>[EMULATOR] DeSmuME User&#x27;s Guide and FAQ</h1><div class="thread-meta" style="font-style:italic;margin-bottom:4px">UPDATED: 0.9.7</div><div class="thread-meta">567 posts &middot; page 1 of 3 &middot; 54060 views</div></div><div class="post" id="p1285840">
+<title>[EMULATOR] DeSmuME User&#x27;s Guide and FAQ</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f288.html">Console Emulation &amp; Modding Assistance</a> &rsaquo; <a href="../forums/f300.html">Nintendo</a> &rsaquo; <a href="../forums/f302.html">DS / 3DS Resources</a> &rsaquo; [EMULATOR] DeSmuME User&#x27;s Guide and FAQ</div><div class="thread-title-box"><h1>[EMULATOR] DeSmuME User&#x27;s Guide and FAQ</h1><div class="thread-meta" style="font-style:italic;margin-bottom:4px">UPDATED: 0.9.7</div><div class="thread-meta">574 posts &middot; page 1 of 3 &middot; 100517 views</div></div><div class="post" id="p1285840">
   <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u149165.html">phoenix121</a><span class="op-tag">ORIGINAL POST</span></span><span>May 13 2006, 08:16 PM</span></div>
   <div class="body"><span style="color:#000000">DeSmuME is currently the best NDS emulator around.</span><br />
 <span style="color:#000000">Here are the instructions to run the emulator, together with an FAQ.</span><br />
 <br />
-<span style="color:#000000"><a href="http://desmume.org/" target="_blank" rel="noopener"><span style="color:#dc921d">Official Site</span><br />
-</a> | <span style="color:#0000FF">The latest version is 0.9.8</span><br />
+<span style="color:#000000"><a href="http://desmume.org/" target="_blank" rel="noopener"><span style="color:#dc921d">Official Site</span></a><br />
+| <span style="color:#0000FF">The latest version is 0.9.8</span><br />
 <span style="color:red"><strong>Anyone asking questions that have already been answered here will receive point deductions.</strong></span><br />
 <br />
 <strong>1. How to Use DeSmuME?</strong></span><br />
 <u>STEP 1</u>: Download the emulator! The latest version of DeSmuME can be found here. There are different versions for Windows (both 32-bit and 64-bit), Linux and Mac OSX.<br />
-<br />
-<u>STEP 2</u>: Select and extract the correct .exe file for Windows users. <br />
+<u>STEP 2</u>: Select and extract the correct .exe file for Windows users.<br />
 For 32-bit users, select desmume.exe. desmume_dev.exe is for developers of course. If you are using an old processor which cannot handle SSE2 please download the NOSSE2 version instead.<br />
 For 64-bit users just use desmume.exe.<br />
-<br />
 <u>STEP 3</u>: Set your controls (and other settings).<br />
 The default controls are OK, but you might prefer other settings. Choose <strong>Config</strong> -> <strong>Control Config</strong> to change the keys. Our recommended settings are <strong>Config -> Sound Settings -> Synchronous and Synch Method Z</strong>; and <strong>Config -> 3D Settings -> SoftRasterizer</strong> for sound and graphics emulation. If you have problems with sound/graphics, however, do try the other settings. In particular, if you have any graphics problems you should test all the possible combinations of the settings under "3D Settings" until you determine which one works best.<br />
-<br />
 <u>STEP 4</u>: BIOS and Firmware files (for troubleshooting).<br />
-Download the BIOS and Firmware files <a href="http://www.mediafire.com/file/l5k50s845r5ch0w" target="_blank" rel="noopener">here</a>. Unzip and extract the files to the same folder as DeSmuME. You should play without using BIOS/Firmware files, unless you face any emulation problems (e.g. freezing), or if the ROM you are playing is known to have many such problems (e.g. Pokemon HG/SS or B/W, Etrian Odyssey III). <br />
+Download the BIOS and Firmware files <a href="http://www.mediafire.com/file/l5k50s845r5ch0w" target="_blank" rel="noopener">here</a>. Unzip and extract the files to the same folder as DeSmuME. You should play without using BIOS/Firmware files, unless you face any emulation problems (e.g. freezing), or if the ROM you are playing is known to have many such problems (e.g. Pokemon HG/SS or B/W, Etrian Odyssey III).<br />
 <br />
 How to use them:<br />
 Go to <strong>Config -> Emulation Settings</strong> and select them under "Use external BIOS images" and "Use external firmware image". If that still doesn't work check the box for <strong>Enable Advanced Bus-Level Timing</strong>, also under Emulation Settings. Otherwise leave it unchecked.<strong>Do take note that the firmware <em>might</em> interfere with your touchscreen.</strong> It's a bug that DeSmuME hasn't really bothered to fix.<br />
-<br />
 <u>STEP 5</u>: Download the roms<br />
 All NDS roms can be found on DGEmu. <strong>Unzip the rom after downloading it.</strong><br />
-<br />
 <u>STEP 6</u>: Running the roms<br />
 Go to <strong>File -> Open</strong>. Choose your unzipped rom (the .nds files) and run it.<br />
 <br />
@@ -52,7 +47,7 @@ More: <a href="http://wiki.desmume.org/index.php?title=Manual" target="_blank" r
 A: Yes, it supports both Linux and Mac. There are Linux and Mac binaries for download from the download page. However, the Mac version only supports Intel CPUs at the moment. To use the Mac version for a Mac without an Intel CPU, you have to compile the source code yourself.<br />
 <br />
 <span style="color:#009900">Q: I get an error (0xC0150002). What do I do?</span><br />
-A: Try this: <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=200B2FD9-AE1A-4A14-984D-389C36F85647&amp;displaylang=en" target="_blank" rel="noopener">http://www.microsoft.com/downloads/details...;displaylang=en</a><br />
+A: Try this: <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=200B2FD9-AE1A-4A14-984D-389C36F85647&amp;displaylang=en" target="_blank" rel="noopener">http://www.microsoft...;displaylang=en</a><br />
 <br />
 <span style="color:#009900">Q: Is DeSmuME a good emulator?</span><br />
 A: It's currently the best NDS emulator around.<br />
@@ -65,6 +60,9 @@ A: It can play almost all ROMs (more than No$gba can!).<br />
 <br />
 <span style="color:#009900">Q: Does it support save? How about save states?</span><br />
 A: In-game save works. <strong>Save state also works.</strong><br />
+<br />
+<span style="color:#009900">Q: Does it support link/wifi?</span><br />
+A: Officially it doesn't, but you can try <a href="http://gbatemp.net/topic/281899-tutorial-on-getting-wifi-on-desmume/" target="_blank" rel="noopener">this tutorial</a> if you really want to. No guarantees, though.<br />
 <br />
 <span style="color:#009900">Q: The game is too slow, how can I increase the speed?</span><br />
 A: Go <strong>Config</strong> -> <strong>Frame Skip</strong> and select the number of frames to skip. The more frames skipped, the jumpier the graphics, but the faster the game speed. Aside from this, the only other thing you can do is to close all unnecessary programs to free up CPU and RAM.Also see the full solution from the official DeSmuME FAQ: <a href="http://wiki.desmume.org/index.php?title=Faq#DeSmuME_runs_too_slow.21" target="_blank" rel="noopener">DeSmuME runs too slow!</a><br />
@@ -420,7 +418,7 @@ GBATEST4/12/09 - Info on 0.9.5, plus clearing away outdated information. (many t
   <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">R</span><span class="author">Red.</span></span><span>Jan 10 2007, 02:52 AM</span></div>
   <div class="body">Kirby Squeak Squad don't show backgrounds with 0.5.0.</div>
 </div><div class="post" id="p2055644">
-  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">Q</span><span class="author">qcarachato</span></span><span>Jan 12 2007, 07:04 AM</span></div>
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">Q</span><a class="author" href="../users/u264381.html">qcarachato</a></span><span>Jan 12 2007, 07:04 AM</span></div>
   <div class="body"><span style="color:#654321">Since Ody is having some problems getting the ROMs (connection issues), I'm gonna take care of this list for a while.If some of the info is incorrect, please feel free to PM me and I'll recheck it and update the list if needed.Tested games from 0783 to 0810.Used DeSmuME v0.5.0Got it from here:<a href="http://desmume.sourceforge.net/downloads/" target="_blank" rel="noopener">http://desmume.sourceforge.net/downloads/</a></span></div>
 </div><div class="post" id="p2059228">
   <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">T</span><span class="author">t3h_n00berer</span></span><span>Jan 13 2007, 08:26 AM</span></div>

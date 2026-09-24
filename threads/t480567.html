@@ -1,0 +1,216 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MERU FIX IT!</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f107.html">DGEmu Social</a> &rsaquo; <a href="../forums/f26.html">Spam Center</a> &rsaquo; MERU FIX IT!</div><div class="thread-title-box"><h1>MERU FIX IT!</h1><div class="thread-meta">17 posts &middot; page 1 of 1 &middot; 103 views</div></div><div class="post" id="p5108697">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a><span class="op-tag">ORIGINAL POST</span></span><span>Feb 18 2014, 12:52 PM</span></div>
+  <div class="body"><p>..... since everyone else is doing it .....</p>
+<p> </p>
+<p>My 3TB internal HDD (the WD Red I bought months and months ago) is listed as a removable drive, and can be ejected just like a USB.  For some !@$^ ass reason Win7 is ejecting it every now and then (hasn't happened for a least a month though .. till now) .... I have now disabled the turn off HDD if inactive for 20 mins but I doubt that is the problem ... as I was JUST downloading something to that drive as it ejected it (and thereby cancelled the download).</p>
+<p> </p>
+<p>I don't see any option to turn off Hot Swap in the BIOS (but in case you know I have a Gigabyte X58A-UD3R motherboard).</p>
+<p> </p>
+<p>I made registry edits to disable this (TreatAsInternalPort) and still isn't working, I am not sure what Controller it is but almost certain it is on Channel 5 ..... I disabled Channel 5 on Controllers 0-5 and still nothing ....</p>
+<p> </p>
+<p>Any suggestions?</p>
+</div>
+</div><div class="post" id="p5108701">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">B</span><a class="author" href="../users/u2670100.html">Behemoth</a></span><span>Feb 18 2014, 02:43 PM</span></div>
+  <div class="body"><p>What usually triggers ejection by Windows?</p>
+<p> </p>
+<p>Does this only happen with that specific HDD or with any other removable drives you have?</p>
+</div>
+</div><div class="post" id="p5108707">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Feb 18 2014, 04:30 PM</span></div>
+  <div class="body"><p>format</p>
+</div>
+</div><div class="post" id="p5108711">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Feb 18 2014, 04:48 PM</span></div>
+  <div class="body"><p>Well, after reading up on your mobo:</p>
+<p>You have 8 SATA2 ports on your Intel controller.</p>
+<p>You have 2 SATA3 ports on your Marvell controller. The Marvel controller support Hotplug, meaning by default, it is hot-swappable (and the reason why they appear with the safely remove option).</p>
+<p> </p>
+<p>The hotplug is not a capability of a hard disk, but of the controller.</p>
+<p>If you were smart, you'd have plugged those disks into the SATA3 ports to take advantage of the higher speeds and set them all to AHCI in the bios. (Only in AHCI that hotplug is available also)</p>
+<p> </p>
+<p>To disable the Hotplug:</p>
+<p>Windows key + R</p>
+<p>Type "devmgmt.msc" without the quotes in the Run box and hit ok.</p>
+<p>Expand "Storage Controllers" and find your Marvell 6G controller.</p>
+<p>Right-click > Properties</p>
+<p>Move to the Policies tab.</p>
+<p>Uncheck "Enable Safely Remove Disk".</p>
+<p>Apply, OK, you may need to restart your computer for changes to apply.</p>
+<p> </p>
+<p>One thing you can do to help optimize your drives also:</p>
+<p>In Device Manager, expand "Disk drives".</p>
+<p>For each hard disk listed, right-click > Properties.</p>
+<p>Move to the Policies tab.</p>
+<p>Make sure both "Enable write caching on the device" and "Turn off Windows write-cache buffer flushing on the device" are both checked.</p>
+<p>Give a better performance to your hard disk, though the second option will increase your chances of data loss if you lose power.</p>
+</div>
+</div><div class="post" id="p5108795">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Feb 19 2014, 08:29 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Renge Miyauchi wrote <span class="qdate">on Feb 18 2014, 04:48 PM</span>:</div><br>
+You have 8 SATA2 ports on your Intel controller.<br><strong>You have 2 SATA3 ports on your Marvell controller. The Marvel controller support Hotplug, meaning by default, it is hot-swappable (and the reason why they appear with the safely remove option).</strong><br><br>
+The hotplug is not a capability of a hard disk, but of the controller.<br><strong>If you were smart, you'd have plugged those disks into the SATA3 ports to take advantage of the higher speeds and set them all to AHCI in the bios. (Only in AHCI that hotplug is available also)</strong></blockquote>
+<p>.... Did you just <strong>confirm</strong> that it was in the Marvell controller (which IS SATA3) and than say if I was smart I would of put it in SATA3?</p>
+<p> </p>
+<blockquote class="quote"><div class="qhdr">Renge Miyauchi wrote <span class="qdate">on Feb 18 2014, 04:48 PM</span>:</div>
+<div>To disable the Hotplug:<br><p>Windows key + R</p>
+<p>Type "devmgmt.msc" without the quotes in the Run box and hit ok.</p>
+<p>Expand "Storage Controllers" and find your Marvell 6G controller.</p>
+<p>Right-click > Properties</p>
+<p>Move to the Policies tab.</p>
+<p>Uncheck "Enable Safely Remove Disk".</p>
+<p>Apply, OK, you may need to restart your computer for changes to apply.</p>
+</div>
+</blockquote>
+<p>No Marvell 6G controller ... the 3 listed are:</p>
+<p>AOZ9SWC3 IDE Controller (WTF this is I am not sure, "AOZ9SWC3" is not Googleable ....)</p>
+<p>GIGABYTE GBB36X Controller</p>
+<p>GIGABYTE GBB36X Controller</p>
+<p>And none of them have a Policies tab ....</p>
+<blockquote class="quote"><div class="qhdr">Behemoth wrote <span class="qdate">on Feb 18 2014, 02:43 PM</span>:</div>
+<div>
+<p>What usually triggers ejection by Windows?</p>
+<p> </p>
+<p>Does this only happen with that specific HDD or with any other removable drives you have?</p>
+</div>
+</blockquote>
+<p>Only this HDD, never happens on USBs or portable HDD .....</p></div>
+</div><div class="post" id="p5108797">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Feb 19 2014, 08:36 AM</span></div>
+  <div class="body"><p>format</p>
+</div>
+</div><div class="post" id="p5108804">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">M</span><a class="author" href="../users/u104116.html">milo-</a></span><span>Feb 19 2014, 09:27 AM</span></div>
+  <div class="body"><p>ded hdd</p>
+</div>
+</div><div class="post" id="p5108805">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Feb 19 2014, 09:27 AM</span></div>
+  <div class="body"><p>format it back 2 life</p>
+</div>
+</div><div class="post" id="p5108808">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Feb 19 2014, 09:55 AM</span></div>
+  <div class="body"><p>lol the HDD is perfectly fine, it lives .... using it at the moment .....</p>
+</div>
+</div><div class="post" id="p5108829">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Feb 19 2014, 03:40 PM</span></div>
+  <div class="body"><p>This is your mobo, right? (On Newegg)</p>
+<p><img src="http://images10.newegg.com/NeweggImage/productimage/13-128-423-03.jpg" alt="13-128-423-03.jpg"></p>
+<p> </p>
+<p>Your motherboard SATA connectors are color coded blue and white in pairs on the side of the motherboard.</p>
+<p>Read near the connectors (In that image at the top, the text seems to be on the left side of the white connectors), it should say something like:</p>
+<p> </p>
+<p>SATA6g_0-1</p>
+<p>SATA_0-1</p>
+<p>SATA_2-3</p>
+<p>SATA_4-5</p>
+<p>SATA_6-7</p>
+<p> </p>
+<p>Is your disk connected on the 6G port? It should normally.</p>
+<p> </p>
+<p>Secondly, IDE Controller in your device manager??</p>
+<p>When you enter your bios settings, you should have 2 configurables:</p>
+<p>- The "high-speed" SATA ports (or whatever they call it)</p>
+<p>- The onboard SATA ports</p>
+<p>Both of them should be set to AHCI, not IDE (or Legacy as some bios calls it). Careful with this though as swapping this can make your operating system not boot anymore...</p>
+<p> </p>
+<p>If you don't have the policies tab, that's because the device item doesn't have any configurations available for it.</p>
+<p>Here's a screenie from my desktop (had to take it like that since I'm at work):</p>
+<p><img src="http://i359.photobucket.com/albums/oo38/mm21xx/Computers/Marvell.jpg~original" alt="Marvell.jpg~original"></p>
+<p> </p>
+<p>And yes:</p>
+<p>WD Red should be a SATA3 drive. Why would you want to connect it to a SATA2 port to deliberately slow the drive's performance down.</p>
+<p>That's like something buying this awesome USB3.0 external drive, and then deciding he'll use his USB2.0 ports instead because he prefers his drive to transfer more slowly.</p>
+</div>
+</div><div class="post" id="p5108848">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Feb 19 2014, 07:30 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Channel28 wrote <span class="qdate">on Feb 19 2014, 09:55 AM</span>:</div>
+<div>
+<p>lol the HDD is perfectly fine, it lives .... using it at the moment .....</p>
+</div>
+</blockquote>
+<p> </p>
+<blockquote class="quote"><div class="qhdr">KHRS wrote <span class="qdate">on Feb 19 2014, 09:27 AM</span>:</div>
+<div>
+<p>format it 2 death then back 2 life</p>
+</div>
+</blockquote></div>
+</div><div class="post" id="p5108935">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Feb 20 2014, 11:37 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Renge Miyauchi wrote <span class="qdate">on Feb 19 2014, 03:40 PM</span>:</div>
+<div>
+<p>This is your mobo, right? (On Newegg)</p>
+<p><img src="http://images10.newegg.com/NeweggImage/productimage/13-128-423-03.jpg" alt="13-128-423-03.jpg"></p>
+</div>
+</blockquote>
+<p>Nope .... that is Revision 1.0 ... mine is 2.0:</p>
+<p><img src="http://www.gigabyte.com.au/fileupload/product/2/3449/3025.jpg" alt="3025.jpg"></p>
+<p>Why would you look on a crappy sale site when you could view the official motherboard site :P</p>
+<blockquote class="quote"><div class="qhdr">Renge Miyauchi wrote <span class="qdate">on Feb 19 2014, 03:40 PM</span>:</div>
+<div>
+<p>Your motherboard SATA connectors are color coded blue and white in pairs on the side of the motherboard.</p>
+<p>Read near the connectors (In that image at the top, the text seems to be on the left side of the white connectors), it should say something like:</p>
+<p> </p>
+<p>SATA6g_0-1</p>
+<p>SATA_0-1</p>
+<p>SATA_2-3</p>
+<p>SATA_4-5</p>
+<p>SATA_6-7</p>
+<p> </p>
+<p>Is your disk connected on the 6G port? It should normally.</p>
+</div>
+</blockquote>
+<blockquote class="quote"><div class="qhdr">Renge Miyauchi wrote <span class="qdate">on Feb 19 2014, 03:40 PM</span>:</div>
+<div>Secondly, IDE Controller in your device manager??<br><p>When you enter your bios settings, you should have 2 configurables:</p>
+<p>- The "high-speed" SATA ports (or whatever they call it)</p>
+<p>- The onboard SATA ports</p>
+<p>Both of them should be set to AHCI, not IDE (or Legacy as some bios calls it). Careful with this though as swapping this can make your operating system not boot anymore...</p>
+<p> </p>
+<p>If you don't have the policies tab, that's because the device item doesn't have any configurations available for it.</p>
+<p>Here's a screenie from my desktop (had to take it like that since I'm at work):</p>
+<p><img src="http://i359.photobucket.com/albums/oo38/mm21xx/Computers/Marvell.jpg~original" alt="Marvell.jpg~original"></p>
+<p> </p>
+</div>
+</blockquote>
+<p>On holiday till next Wednesday now so will have a look at this when I get back :)</p></div>
+</div><div class="post" id="p5108955">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Feb 20 2014, 05:55 PM</span></div>
+  <div class="body"><p>That's cause I couldn't load their site from work for some stupid reason.</p>
+<p> </p>
+<p>Have a look, from your image, the ports are identified on the bottom of the ports.</p>
+<p>Try to take a screencap of what you see exactly if you have issues, but one thing's for sure: You should check your bios settings if you have an IDE controller listed in your storage controllers. You definitely have a set of SATA ports that has been set to Legacy IDE mode, and that hinders your computer performance a bit. And as I noted before, be careful as if that's where your host OS hard disk is plugged, you have a high chance to receive a nice BSOD on next boot, so you may need to revert it back, do a registry tweak, and retry again.</p>
+</div>
+</div><div class="post" id="p5109523">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Feb 26 2014, 12:11 PM</span></div>
+  <div class="body"><p>..... Found the problem ....</p>
+<p> </p>
+<p>The far left SATA (the white) underneath it has GSATA3_6_7 which is what I thought it was plugged into .... BUT to the left of that writing is GSATA_4_5 ... and to the right of it is an arrow ... the SATA3_6_7 is actually the SECOND from the left ....</p>
+<p> </p>
+<p>6/7 was already set to AHCI so that part was fine .... just the small print in the case with lots of stuff in was soooo hard to see.</p>
+<p> </p>
+<p>Upon computer start up it did NOT show the WDblahblahblah but instead something like Marvel? ??xx (think same as you documented above) ... now it is gone though ... but HDD is still working .... so it seems to be working alright now which is good!</p>
+<p> </p>
+<p>Device Manager still has IDE Controller but now it is AIBKD3BC IDE Controller ..... meh .... it works so I'm happy .... until it disconnects ... which hopefully won't happen though lol</p>
+</div>
+</div><div class="post" id="p5109532">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Feb 26 2014, 04:02 PM</span></div>
+  <div class="body"><p>That's a weird controller, it's not even known on the web...</p>
+<p>Just curious, if you just simply, right-clicked that IDE controller, do an uninstall (do NOT check delete the drivers with it), and then do a hardware scan, is it detected and reinstalled?</p>
+<p> </p>
+<p>Also, glad to hear at least that the problem seems fixed.</p>
+</div>
+</div><div class="post" id="p5109637">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Feb 27 2014, 09:35 AM</span></div>
+  <div class="body"><p>..... it appears to be random ... now it is ATSWHO1Y IDE Controller .... lol</p>
+<p></p><p></p><blockquote class="quote"><div class="qhdr">Renge Miyauchi wrote <span class="qdate">on Feb 26 2014, 04:02 PM</span>:</div>Just curious, if you just simply, right-clicked that IDE controller, do an uninstall (do NOT check delete the drivers with it), and then do a hardware scan, is it detected and reinstalled?<br></blockquote>
+<p>Scans and then refreshes ....</p>
+<p>Update Driver does Windows could not find drivers software for this device ....</p>
+<p> </p>
+<p>Since the System drive (C:) is on the IDE setting I won't uninstall or touch this just in case lol ..... doesn't seem to be causing any harm anyhow ....</p></div>
+</div><div class="post" id="p5109773">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Feb 28 2014, 03:26 AM</span></div>
+  <div class="body"><p>That's... weird?</p>
+<p>Never seen a case like that.</p>
+</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

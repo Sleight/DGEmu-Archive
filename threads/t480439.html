@@ -1,0 +1,97 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Partitioning, and installing Ubuntu next to windows 7</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f107.html">DGEmu Social</a> &rsaquo; <a href="../forums/f26.html">Spam Center</a> &rsaquo; Partitioning, and installing Ubuntu next to windows 7</div><div class="thread-title-box"><h1>Partitioning, and installing Ubuntu next to windows 7</h1><div class="thread-meta">12 posts &middot; page 1 of 1 &middot; 53 views</div></div><div class="post" id="p5104499">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">F</span><a class="author" href="../users/u26698.html">French Monkey Cheese Salesman</a><span class="op-tag">ORIGINAL POST</span></span><span>Jan 16 2014, 11:43 PM</span></div>
+  <div class="body">Does anyone have any experience with this stuff? I'm getting stumped.<br><br>I tried installing Ubuntu on my laptop. I made a nice ubuntu disk and tried to install it trough the bios stuff.<br>Half way trough the installation screens, it allows me to choose how to install it.<br>Either I can format my harddrive and make new partitions. I don't want that.<br>Or I can create a new partition for Ubuntu. I do want that. I happen to have an empty partition which I created just for that. That's when things went balls up.<br><br>It said my harddisk didn't have any partitions. None at all. I had to format my disk and create new partitions. I don't want that. When I checked it out on windows, it said it had 4 partitions. Looking some shit up, I found out my disk is using GPT, but I suspect it's GPT trash data, I need to remove.<br><br>I have no idea how to do that. I tried using Fixparts, but I have no idea how to use it.<br><br>Can anyone help me please?</div>
+</div><div class="post" id="p5104504">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">A</span><span class="author">AutoCad_Kaze Class Destroyer</span></span><span>Jan 17 2014, 12:05 AM</span></div>
+  <div class="body">from what ive seen, this can be dangerous unless you really know what you are doing, since they are two different operating systems the safest way to run it would be through Oracles VM software.</div>
+</div><div class="post" id="p5104505">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u2661294.html">Cool Club Coger</a></span><span>Jan 17 2014, 12:09 AM</span></div>
+  <div class="body">Meru should know he's the one that actually told me about it, but from what I remember its better to install Ubuntu first then another because installing Ubuntu is because windows makes your hardrive nstf or something but that's not what you want.<br><br>
+you may have "free space" but it's still nstf which Ubuntu can't use. I don't know what you mean installing the bios but I assume you're installing from the demo Ubuntu disk from cd/flash drive you need to go to gparted and create free space unallocated.<br><br><blockquote class="quote"><div class="qhdr">someone wrote:</div><p>If Windows is already installed: If you've shrunk down its partition for free space and booted into a live Ubuntu or GParted, click on the "Unallocated" piece next to the two "ntfs" partitions that represent your Windows 7 installation and system recovery tools. Create a 15(-ish) GB unformatted partition, and give it a label like Ubuntu. If you've got a good deal of space left, format it as "ntfs" and label it something like "Storage." If you can just barely fit the Ubuntu partition, you can just keep your media files in the Windows partitionâ€”until you can remedy this with a full wipe-and-install down the line.<br><br>
+Experienced Linux geeks might be wondering where the swap space is goingâ€”but don't worry, we'll create one, just not in its own partition.</p></blockquote><br />Gparted can be found in the Ubuntu demo.</div>
+</div><div class="post" id="p5104509">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">M</span><a class="author" href="../users/u2496201.html">Mononon</a></span><span>Jan 17 2014, 12:12 AM</span></div>
+  <div class="body"><p>It's a lot easier if you don't pre-create a partition and install from a USB key.</p>
+</div>
+</div><div class="post" id="p5104511">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">F</span><a class="author" href="../users/u26698.html">French Monkey Cheese Salesman</a></span><span>Jan 17 2014, 12:17 AM</span></div>
+  <div class="body"><p>Yea, but when I run Gparted, All I see are two devices,</p>
+<p> </p>
+<p>/dev/sda, 500gb. all unallocated</p>
+<p>/dev/sdc, 2gb, seems like a backup disk.</p>
+<p> </p>
+<p>sda is my main hard drive, with 3 partitions, C ( my windows installation), D (just some files) and E ( empty)</p>
+<p> </p>
+<p>But it doesn't show up partitioned.</p>
+</div>
+</div><div class="post" id="p5104512">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Jan 17 2014, 12:19 AM</span></div>
+  <div class="body"><p>There's a lot of new stuff in comps nowadays.</p>
+<p> </p>
+<p>Classic bios boot vs UEFI boot.</p>
+<p>Classic MBR vs new GPT.</p>
+<p> </p>
+<p>Thing is, on a GPT drive, it seems that some Linux tools can't recognize it, such as the regular fdisk.</p>
+<p> </p>
+<p>An official guide to get it up and running on a drive that's clean:</p>
+<p><a data-ipb='nomediaparse' href='https://help.ubuntu.com/community/InstallUbuntu11.10OnLenovoEFI/GPT/WLAN/Power/BIOS'>https://help.ubuntu.com/community/InstallUbuntu11.10OnLenovoEFI/GPT/WLAN/Power/BIOS</a></p>
+<p> </p>
+<p>Ignore the wireless parts, it's more the part where you want to make sure that Ubuntu fetches the latest updates, and that when you come to the partition portion, you select Manual mode instead of automatic.</p>
+<p> </p>
+<p>As stated, GPT, on the first partition, it should be the EFI partition (should already be there since Windows 7 is present)</p>
+</div>
+</div><div class="post" id="p5104513">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">A</span><span class="author">AutoCad_Kaze Class Destroyer</span></span><span>Jan 17 2014, 12:22 AM</span></div>
+  <div class="body">wait he needs GPT? but he isn't using a partition larger than 2TB</div>
+</div><div class="post" id="p5104514">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">F</span><a class="author" href="../users/u26698.html">French Monkey Cheese Salesman</a></span><span>Jan 17 2014, 12:24 AM</span></div>
+  <div class="body"><p>"WARNING: GPT (GUID Partition Table) detected on '/dev/sda'! The util fdisk doesn't support GPT. Use GNU Parted"</p>
+<p> </p>
+<p> </p>
+<p>GParted doesn't find anything :(</p>
+<br /><blockquote class="quote"><div class="qhdr">AutoCad_Kaze Class Destroyer wrote <span class="qdate">on Jan 17 2014, 12:22 AM</span>:</div>
+<div>
+<p>wait he needs GPT? but he isn't using a partition larger than 2TB</p>
+</div>
+</blockquote>
+<p>No, I dont. But my partitions and GPT were there when I bought my laptop. I didnt have a choice :(</p></div>
+</div><div class="post" id="p5104515">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Jan 17 2014, 12:25 AM</span></div>
+  <div class="body"><p>It's a new standard used on nearly every new laptop.</p>
+<p>That's how Windows 8.1 can nearly instant boot within 1 or 2 seconds nowadays. It's optimized and much better than classic MBR.</p>
+<p> </p>
+<p>Parted Tools or GDisk seems to work with new GPT.</p>
+<p>GParted is only for old MBR.</p>
+</div>
+</div><div class="post" id="p5104519">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">A</span><span class="author">AutoCad_Kaze Class Destroyer</span></span><span>Jan 17 2014, 12:40 AM</span></div>
+  <div class="body">um the only drives that ive heard you need to use GPT for is anything bigger than 2TB...<br>and I partitioned it in Gparted.</div>
+</div><div class="post" id="p5104520">
+  <div class="phead"><span><span class="avatar" style="background:#7ba0c4;width:22px;height:22px;font-size:9.9px">F</span><a class="author" href="../users/u26698.html">French Monkey Cheese Salesman</a></span><span>Jan 17 2014, 12:53 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">AutoCad_Kaze Class Destroyer wrote <span class="qdate">on Jan 17 2014, 12:40 AM</span>:</div>
+<div>
+<p>um the only drives that ive heard you need to use GPT for is anything bigger than 2TB...<br>
+and I partitioned it in Gparted.</p>
+</div>
+</blockquote>
+<p>Its also used when you need more then 4 partitions. I think..</p>
+<p> </p>
+<p>but thats not the point. I have GPT, not by choice. And I got to learn to deal with it.</p><br /><p>also gdisk isnt exactly easy to use</p>
+<br /><p>I found it earlier but had no idea how the hell to use it.</p>
+</div>
+</div><div class="post" id="p5104524">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Jan 17 2014, 01:00 AM</span></div>
+  <div class="body"><p>Ya, my mistake, GParted does work with its live cd.</p>
+<p> </p>
+<p>GPT is essential to any large drive 2TB and over. GPT can be used for any drive smaller than 2TB.</p>
+<p> </p>
+<p>If you have an UEFI capable bios (which is the case for most hardware nowadays), then there is no reason to not used GPT in all cases.</p>
+<p>When you rand the Ubuntu install, did you switch it to manual mode or automatic detect?</p>
+<br><p>gdisk works very similar to fdisk.</p>
+<p> </p>
+<p>It's a text-based GUI where you just type what you want as option of command.</p>
+<p>Not as friendly to users that's for sure.</p>
+</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

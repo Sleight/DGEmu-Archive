@@ -1,0 +1,141 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plugin tags?</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f107.html">DGEmu Social</a> &rsaquo; <a href="../forums/f26.html">Spam Center</a> &rsaquo; Plugin tags?</div><div class="thread-title-box"><h1>Plugin tags?</h1><div class="thread-meta">20 posts &middot; page 1 of 1 &middot; 111 views</div></div><div class="post" id="p5107755">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u590675.html">stock</a><span class="op-tag">ORIGINAL POST</span></span><span>Feb 10 2014, 05:04 AM</span></div>
+  <div class="body"><p>Are those hard to make? I feel like they're not and we should just have, a bunch.</p>
+</div>
+</div><div class="post" id="p5107771">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Feb 10 2014, 08:59 AM</span></div>
+  <div class="body"><p>What like tag all important topics with "important" and "rules" etc?</p>
+</div>
+</div><div class="post" id="p5107775">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u590675.html">stock</a></span><span>Feb 10 2014, 09:23 AM</span></div>
+  <div class="body"><p>[youtube]</p>
+<p>[vimeo]</p>
+<p> </p>
+<p>(actually, it would be cool if these were just video tags)</p>
+<p> </p>
+<p>etc. etc.</p>
+<p> </p>
+<p>Or is there some sort of [media] tag I don't know about?</p>
+</div>
+</div><div class="post" id="p5107780">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Feb 10 2014, 09:42 AM</span></div>
+  <div class="body"><p>What sort of the media tags would you recommend we include?  It is easy to make ....</p>
+</div>
+</div><div class="post" id="p5107786">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Feb 10 2014, 11:35 AM</span></div>
+  <div class="body"><p>Current "Media Tag"s are:</p>
+<p>YouTube</p>
+<p>Google Video</p>
+<p>MySpace Video</p>
+<p>GameTrailers</p>
+<p>YouTu.be</p>
+<p>Flickr Image Set</p>
+<p>MP3</p>
+<p>Flash Movie/Game</p>
+<p>Vimeo</p>
+<p> </p>
+<p>What else would you like?</p>
+</div>
+</div><div class="post" id="p5107787">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Feb 10 2014, 12:07 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Channel28 wrote <span class="qdate">on Feb 10 2014, 11:35 AM</span>:</div>
+<div><br><p>MySpace Video</p>
+</div>
+</blockquote>
+<p>lol</p></div>
+</div><div class="post" id="p5107818">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Feb 10 2014, 05:52 PM</span></div>
+  <div class="body"><p>ya, the media tags covers all of those, and will automatically parse them if found in your post.</p>
+<p> </p>
+<p>I don't know if the issue of having https or http will mess up the parsing anymore though, I haven't tested it.</p>
+</div>
+</div><div class="post" id="p5107911">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Feb 11 2014, 10:52 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Renge Miyauchi wrote <span class="qdate">on Feb 10 2014, 05:52 PM</span>:</div>
+<p>I don't know if the issue of having https or http will mess up the parsing anymore though, I haven't tested it.</p>
+</blockquote>
+<p>Doesn't for YouTube:</p>
+&lt;pre  class="_prettyXprint"&gt;
+http(?:s)?://(www.)?youtube.com/watch .................
+&lt;/pre&gt;
+<p>the (?: s)? is the variable to allow http and https while (www.)? is to allow <a data-ipb='nomediaparse' href='http://www'>http://www</a> AND <a data-ipb='nomediaparse' href='http://youtube'>http://youtube</a></p>
+<p> </p>
+<p>Vimeo has:</p>
+&lt;pre  class="_prettyXprint"&gt;
+http{1}://vimeo.com/{2}
+&lt;/pre&gt;
+<p>Just uses the standard variable that IPB uses.</p>
+<p> </p>
+<p> </p>
+<p>All the rest are http only</p>
+</div>
+</div><div class="post" id="p5107928">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u590675.html">stock</a></span><span>Feb 11 2014, 09:04 PM</span></div>
+  <div class="body">Alright I'll check these, they seem not to work but could there be a Soundcloud addition? </div>
+</div><div class="post" id="p5108101">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u590675.html">stock</a></span><span>Feb 13 2014, 06:49 AM</span></div>
+  <div class="body">alright cool. only with the bbcode switch off though?</div>
+</div><div class="post" id="p5108110">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Feb 13 2014, 10:05 AM</span></div>
+  <div class="body"><p>All work except Google Video (which doesn't exist now) and MySpace Video (coding is different) and NO you don't need to turn BBCode off, just copy and paste ....</p>
+</div>
+</div><div class="post" id="p5108111">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Feb 13 2014, 10:14 AM</span></div>
+  <div class="body"><p>myspace es no es embed</p>
+</div>
+</div><div class="post" id="p5108112">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Feb 13 2014, 10:29 AM</span></div>
+  <div class="body"><p>Yes MySpace is a bitch to embed and they no longer use:</p>
+&lt;pre  class="_prettyXprint"&gt;
+http://mediaservices.myspace.com/services/media/embed.aspx&lt;/pre&gt;
+<p>it seems .....</p>
+</div>
+</div><div class="post" id="p5108113">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Feb 13 2014, 11:01 AM</span></div>
+  <div class="body"><p>i wouldn't bother fixing it, tbh. I havent heard of anyone actually using myspace in like 5 years</p>
+</div>
+</div><div class="post" id="p5108115">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u590675.html">stock</a></span><span>Feb 13 2014, 11:48 AM</span></div>
+  <div class="body"><p>Hm. Maybe it was images then. Something doesn't get embedded properly with tags.</p>
+<p> </p>
+<p>Anyway! Soundcloud tags, please!</p>
+</div>
+</div><div class="post" id="p5108246">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Feb 14 2014, 09:29 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">stock wrote <span class="qdate">on Feb 13 2014, 11:48 AM</span>:</div><br>
+Hm. Maybe it was images then. Something doesn't get embedded properly with tags.</blockquote>
+<p>.... Images need the [ img] tag of course ..... of course that COULD be altered possibly ....</p>
+<p> </p>
+<p> </p>
+<blockquote class="quote"><div class="qhdr">stock wrote <span class="qdate">on Feb 13 2014, 11:48 AM</span>:</div><br>
+Anyway! Soundcloud tags, please!</blockquote>
+<p>That is kinda tricky, see the thing is that the embedded info contains a TRACK ID number, and the only way to find that ID number is to look at the embed info ..... therefore you can't really copy and paste a link .... I DID however make a BBCode to do it as long as you have the ID track number from the embed info</p>
+<p> </p>
+<p>... hopefully this works *crosses fingers*</p>
+<p>*DELETED OLD CODE .... New way works (see below)*</p>
+</div>
+</div><div class="post" id="p5108247">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u590675.html">stock</a></span><span>Feb 14 2014, 09:30 AM</span></div>
+  <div class="body"><p>I have a question:</p>
+<p><a data-ipb='nomediaparse' href='http://blog.soundcloud.com/2009/07/28/soundcloud-player-in-forums-5-step-guide-for-soundcloud-bb-code/'>http://blog.soundcloud.com/2009/07/28/soundcloud-player-in-forums-5-step-guide-for-soundcloud-bb-code/</a></p>
+</div>
+</div><div class="post" id="p5108256">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Feb 14 2014, 09:46 AM</span></div>
+  <div class="body"><p>https://soundcloud.com/emad-goda/audio1</p>
+<br /><p>Thanks Stock ..... it wasn't exactly what it should of been but after some editing and all it is done and works ^^ !!</p>
+</div>
+</div><div class="post" id="p5108259">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u590675.html">stock</a></span><span>Feb 14 2014, 10:27 AM</span></div>
+  <div class="body"><p>Bad-ass.</p>
+</div>
+</div><div class="post" id="p5108364">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Feb 15 2014, 09:19 AM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">stock wrote <span class="qdate">on Feb 14 2014, 10:27 AM</span>:</div>
+<div>
+<p>Bad-ass.</p>
+</div>
+</blockquote>
+<p>I'm not just a pretty face lol</p></div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

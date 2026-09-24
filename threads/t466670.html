@@ -34,43 +34,43 @@
   <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u50424.html">Hot Like Sauce</a></span><span>Feb 09 2011, 03:11 AM</span></div>
   <div class="body">Even SSBB doesn't run at full speed on most levels and nearly any resolution.  Changing the resolution has very little effect on gameplay, as my gpu is at around 25% utilization but the cpu stays at a constant 50%.  Variation with resolution is maybe 5-10% at most.  As for the C2D, my roommate has a pc with a C2D clocked at a lower speed than my i5; however, since his doesn't have hyperthreading he is able to use both cores at 2.26ghz for around 4.5ghz effective compared to the 3ghz I can use.  Even a slow Core 2 quad clocked at 1.8ghz or so would likely run at a higher speed as long as it doesn't use hyperthreading.</div>
 </div><div class="post" id="p4923050">
-  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Shidou Mariya</span></span><span>Feb 09 2011, 03:27 AM</span></div>
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Feb 09 2011, 03:27 AM</span></div>
   <div class="body">I don't really get why your computer would be slowing down from running such a thing?Your Core i5 should be Turbo Boost compatible, and that thing will simply dynamically disable 1 physical core to overclock your remaining core to perform processor intensive tasks...That there should already be good enough for your emulator.</div>
 </div><div class="post" id="p4923052">
   <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u50424.html">Hot Like Sauce</a></span><span>Feb 09 2011, 03:34 AM</span></div>
   <div class="body">It is turbo boost compatible and MSI also has an overclock button built in to the laptop, but I don't really know what you mean about it disabling a core.  When I check pc activity it shows 4 logical threads 2 of which are running at 100% while the other 2 run at 0% unless I have other applications running.  Overall cpu load shows 50% at all times.  Just to be sure it was the hyperthreading causing the issues and not something else I ran 2 instances of Dolphin at the same time and got similar speeds for both.  Both instances ran at about the same speed as 1 did, except in this case cpu load was 100%.</div>
 </div><div class="post" id="p4923056">
-  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Shidou Mariya</span></span><span>Feb 09 2011, 04:19 AM</span></div>
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Feb 09 2011, 04:19 AM</span></div>
   <div class="body">Turbo boost basically goes disable 1 out of 2 cores and push that single core running to higher speeds.Basically, a Processor at 2.26GHz that supports Turboboost to 2.8GHz in example, will be the following:No TB: 2 cores, 4 threads, 2.26GHzTB on: 1 core, 2 threads, 2.8GHz</div>
 </div><div class="post" id="p4923079">
   <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u50424.html">Hot Like Sauce</a></span><span>Feb 09 2011, 07:01 AM</span></div>
   <div class="body">I disagree.  I think it's like this (see edit below):No TB: 2 cores, 2.26ghzTB: 2 cores, 2.8ghzI say this because even though it isn't using all of the threads it is still using both cores, therefore it doesn't actually disable any of the cores and essentially overclocks the two active cores.Also on Dolphin even though it only uses 2 threads at once, data is constantly jumping around all 4 threads.Edit: Let me try to understand this a little better.  If I have the Intel Core i5 520m clocked at 2.4ghz stock with turbo multipliers of 2/4 that means I can either have:2 cores with a max clock speed of 2.4ghz + 2*(133mhz) = 2.67ghz*1.2(msi oc) = 3.2ghz dual core1 core with a max clock speed of 2.4ghz + 4*(133mhz) = 2.93ghz*1.2(msi oc) = 3.52ghz single coreThe difference really shouldn't be that substantial, and is obviously nowhere near the performance of having both cores working.</div>
 </div><div class="post" id="p4923082">
-  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">P</span><span class="author">pengu</span></span><span>Feb 09 2011, 07:35 AM</span></div>
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u483342.html">pengu</a></span><span>Feb 09 2011, 07:35 AM</span></div>
   <div class="body"><blockquote class="quote"><div class="qhdr">jwilson2007&#x27; post=&#x27;4923038 wrote <span class="qdate">on Feb 9 2011, 03:51 PM</span>:</div>I don't need a 2x performance increase anyhow.  Really I just need about a 20% increase.  This would all be fine if Dolphin simply supported 4 cores.There usually is an option to disable HT in the bios btw.Going back to the msconfig idea, is there any chance I could specify which threads are used upon reboot?  If I could select the two physical cores maybe the issue could be solved?</blockquote>Interesting.I'm running Dolphin just fine on an Intel Core i5.</div>
 </div><div class="post" id="p4923083">
   <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u50424.html">Hot Like Sauce</a></span><span>Feb 09 2011, 07:37 AM</span></div>
   <div class="body">What speed is yours clocked at?  Also what is your cpu load while it's running?</div>
 </div><div class="post" id="p4923084">
-  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">P</span><span class="author">pengu</span></span><span>Feb 09 2011, 07:42 AM</span></div>
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u483342.html">pengu</a></span><span>Feb 09 2011, 07:42 AM</span></div>
   <div class="body">It's standard clock. It's the Core i5-650 I believe, so the dual core. Lemme just check cpu load. It's fairly high I think.</div>
 </div><div class="post" id="p4923085">
-  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">D</span><span class="author">Daft Punk</span></span><span>Feb 09 2011, 07:47 AM</span></div>
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u84857.html">Daft Punk</a></span><span>Feb 09 2011, 07:47 AM</span></div>
   <div class="body">I would also like to know this because mine was all "no thank you" when I was testing out stuff (20fps on FF:Crystal Bearers woo \o/). i5 661 @ 3.3GHz.</div>
 </div><div class="post" id="p4923086">
-  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">P</span><span class="author">pengu</span></span><span>Feb 09 2011, 07:49 AM</span></div>
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u483342.html">pengu</a></span><span>Feb 09 2011, 07:49 AM</span></div>
   <div class="body">So it's clocked at 3.2Ghz I think. Realtemp tells me 3407Mhz, system tells me 3.2Ghz. CPU load looked to be around 50ish percent. It varied a lot obviously. I can post my config if you like.But I know dual tried my config out one time and it was just terrible for him, so *shrug*Admittedly, at times Dolphin does slow down a bit. Say a four player SSBB game with pokemon on the screen and whatnot, and it does slow. But I'm okay with it.</div>
 </div><div class="post" id="p4923087">
   <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">B</span><a class="author" href="../users/u4.html">Bish</a></span><span>Feb 09 2011, 07:49 AM</span></div>
   <div class="body">Guys, maybe he is just <em>lying</em> about it working at 100% full speed and is just trolling you.</div>
 </div><div class="post" id="p4923088">
-  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">P</span><span class="author">pengu</span></span><span>Feb 09 2011, 07:51 AM</span></div>
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u483342.html">pengu</a></span><span>Feb 09 2011, 07:51 AM</span></div>
   <div class="body">I am a pretty awesome liar.</div>
 </div><div class="post" id="p4923089">
-  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">D</span><span class="author">Daft Punk</span></span><span>Feb 09 2011, 07:52 AM</span></div>
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">D</span><a class="author" href="../users/u84857.html">Daft Punk</a></span><span>Feb 09 2011, 07:52 AM</span></div>
   <div class="body">Remember that one time.</div>
 </div><div class="post" id="p4923090">
-  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">P</span><span class="author">pengu</span></span><span>Feb 09 2011, 07:53 AM</span></div>
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u483342.html">pengu</a></span><span>Feb 09 2011, 07:53 AM</span></div>
   <div class="body">Yeah, I was like 'I will lie to Bish in order to kill him.'And it worked out amazingly.</div>
 </div><div class="post" id="p4923091">
   <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">B</span><a class="author" href="../users/u4.html">Bish</a></span><span>Feb 09 2011, 07:54 AM</span></div>
@@ -79,7 +79,7 @@
   <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u50424.html">Hot Like Sauce</a></span><span>Feb 09 2011, 07:59 AM</span></div>
   <div class="body">Well to be fair I am talking about 4 players in Smash, but the fact your dual core is only running at 50% load with some slowdown points to the issue that hyperthreading kills Dolphin.  Yours runs better than mine I imagine because it is clocked slightly higher.My point being an old C2D 2.26ghz can run this better than my superior Core i5.  Seems like a load of crap to me that hyper threading can't be disabled.For anyone else having trouble you may have luck setting the affinity under task manager to the physical cores such as 0 and 2.  I was able to get a minor boost in speed by doing this.  Also all the speed guides I have found say to use the D3D9 plugin but mine is substantially faster with opengl.</div>
 </div><div class="post" id="p4923118">
-  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">P</span><span class="author">pengu</span></span><span>Feb 09 2011, 11:45 AM</span></div>
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">P</span><a class="author" href="../users/u483342.html">pengu</a></span><span>Feb 09 2011, 11:45 AM</span></div>
   <div class="body">It seems silly to ask, but have you tried disabling 2 of the cores in the affinity options for Dolphin?I have no idea whether that would help or not though.Just tried it, played a 4p matchdidn't seem to drop below 90% speed</div>
 </div><div class="post" id="p4923187">
   <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u50424.html">Hot Like Sauce</a></span><span>Feb 09 2011, 08:08 PM</span></div>
@@ -100,7 +100,7 @@
   <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">B</span><a class="author" href="../users/u4.html">Bish</a></span><span>Feb 10 2011, 09:20 PM</span></div>
   <div class="body">maybe it's all those russian porn sites he's been visiting</div>
 </div><div class="post" id="p4923385">
-  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">S</span><span class="author">Shidou Mariya</span></span><span>Feb 11 2011, 01:36 AM</span></div>
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Feb 11 2011, 01:36 AM</span></div>
   <div class="body">Oh, I thought it was the Asian porn sites...</div>
 </div><div class="post" id="p4923580">
   <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">H</span><a class="author" href="../users/u50424.html">Hot Like Sauce</a></span><span>Feb 11 2011, 08:48 PM</span></div>

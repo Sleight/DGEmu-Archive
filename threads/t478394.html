@@ -1,0 +1,176 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invision Board 3.4.0 and IPBWI 3.4.0 Bugs</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f108.html">Staff and Exclusive Access Forums</a> &rsaquo; <a href="../forums/f42.html">Staff Lounge</a> &rsaquo; Invision Board 3.4.0 and IPBWI 3.4.0 Bugs</div><div class="thread-title-box"><h1>Invision Board 3.4.0 and IPBWI 3.4.0 Bugs</h1><div class="thread-meta">22 posts &middot; page 1 of 1 &middot; 91 views</div></div><div class="post" id="p5051930">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a><span class="op-tag">ORIGINAL POST</span></span><span>Dec 04 2012, 02:54 AM</span></div>
+  <div class="body"><p>If you guys notice any bugs, please report them here so that I can try to revise them.</p>
+<p> </p>
+<p>Currently, many things are being fixed for the new 3.4.1 of the board, such as the html issue.</p>
+<p>It's been confirmed that the badword filter will no longer function with images anymore, so for the time being, I'm keeping that offline until we fix things up.</p>
+<br /><br /><p>If you guys could test out the staff utilities and DGEmu Arcade just to see if anything got broken or not, that would be great.</p>
+<p> </p>
+<p>Speaking of the Arcade, I will be restarting work on it hopefully during this holiday season.</p>
+</div>
+</div><div class="post" id="p5051985">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u98015.html">shadowmanwkp</a></span><span>Dec 04 2012, 06:32 AM</span></div>
+  <div class="body">Testing the staff utils... GP manipulation seems to work, deducting, awarding and resetting GPs work. Going to test out the other features as well.<br><br>Edit: removing sigs works too. I'll test out the other things in due time, because I do not want to wreck Meru's profile too much. (all the things I tested were easily reversible)</div>
+</div><div class="post" id="p5051993">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Dec 04 2012, 08:35 AM</span></div>
+  <div class="body"><p>Viewing ticket: My warning points are gone.</p>
+<p> </p>
+<p>..... warning points look a little messed up according to Chya ....</p>
+<br /><br /><p>.....</p>
+<p> </p>
+<p>ALSO....</p>
+<p> </p>
+<p>Member Management in ACP is NOT searching at all .... you type an IP or name in etc and nothing happens .... it doesn't search at all ..... way to screw up DGEmu Meru :P</p>
+</div>
+</div><div class="post" id="p5051995">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">S</span><a class="author" href="../users/u98015.html">shadowmanwkp</a></span><span>Dec 04 2012, 08:36 AM</span></div>
+  <div class="body">PHP threw me an error while trying to deduct GPs from a post:<blockquote class="quote"><div class="qhdr">someone wrote:</div><p>Fatal error: Call to undefined method classes_text_parser::preEditParse() in /var/www/clients/client1/web3/web/Sources/system/ipbwi/lib/bbcode.inc.php on line 66</p></blockquote><br>This is the post in question: http://www.dgemu.com/forums/index.php/topic/107264-marvel-and-dc-quiz/page-106#entry5051448<br><br>Edit: It seems that it cannot edit the post through PHP... The util threw me an error, and didn't edit the post, but it did deduct GPs.<br><br>There's also a report from a memeber that cannot validate: http://www.dgemu.com/forums/index.php/user/2673714-georgeshouston/<br>He said that he cannot register because the page throws him an error page. I resent the mail because I didn't have a better option.</div>
+</div><div class="post" id="p5052004">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Dec 04 2012, 09:57 AM</span></div>
+  <div class="body"><p><blockquote class="quote"><div class="qhdr">shadowmanwkp&#x27; timestamp=&#x27;1354610193&#x27; post=&#x27;5051995 wrote:</div><br>
+This is the post in question: <a href="#entry5051448">http://www.dgemu.com...06#entry5051448</a><br><br>
+Edit: It seems that it cannot edit the post through PHP... The util threw me an error, and didn't edit the post, but it did deduct GPs.<br>
+</blockquote></p>
+<p>This is actually GOOD news ..... means we won't be editing the post with our own details (it replaces the User's IP Address with our own!)</p>
+<p> </p>
+<p>@Meru, Member Management in ACP, the 8th page of members is not showing up for some reason .....</p>
+<p>Currently between 02 Dec to Yesterday, 01:15 AM is empty ....</p>
+</div>
+</div><div class="post" id="p5052034">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">Â</span><a class="author" href="../users/u2096245.html">Â­ Â­ Â­</a></span><span>Dec 04 2012, 04:31 PM</span></div>
+  <div class="body"><p>Wait what? how?</p>
+<p>How did you manage to upgrade the boards without taking the site down for a week?!</p>
+</div>
+</div><div class="post" id="p5052061">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">T</span><a class="author" href="../users/u26698.html">Thugnificent</a></span><span>Dec 04 2012, 09:28 PM</span></div>
+  <div class="body"><p>The fuck?</p>
+<p> </p>
+<p>My posts get fucked up here:<blockquote class="quote"><div class="qhdr">Thugnificent&quot; post=&quot;5052059&quot; time=&quot;1354656279 wrote:</div></p>
+<div>:smile:</div>
+<div> </div>
+<div>THE FUCK IS THIS DOING???</div>
+<div> </div>
+<div>WHY CANT I POST IMAGES???</div>
+<div></blockquote></div>
+<div>I can't seem to post images there.</div>
+<br /><br /><p>Finally I managed, but it took me like 3 minutes, and I got like 3 errors, and 6 times nothing happened!</p>
+</div>
+</div><div class="post" id="p5052066">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Dec 04 2012, 10:25 PM</span></div>
+  <div class="body"><p>Invision's new board incorporated a lot of changes.</p>
+<p> </p>
+<p>The previous IP.SEO search engine that was a seperate plugin is not incorporated into their board by default.</p>
+<p>They changed their post editor also, and it seems to have a lot of issues. Quoting has been mentioned, it appears weird in the edit box, but does seem to post properly.</p>
+<p> </p>
+<p>bbcode parsing is glitched up depending on certain circumstances also, and if you stick smilies too close, supposedly that does work either.:(</p>
+<p> </p>
+<p>I know tons of things were changed in this new version, that's why it's important to check.</p>
+<p> </p>
+<p>As for post edit with staff utilities, that's probably due to the IPBWI upgrade also (the proof that 3.4.0 was a major upgrade is that IPBWI was forced to upgrade their SDK also to work)</p>
+</div>
+</div><div class="post" id="p5052095">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Dec 05 2012, 06:14 AM</span></div>
+  <div class="body"><p><blockquote class="quote"><div class="qhdr">Channel28&#x27; timestamp=&#x27;1354615060&#x27; post=&#x27;5052004 wrote:</div><br>
+@Meru, Member Management in ACP, the 8th page of members is not showing up for some reason .....<br><br>
+Currently between 02 Dec to Yesterday, 01:15 AM is empty ....<br>
+</blockquote></p>
+<p>It is now the 12th page .... something between</p>
+<p>Dec 02 2012 09:13 PM</p>
+<p>and</p>
+<p>Dec 03 2012 02:25 AM</p>
+<p> </p>
+<p>is causing a glitch it seems ....</p>
+<br /><br /><p>[hr]</p>
+<p>LMFAO and this post was just added between #7 (DominÃ¶) and #8 (Meru) .... after a refresh it fixed itself though but lol weird ....</p>
+</div>
+</div><div class="post" id="p5052936">
+  <div class="phead"><span><span class="avatar" style="background:#a084c4;width:22px;height:22px;font-size:9.9px">T</span><a class="author" href="../users/u26698.html">Thugnificent</a></span><span>Dec 12 2012, 08:21 AM</span></div>
+  <div class="body"><p>What happened to the youtube tags?</p>
+<br /><br /><p>The fuck happened to the post order???</p>
+</div>
+</div><div class="post" id="p5052981">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Dec 12 2012, 11:37 PM</span></div>
+  <div class="body">Board just got upgraded to 3.4.1.<br><br>Fixes several issues, but there's still a critical bug with html posting mode...<br>This is really getting annoying...<br /><br /><p>Invision Awards has been updated to v1.1.5</p>
+<p> </p>
+<p>Irc chat has been enabled for all staff groups and elites for now... Until I figure out how to register an IRC channel on that server, at least all the people we can trust a bit more can use it. :)</p>
+<br /><br /><blockquote class="quote"><div class="qhdr">Â­ Â­ Â­ wrote <span class="qdate">on Dec 04 2012, 04:31 PM</span>:</div>Wait what? how?
+<p>How did you manage to upgrade the boards without taking the site down for a week?!</p></blockquote>
+<p>I'm much quicker than the rest. :)</p>
+</div>
+</div><div class="post" id="p5053012">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Dec 13 2012, 08:28 AM</span></div>
+  <div class="body"><p>EXCELLENT! .... but why is it using umich.edu of all places?</p>
+<br /><br /><p>AND the Members Management Search NOW works!!!</p>
+</div>
+</div><div class="post" id="p5053066">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Dec 13 2012, 10:18 PM</span></div>
+  <div class="body"><p>It's the one of the few servers I found that supports mibbit clients without any sort of restrictions.</p>
+<p> </p>
+<p>Yes, Invision's release of 3.4.0 came with a lot of parsing bugs that they are fixing as they go. They're finally standardizing their posting system to html and slowly getting rid of bbcode (though the compatibility mode is still there), so that will hopefully resolved the post parsing issues once I fix the utilities.</p>
+</div>
+</div><div class="post" id="p5053084">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Dec 14 2012, 05:39 AM</span></div>
+  <div class="body"><p>I cant seem to post images anymore, what da dealio?</p>
+<p> </p>
+<p>and yet I can change my sig just fine...</p>
+</div>
+</div><div class="post" id="p5053101">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Dec 14 2012, 08:47 AM</span></div>
+  <div class="body"><p>Getting rid of BBCode??  WTF WHY??</p>
+</div>
+</div><div class="post" id="p5053111">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Dec 14 2012, 01:39 PM</span></div>
+  <div class="body"><p>Test:</p>
+<p><img src="http://www.pureanimegallery.com/d/5449-1/anya-alstreim-code-geass-r2.jpg" alt="anya-alstreim-code-geass-r2.jpg"></p>
+<br /><br /><blockquote class="quote"><div class="qhdr">someone wrote:</div>However, the underpinnings of the editor remained unchanged which lead to some challenges. For example, the actual post was saved as BBCode in the database. This meant that the post had to be converted into BBCode before saving and then converted back into HTML before editing or showing the post. This lead to some frustrating due to inconsistencies with this process.<br><br>
+Happily, the underpinnings to our editor have now been completely rewritten to increase stability and to remove these inconsistencies. Now, the post is actually saved as cleaned HTML (via the excellent HTMLPurify) which means it does not have to be converted between states. You can still edit the BBCode manually if you wish, but this is handled by a single BBCode plug-in for CKEditor. This is very exciting because it frees up IP.Board from having to deal with BBCode manually saving hundreds of lines of code.</blockquote>
+<p> </p>
+<p>Source: <a href="http://community.invisionpower.com/blog/1174/entry-7940-ipboard-34-dev-update-editor-improvements/">http://community.invisionpower.com/blog/1174/entry-7940-ipboard-34-dev-update-editor-improvements/</a></p>
+<p> </p>
+<p>As I mentioned, since all the posts will now be saved as HTML in the database, this will make the parsing easier (in theory), but because they're keeping the bbcode legacy compatibility, there's tons of bugs in their editor...</p>
+<p> </p>
+<p>@KHRS: Using the img bbocde tag to post images wrecks gives you an error that you cannot post those extensions on the community...</p>
+<p>If you use the button for images in the advanced editor, paste your link in there, and post, it works. Seems to be yet another bug...</p>
+</div>
+</div><div class="post" id="p5053112">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Dec 14 2012, 01:53 PM</span></div>
+  <div class="body"><p><img src="http://i222.photobucket.com/albums/dd97/KHRS7/1354905556075.jpg" alt="1354905556075.jpg"></p>
+<p>a bit troublesome but it seems to work</p>
+</div>
+</div><div class="post" id="p5053113">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Dec 14 2012, 02:00 PM</span></div>
+  <div class="body"><p>Yeah, there was a fix released that I applied like 1 minute ago.</p>
+<p> </p>
+<p>It fixed the bbcode issue with the img tag.</p>
+<p>Try it again with the old classic way and let me know if it's ok!</p>
+</div>
+</div><div class="post" id="p5053114">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Dec 14 2012, 02:20 PM</span></div>
+  <div class="body"><p><img src="http://i222.photobucket.com/albums/dd97/KHRS7/seibah.png" alt="seibah.png"></p>
+<p>looks good! good job, meru</p>
+</div>
+</div><div class="post" id="p5053115">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Dec 14 2012, 02:51 PM</span></div>
+  <div class="body"><p>Yup, their fix seems to have fixed my issue with the radio posting also.</p>
+<p> </p>
+<p>Ever since they applied the HTMLPurify feature, it caused nothing but headaches for many boards.</p>
+<p>Most of the people are complaining about the upgrade to 3.4.0 completely breaking all their posts.</p>
+<p> </p>
+<p>I'm glad that they fixed it, I can proceed with uploading new albums and also prepare that Xmas event thing for DG.</p>
+</div>
+</div><div class="post" id="p5053193">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">C</span><a class="author" href="../users/u53560.html">Channel28</a></span><span>Dec 15 2012, 08:49 AM</span></div>
+  <div class="body"><p>.... with HTMLPurify and the rest of the overhaul does that mean HTML is now enabled on the forums or we still have it for Sent/Admin only?  Like no one can post the wacky HTML code to make an image popup and such, etc.</p>
+</div>
+</div><div class="post" id="p5053221">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Dec 15 2012, 07:48 PM</span></div>
+  <div class="body"><p>Posting in pure HTML is only reserved for Sent and Admin.</p>
+<p> </p>
+<p>HTML purify is there to take all the contents users type up in the new CKEditor (I think that's what they call the thing for posting) so that everything is saved as html in the database, making it easier to parse the content to output.</p>
+<p>Before, the posts used to be parsed in another format in the database, and thus breaking a lot of output.</p>
+<p> </p>
+<p>BBCode is not known as old school technology. Invision is trying to move away from it. This might be a good thing for new boardsm but for anyone that grew up with BBCode (such as us), we all find it infuriating that it's buggy and not working correctly. You should see the amount of ranting on their boards.</p>
+</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

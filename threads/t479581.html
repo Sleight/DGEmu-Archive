@@ -1,0 +1,126 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAME emulation troubles</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f288.html">Console Emulation &amp; Modding Assistance</a> &rsaquo; <a href="../forums/f323.html">Other Console Resources</a> &rsaquo; MAME emulation troubles</div><div class="thread-title-box"><h1>MAME emulation troubles</h1><div class="thread-meta">13 posts &middot; page 1 of 1 &middot; 1309 views</div></div><div class="post" id="p5086967">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">O</span><span class="author">Ostap_Blender</span><span class="op-tag">ORIGINAL POST</span></span><span>Aug 17 2013, 08:48 PM</span></div>
+  <div class="body"><p>Ahoy people. </p>
+<p>I am the old fan of Battletoads (who isn't?), so recently I've discovered that there was a brilliant version of this game created for arcade! So, I did not know about any MAME emulation before and when I did, I became really excited about it, downloaded the most recent emulator, then the btoads rom... The only problem is that when I try to launch the game, emulator asks me for some .CHD files that are absent...</p>
+<p> </p>
+<p>I have tried many different approaches (changed the emulator, watched hours of youtube etc) but they just didn't work - always the same CHD trouble.</p>
+<p> </p>
+<p>May anyone guide me to the "right" tutorial - I would be very much obliged to that person! </p>
+<p> </p>
+<p>You're my only last hope guys...</p>
+<p> </p>
+<p>Thanx in advance!</p>
+</div>
+</div><div class="post" id="p5086969">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Aug 17 2013, 10:03 PM</span></div>
+  <div class="body"><p>I'm going to take a look, but from what I recall, a CHD is a hard disk capture of the game that is required to run the rom.</p>
+<p>Usually, those files are very huge. I remember it being several hundreds of megabytes for the Killer Instinct one back in the days.</p>
+<p> </p>
+<p>What version of MAME are you using? Are you using the official command line build or MAME32?</p>
+<p>And what's the exact romset name you have?</p>
+</div>
+</div><div class="post" id="p5087013">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">O</span><span class="author">Ostap_Blender</span></span><span>Aug 18 2013, 08:59 AM</span></div>
+  <div class="body"><p>Hi, thanks for answering.</p>
+<p> </p>
+<p>Well, the emulator I use is from here <a data-ipb='nomediaparse' href='http://www.mamedev.org/release.html'>http://www.mamedev.org/release.html</a> The one that I took is <a data-ipb='nomediaparse' href='http://www.mamedev.org/downloader.php?file=releases/mame0149b.exe'>mame0149b.exe</a> (I use windows 7).</p>
+<p>The rom is that one http://www.dgemu.com/mame-details-1806.html?/Battle-Toads</p>
+</div>
+</div><div class="post" id="p5087168">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Aug 20 2013, 05:04 AM</span></div>
+  <div class="body"><p>Alright, I'll have a look hopefully tonight and get back to you with this with a clear answer.</p>
+<p> </p>
+<p>Just curious though, is the error message more in this format:</p>
+<p>The selected game is missing one or more required ROM or CHD images. Please select a different game.</p>
+<p> </p>
+<p>My speculation is that this game may not require a a CHD, but in fact, the romset we carry might be outdated for that version of Battletoads.</p>
+<p>Arcade roms work differently from normal console roms since they were are a single zip that contains multiple files inside that are simply memory dumps from several chips on the cartridge board.</p>
+<p>And between every version of MAME, that same romset that worked with a previous version might stop working with the newer one due to an update to the romset or having new files to increase compatibility.</p>
+<br /><p>I just checked. Our rom is outdated, I think it was a dump meant to work on MAME 1.41.</p>
+<p>I've just finished fixing a rom for you and am done uploading.</p>
+<p> </p>
+<p>I personally recommend using MAME64 (formerly known as MAME32) instead of the official build.</p>
+<p> </p>
+<p>Download the emulator here: <a data-ipb='nomediaparse' href='http://www.mameui.info/'>http://www.mameui.info/</a> (look for "MAMEUI64 .149.1" link, requires 7-zip to extract).</p>
+<p> </p>
+<p>Once the emulator extracted, download the rom found here and put it into the "ROMs" folder of the emulator. Make sure to NOT rename nor extract the content of the zip.</p>
+<p>Rom download: <a data-ipb='nomediaparse' href='http://www.filefactory.com/file/4sfnrnflms6j/n/btoads.zip'>http://www.filefactory.com/file/4sfnrnflms6j/n/btoads.zip</a></p>
+<p> </p>
+<p>Once done, open up the emulator by loading "Mameui64.exe".</p>
+<p>In the user interface, on the left hand side, click on "Available".</p>
+<p>You'll notice that your "Game" list will be empty. On your keyboard, press "F5". this scan operation will take about 5 minutes to complete.</p>
+<p>Once complete, "Battletoads" should appear with a green icon next to it. Double-click and enjoy. :)</p>
+</div>
+</div><div class="post" id="p5087293">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">O</span><span class="author">Ostap_Blender</span></span><span>Aug 20 2013, 07:48 PM</span></div>
+  <div class="body"><p>Cool, many thanks.</p>
+<p> </p>
+<p>Yes, the message is exactly what you have mentioned.</p>
+<p> </p>
+<p>So, I am completely lost now :(</p>
+</div>
+</div><div class="post" id="p5087462">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Aug 22 2013, 05:40 AM</span></div>
+  <div class="body"><p>Well, just follow my steps and download of the new rom, and it should all work out! :)</p>
+<p> </p>
+<p>Arcade emulation is a bit more complicated than a regular console since the roms themselves consists of a zip with multiple rom dumps for video, audio, content, etc.</p>
+<p>Everytime a new version of MAME or other arcade emulator comes out, there's always a list of rom changes that will break compatibility with your current ones.</p>
+<p> </p>
+<p>For those cases, it's important that you maintain your roms with a rom manager such as Romcenter so that they can scan your sets, rename and fix them, etc.</p>
+<p>I can explain in more detail next time if you're interested. :)</p>
+</div>
+</div><div class="post" id="p5087491">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">O</span><span class="author">Ostap_Blender</span></span><span>Aug 22 2013, 05:30 PM</span></div>
+  <div class="body"><p>AHHHHHHH MY GOD!!!!</p>
+<p> </p>
+<p>Thank you mate, THANX THANX THANX THANX!!!! So it is working now... Nice.</p>
+<p> </p>
+<p>The new era for me is about to begin :)) In fact, what about the other roms? Is there any "safe place" where I could get other roms to try it in MAME? Or every time I will need to perform such a deep "troubleshoot" research?!</p></div>
+</div><div class="post" id="p5087535">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Aug 22 2013, 09:02 PM</span></div>
+  <div class="body"><p>Ya, it's hard to say exactly which romsets are for which version of the emulators and many sites do not specify it. It just so happens that you landed on me that knows about this little quirky detail and have the proper utilities to munch it up together.</p>
+<p> </p>
+<p>Tbh, for the rom I uploaded, I used DGEmu's copy, another rom copy I took from Emuparadise, and another part from a Google search on the web and ran Romcenter to check for the CRC and merge everything together.</p>
+<p> </p>
+<p>Then I tested the rom in MAME64, and ended up spending 1 hour of my evening completing the whole game... lol</p>
+<p> </p>
+<p>I actually started downloading a full MAME set off a torrent... 32GB of roms which I will have to scan through them once the download is complete. I could possibly supply you with some stuff once done.</p>
+<p> </p>
+<p>If you're looking for NeoGeo, CPS-1, and CPS-2 arcade emulation, I uploaded a pre-configured Kawaks emulator in the Download Center here: http://www.dgemu.com/forums/index.php/topic/478820-mh-kawaks-163-collection/</p>
+<p> </p>
+<p>It's basically a perfect romset with every rom matching their CRC, I took all the roms I had from v1.61 of the emulator with a whole week of almost full time effort to compile that new version while scouring the Internet for the proper pieces. Let me know if there's any links that are dead, the pack is quite big.</p>
+</div>
+</div><div class="post" id="p5087538">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">O</span><span class="author">Ostap_Blender</span></span><span>Aug 22 2013, 09:56 PM</span></div>
+  <div class="body"><p>Oh lala, that is just great, mate! You're doing a great job. I (and all of "us") highly appreciate that!!!</p>
+<p> </p>
+<p>Well, I will start downloading all that stuff you mentioned - hope everyone will enjoy it. </p>
+<p> </p>
+<p>Are you planning to upload all that MAME collection to some fileshare resourses as well? (Coz here in France I am afraid of using torrents ). </p>
+<p> </p>
+<p>Also, why do you use depositfiles? It's great but maybe you might be interested in letitbit - so you can upload HUGE archives in ONE file. But I suppose you know it...</p>
+</div>
+</div><div class="post" id="p5087550">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Aug 22 2013, 11:55 PM</span></div>
+  <div class="body"><p>I had accounts for those share sites, unfortunately, I didnt have for others such as Zippyshare and others I might be using soon.</p>
+<p>I`ll get to uploading to Letitbit sooner or later also. :)</p>
+</div>
+</div><div class="post" id="p5087593">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">O</span><span class="author">Ostap_Blender</span></span><span>Aug 23 2013, 11:27 AM</span></div>
+  <div class="body"><p>Ok, great. I can do it, if you don't mind ;) </p>
+<p> </p>
+<p>My great thanks once again.</p>
+</div>
+</div><div class="post" id="p5087596">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Aug 23 2013, 12:48 PM</span></div>
+  <div class="body"><p>Sure, of course you can go ahead and do it and share the links with people in that same thread.</p>
+<p> </p>
+<p>I'll throw some GPs at your for uploading a mirror also! ;)</p>
+</div>
+</div><div class="post" id="p5088105">
+  <div class="phead"><span><span class="avatar" style="background:#c47b9e;width:22px;height:22px;font-size:9.9px">O</span><span class="author">Ostap_Blender</span></span><span>Aug 28 2013, 10:21 PM</span></div>
+  <div class="body"><p>Finally! Here it is: <a data-ipb='nomediaparse' href='http://letitbit.net/download/89585.852c4afd9a6f5f475f1c56e03225/_MH__Kawaks_1.63_-_Collection.rar.html'>http://letitbit.net/download/89585.852c4afd9a6f5f475f1c56e03225/_MH__Kawaks_1.63_-_Collection.rar.html</a></p>
+</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

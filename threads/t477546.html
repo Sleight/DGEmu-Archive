@@ -1,0 +1,140 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lol From Other Board</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f107.html">DGEmu Social</a> &rsaquo; <a href="../forums/f26.html">Spam Center</a> &rsaquo; Lol From Other Board</div><div class="thread-title-box"><h1>Lol From Other Board</h1><div class="thread-meta">4 posts &middot; page 1 of 1 &middot; 34 views</div></div><div class="post" id="p5033278">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a><span class="op-tag">ORIGINAL POST</span></span><span>Aug 21 2012, 03:09 PM</span></div>
+  <div class="body">Haha, reading through for some information on a Microsoft support forum, I loled at how the person asking the question failed to understand the other guy, which was supposed to be very obvious. And the way he replies, for some reason, reminds me of Chizzy at times.  XD <br />
+<br />
+<strong>niine</strong><br />
+Hi,<br />
+<br />
+we have problems here to update our sms clients in sccm.<br />
+We want to update them in an advertisement to collection.<br />
+<br />
+The package has the following cmd line:<br />
+<br />
+CCMSETUP.EXE /USERONLY /mp:"our mp" /downloadtimeout:15 SMSSITECODE="our mpsitecode" SMSCACHEDIR=E:\SMSCACHE SMSCACHESIZE=2048<br />
+<br />
+The client is updated to sccm, but the advertisement fails:<br />
+<br />
+The program for advertisement "ZSM2000F" failed ("ZSM00006" - "Update f&uuml;r Site ZAP"). The program was able to be executed but the system was restarted unexpectedly before the program could be completed or before status could be recorded. No installation status MIF was found after the system restarted. Possible cause: The program performs a restart of the client computer when it completes, but the 'After running' setting in the program's properties is not set to Program restarts computer, or the client machine was restarted while the program was running. Solution: Verify the above. If the program does a restart when it completes, even if it only requires a restart in some cases, modify the program's properties and set 'After running' to 'Program restarts computer'.<br />
+<br />
+Analysing the log files on the client is a pitty. I found something in the exec manager:<br />
+failed to instantiate ui server.<br />
+<br />
+In the rebootcoordinator log is a line like:<br />
+unable to notify client ui of completed jobs.<br />
+<br />
+Is the parameter /USERONLY the problem here?<br />
+<br />
+=====<br />
+<br />
+<strong>Wally (MSFT)</strong><br />
+For reference, this is the wrong forum for this. You should ask this in the Setup/Deployment forum, which is for SCCM setup issues.<br />
+<br />
+However, you indicated that the clients did upgrade fine - correct? If so, then this is to be expected. As part of the upgrade, the Ccmexec.exe service (SMS Agent Host) service is stopped. That causes this error in the logs, which is not really an error.<br />
+<br />
+But Ccmexec.exe is replaced by Ccmsetup.exe, which successfully installs the new client.<br />
+<br />
+So, as long as the client did indeed upgrade to SCCM, and has reported in to the site as running version 4.00.5931.0000, then you are fine.<br />
+<br />
+=====<br />
+<br />
+<strong>niine</strong><br />
+No, i am not fine.<br />
+Because the folllowing software distriibutions will not begin, and<br />
+this software distribution will not end. The official status is failed.<br />
+<br />
+Is there an official way to update a sms agent to a sccm client via Software Package<br />
+which will not fail?<br />
+<br />
+Normally i should ask this question to the microsoft support, sry.<br />
+<br />
+Is a moderator here who can move my thread?<br />
+<br />
+MfG<br />
+<br />
+J&ouml;rn Rink<br />
+<br />
+=====<br />
+<br />
+<strong>Wally (MSFT)</strong><br />
+The fact is that the SMS client agent is stopped as part of the upgrade. That causes the status to report failure. However, simply run the "Count SMS client versions report" or the "Client Deployment Status Details" report (if you are using a fallback status point) to validate that the clients did indeed upgrade to Configuration Manager fine.<br />
+<br />
+You are also welcome to ask this question of Microsoft product support if you wish, but I'm assuming you'll get the same answer. I will move the thread to the Software Distribution forum for you. I thought I already had, but guess I forgot to.<br />
+<br />
+=====<br />
+<br />
+<strong>niine</strong><br />
+Hi,<br />
+i am not sure if you understand me.<br />
+Yes, the client is updated, but that is not the point.<br />
+<br />
+The distribution shows a failure.<br />
+<br />
+I have defined this update as an advertisement to a collection where all sms clients goes in.<br />
+But with the failure status, the advertisemnt will not end. And always restarts.<br />
+<br />
+As i remember correectly, the installation of the sccm client over a sms client via software package is a supported<br />
+way to migrate to sccm.<br />
+<br />
+I want to install other software packages after the installation of the client via a task-sequence. These<br />
+distributions will not, or cannot start.<br />
+<br />
+So, is there a way how i can upgrade a sms client with a software distribution without a failure?<br />
+<br />
+=====<br />
+<br />
+<strong>Wally (MSFT)</strong><br />
+Yes, I do understand you. And I'm answering your question - IT DOES REPORT AS A FAILURE!<br />
+<br />
+It does not retry by default, so you must have changed the advertisement to Rerun if previous attempt failed. If you set it to not rerun, then it will fail (as expected), and not rerun.<br />
+<br />
+Yes, upgrading from SMS 2003 to Configuration Manager via software distribution is a supported scenario.<br />
+<br />
+Maybe if you play with the command line parameters you can get a success status, but I've never seen one - only failures. I complained about this in the beta, but nothing was changed for it :-(<br />
+<br />
+I'm sorry, but from my experience and from what I've been told, that is the way it is.<br />
+<br />
+=====<br />
+<br />
+<strong>niine</strong><br />
+Ok,<br />
+there is no need for shouting here.<br />
+<br />
+So for my understanding of software distribution the failure reporting is a bug. Because the client<br />
+is updated.<br />
+<br />
+I have no time for playing around with comand line parameters.<br />
+The sccm agent service has a little design problem then. It cannot distinguish between a reboot and a service restart, am i right here?<br />
+<br />
+=====<br />
+<br />
+(...)<br />
+<br />
+=====<br />
+<br />
+<strong>Wally (MSFT)</strong><br />
+There was no shouting, but I had answered the question twice already. So that's why I capitalized the the response.<br />
+<br />
+It is not a bug in the agent, it is the way the product is designed - if the agent stops in a deployment, we don't know its state, so can only assume it was successful.<br />
+<br />
+The suggestions of a status mif should work fine.</div>
+</div><div class="post" id="p5033280">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u1619195.html">KHRS</a></span><span>Aug 21 2012, 03:15 PM</span></div>
+  <div class="body"><blockquote class="quote"><div class="qhdr">Sakamoto-san&#x27; timestamp=&#x27;1345561754&#x27; post=&#x27;5033278 wrote:</div><br />
+<strong>Wally (MSFT)</strong><br />
+For reference, this is the wrong forum for this. You should ask this in the Setup/Deployment forum, which is for SCCM setup issues.<br />
+</blockquote><br />
+he told the person that they posted in the wrong forum but still helped them. WELL THIS DEFINITELY ISN'T DGEMU!<br />
+well, not the old DG that had shitty MA hungry mods like Sir VG or mario or me</div>
+</div><div class="post" id="p5033281">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">K</span><a class="author" href="../users/u23354.html">Kirie Motoba</a></span><span>Aug 21 2012, 03:16 PM</span></div>
+  <div class="body">Ya, now we nice.<br />
+Now we move and answer. I hope.<br />
+<br />
+I laughed at the fact that the guy repeated the answer twice, and that the other guy is like:<br />
+You don't understand me, don't shout.  XD </div>
+</div><div class="post" id="p5033293">
+  <div class="phead"><span><span class="avatar" style="background:#c98a6b;width:22px;height:22px;font-size:9.9px">M</span><a class="author" href="../users/u104116.html">milo-</a></span><span>Aug 21 2012, 05:44 PM</span></div>
+  <div class="body">tl;dr</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>

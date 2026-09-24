@@ -54,7 +54,6 @@ input#search{width:100%;padding:9px 12px;border-radius:5px;border:1px solid #b9c
 .post{background:#fff;border:1px solid #cdd9e5;border-top:none;padding:14px 16px}
 .post:last-of-type{border-radius:0 0 6px 6px}
 .post .phead{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.83rem;color:#8a97a5;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid #eef2f6}
-.post .author{color:#1c3b5e;font-weight:bold}
 .post .body{word-wrap:break-word;overflow-wrap:break-word;line-height:1.55}
 .post .body img.post-img{max-width:100%;border-radius:5px;margin:6px 0}
 blockquote.quote{border-left:3px solid #7ba0c4;background:#eef4fa;margin:8px 0;padding:8px 12px;border-radius:0 5px 5px 0}
@@ -75,6 +74,7 @@ blockquote.quote .qhdr{color:#7488a0;font-size:.78rem;margin-bottom:4px;font-sty
 .field-table td{padding:8px 12px;border-bottom:1px solid #e3e9ef;font-size:.85rem}
 .field-table td:first-child{color:#5a6c7d;width:140px}
 .author{color:#1c3b5e;font-weight:bold}
+a.author{color:#1b5faa}
 a.author:hover{text-decoration:underline}
 
 @media (max-width: 700px) {

@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Light Hardware Modding</title><link rel="stylesheet" href="../style.css"></head><body><div class="topbar"><img src="../logo.png" alt="DGEmu.com Forums" class="brand-logo"><span style="font-size:.9rem;font-weight:normal">archived static copy &middot; reconstructed from backup</span></div><div class="navbar"><a href="../index.html">Forums</a><a href="../search.html">Search All Threads</a><a href="../pm/index.html">Private Messages</a></div><div class="wrap"><div class="crumbs"><a href="../index.html">Forums</a> &rsaquo; <a href="../forums/f288.html">Console Emulation &amp; Modding Assistance</a> &rsaquo; <a href="../forums/f300.html">Nintendo</a> &rsaquo; <a href="../forums/f303.html">Other Nintendo Resources</a> &rsaquo; Light Hardware Modding</div><div class="thread-title-box"><h1>Light Hardware Modding</h1><div class="thread-meta">6 posts &middot; page 1 of 1 &middot; 986 views</div></div><div class="post" id="p5118688">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">B</span><a class="author" href="../users/u2708277.html">bpavlackagnpd117net</a><span class="op-tag">ORIGINAL POST</span></span><span>Jun 06 2014, 04:49 PM</span></div>
+  <div class="body"><p>First off, I don't see a search feature for the forums, so if there is one, could someone please direct me toward it so I don't post things that have already been posted?<br><br>
+So anyway, I'd like to try some hardware modding. In particular, I'd like to backlight an original gameboy and I'd like to LED mod a N64. Does anyone know of any website that has equipment to purchase for doing so or perhaps walk-throughs on how to do so?</p>
+</div>
+</div><div class="post" id="p5118790">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">N</span><a class="author" href="../users/u2545078.html">Nova²</a></span><span>Jun 08 2014, 06:21 AM</span></div>
+  <div class="body"><p>Just search â€œGame Boy Backlightâ€ in google and you will get all kinds of tutorials on taking a small SMD LED and lighting up your display with it. Looks like there might be a few kits too. Also search for â€œGame Boy Backlight Kitsâ€, as they have some that you just easily install.<br>
+There is a nice LED calculator at <a data-ipb='nomediaparse' href='http://ledz.com/?p=zz.led.resistor.calculator'>http://ledz.com/?p=zz.led.resistor.calculator</a> for hooking multiple LEDs up in a circuit, you need to know your LED and voltage specs.<br><br>
+Now the N64 mod I presume your talking about just jazzing up the case with LEDs and neon wires and what not? For that your imagination is the limit, ebay is a cheap place for finding these components. And how eccentric are you going to get? If your going to have advanced flashing patterns and/or interactive lighting ect you may need a micro controller to turn the lights on and off or change brightness.<br>
+If you know nothing about microcontrollers I would just recommend getting an arduino (or arduino based clone), as they are great for prototyping, and have a large community base for tutorials and help on getting started. (<a data-ipb='nomediaparse' href='http://www.arduino.cc/'>http://www.arduino.cc/</a>) </p>
+</div>
+</div><div class="post" id="p5118919">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">B</span><a class="author" href="../users/u2708277.html">bpavlackagnpd117net</a></span><span>Jun 09 2014, 03:37 PM</span></div>
+  <div class="body"><p>Thanks for the pointers! :) I'm not sure when I'll actually get around to working on either of these, but I'll definitely be looking into some of these options!<br><br>
+I've already opened up an N64, drilled a few holes in the plastic casing, and identified the Power LED. I might just start slow; swap out the Power LED with a different colour, make sure I still know how to solder properly, and work my way up from there. I wasn't even considering a microcontroller, but it sounds fun (even though my programming knowledge is minimal).<br><br>
+As for the Gameboy... I think I need another screwdriver (a long/thin triwing)... I'm pretty sure i can find one on eBay though.</p>
+</div>
+</div><div class="post" id="p5120114">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">N</span><a class="author" href="../users/u2545078.html">Nova²</a></span><span>Jun 18 2014, 06:26 AM</span></div>
+  <div class="body"><p>I guess I never realy looked at what a gameboy takes for a screw, I know the NES carts had a funky triangle screw. I am sure now you can find a driver for that triangle bit, but if you run across something like this you can try to run to your local hobby store and find some ABS rods and melt the end of the rod and form it to the screw and make your own tool (that is that it is not so tight that it strips your plastic tool).<br><br>
+You can find a nice selection of odd-ball bits on ebay by looking up "Security Bit Sets", I have one of the 100pc sets. They come in handy now and then when you get into electronics. You can typically pick one of these 100pc sets up for under $15.<br><br>
+Jermy Blum has some nice tutorials on youtube for getting you started with programming Arduinos (https://www.youtube.com/watch?v=fCxzA9_kg6s). My first experiance with the arduino was with the Mega 2560 that came ina RAMPS kit for 3D printers, while waiting on a replacement extruder tip I started playing with the arduino a little bit and found it very useful.<br><br>
+If your just going to do a basic blinking you donot even need a microcontroller, all you need is a capacitor and transistor. (<a data-ipb='nomediaparse' href='http://www.instructables.com/id/Blinking-led-with-only-one-transistor-npn/'>http://www.instructables.com/id/Blinking-led-with-only-one-transistor-npn/</a>) <br>
+I am not sure of the formula, it is out there somware, but by changing the capacitor with another of a differant capacitance will change the blink speed. You can also use a 555 timer to make an LED fade in and out too. (<a data-ipb='nomediaparse' href='http://www.instructables.com/id/ThrobbingFading-LED-with-555-Timer/'>http://www.instructables.com/id/ThrobbingFading-LED-with-555-Timer/</a>). <br>
+The Arduino would be more along the lines if you wanted the LED to fade in and out when you turn on the console without a cartridge in it and stay on solid when you do have a cart plugged in. There would have to be a way to monitor a connection between the terminals or a voltage drop to the +12V/VCC to the cart with the arduino, not sure how off the top of my head. Or monitoring the controller input and changing the colors to an RGB LED as a mood light.<br><br>
+If you start getting into neon/cc lights and what not, you will want to supply a seporat 12V power source so you donot burn out the N64s PSU. A couple handfulls of your typical LEDs is not going to put all that much more of a load on the PSU, but you can easily pop it if you start adding on inverters for lights.</p>
+</div>
+</div><div class="post" id="p5149856">
+  <div class="phead"><span><span class="avatar" style="background:#8fa876;width:22px;height:22px;font-size:9.9px">N</span><a class="author" href="../users/u2545078.html">Nova²</a></span><span>Mar 20 2015, 07:05 AM</span></div>
+  <div class="body"><p>So have you made any progress with modding your N64?</p>
+</div>
+</div><div class="post" id="p5157402">
+  <div class="phead"><span><span class="avatar" style="background:#5aa8a0;width:22px;height:22px;font-size:9.9px">B</span><a class="author" href="../users/u2708277.html">bpavlackagnpd117net</a></span><span>Jun 04 2015, 02:18 PM</span></div>
+  <div class="body"><p>LOL, no. I'm crazy lazy. Xb<br>
+I still haven't bought a Tri-Wing Screwdriver for my GameBoy either.</p>
+</div>
+</div><div class="pagenav"><span class="current">1</span></div></div></body></html>
